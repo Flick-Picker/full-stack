@@ -1,3 +1,5 @@
+[#CAP-dddd] - Replace `d`'s with the number of ticket, if available
+
 # Ticket OR Documentation Changes
 Replace this with the Jira link and choose the correct title for this section. If `Documentation Change` delete this text instead.
 
@@ -5,7 +7,7 @@ Replace this with the Jira link and choose the correct title for this section. I
 Please include a small summary of the change (nothing too in-depth as the attached ticket should have more detail)
 
 ## Type of change
-Delete options that are not relevant. Can be an unnessessary section
+Delete options that are not relevant. Can be an unnecessary section
 
 - [ ] Bug fix (non-breaking change which fixes an issue)
 - [ ] New feature (non-breaking change which adds functionality)
