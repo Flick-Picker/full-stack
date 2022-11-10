@@ -1,20 +1,20 @@
 # Ticket OR Documentation Changes
 Replace this with the Jira link and choose the correct title for this section. If `Documentation Change` delete this text instead.
 
-## Description
+# Description
 Please include a small summary of the change (nothing too in-depth as the attached ticket should have more detail)
 
-## Type of change
-Delete options that are not relevant. Can be an unnessessary section
+# Type of change
+Delete options that are not relevant. Can be an unnecessary section
 
 - [ ] Bug fix (non-breaking change which fixes an issue)
 - [ ] New feature (non-breaking change which adds functionality)
 - [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
 
-## Tests
+# Tests
 Please describe the tests that you ran to verify your changes.
 
-## Checklist:
+# Checklist:
 - [ ] My code follows the style guidelines of this project
 - [ ] I have performed a self-review of my own code
 - [ ] I have commented my code, particularly in hard-to-understand areas
