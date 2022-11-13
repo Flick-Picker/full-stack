@@ -14,7 +14,7 @@ permissions:
   contents: write
 
 jobs:
-  Build and Deploy Client:
+  Build_and_Deploy_Client:
     runs-on: ubuntu-20.04
     defaults:
       run:
