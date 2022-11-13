@@ -3,22 +3,33 @@ name: Build and Deploy
 on:
   push:
     branches:
-      - main
+      - develop
 
 permissions:
   contents: write
 
 jobs:
-  build-and-deploy:
-    concurrency: ci-${{ github.ref }}
-    runs-on: ubuntu-latest
+  Build and Deploy Client:
+    runs-on: ubuntu-20.04
+    defaults:
+      run:
+        working-directory: ./src/client
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
 
       - name: Install
         run: |
           npm ci
+
+      - name: Linter
+        run: |
+          npm run lint
 
       - name: Unit Tests
         run: |

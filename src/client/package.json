@@ -21,6 +21,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "lint": "eslint './**/*.{ts,tsx}'",
+    "fix" :"eslint './**/*.{ts,tsx}' --fix",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
