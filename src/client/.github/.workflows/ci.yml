@@ -1,35 +1,36 @@
-name: CI
+name: Build and Deploy
 
-on: 
+on:
   push:
-    branches:    
-      - develop 
+    branches:
+      - main
+
+permissions:
+  contents: write
 
 jobs:
-  build:
-
+  build-and-deploy:
+    concurrency: ci-${{ github.ref }}
     runs-on: ubuntu-latest
-    
-    strategy:
-      matrix:
-        node-version: [10.x, 8.x]
-    
     steps:
-    - uses: actions/checkout@v1
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    
-    - name: npm install
-      run: |
-        npm install
-    - name: npm test
-      run: |
-        npm test 
-      env:
-        CI: true
-      
-    - name: npm build
-      run: |
-        npm run build --if-present
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Install
+        run: |
+          npm install
+
+      - name: Unit Tests
+        run: |
+          npm test 
+        env:
+          CI: true
+
+      - name: Build
+        run: |
+          npm run build --if-present
+          
+      - name: Deploy
+        uses: Flick-Picker/github-pages-deploy-action@v1
+        with:
+          folder: build
