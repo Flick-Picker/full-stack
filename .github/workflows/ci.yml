@@ -48,6 +48,6 @@ jobs:
 
       - name: Deploy
         if: ${{ github.event_name == 'push' }}
-        uses: Flick-Picker/github-pages-deploy-action@v1
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: build
