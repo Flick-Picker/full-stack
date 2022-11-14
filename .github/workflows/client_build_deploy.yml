@@ -1,0 +1,26 @@
+name: build-deploy-client
+on:
+  push:
+    branches:
+      - develop
+    paths:
+      - ./src/client
+permissions:
+  contents: write
+jobs:
+  build_and_test:
+    defaults:
+      run:
+        working-directory: ./src/client
+    uses: Flick-Picker/full-stack/.github/workflows/build.yml@v1
+  deploy_client:
+    defaults:
+      run:
+        working-directory: ./src/client
+    needs: build
+    steps:
+      - name: Deploy
+        if: ${{ github.event_name == 'push' }}
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: build
