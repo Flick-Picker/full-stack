@@ -12,8 +12,8 @@ jobs:
     defaults:
       run:
         working-directory: ./src/client
+    uses: Flick-Picker/full-stack/.github/workflows/build.yml@v1
     steps:
-      - uses: Flick-Picker/full-stack/.github/workflows/build.yml@v1
       - name: Deploy
         if: ${{ github.event_name == 'push' }}
         uses: JamesIves/github-pages-deploy-action@v4
