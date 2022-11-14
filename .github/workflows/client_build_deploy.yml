@@ -9,10 +9,6 @@ permissions:
   contents: write
 jobs:
   build_and_test:
-    runs-on: ubuntu-20.04
-    defaults:
-      run:
-        working-directory: ./src/client
     uses: ./.github/workflows/build.yml
   deploy_client:
     runs-on: ubuntu-20.04
