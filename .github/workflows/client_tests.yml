@@ -19,4 +19,4 @@ jobs:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
   run_tests:
     needs: comment_trigger
-    uses: ./.github/workflows/build.yml
+    uses: ./.github/workflows/client_build.yml
