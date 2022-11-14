@@ -2,12 +2,11 @@ name: run-tests
 on:
   issue_comment:                                     
     types: [created]
-jobs: 
-  run_tests:
+jobs:
+  comment_trigger:
     defaults:
       run:
-        working-directory: ./src/client
-    uses: Flick-Picker/full-stack/.github/workflows/build.yml@v1
+        working-directory: ./src/client 
     steps:
       - name: Comment trigger
         uses: khan/pull-request-comment-trigger@v1.1.0
@@ -17,3 +16,9 @@ jobs:
           reaction: eyes
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+  run_tests:
+    defaults:
+      run:
+        working-directory: ./src/client 
+    needs: comment_trigger
+    uses: Flick-Picker/full-stack/.github/workflows/build.yml@v1

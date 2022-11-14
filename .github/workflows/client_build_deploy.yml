@@ -8,11 +8,16 @@ on:
 permissions:
   contents: write
 jobs:
-  deploy_client:
+  build_and_test:
     defaults:
       run:
         working-directory: ./src/client
     uses: Flick-Picker/full-stack/.github/workflows/build.yml@v1
+  deploy_client:
+    defaults:
+      run:
+        working-directory: ./src/client
+    needs: build
     steps:
       - name: Deploy
         if: ${{ github.event_name == 'push' }}
