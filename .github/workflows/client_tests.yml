@@ -18,9 +18,5 @@ jobs:
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
   run_tests:
-    runs-on: ubuntu-20.04
-    defaults:
-      run:
-        working-directory: ./src/client 
     needs: comment_trigger
-    uses: ./.github/workflows/build.yml
+    uses: ./.github/workflows/client_build.yml
