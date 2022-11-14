@@ -1,0 +1,42 @@
+name: Run Tests
+on:
+  issue_comment:                                     
+    types: [created]
+jobs: 
+  run_tests:
+    defaults:
+      run:
+        working-directory: ./src/client
+    steps:
+      - name: Comment trigger
+        uses: khan/pull-request-comment-trigger@v1.1.0
+        id: check
+        with:
+          trigger: 'run tests'
+          reaction: eyes
+        env:
+          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+      - uses: Flick-Picker/full-stack/.github/workflows/build.yml@v1
+
+
+name: Build and Deploy Client
+on:
+  push:
+    branches:
+      - develop
+    paths:
+      - ./src/client
+permissions:
+  contents: write
+jobs:
+  deploy_client:
+    defaults:
+      run:
+        working-directory: ./src/client
+    steps:
+      - uses: Flick-Picker/full-stack/.github/workflows/build.yml@v1
+      - name: Deploy
+        if: ${{ github.event_name == 'push' }}
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: build
