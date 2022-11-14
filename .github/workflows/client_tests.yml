@@ -6,7 +6,7 @@ jobs:
   comment_trigger:
     defaults:
       run:
-        working-directory: ./src/client 
+        working-directory: Flick-Picker/full-stack/src/client 
     steps:
       - name: Comment trigger
         uses: khan/pull-request-comment-trigger@v1.1.0
@@ -19,6 +19,6 @@ jobs:
   run_tests:
     defaults:
       run:
-        working-directory: ./src/client 
+        working-directory: Flick-Picker/full-stack/src/client 
     needs: comment_trigger
     uses: Flick-Picker/full-stack/.github/workflows/build.yml@v1
