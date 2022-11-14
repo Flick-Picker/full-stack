@@ -1,4 +1,4 @@
-name: build-deploy-client
+name: Build and Deploy Client
 on:
   push:
     branches:
@@ -12,7 +12,7 @@ jobs:
     defaults:
       run:
         working-directory: Flick-Picker/full-stack/src/client
-    uses: Flick-Picker/full-stack/.github/workflows/build.yml@v1
+    uses: Flick-Picker/full-stack/.github/workflows/build.yml
   deploy_client:
     defaults:
       run:

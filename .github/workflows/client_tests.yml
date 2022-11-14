@@ -1,4 +1,4 @@
-name: run-tests
+name: Run Tests
 on:
   issue_comment:                                     
     types: [created]
@@ -21,4 +21,4 @@ jobs:
       run:
         working-directory: Flick-Picker/full-stack/src/client 
     needs: comment_trigger
-    uses: Flick-Picker/full-stack/.github/workflows/build.yml@v1
+    uses: Flick-Picker/full-stack/.github/workflows/build.yml
