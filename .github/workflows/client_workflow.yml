@@ -1,4 +1,4 @@
-name: Run Tests
+name: run-tests
 on:
   issue_comment:                                     
     types: [created]
@@ -19,7 +19,7 @@ jobs:
       - uses: Flick-Picker/full-stack/.github/workflows/build.yml@v1
 
 
-name: Build and Deploy Client
+name: build-deploy-client
 on:
   push:
     branches:
