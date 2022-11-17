@@ -12,7 +12,7 @@
     "parserOptions": {
         "ecmaVersion": "latest",
         "sourceType": "module",
-        "project": "./server/tsconfig.json"
+        "project": "./tsconfig.json"
     },
     "rules": {
         "linebreak-style": 0,
