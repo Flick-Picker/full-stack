@@ -47,6 +47,7 @@
 \toprule {\bf Date} & {\bf Version} & {\bf Notes}\\
 \midrule
 Jan 14 & 1.0 & Adding modules and objects to store in databases - Talha\\
+Jan 15 & 1.0 & Adding descriptions to modules - Talha\\
 \bottomrule
 \end{tabularx}
 
@@ -73,7 +74,6 @@ This section records information for easy reference.
   SRS & Software Requirements Specification\\
   \progname & Application\\
   UC & Unlikely Change \\
-  \wss{etc.} & \wss{...}\\
   \bottomrule
 \end{tabular}\\
 
@@ -134,7 +134,7 @@ The rest of the document is organized as follows. Section
 requirements. Section \ref{SecMH} summarizes the module decomposition that
 was constructed according to the likely changes. Section \ref{SecConnection}
 specifies the connections between the software requirements and the
-modules. Section \ref{SecMD} gives a detailed description of the
+modules. Section \ref{SecCD} provides detailed descriptions of native data types. Section \ref{SecMD} gives a detailed description of the
 modules. Section \ref{SecTM} includes two traceability matrices. One checks
 the completeness of the design against the requirements provided in the SRS. The
 other shows the relation between anticipated changes and the modules. Section
@@ -156,11 +156,8 @@ adapted here is called design for
 change.
 
 \begin{description}
-\item[\refstepcounter{acnum} \actheacnum \label{acHardware}:] The specific
-  hardware on which the software is running.
-\item[\refstepcounter{acnum} \actheacnum \label{acInput}:] The format of the
-  initial input data.
-\item ...
+\item[\refstepcounter{acnum} \actheacnum \label{acHardware}:] The specific hardware on which the software is running.
+\item[\refstepcounter{acnum} \actheacnum \label{acPrefs}:] The \verb_preferences_ could be modified, depending on what the general response to the initial show preferences exist
 \end{description}
 
 \subsection{Unlikely Changes} \label{SecUchange}
@@ -173,62 +170,12 @@ will potentially need to be modified. Hence, it is not intended that these
 decisions will be changed.
 
 \begin{description}
-\item[\refstepcounter{ucnum} \uctheucnum \label{ucIO}:] Input/Output devices
-  (Input: File and/or Keyboard, Output: File, Memory, and/or Screen).
-\item ...
+\item[\refstepcounter{ucnum} \uctheucnum \label{ucIO}:] Input/Output devices (Input: Mouse, Output: File, Memory, and/or Screen)
+\item[\refstepcounter{ucnum} \uctheucnum \label{ucCD}:] The \verb_user_ and \verb_group_ data types will retain the information describe in Section \ref{SecCD}
 \end{description}
-
-\section{Module Hierarchy} \label{SecMH}
-
-This section provides an overview of the module design. Modules are summarized
-in a hierarchy decomposed by secrets in Table \ref{TblMH}. The modules listed
-below, which are leaves in the hierarchy tree, are the modules that will
-actually be implemented.
-
-\begin{description}
-\item [\refstepcounter{mnum} \mthemnum \label{mHH}:] Hardware-Hiding Module
-\item ...
-\end{description}
-
-
-\begin{table}[h!]
-\centering
-\begin{tabular}{p{0.3\textwidth} p{0.6\textwidth}}
-\toprule
-\textbf{Level 1} & \textbf{Level 2}\\
-\midrule
-
-{Hardware-Hiding Module} & ~ \\
-\midrule
-
-\multirow{7}{0.3\textwidth}{Behaviour-Hiding Module} & ?\\
-& ?\\
-& ?\\
-& ?\\
-& ?\\
-& ?\\
-& ?\\ 
-& ?\\
-\midrule
-
-\multirow{3}{0.3\textwidth}{Software Decision Module} & {?}\\
-& ?\\
-& ?\\
-\bottomrule
-
-\end{tabular}
-\caption{Module Hierarchy}
-\label{TblMH}
-\end{table}
-
-\section{Connection Between Requirements and Design} \label{SecConnection}
-
-The design of the system is intended to satisfy the requirements developed in
-the SRS. In this stage, the system is decomposed into modules. The connection
-between requirements and modules is listed in Table~\ref{TblRT}.
 
 \section{Custom Data Types} \label{SecCD}
-Flick Picker uses many native standard data types, but a handful custom ones have to be created, defined below. All the data types are a key-value pair.
+Flick Picker uses standard data types, but a handful custom ones have to be created, defined below. All the data types are a key-value pair.
 
 \subsection{Preferences}
 \begin{tabularx}{\textwidth}{|p{3.3cm}|p{3cm}|X|}
@@ -285,6 +232,64 @@ Flick Picker uses many native standard data types, but a handful custom ones hav
 \hline
 \end{tabularx}
 
+\section{Module Hierarchy} \label{SecMH}
+
+This section provides an overview of the module design. Modules are summarized
+in a hierarchy decomposed by secrets in Table \ref{TblMH}. The modules listed
+below, which are leaves in the hierarchy tree, are the modules that will
+actually be implemented.
+
+\begin{description}
+\item [\refstepcounter{mnum} \mthemnum \label{mHH}:] Hardware-Hiding Module
+\item [\refstepcounter{mnum} \mthemnum \label{mBH}:] Behaviour-Hiding Module
+	\begin{itemize}
+		\item [\refstepcounter{mnum} \mthemnum \label{mNL}:] Native Login Module
+		\item [\refstepcounter{mnum} \mthemnum \label{mF}:] Friends Module
+		\item [\refstepcounter{mnum} \mthemnum \label{mG}:] Groups Module
+		\item [\refstepcounter{mnum} \mthemnum \label{mPM}:] Profile Module
+	\end{itemize}
+\item [\refstepcounter{mnum} \mthemnum \label{mSD}:] Software Decision Module
+	\begin{itemize}
+		\item [\refstepcounter{mnum} \mthemnum \label{mMA}:] Matching Algorithm Module
+		\item [\refstepcounter{mnum} \mthemnum \label{mOL}:] OAuth Login Module
+		\item [\refstepcounter{mnum} \mthemnum \label{mA}:] API Module
+	\end{itemize}
+\end{description}
+
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{p{0.3\textwidth} p{0.6\textwidth}}
+\toprule
+\textbf{Level 1} & \textbf{Level 2}\\
+\midrule
+
+{Hardware-Hiding Module} & ~ \\
+\midrule
+
+\multirow{4}{0.3\textwidth}{Behaviour-Hiding Module} & \\
+& Native Login Module\\
+& Friends Module\\
+& Groups Module\\
+& Profile Module\\
+\midrule
+
+\multirow{3}{0.3\textwidth}{Software Decision Module} & {Matching Algorithm Module}\\
+& OAuth Login Module\\
+& API Module\\
+\bottomrule
+
+\end{tabular}
+\caption{Module Hierarchy}
+\label{TblMH}
+\end{table}
+
+\section{Connection Between Requirements and Design} \label{SecConnection}
+
+The design of the system is intended to satisfy the requirements developed in
+the SRS. In this stage, the system is decomposed into modules. The connection
+between requirements and modules is listed in Table~\ref{TblRT}.
+
 \section{Module Decomposition} \label{SecMD}
 
 Modules are decomposed according to the principle of ``information hiding''
@@ -312,7 +317,7 @@ to be implemented.
 \item[Implemented By:] OS
 \end{description}
 
-\subsection{Behaviour-Hiding Module}
+\subsection{Behaviour-Hiding Module (\mref{mBH})}
 
 \begin{description}
 \item[Secrets:]The contents of the required behaviours.
@@ -324,21 +329,54 @@ to be implemented.
 \item[Implemented By:] --
 \end{description}
 
-\subsubsection{Input Format Module (\mref{mInput})}
+%\subsubsection{Input Format Module (\mref{mInput})}
+%
+%\begin{description}
+%\item[Secrets:]The format and structure of the input data.
+%\item[Services:]Converts the input data into the data structure used by the
+%  input parameters module.
+%\item[Implemented By:] [Your Program Name Here]
+%\item[Type of Module:] [Record, Library, Abstract Object, or Abstract Data Type]
+%  [Information to include for leaf modules in the decomposition by secrets tree.]
+%\end{description}
+
+\subsubsection{Native Login Module (\mref{mNL})}
 
 \begin{description}
-\item[Secrets:]The format and structure of the input data.
-\item[Services:]Converts the input data into the data structure used by the
-  input parameters module.
-\item[Implemented By:] [Your Program Name Here]
-\item[Type of Module:] [Record, Library, Abstract Object, or Abstract Data Type]
-  [Information to include for leaf modules in the decomposition by secrets tree.]
+\item[Secrets:] Hides authentication data from the rest of the software, isolating the authentication as the rest of the software has no use for a user's email or password
+\item[Services:] Native log in to the application
+\item[Implemented By:] \progname
+\item[Type of Module:] Record
 \end{description}
 
-\subsubsection{Etc.}
+\subsubsection{Friends Module (\mref{mF})}
 
+\begin{description}
+\item[Secrets:] The methodology and data related to adding/deleting friends
+\item[Services:] Allows a user to add and delete friend's but sharing their nickname or email address with one another
+\item[Implemented By:] \progname
+\item[Type of Module:] Record
+\end{description}
 
-\subsection{Software Decision Module}
+\subsubsection{Groups Module (\mref{mG})}
+
+\begin{description}
+\item[Secrets:] The methodology and data used to create a group with other friends
+\item[Services:] Allows the user to create, join, leave, and delete individual groups, invite friends, and receive recommendations on a show to watch based on the groups' preferences
+\item[Implemented By:] \progname
+\item[Type of Module:] Abstract Object
+\end{description}
+
+\subsubsection{Profile Module (\mref{mP})}
+
+\begin{description}
+\item[Secrets:] The methodology and data for an individual user
+\item[Services:] Allows the user to modify their preferences and general profile
+\item[Implemented By:] \progname
+\item[Type of Module:] Abstract Object
+\end{description}
+
+\subsection{Software Decision Module (\mref{mSD})}
 
 \begin{description}
 \item[Secrets:] The design decision based on mathematical theorems, physical
@@ -351,7 +389,32 @@ to be implemented.
 \item[Implemented By:] --
 \end{description}
 
-\subsubsection{Etc.}
+\subsubsection{Matching Algorithm Module (\mref{mMA})}
+
+\begin{description}
+\item[Secrets:] The methodology and data on how recommendations are created
+\item[Services:] Converts the input data to a list of recommendations for a \verb_group_
+\item[Implemented By:] \progname
+\item[Type of Module:] Abstract Object
+\end{description}
+
+\subsubsection{OAuth Login Module (\mref{mOL})}
+
+\begin{description}
+\item[Secrets:] OAuthentication login details, through Google, Meta, or Apple
+\item[Services:] Allows the user to sign up and login through an OAuth provider
+\item[Implemented By:] Google, Meta, Apple OAuth services paired with \progname
+\item[Type of Module:] Library
+\end{description}
+
+\subsubsection{API Module (\mref{mA})}
+
+\begin{description}
+\item[Secrets:] Data behind fetching all the shows and organizing them
+\item[Services:] Allows \progname ~ to return a set of shows that match user preferences
+\item[Implemented By:] OMDb API and MyAnimeList API
+\item[Type of Module:] Library
+\end{description}
 
 \section{Traceability Matrix} \label{SecTM}
 
@@ -428,22 +491,6 @@ because they use modules from the lower levels.
 \end{figure}
 
 \newpage
-\section{Appendix}
-
-\subsection{Reflection - Talha}
-Put Reflection here
-
-\subsection{Reflection - Jarrod}
-Put Reflection here
-
-\subsection{Reflection - Madhi}
-Put Reflection here
-
-\subsection{Reflection - Ali}
-Put Reflection here
-
-\subsection{Reflection - Andrew}
-Put Reflection here
 
 %\section*{References}
 
