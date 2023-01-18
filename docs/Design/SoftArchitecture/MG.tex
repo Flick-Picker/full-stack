@@ -34,7 +34,7 @@
 \begin{document}
 
 \title{Module Guide for \progname{}} 
-\author{Author Name}
+\author{\authname}
 \date{\today}
 
 \maketitle
@@ -46,8 +46,8 @@
 \begin{tabularx}{\textwidth}{p{3cm}p{2cm}X}
 \toprule {\bf Date} & {\bf Version} & {\bf Notes}\\
 \midrule
-Date 1 & 1.0 & Notes\\
-Date 2 & 1.1 & Notes\\
+Jan 14 & 1.0 & Adding modules and objects to store in databases - Talha\\
+Jan 15 & 1.0 & Adding descriptions to modules - Talha\\
 \bottomrule
 \end{tabularx}
 
@@ -72,9 +72,8 @@ This section records information for easy reference.
   R & Requirement\\
   SC & Scientific Computing \\
   SRS & Software Requirements Specification\\
-  \progname & Explanation of program name\\
+  \progname & Application\\
   UC & Unlikely Change \\
-  \wss{etc.} & \wss{...}\\
   \bottomrule
 \end{tabular}\\
 
@@ -125,7 +124,7 @@ potential readers of this document are as follows:
   important for a maintainer to update the relevant sections of the document
   after changes have been made.
 \item Designers: Once the module guide has been written, it can be used to
-  check for consistency, feasibility and flexibility. Designers can verify the
+  check for consistency, feasibility, and flexibility. Designers can verify the
   system in various ways, such as consistency among modules, feasibility of the
   decomposition, and flexibility of the design.
 \end{itemize}
@@ -135,7 +134,7 @@ The rest of the document is organized as follows. Section
 requirements. Section \ref{SecMH} summarizes the module decomposition that
 was constructed according to the likely changes. Section \ref{SecConnection}
 specifies the connections between the software requirements and the
-modules. Section \ref{SecMD} gives a detailed description of the
+modules. Section \ref{SecCD} provides detailed descriptions of native data types. Section \ref{SecMD} gives a detailed description of the
 modules. Section \ref{SecTM} includes two traceability matrices. One checks
 the completeness of the design against the requirements provided in the SRS. The
 other shows the relation between anticipated changes and the modules. Section
@@ -157,11 +156,8 @@ adapted here is called design for
 change.
 
 \begin{description}
-\item[\refstepcounter{acnum} \actheacnum \label{acHardware}:] The specific
-  hardware on which the software is running.
-\item[\refstepcounter{acnum} \actheacnum \label{acInput}:] The format of the
-  initial input data.
-\item ...
+\item[\refstepcounter{acnum} \actheacnum \label{acHardware}:] The specific hardware on which the software is running.
+\item[\refstepcounter{acnum} \actheacnum \label{acPrefs}:] The \verb_preferences_ could be modified, depending on what the general response to the initial show preferences exist
 \end{description}
 
 \subsection{Unlikely Changes} \label{SecUchange}
@@ -174,10 +170,80 @@ will potentially need to be modified. Hence, it is not intended that these
 decisions will be changed.
 
 \begin{description}
-\item[\refstepcounter{ucnum} \uctheucnum \label{ucIO}:] Input/Output devices
-  (Input: File and/or Keyboard, Output: File, Memory, and/or Screen).
-\item ...
+\item[\refstepcounter{ucnum} \uctheucnum \label{ucIO}:] Input/Output devices (Input: Mouse, Output: File, Memory, and/or Screen)
+\item[\refstepcounter{ucnum} \uctheucnum \label{ucCD}:] The \verb_user_ and \verb_group_ data types will retain the information describe in Section \ref{SecCD}
+\item[\refstepcounter{ucnum} \uctheucnum \label{ucAPIMT}:] The API for movies and tv shows will stay the same
+\item[\refstepcounter{ucnum} \uctheucnum \label{ucAPIA}:] The API for animes will stay the same
 \end{description}
+
+\section{Custom Data Types} \label{SecCD}
+Flick Picker uses standard data types, but a handful custom ones have to be created, defined below. All the data types are a key-value pair.
+
+\subsection{Preferences}
+\begin{tabularx}{\textwidth}{|p{3.3cm}|p{3cm}|X|}
+\hline
+{\bf Key Name} & {\bf Value Type} & {\bf Description}\\
+\hline
+\verb_anime_ & bool & Allow animes as show recommendations\\
+\hline
+\verb_movie_ & bool & Allow movies as show recommendations\\
+\hline
+\verb_tv_ & bool & Allow tv shows as show recommendations\\
+\hline
+\verb_series_ & bool & Allow a show with multiple seasons\\
+\hline
+\verb_genre_ & enum & Which type of show is allowed\\
+\hline
+\verb_runtime_ & enum & Length of show allowed\\
+\hline
+\verb_rating_ & enum & Minimum rating of show allowed\\
+\hline
+\end{tabularx}
+
+\subsection{User}
+\begin{tabularx}{\textwidth}{|p{3.32cm}|p{3cm}|X|}
+\hline
+{\bf Key Name} & {\bf Value Type} & {\bf Description}\\
+\hline
+\verb_id_ & int & Unique user identifier\\
+\hline
+\verb_name_ & String & Name of the user\\
+\hline
+\verb_email_ & String & The email user created their account with\\
+\hline
+\verb_friends_ & List\textlangle{}int\textrangle & Friends the user has\\
+\hline
+\verb_preferences_ & Preferences & Show constraints user has selected\\
+\hline
+\end{tabularx}
+
+\subsection{Group}
+\begin{tabularx}{\textwidth}{|p{3.3cm}|p{3cm}|X|}
+\hline
+{\bf Key Name} & {\bf Value Type} & {\bf Description}\\
+\hline
+\verb_id_ & int & Unique group identifier\\
+\hline
+\verb_owner_ & int & Group owner identifier\\
+\hline
+\verb_users_ & List\textlangle{}int\textrangle & List of users in the group\\
+\hline
+\verb_preferences_ & List\textlangle{}Preferences\textrangle & All preferences of users in the group\\
+\hline
+\verb_recommendations_ & List\textlangle{}String\textrangle & Shows recommended to the group\\
+\hline
+\end{tabularx}
+
+\subsection{Authentication}
+\begin{tabularx}{\textwidth}{|p{3.3cm}|p{3cm}|X|}
+\hline
+{\bf Key Name} & {\bf Value Type} & {\bf Description}\\
+\hline
+\verb_id_ & int & Unique user identifier, linked to \verb_User_ \\
+\hline
+\verb_password_ & Hash & Hashed password stored\\
+\hline
+\end{tabularx}
 
 \section{Module Hierarchy} \label{SecMH}
 
@@ -188,7 +254,19 @@ actually be implemented.
 
 \begin{description}
 \item [\refstepcounter{mnum} \mthemnum \label{mHH}:] Hardware-Hiding Module
-\item ...
+\item [\refstepcounter{mnum} \mthemnum \label{mBH}:] Behaviour-Hiding Module
+	\begin{itemize}
+		\item [\refstepcounter{mnum} \mthemnum \label{mNL}:] Native Login Module
+		\item [\refstepcounter{mnum} \mthemnum \label{mF}:] Friends Module
+		\item [\refstepcounter{mnum} \mthemnum \label{mG}:] Groups Module
+		\item [\refstepcounter{mnum} \mthemnum \label{mP}:] Profile Module
+	\end{itemize}
+\item [\refstepcounter{mnum} \mthemnum \label{mSD}:] Software Decision Module
+	\begin{itemize}
+		\item [\refstepcounter{mnum} \mthemnum \label{mMA}:] Matching Algorithm Module
+		\item [\refstepcounter{mnum} \mthemnum \label{mOL}:] OAuth Login Module
+		\item [\refstepcounter{mnum} \mthemnum \label{mA}:] API Module
+	\end{itemize}
 \end{description}
 
 
@@ -202,19 +280,15 @@ actually be implemented.
 {Hardware-Hiding Module} & ~ \\
 \midrule
 
-\multirow{7}{0.3\textwidth}{Behaviour-Hiding Module} & ?\\
-& ?\\
-& ?\\
-& ?\\
-& ?\\
-& ?\\
-& ?\\ 
-& ?\\
+\multirow{4}{0.3\textwidth}{Behaviour-Hiding Module} & {Native Login Module}\\
+& Friends Module\\
+& Groups Module\\
+& Profile Module\\
 \midrule
 
-\multirow{3}{0.3\textwidth}{Software Decision Module} & {?}\\
-& ?\\
-& ?\\
+\multirow{3}{0.3\textwidth}{Software Decision Module} & {Matching Algorithm Module}\\
+& OAuth Login Module\\
+& API Module\\
 \bottomrule
 
 \end{tabular}
@@ -226,16 +300,7 @@ actually be implemented.
 
 The design of the system is intended to satisfy the requirements developed in
 the SRS. In this stage, the system is decomposed into modules. The connection
-between requirements and modules is listed in Table \ref{TblRT}.
-
-\wss{The intention of this section is to document decisions that are made
-  ``between'' the requirements and the design.  To satisfy some requirements,
-  design decisions need to be made.  Rather than make these decisions implicit,
-  they are explicitly recorded here.  For instance, if a program has security
-  requirements, a specific design decision may be made to satisfy those
-  requirements with a password.  In scientific examples, the choice of algorithm
-could potentially go here, if that is a decision that is exposed by the
-interface.}
+between requirements and modules is listed in Table~\ref{TblRT}.
 
 \section{Module Decomposition} \label{SecMD}
 
@@ -264,7 +329,7 @@ to be implemented.
 \item[Implemented By:] OS
 \end{description}
 
-\subsection{Behaviour-Hiding Module}
+\subsection{Behaviour-Hiding Module (\mref{mBH})}
 
 \begin{description}
 \item[Secrets:]The contents of the required behaviours.
@@ -276,21 +341,54 @@ to be implemented.
 \item[Implemented By:] --
 \end{description}
 
-\subsubsection{Input Format Module (\mref{mInput})}
+%\subsubsection{Input Format Module (\mref{mInput})}
+%
+%\begin{description}
+%\item[Secrets:]The format and structure of the input data.
+%\item[Services:]Converts the input data into the data structure used by the
+%  input parameters module.
+%\item[Implemented By:] [Your Program Name Here]
+%\item[Type of Module:] [Record, Library, Abstract Object, or Abstract Data Type]
+%  [Information to include for leaf modules in the decomposition by secrets tree.]
+%\end{description}
+
+\subsubsection{Native Login Module (\mref{mNL})}
 
 \begin{description}
-\item[Secrets:]The format and structure of the input data.
-\item[Services:]Converts the input data into the data structure used by the
-  input parameters module.
-\item[Implemented By:] [Your Program Name Here]
-\item[Type of Module:] [Record, Library, Abstract Object, or Abstract Data Type]
-  [Information to include for leaf modules in the decomposition by secrets tree.]
+\item[Secrets:] Hides authentication data from the rest of the software, isolating the authentication as the rest of the software has no use for a user's email or password
+\item[Services:] Native log in to the application
+\item[Implemented By:] \progname
+\item[Type of Module:] Record
 \end{description}
 
-\subsubsection{Etc.}
+\subsubsection{Friends Module (\mref{mF})}
 
+\begin{description}
+\item[Secrets:] The methodology and data related to adding/deleting friends
+\item[Services:] Allows a user to add and delete friend's but sharing their nickname or email address with one another
+\item[Implemented By:] \progname
+\item[Type of Module:] Record
+\end{description}
 
-\subsection{Software Decision Module}
+\subsubsection{Groups Module (\mref{mG})}
+
+\begin{description}
+\item[Secrets:] The methodology and data used to create a group with other friends
+\item[Services:] Allows the user to create, join, leave, and delete individual groups, invite friends, and receive recommendations on a show to watch based on the groups' preferences
+\item[Implemented By:] \progname
+\item[Type of Module:] Abstract Object
+\end{description}
+
+\subsubsection{Profile Module (\mref{mP})}
+
+\begin{description}
+\item[Secrets:] The methodology and data for an individual user
+\item[Services:] Allows the user to modify their preferences and general profile
+\item[Implemented By:] \progname
+\item[Type of Module:] Abstract Object
+\end{description}
+
+\subsection{Software Decision Module (\mref{mSD})}
 
 \begin{description}
 \item[Secrets:] The design decision based on mathematical theorems, physical
@@ -303,7 +401,32 @@ to be implemented.
 \item[Implemented By:] --
 \end{description}
 
-\subsubsection{Etc.}
+\subsubsection{Matching Algorithm Module (\mref{mMA})}
+
+\begin{description}
+\item[Secrets:] The methodology and data on how recommendations are created
+\item[Services:] Converts the input data to a list of recommendations for a \verb_group_
+\item[Implemented By:] \progname
+\item[Type of Module:] Abstract Object
+\end{description}
+
+\subsubsection{OAuth Login Module (\mref{mOL})}
+
+\begin{description}
+\item[Secrets:] OAuthentication login details, through Google, Meta, or Apple
+\item[Services:] Allows the user to sign up and login through an OAuth provider
+\item[Implemented By:] Google, Meta, Apple OAuth services paired with \progname
+\item[Type of Module:] Library
+\end{description}
+
+\subsubsection{API Module (\mref{mA})}
+
+\begin{description}
+\item[Secrets:] Data behind fetching all the shows and organizing them
+\item[Services:] Allows \progname ~ to return a set of shows that match user preferences
+\item[Implemented By:] OMDb API and MyAnimeList API
+\item[Type of Module:] Library
+\end{description}
 
 \section{Traceability Matrix} \label{SecTM}
 
@@ -318,17 +441,17 @@ requirements and between the modules and the anticipated changes.
 \toprule
 \textbf{Req.} & \textbf{Modules}\\
 \midrule
-R1 & \mref{mHH}, \mref{mInput}, \mref{mParams}, \mref{mControl}\\
-R2 & \mref{mInput}, \mref{mParams}\\
-R3 & \mref{mVerify}\\
-R4 & \mref{mOutput}, \mref{mControl}\\
-R5 & \mref{mOutput}, \mref{mODEs}, \mref{mControl}, \mref{mSeqDS}, \mref{mSolver}, \mref{mPlot}\\
-R6 & \mref{mOutput}, \mref{mODEs}, \mref{mControl}, \mref{mSeqDS}, \mref{mSolver}, \mref{mPlot}\\
-R7 & \mref{mOutput}, \mref{mEnergy}, \mref{mControl}, \mref{mSeqDS}, \mref{mPlot}\\
-R8 & \mref{mOutput}, \mref{mEnergy}, \mref{mControl}, \mref{mSeqDS}, \mref{mPlot}\\
-R9 & \mref{mVerifyOut}\\
-R10 & \mref{mOutput}, \mref{mODEs}, \mref{mControl}\\
-R11 & \mref{mOutput}, \mref{mODEs}, \mref{mEnergy}, \mref{mControl}\\
+R1 & \mref{mNL}\\
+R2 & \mref{mOL}\\
+R3 & \mref{mNL}, \mref{mOL}\\
+R4 & \mref{mP}\\
+R5 & \mref{mP}\\
+R6 & \mref{mG}\\
+R7 & \mref{mF}, \mref{mG}\\
+R8 & \mref{mF}\\
+R9 & \mref{mG}, \mref{mA}\\
+R10 & \mref{mG}, \mref{mP}\\
+R11 & \mref{mG}, \mref{mP}\\
 \bottomrule
 \end{tabular}
 \caption{Trace Between Requirements and Modules}
@@ -342,17 +465,7 @@ R11 & \mref{mOutput}, \mref{mODEs}, \mref{mEnergy}, \mref{mControl}\\
 \textbf{AC} & \textbf{Modules}\\
 \midrule
 \acref{acHardware} & \mref{mHH}\\
-\acref{acInput} & \mref{mInput}\\
-\acref{acParams} & \mref{mParams}\\
-\acref{acVerify} & \mref{mVerify}\\
-\acref{acOutput} & \mref{mOutput}\\
-\acref{acVerifyOut} & \mref{mVerifyOut}\\
-\acref{acODEs} & \mref{mODEs}\\
-\acref{acEnergy} & \mref{mEnergy}\\
-\acref{acControl} & \mref{mControl}\\
-\acref{acSeqDS} & \mref{mSeqDS}\\
-\acref{acSolver} & \mref{mSolver}\\
-\acref{acPlot} & \mref{mPlot}\\
+\acref{acPrefs} & \mref{mP}\\
 \bottomrule
 \end{tabular}
 \caption{Trace Between Anticipated Changes and Modules}
@@ -378,6 +491,8 @@ because they use modules from the lower levels.
 \caption{Use hierarchy among modules}
 \label{FigUH}
 \end{figure}
+
+\newpage
 
 %\section*{References}
 
