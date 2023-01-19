@@ -192,7 +192,7 @@ Flick Picker uses standard data types, but a handful custom ones have to be crea
 \hline
 \verb_series_ & bool & Allow a show with multiple seasons\\
 \hline
-\verb_genre_ & enum & Which type of show is allowed\\
+\verb_genre_ & List\textlangle{}enum\textrangle & Which type of show is allowed\\
 \hline
 \verb_runtime_ & enum & Length of show allowed\\
 \hline
@@ -449,7 +449,7 @@ R5 & \mref{mP}\\
 R6 & \mref{mG}\\
 R7 & \mref{mF}, \mref{mG}\\
 R8 & \mref{mF}\\
-R9 & \mref{mG}, \mref{mA}\\
+R9 & \mref{mG}, \mref{mMA}, \mref{mA}\\
 R10 & \mref{mG}, \mref{mP}\\
 R11 & \mref{mG}, \mref{mP}\\
 \bottomrule
@@ -487,7 +487,7 @@ because they use modules from the lower levels.
 
 \begin{figure}[H]
 \centering
-%\includegraphics[width=0.7\textwidth]{UsesHierarchy.png}
+\includegraphics[width=0.7\textwidth]{UsesHierarchy.png}
 \caption{Use hierarchy among modules}
 \label{FigUH}
 \end{figure}
