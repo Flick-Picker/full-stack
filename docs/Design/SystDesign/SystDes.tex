@@ -47,6 +47,7 @@
 \toprule {\bf Date} & {\bf Version} & {\bf Notes}\\
 \midrule
 January 18 & 1.0 & Added content to section 6.4, some potential content to 6.1\\
+January 18 & 1.1 & Completed Sections 3, 4, 6.1, 6.2, 6.4\\
 \bottomrule
 \end{tabularx}
 
@@ -83,14 +84,10 @@ This section records information for easy reference.
 \pagenumbering{arabic}
 
 \section{Introduction}
-
-\wss{Include references to your other documentation}
+\hspace*{14pt} In order to continue with the implementation of Flick Picker, it is important to cretae a System Design document. This will help in outlining the design decisions that were made so as to not cause confusion and increased work in the implementation process. It is also important to outline the tasks, both in regard to the work that needs to be done and with whom the work has been assigned. This document, including these design decisions and timeline, will be complimented by the MG and the MIS to futher outline the specifications of Flick Picker. 
 
 \section{Purpose}
-
-\wss{Purpose of your design documentation}
-
-\wss{Point to your other design documents}
+\hspace*{14pt} The purpose of this design documentation is to cover the behaviour of our system under a variety of conditions, detail the components of the system, discuss any connections between design choices and the requirements, user interface designs, and a timeline of when tasks should be complete and who should be completing them. Information in this design document should support or further explain the information found in the MG and MIS.
 
 \section{Scope}
 
@@ -106,15 +103,22 @@ The system will allow the user to interact with the application, in order to fin
 \section{Project Overview}
 
 \subsection{Normal Behaviour}
-%\begin{itemize}
-%	\item \textbf{Login Module:} Provided the email and password, this module will communicate with the login database to authorize or deny the user's login.
-%	\item \textbf{Profile module:} Flick picker will allow for an individual to find a movie, tv show, or anime that fits their preferences.
-%	\item Flick picker will allow for a group of individuals to find a movie, tv show, or anime that most closely fits the preferences of the group.
-%\end{itemize}
+\begin{itemize}
+	\item \textbf{Native Login Module:} Provided the email and password, this module will communicate with the database module to authorize or deny the user's login.
+	\item \textbf{OAuth Login Module:} Provided the authorization from an OAuth login, this module will communicate with the database module to authorize the user's login or account creation.
+	\item \textbf{Database Module:} Communicates with the database to verify logins, store Movie, TV Show, and Anime data, and to retrieve user data.
+	\item \textbf{Profile Module:} Communicates with the Database module to get a user's information to provide to the UI. Allows for users to add friends and create or join groups. 
+	\item \textbf{Friends Module:} Allows for users to see their friends, accept friend invites, and invite their friends to groups. 
+	\item \textbf{Group Module:} Compiles preferences of users and sends this information to the Matching Algorithm Module. Presents the received recommendations to the users of the group. 
+	\item \textbf{Matching Algorithm Module:} Receives the set of preferences and queries the API Module using these preferences to create a set of Movies, TV Shows, and/or Anime recommendations. Sends this set of recommendations back to the group module. 
+	\item \textbf{API Module:} Queries external APIs daily for the most popular Movies, TV Shows, and Anime. Sends this information to the database. Receives query calls from the Matching Algorithm Module and returns information to it. 
+\end{itemize}
 
 \subsection{Undesired Event Handling}
-
-\wss{How you will approach undesired events}
+\begin{itemize}
+	\item \textbf{API Module - No Match Found:} If the Matching Algorithm queries the API Module and it cannot find Movies, TV Shows, or Anime that match the filters, the API module will send requests to the external APIs with these filters. 
+	\item \textbf{Various Modules - Rate Limiting:} If an individual attempts to overload the system with certain requests, they will be timed out via rate limiting.
+\end{itemize}
 
 \subsection{Component Diagram}
 \begin{figure}[H]
@@ -134,7 +138,7 @@ Google and Facebook OAuth will provide authorization and an email to Flick Picke
 Upon clicking the logout button, the user will be brought to the login screen and their token is removed.
 
 \subsubsection{Connection Between Profile/Group Requirements and Design}
-
+\hspace*{14pt} There will be a page for users to modify their information, including username and password if the account is not an OAuth account. Additionally, there will be a page for users to access and modify their preferences (e.g. genre, show type, etc.). A separate page will enable users to create and join groups. Group invites will be provided through the invited user's email or friends page. The owner of a group can view the group members, join requests, and other information regarding group management on the group management page. 
 
 \subsubsection{connection Between Recommendation Requirements and Design}
 \hspace*{14pt} Daily, Flick Picker will retrieve information about the top 3000 most popular Movies, TV Shows, and Anime and store that information for quick access. This information will be used in the vast majority of all recommendations. If a recommendation cannot be found within these Movies, TV Shows, or Anime, additional queries will be sent to the relevant APIs to find a recommendation.
@@ -166,8 +170,7 @@ N/A
 N/A
 
 \section{Design of Communication Protocols}
-
-\wss{If appropriate}
+N/A
 
 \section{Timeline}
 
@@ -186,10 +189,13 @@ N/A
 interaction with, the user interface}
 
 \section{Mechanical Hardware}
+N/A
 
 \section{Electrical Components}
+N/A
 
 \section{Communication Protocols}
+N/A
 
 \section{Reflection}
 
