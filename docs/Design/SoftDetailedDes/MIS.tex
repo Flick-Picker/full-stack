@@ -54,7 +54,7 @@ urlcolor=cyan          % color of external links
 \toprule {\bf Date} & {\bf Version} & {\bf Notes}\\
 \midrule
 January 18 & 1.0 & Added title, Module Decomposition table from Module Guide\\
-Date 2 & 1.1 & Notes\\
+January 18 & 2.0 & Updated section 2, 3, 4\\
 \bottomrule
 \end{tabularx}
 
@@ -62,9 +62,24 @@ Date 2 & 1.1 & Notes\\
 
 \section{Symbols, Abbreviations and Acronyms}
 
-See SRS Documentation at \wss{give url}
+See SRS Documentation at \url{https://github.com/Flick-Picker/full-stack/blob/develop/docs/SRS/SRS.pdf}
 
-\wss{Also add any additional symbols, abbreviations or acronyms}
+\begin{center}
+	\renewcommand{\arraystretch}{1.2}
+	\noindent 
+	\begin{tabular}{l l p{7.5cm}} 
+		\toprule 
+		\textbf{Term} & \textbf{Abbreviation}\\ 
+		\midrule
+		True & T\\
+		False & F\\
+		\bottomrule
+	\end{tabular}
+\end{center}
+
+
+
+
 
 \newpage
 
@@ -76,17 +91,14 @@ See SRS Documentation at \wss{give url}
 
 \section{Introduction}
 
-The following document details the Module Interface Specifications for
-\wss{Fill in your project name and description}
+The following document details the Module Interface Specifications for Flick Picker. Flick Picker is a web application that allows people to select their preferences in regarding watchable media genres and find recommendations of things to watch based on those preferences, being able to take multiple sets of preferences into account to find new media. Users can find new things to watch by themselves using only their preferences, or join user groups that find media based on the preferences of everyone in the group.
 
 Complementary documents include the System Requirement Specifications
 and Module Guide.  The full documentation and implementation can be
-found at \url{...}.  \wss{provide the url for your repo}
+found at \url{https://github.com/Flick-Picker/full-stack}.
 
 \section{Notation}
 
-\wss{You should describe your notation.  You can use what is below as
-  a starting point.}
 
 The structure of the MIS for modules comes from \citet{HoffmanAndStrooper1995},
 with the addition that template modules have been adapted from
@@ -108,50 +120,42 @@ character & char & a single symbol or digit\\
 integer & $\mathbb{Z}$ & a number without a fractional component in (-$\infty$, $\infty$) \\
 natural number & $\mathbb{N}$ & a number without a fractional component in [1, $\infty$) \\
 real & $\mathbb{R}$ & any number in (-$\infty$, $\infty$)\\
+boolean & bool & either T or F \\
 \bottomrule
-\end{tabular} 
+\end{tabular}
 \end{center}
 
 \noindent
-The specification of \progname \ uses some derived data types: sequences, strings, and
-tuples. Sequences are lists filled with elements of the same data type. Strings
-are sequences of characters. Tuples contain a list of values, potentially of
-different types. In addition, \progname \ uses functions, which
-are defined by the data types of their inputs and outputs. Local functions are
-described by giving their type signature followed by their specification.
+The specification of \progname \ uses some common derived data types: sequences and strings. Sequences are lists filled with elements of the same data type. Strings are sequences of characters. Flick Picker also uses enumerated types, which are data types that hold a static set of constant values. In addition, \progname \ uses functions, which are defined by the data types of their inputs and outputs. Local functions are
+described by giving their type signature followed by their specification.\pagebreak
+
+Flick Picker also uses its own custom data types, summarized in the following table.
+
+
+
+\begin{center}
+	\renewcommand{\arraystretch}{1.2}
+	\noindent 
+	\begin{tabular}{l l p{7.5cm}} 
+		\toprule 
+		\textbf{Data Type} & \textbf{Notation} & \textbf{Description}\\ 
+		\midrule
+		Preferences & Preferences & a class that stores multiple boolean and enumerated values to keep track of user preferences such as genre or runtime\\
+		User & User & a class that stores user information such as an ID, name, and Preferences \\
+		Group & Group & a class that stores information about a user group, including an ID, owner, and user list. \\
+		Authentication & Authentication & a class that stores information about a user's login, connecting a user ID to the appropriate password\\		
+		\bottomrule
+	\end{tabular} 
+\end{center}
+
+
+
+
 
 \section{Module Decomposition}
 
 The following table is taken directly from the Module Guide document for this project.
 
-\begin{table}[h!]
-\centering
-\begin{tabular}{p{0.3\textwidth} p{0.6\textwidth}}
-\toprule
-\textbf{Level 1} & \textbf{Level 2}\\
-\midrule
-
-{Hardware-Hiding} & ~ \\
-\midrule
-
-\multirow{7}{0.3\textwidth}{Behaviour-Hiding} & Input Parameters\\
-& Output Format\\
-& Output Verification\\
-& Temperature ODEs\\
-& Energy Equations\\ 
-& Control Module\\
-& Specification Parameters Module\\
-\midrule
-
-\multirow{3}{0.3\textwidth}{Software Decision} & {Sequence Data Structure}\\
-& ODE Solver\\
-& Plotting\\
-\bottomrule
-
-\end{tabular}
-\caption{Module Hierarchy}
-\label{TblMH}
-\end{table}
 
 \begin{table}[h!]
 	\centering
@@ -180,7 +184,6 @@ The following table is taken directly from the Module Guide document for this pr
 \end{table}
 
 \newpage
-~\newpage
 
 \section{MIS of \wss{Module Name}} \label{Module} \wss{Use labels for
   cross-referencing}
