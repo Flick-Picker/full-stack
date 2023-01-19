@@ -48,6 +48,7 @@
 \midrule
 January 18 & 1.0 & Added content to section 6.4, some potential content to 6.1\\
 January 18 & 1.1 & Completed Sections 3, 4, 6.1, 6.2, 6.4\\
+
 \bottomrule
 \end{tabularx}
 
@@ -84,7 +85,7 @@ This section records information for easy reference.
 \pagenumbering{arabic}
 
 \section{Introduction}
-\hspace*{14pt} In order to continue with the implementation of Flick Picker, it is important to create a System Design document. This will help in outlining the design decisions that were made so as to not cause confusion and increased work in the implementation process. It is also important to outline the tasks, both in regard to the work that needs to be done and with whom the work has been assigned. This document, including these design decisions and timeline, will be complimented by the MG and the MIS to futher outline the specifications of Flick Picker. 
+\hspace*{14pt} In order to continue with the implementation of Flick Picker, it is important to create a System Design document. This will help in outlining the design decisions that were made so as to not cause confusion and increased work in the implementation process. It is also important to outline the tasks, both in regard to the work that needs to be done and with whom the work has been assigned. This document, including these design decisions and timeline, will be complimented by the MG and the MIS to further outline the specifications of Flick Picker. 
 
 \section{Purpose}
 \hspace*{14pt} The purpose of this design documentation is to cover the behaviour of our system under a variety of conditions, detail the components of the system, discuss any connections between design choices and the requirements, user interface designs, and a timeline of when tasks should be complete and who should be completing them. Information in this design document should support or further explain the information found in the MG and MIS.
@@ -271,11 +272,13 @@ graduate attribute of Problem Analysis and Design.  Please answer the following 
   (LO\_Explores)
 \end{enumerate}
 
-\subsection{Talha Reflection}
-\begin{enumerate}
-	\item Our solution's two most significant limitations are the number of developers and time constraints. As 7eam only has five developers with solely software engineering experience, we need to learn how to market a product. We also need multiple years of development experience to avoid pitfalls that individuals who have worked in the industry would know to avoid. If we were given an unlimited number of individuals to make an entire development team with dedicated teams per dev-op, frontend, backend, and business teams, the application would see a much more significant influx of users and have an incredibly refined design. Furthermore, we are constrained by time, not just by the due dates but by how much content we five individual developers can put in. We could refine the application incredibly well with infinite time and no other resources.
+\subsection{Group Reflection}
+1. Our solution's two most significant limitations are the number of developers and time constraints. As 7eam only has five developers with solely software engineering experience, we need to learn how to market a product. We also need multiple years of development experience to avoid pitfalls that individuals who have worked in the industry would know to avoid. If we were given an unlimited number of individuals to make an entire development team with dedicated teams per dev-op, frontend, backend, and business teams, the application would see a much more significant influx of users and have an incredibly refined design. Furthermore, we are constrained by time, not just by the due dates but by how much content we five individual developers can put in. We could refine the application incredibly well with infinite time and no other resources. 
 	
-	\item Another design solution was a minor decision about pairing and preferences together. The benefit is that they go hand-in-hand, where users are directly linked to their preferences. The downside being it adds an overhead to updating the preferences list, and since we are going to take into account user feedback for the preferences, it could go through a handful of updates. Therefore splitting it off into a module in isolation and linking the user is a safer implementation.
-\end{enumerate}
+Outside of those limitations, the APIs also proved to be limiting. There are some ideas that the team had that we were unable to go through with due to the lacking APIs, especially on the Anime side of things. If these APIs were available or if this information magically appeared in our database, we could have developed a more complex algorithm and potentially some cool new features. 
+	
+2. Another design solution was a minor decision about pairing users and preferences together. The benefit is that they go hand-in-hand, where users are directly linked to their preferences. The downside being it adds an overhead to updating the preferences list, and since we are going to take into account user feedback for the preferences, it could go through a handful of updates. Therefore splitting it off into a module in isolation and linking the user is a safer implementation.
+
+Another design decision that we ended up not going with was to have, alongside each preference, a scale to say how important that preference is to a user, potentially on a scale of 1-10 or 1-3. We felt like this would help people who might not care much about the type of entertainment (Movie, TV Show, Anime) in comparison to the genre (e.g. they really love action and comedy but hate romance). Ultimately this idea was placed on a potential addition list since it doesn't add enough value to the system in comparison to the complication it poses to both the users and the developers. 
 
 \end{document}
