@@ -46,8 +46,7 @@
 \begin{tabularx}{\textwidth}{p{3cm}p{2cm}X}
 \toprule {\bf Date} & {\bf Version} & {\bf Notes}\\
 \midrule
-Date 1 & 1.0 & Notes\\
-Date 2 & 1.1 & Notes\\
+January 18 & 1.0 & Added content to section 6.4, some potential content to 6.1\\
 \bottomrule
 \end{tabularx}
 
@@ -101,6 +100,11 @@ your system and the environment around it.)}
 \section{Project Overview}
 
 \subsection{Normal Behaviour}
+%\begin{itemize}
+%	\item \textbf{Login Module:} Provided the email and password, this module will communicate with the login database to authorize or deny the user's login.
+%	\item \textbf{Profile module:} Flick picker will allow for an individual to find a movie, tv show, or anime that fits their preferences.
+%	\item Flick picker will allow for a group of individuals to find a movie, tv show, or anime that most closely fits the preferences of the group.
+%\end{itemize}
 
 \subsection{Undesired Event Handling}
 
@@ -110,22 +114,33 @@ your system and the environment around it.)}
 
 \subsection{Connection Between Requirements and Design} \label{SecConnection}
 
-\wss{The intention of this section is to document decisions that are made
-  ``between'' the requirements and the design.  To satisfy some requirements,
-  design decisions need to be made.  Rather than make these decisions implicit,
-  they are explicitly recorded here.  For instance, if a program has security
-  requirements, a specific design decision may be made to satisfy those
-  requirements with a password.}
+\subsubsection{Connection Between Authentication Requirements and Design}
+\hspace*{14pt} For email and password authentication, the user's email and a hashed form of their password are stored in the database. Upon login request, the inputted email and password will be compared to the pairs in the database and the login will either succeed or fail depending on whether a match is found. 
+
+Google and Facebook OAuth will provide authorization and an email to Flick Picker which will have / create an account with this email. If an account with this email already exists using OAuth, the user is logged in successfully. If an account using the previous method (email and password) exists, the user will be prompted to login using their email and password as above. If an account with this email does not exist, the user will be logged in and a new OAuth account will be created. They will then be brought to the new user page (creation of username, preferences, etc.). 
+
+Upon clicking the logout button, the user will be brought to the login screen and their token is removed.
+
+\subsubsection{Connection Between Profile/Group Requirements and Design}
+
+
+\subsubsection{connection Between Recommendation Requirements and Design}
+\hspace*{14pt} Daily, Flick Picker will retrieve information about the top 3000 most popular Movies, TV Shows, and Anime and store that information for quick access. This information will be used in the vast majority of all recommendations. If a recommendation cannot be found within these Movies, TV Shows, or Anime, additional queries will be sent to the relevant APIs to find a recommendation.
+
+During the recommendation process for a group, individual users reflect their desire to watch a recommendation using the 'like', 'neutral', or 'dislike' buttons. This information will be stored alongside their preferences to aid in future recommendations for both the group and the individuals. 
+
+Given user permission, Flick Picker will send emails to all members in a group once a recommendation has been chosen. 
 
 \section{System Variables}
 
-\wss{Include this section for Mechatronics projects}
-
 \subsection{Monitored Variables}
+N/A
 
 \subsection{Controlled Variables}
+N/A
 
 \subsection{Constants Variables}
+N/A
 
 \section{User Interfaces}
 
@@ -133,19 +148,10 @@ your system and the environment around it.)}
 needed. Drawings, Sketches, Figma}
 
 \section{Design of Hardware}
-
-\wss{Most relevant for mechatronics projects}
-\wss{Show what will be acquired}
-\wss{Show what will be built, with detail on fabrication and materials}
-\wss{Include appendices as appropriate, possibly with sketches, drawings, CAD, etc}
+N/A
 
 \section{Design of Electrical Components}
-
-\wss{Most relevant for mechatronics projects}
-\wss{Show what will be acquired}
-\wss{Show what will be built, with detail on fabrication and materials}
-\wss{Include appendices as appropriate, possibly with sketches, drawings,
-circuit diagrams, etc}
+N/A
 
 \section{Design of Communication Protocols}
 
