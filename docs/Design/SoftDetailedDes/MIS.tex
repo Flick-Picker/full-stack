@@ -53,7 +53,7 @@ urlcolor=cyan          % color of external links
 \begin{tabularx}{\textwidth}{p{3cm}p{2cm}X}
 \toprule {\bf Date} & {\bf Version} & {\bf Notes}\\
 \midrule
-Date 1 & 1.0 & Notes\\
+January 18 & 1.0 & Added title, Module Decomposition table from Module Guide\\
 Date 2 & 1.1 & Notes\\
 \bottomrule
 \end{tabularx}
@@ -151,6 +151,32 @@ The following table is taken directly from the Module Guide document for this pr
 \end{tabular}
 \caption{Module Hierarchy}
 \label{TblMH}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{p{0.3\textwidth} p{0.6\textwidth}}
+		\toprule
+		\textbf{Level 1} & \textbf{Level 2}\\
+		\midrule
+		
+		{Hardware-Hiding Module} & ~ \\
+		\midrule
+		
+		\multirow{4}{0.3\textwidth}{Behaviour-Hiding Module} & {Native Login Module}\\
+		& Friends Module\\
+		& Groups Module\\
+		& Profile Module\\
+		\midrule
+		
+		\multirow{3}{0.3\textwidth}{Software Decision Module} & {Matching Algorithm Module}\\
+		& OAuth Login Module\\
+		& API Module\\
+		\bottomrule
+		
+	\end{tabular}
+	\caption{Module Hierarchy}
+	\label{TblMH}
 \end{table}
 
 \newpage
