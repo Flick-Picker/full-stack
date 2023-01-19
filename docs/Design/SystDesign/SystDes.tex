@@ -160,8 +160,37 @@ N/A
 
 \section{User Interfaces}
 
-\wss{Design of user interface for software and hardware.  Attach an appendix if
-needed. Drawings, Sketches, Figma}
+Mockups of the user interface were designed in Figma. Below are the mockups, organized by the module they fall under.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figma/login.png}
+	\caption{UI mockups of the Login Module. Note that both the Native Login Module and Auth Module are represented in the Login Page}
+	\label{FigUH}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figma/profile.png}
+	\caption{UI mockups of the Profile \& Friend Modules}
+	\label{FigUH}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{figma/groups.png}
+	\caption{UI mockups of the Group Module}
+	\label{FigUH}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{figma/voting.png}
+	\caption{UI mockups of the Matching Algorithm Module}
+	\label{FigUH}
+\end{figure}
+
+
 
 \section{Design of Hardware}
 N/A
@@ -173,8 +202,39 @@ N/A
 N/A
 
 \section{Timeline}
-
-\wss{Schedule of tasks and who is responsible}
+\begin{tabularx}{\textwidth}{|X|p{4cm}|p{2cm}|p{2cm}|}
+	\hline
+	{\bf Task} & {\bf Module} & {\bf Task Due Date} & {\bf Assigned To} \\
+	\hline
+	Create Login \& Password Reset Pages & Login (Native \& Auth) & Jan 23 & Talha\\
+	\hline
+	Integrate External APIs to backend & API & Jan 23 & Madhi\\
+	\hline
+	Setup Firebase DB & API, DB & Jan 23 & Jarrod\\
+	\hline
+	Create Home \& Profile Pages & Profile & Jan 25 & Andrew\\
+	\hline
+	Create Preference Pages & Profile & Jan 25 & Ali\\
+	\hline
+	Add native login functionality & Native Login & Jan 30 & Jarrod\\
+	\hline
+	Add Auth functionality & Auth Login & Jan 30 & Madhi\\
+	\hline
+	Create Groups Page & Group & Feb 2 & Ali\\
+	\hline
+	Create Friends Page & Friend & Feb 2 & Andrew\\
+	\hline
+	Create Recommendation Pages & Friend & Feb 3 & Talha\\
+	\hline
+	Hookup Backend to Frontend & All & Feb 5 & Talha, Jarrod\\
+	\hline
+	Deploy Frontend and Backend & All & Feb 12 & Madhi\\
+	\hline
+	Manual Testing & All & continuous & Team\\
+	\hline
+	Integration Tests & All & Feb 15 & Team\\
+	\hline
+\end{tabularx}
 
 % \bibliographystyle {plainnat}
 % \bibliography{../../../refs/References}
