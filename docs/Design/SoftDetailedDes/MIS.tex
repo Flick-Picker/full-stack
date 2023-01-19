@@ -156,32 +156,30 @@ The following table is taken directly from the Module Guide document for this pr
 \newpage
 ~\newpage
 
-\section{MIS of \wss{Module Name}} \label{Module} \wss{Use labels for
-  cross-referencing}
+% MIS Module 3
 
-\wss{You can reference SRS labels, such as R\ref{R_Inputs}.}
-
-\wss{It is also possible to use \LaTeX for hypperlinks to external documents.}
+\section{MIS of M3} \label{Module}
 
 \subsection{Module}
-
-\wss{Short name for the module}
+Native Login Module
 
 \subsection{Uses}
-
+Types: User and Authentication
 
 \subsection{Syntax}
 
 \subsubsection{Exported Constants}
+N/A
 
 \subsubsection{Exported Access Programs}
 
 \begin{center}
-\begin{tabular}{p{2cm} p{4cm} p{4cm} p{2cm}}
+\begin{tabular}{p{3cm} p{4cm} p{4cm} p{3cm}}
 \hline
 \textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
 \hline
-\wss{accessProg} & - & - & - \\
+getProfile() & String email, String password & - & Unregistered email, Incorrect password \\
+signOut() & - & - & - \\
 \hline
 \end{tabular}
 \end{center}
@@ -189,43 +187,438 @@ The following table is taken directly from the Module Guide document for this pr
 \subsection{Semantics}
 
 \subsubsection{State Variables}
-
-\wss{Not all modules will have state variables.  State variables give the module
-  a memory.}
+int profileId, String profileName, String profileEmail, String profilePassword
 
 \subsubsection{Environment Variables}
-
-\wss{This section is not necessary for all modules.  Its purpose is to capture
-  when the module has external interaction with the environment, such as for a
-  device driver, screen interface, keyboard, file, etc.}
+N/A
 
 \subsubsection{Assumptions}
-
-\wss{Try to minimize assumptions and anticipate programmer errors via
-  exceptions, but for practical purposes assumptions are sometimes appropriate.}
+User has a profile with the OAuth service they use to sign-in, with the provider of that service being able to handle invalid sign-in attempts.
 
 \subsubsection{Access Routine Semantics}
 
-\noindent \wss{accessProg}():
+\noindent getProfile():
 \begin{itemize}
-\item transition: \wss{if appropriate} 
-\item output: \wss{if appropriate} 
-\item exception: \wss{if appropriate} 
+\item transition: User.id, User.name, User.email, Authentication.id, Authentication.password := profileId, profileName, profileEmail, profileId, profilePassword
+\item output: N/A
+\item exception: N/A
 \end{itemize}
 
-\wss{A module without environment variables or state variables is unlikely to
-  have a state transition.  In this case a state transition can only occur if
-  the module is changing the state of another module.}
-
-\wss{Modules rarely have both a transition and an output.  In most cases you
-  will have one or the other.}
+\noindent signOut():
+\begin{itemize}
+\item transition: Authentication := Null
+\item output: N/A
+\item exception: N/A
+\end{itemize}
 
 \subsubsection{Local Functions}
+N/A
 
-\wss{As appropriate} \wss{These functions are for the purpose of specification.
-  They are not necessarily something that is going to be implemented
-  explicitly.  Even if they are implemented, they are not exported; they only
-  have local scope.}
+% MIS Module 4
+
+\section{MIS of M4} \label{Module}
+
+\subsection{Module}
+Friends Module
+
+\subsection{Uses}
+Types: User
+
+\subsection{Syntax}
+
+\subsubsection{Exported Constants}
+N/A
+
+\subsubsection{Exported Access Programs}
+
+\begin{center}
+\begin{tabular}{p{3cm} p{4cm} p{4cm} p{3cm}}
+\hline
+\textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
+\hline
+findFriend() & String searchName & List\textlangle User\textrangle users & No user with that name \\
+addFriend() & - & - & - \\
+deleteFriend() & - & - & - \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection{Semantics}
+
+\subsubsection{State Variables}
+int friendId, String searchName
+
+\subsubsection{Environment Variables}
+N/A
+
+\subsubsection{Assumptions}
+The selected friend's account won't be deleted during the process of adding them
+
+\subsubsection{Access Routine Semantics}
+
+\noindent findFriend():
+\begin{itemize}
+\item transition: N/A
+\item output: List\textlangle User\textrangle $\rightarrow$ User.name == searchName
+\item exception: No user with the entered name
+\end{itemize}
+
+\noindent addFriend():
+\begin{itemize}
+\item transition: User.friends.append(friendId)
+\item output: N/A
+\item exception: N/A
+\end{itemize}
+
+\noindent deleteFriend():
+\begin{itemize}
+\item transition: User.friends.remove(friend)
+\item output: N/A
+\item exception: N/A
+\end{itemize}
+
+\subsubsection{Local Functions}
+N/A
+
+% MIS Module 5
+
+\section{MIS of M5} \label{Module}
+
+\subsection{Module}
+Groups Module
+
+\subsection{Uses}
+Types: User, Group
+
+\subsection{Syntax}
+
+\subsubsection{Exported Constants}
+N/A
+
+\subsubsection{Exported Access Programs}
+
+\begin{center}
+\begin{tabular}{p{3cm} p{4cm} p{4cm} p{3cm}}
+\hline
+\textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
+\hline
+createGroup() & List\textlangle User\textrangle selectedUsers, String groupName & Group newGroup & - \\
+deleteGroup() & Group selectedGroup & - & - \\
+joinGroup() & - & Group newGroup & - \\
+leaveGroup() & - & - & - \\
+inviteToGroup() & User name & - & - \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection{Semantics}
+
+\subsubsection{State Variables}
+Group newGroup, int groupId, List\textlangle int\textrangle groupIds, Group invitedGroup
+
+\subsubsection{Environment Variables}
+N/A
+
+\subsubsection{Assumptions}
+N/A
+
+\subsubsection{Access Routine Semantics}
+
+\noindent createGroup():
+\begin{itemize}
+\item transition: groupIds := selectedUsers.id
+\item output: Group newGroup := groupId, User.id, groupIds
+\item exception: N/A
+\end{itemize}
+
+\noindent deleteGroup():
+\begin{itemize}
+\item transition: selectedGroup := Null
+\item output: N/A
+\item exception: N/A
+\end{itemize}
+
+\noindent joinGroup():
+\begin{itemize}
+\item transition: N/A
+\item output: newGroup
+\item exception: N/A
+\end{itemize}
+
+\noindent leaveGroup():
+\begin{itemize}
+\item transition: deletes user id from old group, but changes no state variable in the module
+\item output: N/A
+\item exception: N/A
+\end{itemize}
+
+\noindent inviteToGroup():
+\begin{itemize}
+\item transition: N/A
+\item output: sends group info (name, id, user list, etc.) to the selected user
+\item exception: N/A
+\end{itemize}
+
+\subsubsection{Local Functions}
+N/A
+
+% MIS Module 6
+
+\section{MIS of M6} \label{Module}
+
+\subsection{Module}
+Profile Module
+
+\subsection{Uses}
+Types: User, Authentication, Preferences \\
+Modules: M4
+
+\subsection{Syntax}
+
+\subsubsection{Exported Constants}
+N/A
+
+\subsubsection{Exported Access Programs}
+
+\begin{center}
+\begin{tabular}{p{3cm} p{4cm} p{4cm} p{3cm}}
+\hline
+\textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
+\hline
+editName() & String newName & - & Invalid name (swearing, length, etc.) \\
+editEmail() & String newEmail & - & Invalid email \\
+editPassword() & String newPassword & - & User does not authenticate password change \\
+editFriends() & - & User.friends & - \\
+editPreferences() & Preferences newPreferences & newPreferences & - \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection{Semantics}
+
+\subsubsection{State Variables}
+User.name, User.email, Authentication.password, User.friends, User.preferences
+
+\subsubsection{Environment Variables}
+N/A
+
+\subsubsection{Assumptions}
+The user is the one making changes, and not some other party
+
+\subsubsection{Access Routine Semantics}
+
+\noindent editName():
+\begin{itemize}
+\item transition: User.name := newName
+\item output: N/A
+\item exception: N/A
+\end{itemize}
+
+\noindent editEmail():
+\begin{itemize}
+\item transition: User.email := newEmail
+\item output: N/A
+\item exception: N/A
+\end{itemize}
+
+\noindent editPassword():
+\begin{itemize}
+\item transition: Authentication.password := newPassword
+\item output: N/A
+\item exception: N/A
+\end{itemize}
+
+\noindent editFriends():
+\begin{itemize}
+\item transition: uses Friends Module
+\item output: User.friends
+\item exception: N/A
+\end{itemize}
+
+\noindent editPreferences():
+\begin{itemize}
+\item transition: User.preferences := newPreferences
+\item output: newPreferences
+\item exception: N/A
+\end{itemize}
+
+\subsubsection{Local Functions}
+editPreferences() will rely on functions that display and allow the user to chose the values for different Preferences keys
+
+% MIS Module 8
+
+\section{MIS of M8} \label{Module}
+
+\subsection{Module}
+Matching Algorithm Module
+
+\subsection{Uses}
+Types: Preferences
+
+\subsection{Syntax}
+
+\subsubsection{Exported Constants}
+N/A
+
+\subsubsection{Exported Access Programs}
+
+\begin{center}
+\begin{tabular}{p{3cm} p{4cm} p{4cm} p{3cm}}
+\hline
+\textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
+\hline
+recommendGroup() & Preferences group.preferences & List\textlangle String\textrangle shows & no matching results \\
+recommendUser() & Preferences user.preferences & List\textlangle String\textrangle shows & no matching results \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection{Semantics}
+
+\subsubsection{State Variables}
+N/A
+
+\subsubsection{Environment Variables}
+N/A
+
+\subsubsection{Assumptions}
+N/A
+
+\subsubsection{Access Routine Semantics}
+
+\noindent recommendGroup():
+\begin{itemize}
+\item transition: N/A
+\item output: List\textlangle String\textrangle shows
+\item exception: N/A
+\end{itemize}
+
+\noindent recommendUser():
+\begin{itemize}
+\item transition: N/A
+\item output: List\textlangle String\textrangle shows
+\item exception: N/A
+\end{itemize}
+
+\subsubsection{Local Functions}
+N/A
+
+% MIS Module 9
+
+\section{MIS of M9} \label{Module}
+
+\subsection{Module}
+OAuth Login Module
+
+\subsection{Uses}
+Types: User and Authentication
+
+\subsection{Syntax}
+
+\subsubsection{Exported Constants}
+N/A
+
+\subsubsection{Exported Access Programs}
+
+\begin{center}
+\begin{tabular}{p{3cm} p{4cm} p{4cm} p{3cm}}
+\hline
+\textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
+\hline
+getProfile() & String email, password & - & - \\
+signOut() & - & - & - \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection{Semantics}
+
+\subsubsection{State Variables}
+int profileId, String profileName, String profileEmail
+
+\subsubsection{Environment Variables}
+N/A
+
+\subsubsection{Assumptions}
+User has a profile with the OAuth service they use to sign-in, with the provider of that service being able to handle invalid sign-in attempts.
+
+\subsubsection{Access Routine Semantics}
+
+\noindent getProfile():
+\begin{itemize}
+\item transition: User.id, User.name, User.email := profileId, profileName, profileEmail
+\item output: N/A
+\item exception: N/A
+\end{itemize}
+
+\noindent signOut():
+\begin{itemize}
+\item transition: Authentication := Null
+\item output: N/A
+\item exception: N/A
+\end{itemize}
+
+\subsubsection{Local Functions}
+N/A as they are implemented within the OAuth (Google, Meta, or Apple)
+
+% MIS Module 10
+
+\section{MIS of M10} \label{Module}
+
+\subsection{Module}
+Matching Algorithm Module
+
+\subsection{Uses}
+Types: Preferences
+Modules: M8
+
+\subsection{Syntax}
+
+\subsubsection{Exported Constants}
+N/A
+
+\subsubsection{Exported Access Programs}
+
+\begin{center}
+\begin{tabular}{p{3cm} p{4cm} p{4cm} p{3cm}}
+\hline
+\textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
+\hline
+groupData() & M8.recommendGroup & List\textlangle String\textrangle media & no matching results \\
+userData() & M8.recommendUser & List\textlangle String\textrangle media & no matching results \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection{Semantics}
+
+\subsubsection{State Variables}
+N/A
+
+\subsubsection{Environment Variables}
+N/A
+
+\subsubsection{Assumptions}
+N/A
+
+\subsubsection{Access Routine Semantics}
+
+\noindent groupData():
+\begin{itemize}
+\item transition: N/A
+\item output: List\textlangle String\textrangle media
+\item exception: N/A
+\end{itemize}
+
+\noindent userData():
+\begin{itemize}
+\item transition: N/A
+\item output: List\textlangle String\textrangle media
+\item exception: N/A
+\end{itemize}
+
+\subsubsection{Local Functions}
+N/A
 
 \newpage
 
