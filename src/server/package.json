@@ -2,10 +2,10 @@
   "name": "flickpicker-api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.ts",
+  "main": "server.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.ts",
+    "start": "nodemon server.ts",
     "build": "tsc"
   },
   "author": "",

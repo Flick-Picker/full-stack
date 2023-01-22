@@ -4,8 +4,9 @@ import axios from 'axios';
 
 dotenv.config();
 
+const genre = require('./routes/genre');
+
 const app: Express = express();
-const port = process.env.PORT || 8080;
 const TMDB_KEY = process.env.TMDB_KEY || '';
 const TMDB_API_URL = 'https://api.themoviedb.org/3';
 
@@ -15,19 +16,7 @@ app.get('/', (req: Request, res: Response) => {
   res.send('Flick Picker API');
 });
 
-app.get('/genres/:mediatype', (req: Request, res: Response) => {
-  const requrl = `${TMDB_API_URL}/genre/${req.params.mediatype}/list`;
-  axios
-    .get(requrl, {
-      params: {
-        api_key: TMDB_KEY,
-        language: 'en-US',
-      },
-    })
-    .then((resp) => resp.data)
-    .then((data) => res.send(data))
-    .catch((err) => res.send(err));
-});
+app.use('/api/genres', genre);
 
 const discoverMedia = async (mediatype: string, genres: string) => {
   try {
@@ -82,10 +71,6 @@ app.get('/recommendations/:mediatype', async (req: Request, res: Response) => {
   res.send(recs.concat(recs2).concat(recs3));
 });
 
-app.listen(port, () => {
-  console.log(`⚡️[server]: Server is running at http://localhost:${port}/`);
-});
-
 interface Genre {
   [genre: number]: number;
 }
@@ -93,3 +78,5 @@ interface Genre {
 interface Preference {
   fav_genre: number;
 }
+
+module.exports = app;
