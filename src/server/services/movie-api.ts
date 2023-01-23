@@ -1,7 +1,8 @@
 import dotenv from 'dotenv';
 import axios from 'axios';
+import path from 'path';
 
-dotenv.config();
+dotenv.config({ path: path.resolve(__dirname, '../.env') });
 const TMDB_KEY = process.env.TMDB_KEY || '';
 const TMDB_API_URL = 'https://api.themoviedb.org/3';
 
