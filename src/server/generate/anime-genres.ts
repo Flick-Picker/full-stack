@@ -4,7 +4,9 @@ import GenreObject from '../classes/genreObject';
 
 const getAnimeGenres = async () => {
   try {
-    const data = fs.readFileSync('../static/anime_tv_batch.json');
+    const tvData = fs.readFileSync('../static/anime_tv_batch.json');
+    const movieData = fs.readFileSync('../static/anime_movie_batch.json');
+    const data = tvData.toString().concat(movieData.toString());
     const genres: AnimeGenre[] = [];
     let genreCounter = 1;
     const lines = data.toString().split('\n');
@@ -34,7 +36,7 @@ const getAnimeGenres = async () => {
         }
       }
     }
-    fs.writeFile('../static/anime_tv_genres.json', JSON.stringify(new GenreObject(genres)), (err) => {
+    fs.writeFile('../static/anime_genres.json', JSON.stringify(new GenreObject(genres)), (err) => {
       if (err) console.log(err);
     });
   } catch (e:any) {
