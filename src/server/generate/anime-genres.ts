@@ -1,47 +1,34 @@
 import fs from 'fs';
 import AnimeGenre from '../classes/animeGenre';
 import GenreObject from '../classes/genreObject';
+import animeMovies from '../static/anime_movie_batch.json';
+import animeTV from '../static/anime_tv_batch.json';
 
 const getAnimeGenres = async () => {
-  try {
-    const tvData = fs.readFileSync('../static/anime_tv_batch.json');
-    const movieData = fs.readFileSync('../static/anime_movie_batch.json');
-    const data = tvData.toString().concat(movieData.toString());
-    const genres: AnimeGenre[] = [];
-    let genreCounter = 1;
-    const lines = data.toString().split('\n');
-    for (let i = 0; i < lines.length; i += 1) {
-      let line = lines[i];
-      if (line.includes('genres')) {
-        i += 1;
-        line = lines[i];
-        while (!line.includes(']')) {
-          if (line.includes('"name":')) {
-            const name = line.substring(line.indexOf(': "') + 3, line.lastIndexOf('"'));
-            let add = true;
-            for (let j = 0; j < genres.length; j += 1) {
-              const curGenre = genres[j];
-              if (curGenre.name.toLowerCase() === name.toLowerCase()) {
-                add = false;
-                break;
-              }
-            }
-            if (add) {
-              genres.push(new AnimeGenre(genreCounter.toString(), name.toLowerCase()));
-              genreCounter += 1;
-            }
-          }
-          i += 1;
-          line = lines[i];
-        }
-      }
-    }
-    fs.writeFile('../static/anime_genres.json', JSON.stringify(new GenreObject(genres)), (err) => {
-      if (err) console.log(err);
+  const genreNameSet = new Set<string>();
+
+  animeMovies.forEach((anime) => {
+    anime.genres.forEach((genre) => {
+      genreNameSet.add(genre.name.toLowerCase());
     });
-  } catch (e:any) {
-    console.log(e.toString());
-  }
+  });
+
+  animeTV.forEach((anime) => {
+    anime.genres.forEach((genre) => {
+      genreNameSet.add(genre.name.toLowerCase());
+    });
+  });
+
+  const genres: AnimeGenre[] = [];
+  let nameCounter = 1;
+  genreNameSet.forEach((name) => {
+    genres.push(new AnimeGenre(nameCounter, name));
+    nameCounter += 1;
+  });
+
+  fs.writeFile('../static/anime_genres.json', JSON.stringify(new GenreObject(genres)), (err) => {
+    if (err) console.log(err);
+  });
 };
 
 console.log('Getting anime genres...');
