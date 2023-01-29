@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.ts",
-    "build": "tsc"
+    "build": "tsc",
+    "lint": "eslint './**/*.{ts,tsx}'",
+    "fix" :"eslint './**/*.{ts,tsx}' --fix"
   },
   "author": "",
   "license": "ISC",
