@@ -1,5 +1,5 @@
 import fs from 'fs';
-import * as movieapi from '../services/movie-api';
+import * as movieapi from '../services/movieService';
 
 const retrieveBatch = async (mediatype: string, genre: string) => {
   let batch: any[] = [];

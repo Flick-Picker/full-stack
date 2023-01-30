@@ -1,6 +1,6 @@
 /* eslint-disable no-await-in-loop */
 import fs from 'fs';
-import * as animeapi from '../services/anime-api';
+import * as animeapi from '../services/animeService';
 
 const sleep = (ms: number) => (
   new Promise((resolve) => setTimeout(resolve, ms)));

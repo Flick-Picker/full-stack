@@ -1,9 +1,8 @@
 import { Request, Response } from 'express';
-import * as movieapi from '../services/movie-api';
+import * as movieapi from '../services/movieService';
 
 export async function resGenres(req: Request, res: Response) {
   try {
-    console.log('controller');
     const { mediatype } = req.params;
     const genres = await movieapi.getGenres(mediatype);
     res.send(genres);

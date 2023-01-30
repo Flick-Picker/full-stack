@@ -1,8 +1,5 @@
-import dotenv from 'dotenv';
 import axios from 'axios';
-import path from 'path';
 
-dotenv.config({ path: path.resolve(__dirname, '../.env') });
 const JIKAN_API_URL = 'https://api.jikan.moe/v4';
 
 export const topAnimes = async (mediatype: string, page: number) => {

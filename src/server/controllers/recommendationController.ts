@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import * as movieapi from '../services/movie-api';
+import * as movieapi from '../services/movieService';
 
 // mediatype is movie or tv
 export async function getRecommendations(req: Request, res: Response) {
