@@ -1,18 +1,39 @@
+import { initializeApp } from 'firebase/app';
+import { getAuth } from 'firebase/auth';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import './index.css';
 import App from './App';
+import './index.css';
 import ErrorPage from './pages/ErrorPage';
 import reportWebVitals from './reportWebVitals';
+import LoginPage from './pages/LoginPage';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
     errorElement: <ErrorPage />,
+    // children: []
+  },
+  {
+    path: '/login',
+    element: <LoginPage />
   }
 ])
+
+const firebaseConfig = {
+  apiKey: process.env.REACT_APP_FIREBASE_apiKey || '',
+  authDomain: process.env.REACT_APP_FIREBASE_authDomain || '',
+  projectId: process.env.REACT_APP_FIREBASE_projectId || '',
+  storageBucket: process.env.REACT_APP_FIREBASE_storageBucket || '',
+  messagingSenderId: process.env.REACT_APP_FIREBASE_messagingSenderId || '',
+  appId: process.env.REACT_APP_FIREBASE_appId || '',
+  measurementId: process.env.REACT_APP_FIREBASE_measurementId || '',
+};
+
+const firebaseConnection = initializeApp(firebaseConfig);
+const auth = getAuth(firebaseConnection);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

@@ -1,6 +1,6 @@
-import React from 'react';
 import { AccountCircle, Visibility, VisibilityOff } from '@mui/icons-material';
 import { Box, Button, FormControl, IconButton, InputAdornment, InputLabel, OutlinedInput } from '@mui/material';
+import React from 'react';
 
 export default function LoginPage() {
     const [email, setEmail] = React.useState('');
@@ -40,6 +40,7 @@ export default function LoginPage() {
             flexDirection='column'
             gap='2vh'
             minHeight='100vh'>
+            <Button href='/'>Back</Button>
             <FormControl variant='standard' required={true}>
                 <InputLabel htmlFor='outlined-adornment-email'>Email</InputLabel>
                 <OutlinedInput 
@@ -80,10 +81,6 @@ export default function LoginPage() {
                 disabled={!email || !password}
                 onClick={e => handleSubmit(e)}>
                     Log In
-            </Button>
-            <Button
-                variant='outlined'>
-                    Sign Up
             </Button>
         </Box>
     );

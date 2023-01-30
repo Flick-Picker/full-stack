@@ -1,13 +1,12 @@
+import { Box, Card, CardContent, Typography } from "@mui/material";
 import React from 'react';
-import { Card, CardContent, Typography } from "@mui/material";
-import { Box } from '@mui/material';
-import { useRouteError } from "react-router"
+import { useRouteError } from "react-router";
 
 
 const ErrorPage = () => {
     const error = useRouteError();
     console.log(error);
-    
+
     return (
         <Box
             display='flex'
