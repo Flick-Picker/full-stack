@@ -2,9 +2,10 @@ import { AccountCircle, Visibility, VisibilityOff } from '@mui/icons-material';
 import { Box, Button, FormControl, IconButton, InputAdornment, InputLabel, OutlinedInput } from '@mui/material';
 import React from 'react';
 
-const LoginPage = () => {
+const SignupPage = () => {
     const [email, setEmail] = React.useState('');
     const [password, setPassword] = React.useState('');
+    const [passAgain, setPassAgain] = React.useState('');
     const [showPassword, setShowPassword] = React.useState(false);
 
     const handleEmailChange = (e) => {
@@ -17,6 +18,11 @@ const LoginPage = () => {
         setPassword(e.target.value);
     }
 
+    const handlePassAgainChange = (e) => {
+        e.preventDefault();
+        setPassAgain(e.target.value);
+    }
+
     const handleClickShowPassword = () => setShowPassword(!showPassword);
 
     const handleMouseDownPassword = (e) => {
@@ -25,11 +31,17 @@ const LoginPage = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        callLogin();
+        callSignup();
     }
 
-    const callLogin = () => {
-        alert(`email: ${email} and password: ${password} sent`);
+    const callSignup = () => {
+        if (password === passAgain) {
+            alert(`email: ${email}, password: ${password}, passAgain sent`);
+        } else {
+            alert('The passwords provided are different');
+            setPassword('');
+            setPassAgain('');
+        }
     }
 
     return (
@@ -40,8 +52,8 @@ const LoginPage = () => {
             flexDirection='column'
             gap='2vh'
             minHeight='100vh'>
-            <Button href='/'>Back</Button>
-            <FormControl variant='standard' required={true}>
+                <Button href='/'>Back</Button>
+                <FormControl variant='standard' required={true}>
                 <InputLabel htmlFor='outlined-adornment-email'>Email</InputLabel>
                 <OutlinedInput
                     id='outlined-adornment-email'
@@ -76,14 +88,35 @@ const LoginPage = () => {
                     label='Password'
                 />
             </FormControl>
+            <FormControl variant='standard' required={true}>
+                <InputLabel htmlFor='outlined-adornment-password'>Re-Enter Password</InputLabel>
+                <OutlinedInput
+                    id='outlined-adornment-password'
+                    sx={{ width: '25ch' }}
+                    type={showPassword ? 'text' : 'password'}
+                    endAdornment={
+                        <InputAdornment position='end'>
+                            <IconButton
+                                aria-label='toggle password visibility'
+                                onClick={handleClickShowPassword}
+                                onMouseDown={handleMouseDownPassword}
+                                edge='end'>
+                                {showPassword ? <Visibility /> : <VisibilityOff />}
+                            </IconButton>
+                        </InputAdornment>
+                    }
+                    onChange={(e) => handlePassAgainChange(e)}
+                    label='Password'
+                />
+            </FormControl>
             <Button
                 variant='outlined'
-                disabled={!email || !password}
+                disabled={!email || !password || !passAgain}
                 onClick={e => handleSubmit(e)}>
-                Log In
+                Sign Up
             </Button>
         </Box>
-    );
+    )
 }
 
-export default LoginPage;
+export default SignupPage;
