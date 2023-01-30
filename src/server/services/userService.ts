@@ -1,15 +1,15 @@
 import {
   getFirestore, getDoc, setDoc, doc,
 } from 'firebase/firestore/lite';
-import { Profile } from '../models/profileModel';
+import { User } from '../models/userModel';
 
 const firebase = require('./firebase');
 
-const col = 'profile';
+const col = 'user';
 const db = getFirestore(firebase);
-// const profileCol = collection(db, 'profile');
+// const userCol = collection(db, 'user');
 
-export const getProfile = async (email: string) => {
+export const getUser = async (email: string) => {
   const docRef = doc(db, col, email);
   const docSnap = await getDoc(docRef);
 
@@ -19,7 +19,7 @@ export const getProfile = async (email: string) => {
   return {};
 };
 
-export const addProfile = async (email: string) => {
+export const addUser = async (email: string) => {
   const docRef = doc(db, col, email);
   let docSnap = await getDoc(docRef);
 
@@ -36,12 +36,12 @@ export const addProfile = async (email: string) => {
   return docSnap.data();
 };
 
-export const updateProfile = async (profileData: Profile) => {
-  const docRef = doc(db, col, profileData.email);
+export const updateUser = async (userData: User) => {
+  const docRef = doc(db, col, userData.email);
   let docSnap = await getDoc(docRef);
 
   if (docSnap.exists()) {
-    await setDoc(docRef, profileData);
+    await setDoc(docRef, userData);
   }
   docSnap = await getDoc(docRef);
   return docSnap.data();
