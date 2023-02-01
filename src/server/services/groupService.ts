@@ -10,8 +10,8 @@ const col = 'group';
 const db = getFirestore(firebase);
 // const userCol = collection(db, 'user');
 
-export const getGroup = async (email: string) => {
-  const docRef = doc(db, col, email);
+export const getGroup = async (groupId: string) => {
+  const docRef = doc(db, col, groupId);
   const docSnap = await getDoc(docRef);
 
   if (docSnap.exists()) {
@@ -21,7 +21,8 @@ export const getGroup = async (email: string) => {
 };
 
 export const addGroup = async (group: Group) => {
-  const groupId = group.owner.concat('@').concat(group.groupName);
+  const id = Math.floor(Math.random() * 1000);
+  const groupId = group.groupName.concat('#').concat(id.toString());
   const docRef = doc(db, col, groupId);
   let docSnap = await getDoc(docRef);
 
@@ -49,8 +50,7 @@ export const updateGroup = async (group: Group) => {
   return docSnap.data();
 };
 
-export const addUserToGroup = async (owner: string, groupName: string, userEmail: string) => {
-  const groupId = owner.concat('@').concat(groupName);
+export const addUserToGroup = async (groupId: string, userEmail: string) => {
   const docRef = doc(db, col, groupId);
   let docSnap = await getDoc(docRef);
 
@@ -58,7 +58,7 @@ export const addUserToGroup = async (owner: string, groupName: string, userEmail
     await updateDoc(docRef, {
       users: arrayUnion(userEmail),
     });
-    await userService.addToGroup(owner, groupId, false);
+    await userService.addToGroup(userEmail, groupId, false);
   }
   docSnap = await getDoc(docRef);
   return docSnap.data();

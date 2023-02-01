@@ -48,7 +48,7 @@ export const updateUser = async (userData: User) => {
   return docSnap.data();
 };
 
-// adding friend
+// adding friend (two-way)
 export const addFriend = async (userEmail: string, friendUserEmail: string) => {
   const docRef = doc(db, col, userEmail);
   let docSnap = await getDoc(docRef);
@@ -59,6 +59,16 @@ export const addFriend = async (userEmail: string, friendUserEmail: string) => {
     });
   }
   docSnap = await getDoc(docRef);
+
+  const frDocRef = doc(db, col, friendUserEmail);
+  const frDocSnap = await getDoc(docRef);
+
+  if (frDocSnap.exists()) {
+    await updateDoc(frDocRef, {
+      friends: arrayUnion(userEmail),
+    });
+  }
+
   return docSnap.data();
 };
 
