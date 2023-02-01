@@ -20,20 +20,20 @@ export const getGroup = async (groupId: string) => {
   return {};
 };
 
-export const addGroup = async (group: Group) => {
+export const addGroup = async (groupName: string, owner: string) => {
   const id = Math.floor(Math.random() * 1000);
-  const groupId = group.groupName.concat('#').concat(id.toString());
+  const groupId = groupName.concat('#').concat(id.toString());
   const docRef = doc(db, col, groupId);
   let docSnap = await getDoc(docRef);
 
   if (!docSnap.exists()) {
     await setDoc(docRef, {
-      owner: group.owner,
-      groupName: group.groupName,
-      users: [group.owner],
+      owner,
+      groupName,
+      users: [owner],
       votingSessions: [],
     });
-    await userService.addToGroup(group.owner, groupId, true);
+    await userService.addToGroup(owner, groupId, true);
   }
   docSnap = await getDoc(docRef);
   return docSnap.data();
