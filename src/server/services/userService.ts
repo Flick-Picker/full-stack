@@ -1,5 +1,5 @@
 import {
-  getFirestore, getDoc, setDoc, doc,
+  getFirestore, getDoc, setDoc, doc, updateDoc, arrayUnion,
 } from 'firebase/firestore/lite';
 import { User } from '../models/userModel';
 
@@ -29,7 +29,8 @@ export const addUser = async (email: string) => {
       username: '',
       name: '',
       friends: [],
-      groups: [],
+      groupsOwned: [],
+      groupsJoined: [],
     });
   }
   docSnap = await getDoc(docRef);
@@ -42,6 +43,40 @@ export const updateUser = async (userData: User) => {
 
   if (docSnap.exists()) {
     await setDoc(docRef, userData);
+  }
+  docSnap = await getDoc(docRef);
+  return docSnap.data();
+};
+
+// adding friend
+export const addFriend = async (userEmail: string, friendUserEmail: string) => {
+  const docRef = doc(db, col, userEmail);
+  let docSnap = await getDoc(docRef);
+
+  if (docSnap.exists()) {
+    await updateDoc(docRef, {
+      friends: arrayUnion(friendUserEmail),
+    });
+  }
+  docSnap = await getDoc(docRef);
+  return docSnap.data();
+};
+
+// adding to group
+export const addToGroup = async (userEmail: string, groupId: string, isOwned: boolean) => {
+  const docRef = doc(db, col, userEmail);
+  let docSnap = await getDoc(docRef);
+
+  if (docSnap.exists()) {
+    if (isOwned) {
+      await updateDoc(docRef, {
+        groupsOwned: arrayUnion(groupId),
+      });
+    } else {
+      await updateDoc(docRef, {
+        groupsJoined: arrayUnion(groupId),
+      });
+    }
   }
   docSnap = await getDoc(docRef);
   return docSnap.data();
