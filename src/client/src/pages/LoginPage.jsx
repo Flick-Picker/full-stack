@@ -1,11 +1,23 @@
 import { AccountCircle, Visibility, VisibilityOff } from '@mui/icons-material';
 import { Box, Button, FormControl, IconButton, InputAdornment, InputLabel, OutlinedInput } from '@mui/material';
+import { signInWithEmailAndPassword } from 'firebase/auth';
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import auth from '..';
+import { init } from '../features/token/tokenSlice';
+import { useNavigate } from 'react-router-dom';
 
 const LoginPage = () => {
+    // Page Specific State
     const [email, setEmail] = React.useState('');
     const [password, setPassword] = React.useState('');
     const [showPassword, setShowPassword] = React.useState(false);
+
+    // Redux Global State
+    const dispatch = useDispatch();
+
+    // React-Router Navigation
+    const navigate = useNavigate();
 
     const handleEmailChange = (e) => {
         e.preventDefault();
@@ -28,8 +40,30 @@ const LoginPage = () => {
         callLogin();
     }
 
+    const handleKeyDown = (e) => {
+        if (e.key === 'Enter') {
+            callLogin();
+        }
+    }
+
     const callLogin = () => {
-        alert(`email: ${email} and password: ${password} sent`);
+        signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                // Signed in
+                const obj = {
+                    uid: userCredential.user.uid,
+                    email: userCredential.user.email,
+                    accessToken: userCredential.user.stsTokenManager.accessToken,
+                    refreshToken: userCredential.user.stsTokenManager.refreshToken,
+                    expirationTime: userCredential.user.stsTokenManager.expirationTime,
+                }
+                dispatch(init(obj));
+                navigate('/home');
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+            });
     }
 
     return (
@@ -39,7 +73,8 @@ const LoginPage = () => {
             alignItems='center'
             flexDirection='column'
             gap='2vh'
-            minHeight='100vh'>
+            minHeight='100vh'
+            onKeyDown={e => handleKeyDown(e)}>
             <Button href='/'>Back</Button>
             <FormControl variant='standard' required={true}>
                 <InputLabel htmlFor='outlined-adornment-email'>Email</InputLabel>

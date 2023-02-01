@@ -1,12 +1,24 @@
 import { AccountCircle, Visibility, VisibilityOff } from '@mui/icons-material';
 import { Box, Button, FormControl, IconButton, InputAdornment, InputLabel, OutlinedInput } from '@mui/material';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
 import React from 'react';
+import auth from '..';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { init } from '../features/token/tokenSlice';
 
-const SignupPage = () => {
+const SignUpPage = () => {
+    // Page Specific State
     const [email, setEmail] = React.useState('');
     const [password, setPassword] = React.useState('');
     const [passAgain, setPassAgain] = React.useState('');
     const [showPassword, setShowPassword] = React.useState(false);
+
+    // Redux Global State
+    const dispatch = useDispatch();
+
+    // React-Router Navigation
+    const navigate = useNavigate();
 
     const handleEmailChange = (e) => {
         e.preventDefault();
@@ -36,7 +48,20 @@ const SignupPage = () => {
 
     const callSignup = () => {
         if (password === passAgain) {
-            alert(`email: ${email}, password: ${password}, passAgain sent`);
+            createUserWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    // Signed in 
+                    dispatch(init(userCredential.user));
+                    navigate('/home')
+
+                    // use this way to make a user login after sign up
+                    // otherwise redirect directly to logged in
+                    // navigate('/login')
+                })
+                .catch((error) => {
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                });
         } else {
             alert('The passwords provided are different');
             setPassword('');
@@ -52,8 +77,8 @@ const SignupPage = () => {
             flexDirection='column'
             gap='2vh'
             minHeight='100vh'>
-                <Button href='/'>Back</Button>
-                <FormControl variant='standard' required={true}>
+            <Button href='/'>Back</Button>
+            <FormControl variant='standard' required={true}>
                 <InputLabel htmlFor='outlined-adornment-email'>Email</InputLabel>
                 <OutlinedInput
                     id='outlined-adornment-email'
@@ -65,6 +90,7 @@ const SignupPage = () => {
                     }
                     onChange={(e) => handleEmailChange(e)}
                     label='Email'
+                    value={email}
                 />
             </FormControl>
             <FormControl variant='standard' required={true}>
@@ -86,18 +112,19 @@ const SignupPage = () => {
                     }
                     onChange={(e) => handlePasswordChange(e)}
                     label='Password'
+                    value={password}
                 />
             </FormControl>
             <FormControl variant='standard' required={true}>
-                <InputLabel htmlFor='outlined-adornment-password'>Re-Enter Password</InputLabel>
+                <InputLabel htmlFor='outlined-adornment-pass-again'>Re-Enter Password</InputLabel>
                 <OutlinedInput
-                    id='outlined-adornment-password'
+                    id='outlined-adornment-pass=again'
                     sx={{ width: '25ch' }}
                     type={showPassword ? 'text' : 'password'}
                     endAdornment={
                         <InputAdornment position='end'>
                             <IconButton
-                                aria-label='toggle password visibility'
+                                aria-label='toggle retype password visibility'
                                 onClick={handleClickShowPassword}
                                 onMouseDown={handleMouseDownPassword}
                                 edge='end'>
@@ -106,7 +133,8 @@ const SignupPage = () => {
                         </InputAdornment>
                     }
                     onChange={(e) => handlePassAgainChange(e)}
-                    label='Password'
+                    label='Re-Enter Password'
+                    value={passAgain}
                 />
             </FormControl>
             <Button
@@ -119,4 +147,4 @@ const SignupPage = () => {
     )
 }
 
-export default SignupPage;
+export default SignUpPage;
