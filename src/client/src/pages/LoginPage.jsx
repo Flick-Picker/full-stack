@@ -2,10 +2,11 @@ import { AccountCircle, Visibility, VisibilityOff } from '@mui/icons-material';
 import { Box, Button, FormControl, IconButton, InputAdornment, InputLabel, OutlinedInput } from '@mui/material';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import React from 'react';
+import { useCookies } from 'react-cookie';
 import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import auth from '..';
 import { init } from '../features/token/tokenSlice';
-import { useNavigate } from 'react-router-dom';
 
 const LoginPage = () => {
     // Page Specific State
@@ -15,6 +16,9 @@ const LoginPage = () => {
 
     // Redux Global State
     const dispatch = useDispatch();
+
+    // Cookie Management
+    const [cookies, setCookie] = useCookies(['access_token', 'refresh_token', 'expiration_time']);
 
     // React-Router Navigation
     const navigate = useNavigate();
@@ -58,11 +62,18 @@ const LoginPage = () => {
                     expirationTime: userCredential.user.stsTokenManager.expirationTime,
                 }
                 dispatch(init(obj));
+
+                const expires = new Date();
+                expires.setTime(obj.expirationTime);
+                setCookie('access_token', obj.accessToken, { path: '/', expires });
+                setCookie('refresh_token', obj.refreshToken, { path: '/', expires });
+                setCookie('expiration_time', obj.expirationTime, { path: '/', expires });
                 navigate('/home');
             })
             .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
+                console.log(error);
+                // const errorCode = error.code;
+                // const errorMessage = error.message;
             });
     }
 

@@ -4,8 +4,6 @@ import { createUserWithEmailAndPassword } from 'firebase/auth';
 import React from 'react';
 import auth from '..';
 import { useNavigate } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { init } from '../features/token/tokenSlice';
 
 const SignUpPage = () => {
     // Page Specific State
@@ -13,9 +11,6 @@ const SignUpPage = () => {
     const [password, setPassword] = React.useState('');
     const [passAgain, setPassAgain] = React.useState('');
     const [showPassword, setShowPassword] = React.useState(false);
-
-    // Redux Global State
-    const dispatch = useDispatch();
 
     // React-Router Navigation
     const navigate = useNavigate();
@@ -51,12 +46,12 @@ const SignUpPage = () => {
             createUserWithEmailAndPassword(auth, email, password)
                 .then((userCredential) => {
                     // Signed in 
-                    dispatch(init(userCredential.user));
-                    navigate('/home')
+                    // dispatch(init(userCredential.user));
+                    // navigate('/home')
 
                     // use this way to make a user login after sign up
                     // otherwise redirect directly to logged in
-                    // navigate('/login')
+                    navigate('/login')
                 })
                 .catch((error) => {
                     const errorCode = error.code;

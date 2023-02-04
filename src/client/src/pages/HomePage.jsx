@@ -1,8 +1,10 @@
-import { Box, Button } from '@mui/material';
-import React from 'react';
+import { Box } from '@mui/material';
+import React, { useEffect } from 'react';
+import { useCookies } from 'react-cookie';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { remove, selectAccessToken, selectEmail } from '../features/token/tokenSlice';
+import LogOut from '../components/LogOut';
+import { init, selectEmail } from '../features/token/tokenSlice';
 
 const HomePage = () => {
 
@@ -12,27 +14,31 @@ const HomePage = () => {
     // React-Router Navigation
     const navigate = useNavigate();
 
-    const accessToken = useSelector(selectAccessToken);
+    // Cookie Management
+    const [cookies] = useCookies(['access_token', 'refresh_token', 'expiration_time']);
     const email = useSelector(selectEmail);
 
-    // if (accessToken === null) {
-    //     navigate('/login');
-    // }
-
-    const handleLogOut = (e) => {
-        e.preventDefault();
-        dispatch(remove());
-        navigate('/');
-    }
+    // Redirects if there is no active user
+    // ..handle cookies?
+    useEffect(() => {
+        if (cookies.access_token === null) {
+            navigate('/login');
+        } else {
+            const obj = {
+                uid: 0, // Collect uid from db
+                email: 'collect', // Collect email from db
+                accessToken: cookies.access_token,
+                refreshToken: cookies.refresh_token,
+                expirationTime: cookies.expiration_time,
+            }
+            dispatch(init(obj));
+        }
+    }, []);
 
     return (
         <Box>
             Hi {`${email}`}
-            <Button
-                variant='outlined'
-                onClick={e => handleLogOut(e)}>
-                Log Out
-            </Button>
+            <LogOut />
         </Box>
     )
 }
