@@ -1,8 +1,9 @@
 import express, { Express, Request, Response } from 'express';
 
 const genre = require('./routes/genre');
-
-const profile = require('./routes/user');
+const user = require('./routes/user');
+const pref = require('./routes/pref');
+const group = require('./routes/group');
 
 const app: Express = express();
 
@@ -13,6 +14,8 @@ app.get('/', (req: Request, res: Response) => {
 });
 
 app.use('/api/genres', genre);
-app.use('/api/user', profile);
+app.use('/api/user', user);
+app.use('/api/user/pref', pref);
+app.use('/api/group', group);
 
 module.exports = app;

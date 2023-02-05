@@ -3,5 +3,6 @@ export interface User {
   username: string;
   name: string;
   friends: any[];
-  groups: any[];
+  groupsOwned: any[];
+  groupsJoined: any[];
 }
