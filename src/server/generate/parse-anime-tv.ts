@@ -7,7 +7,7 @@ function parseAnimeTvGenre(genres: { name: string; }[]) {
   genres.forEach((genre: { name: string; }) => {
     returnGenres.add(genre.name.toLowerCase());
   });
-  return returnGenres;
+  return Array.from(returnGenres);
 }
 
 const getAnimeTv = async () => {
@@ -17,11 +17,16 @@ const getAnimeTv = async () => {
     if (show.title_english != null) {
       name = show.title_english;
     }
-    const malID = show.mal_id;
-    const rating = show.score;
-    const imageURL = show.images.jpg.image_url;
-    const genres = parseAnimeTvGenre(show.genres);
-    anime.push(new AnimeTvObject(Array.from(genres.values()), name, malID, imageURL, rating));
+    anime.push(
+      new AnimeTvObject(
+        parseAnimeTvGenre(show.genres),
+        name,
+        show.mal_id,
+        show.images.jpg.large_image_url,
+        show.score,
+        show.scored_by,
+      ),
+    );
   });
 
   fs.writeFile('../static/anime_tv.json', JSON.stringify(anime), (err) => {
