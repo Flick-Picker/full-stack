@@ -10,15 +10,20 @@ const fCol = 'friendInvite';
 const gCol = 'groupInvite';
 const db = getFirestore(firebase);
 
-export const sendFriendInvite = async (senderEmail: string, requestEmail: string) => {
-  const inviteId = senderEmail.concat('^').concat(requestEmail);
+export const sendFriendInvite = async (senderUid: string, requestUid: string) => {
+  const inviteId = senderUid.concat('@').concat(requestUid);
   const docRef = doc(db, fCol, inviteId);
   let docSnap = await getDoc(docRef);
 
+  const sendUserRef = doc(db, 'user', senderUid);
+  const reqUserRef = doc(db, 'user', requestUid);
+
   if (!docSnap.exists()) {
     await setDoc(docRef, {
-      senderUser: senderEmail,
-      requestedUser: requestEmail,
+      senderUser: senderUid,
+      requestedUser: requestUid,
+      senderUserRef: sendUserRef,
+      requestedUserRef: reqUserRef,
       isAccepted: false,
     });
   }
@@ -44,17 +49,22 @@ export const acceptFriendInvite = async (senderEmail: string, requestEmail: stri
 
 export const sendGroupInvite = async (
   groupId: string,
-  senderEmail: string,
-  requestEmail: string,
+  senderUid: string,
+  requestUid: string,
 ) => {
-  const inviteId = groupId.concat('^').concat(requestEmail);
+  const inviteId = groupId.concat('@').concat(requestUid);
   const docRef = doc(db, gCol, inviteId);
   let docSnap = await getDoc(docRef);
 
+  const sendUserRef = doc(db, 'user', senderUid);
+  const reqUserRef = doc(db, 'user', requestUid);
+
   if (!docSnap.exists()) {
     await setDoc(docRef, {
-      senderUser: senderEmail,
-      requestedUser: requestEmail,
+      senderUser: senderUid,
+      requestedUser: requestUid,
+      senderUserRef: sendUserRef,
+      requestedUserRef: reqUserRef,
       isAccepted: false,
     });
   }
@@ -65,10 +75,10 @@ export const sendGroupInvite = async (
 // also adds users as friends
 export const acceptGroupInvite = async (
   groupId: string,
-  senderEmail: string,
-  requestEmail: string,
+  senderUid: string,
+  requestUid: string,
 ) => {
-  const inviteId = groupId.concat('^').concat(requestEmail);
+  const inviteId = groupId.concat('@').concat(requestUid);
   const docRef = doc(db, gCol, inviteId);
   let docSnap = await getDoc(docRef);
 
@@ -76,7 +86,7 @@ export const acceptGroupInvite = async (
     await updateDoc(docRef, {
       isAccepted: true,
     });
-    await groupService.addUserToGroup(senderEmail, requestEmail);
+    await groupService.addUserToGroup(senderUid, requestUid);
   }
   docSnap = await getDoc(docRef);
   return docSnap.data();

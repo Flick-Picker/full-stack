@@ -3,8 +3,8 @@ import * as service from '../services/userService';
 
 export async function getUser(req: Request, res: Response) {
   try {
-    const { email } = req.body;
-    const user = await service.getUser(email);
+    const { uid } = req.body;
+    const user = await service.getUser(uid);
     res.send(user);
   } catch (err) {
     console.log(err);
@@ -14,8 +14,8 @@ export async function getUser(req: Request, res: Response) {
 
 export async function newUser(req: Request, res: Response) {
   try {
-    const { email } = req.body;
-    const user = await service.addUser(email);
+    const { uid, email } = req.body;
+    const user = await service.addUser(uid, email);
     res.send(user);
   } catch (err) {
     res.status(500).send(err);
