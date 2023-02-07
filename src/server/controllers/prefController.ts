@@ -31,3 +31,14 @@ export async function postUserPref(req: Request, res: Response) {
     res.status(500).send(err);
   }
 }
+
+export async function getGroupPrefs(req: Request, res: Response) {
+  try {
+    const { groupId } = req.body;
+    const pref = await service.getGroupPrefs(groupId);
+    res.send(pref);
+  } catch (err) {
+    console.log(err);
+    res.status(500).send(err);
+  }
+}
