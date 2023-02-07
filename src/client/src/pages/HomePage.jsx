@@ -44,9 +44,11 @@ const HomePage = () => {
                 flexDirection='column'
                 gap='5vh'
                 minHeight='75vh'>
+                    {/* TODO: Every button needs a handler */}
                     <Typography variant='h3' component='h3'>Who's joining you?</Typography>
                     <Button variant='outlined' size='large'>Just me</Button>
                     <Typography variant='h6' component='h6'>You currently have no groups. Create or join a group to get started.</Typography>
+                    {/* TODO: This above typography needs to check if there are existing groups */}
                     <Box
                         display='flex'
                         justifyContent='center'
