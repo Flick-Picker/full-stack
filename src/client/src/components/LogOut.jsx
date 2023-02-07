@@ -7,7 +7,8 @@ import { useNavigate } from 'react-router-dom';
 import auth from '..';
 import { remove } from '../features/token/tokenSlice';
 
-const LogOut = () => {
+const LogOut = (props) => {
+    
     // Redux Global State
     const dispatch = useDispatch();
 
@@ -36,7 +37,8 @@ const LogOut = () => {
     return (
         <Button
             variant='outlined'
-            onClick={e => handleLogOut(e)}>
+            onClick={e => handleLogOut(e)}
+            color={props.color}>
             Log Out
         </Button>
     )

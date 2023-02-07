@@ -1,6 +1,6 @@
-import { Box, Card, CardContent, Typography } from "@mui/material";
+import { Box, Card, CardContent, Typography } from '@mui/material';
 import React from 'react';
-import { useRouteError } from "react-router";
+import { useRouteError } from 'react-router';
 
 
 const ErrorPage = () => {
