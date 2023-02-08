@@ -1,10 +1,10 @@
 import { Box, Card, CardContent, Typography } from '@mui/material';
 import React from 'react';
-//import { useRouteError } from 'react-router';
+import { useRouteError } from 'react-router';
 
 
 const ErrorPage = () => {
-    const error = 'useRouteError()';
+    const error = useRouteError();
     console.log(error);
 
     return (
@@ -18,7 +18,7 @@ const ErrorPage = () => {
                 <Card>
                     <CardContent>Error</CardContent>
                     <Typography>Sorry, an unexpected error has occured.</Typography>
-                    <Typography>{error || error}</Typography>
+                    <Typography>{error.statusText || error.message}</Typography>
                 </Card>
         </Box>
     )
