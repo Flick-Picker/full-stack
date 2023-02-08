@@ -31,10 +31,7 @@ const FriendsList = () => {
 
         return (
           <ListItem key={value} disablePadding>
-            <ListItemButton
-              role={undefined}
-              onClick={handleToggle(value)}
-              dense>
+            <ListItemButton role={undefined} onClick={handleToggle(value)}>
               <ListItemIcon>
                 <Checkbox
                   edge="start"
