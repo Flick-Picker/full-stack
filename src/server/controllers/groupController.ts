@@ -3,7 +3,15 @@ import * as service from '../services/groupService';
 
 export async function getGroup(req: Request, res: Response) {
   try {
-    const { groupId } = req.body;
+    const { groupId } = req.query;
+    if (!groupId) {
+      res.status(404).json({ error: 'Params not found' });
+      return;
+    }
+    if (typeof groupId !== 'string') {
+      res.status(500).json({ error: 'Invalid params' });
+      return;
+    }
     const group = await service.getGroup(groupId);
     res.send(group);
   } catch (err) {
