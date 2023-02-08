@@ -4,14 +4,17 @@ import { createUserWithEmailAndPassword } from 'firebase/auth';
 import React from 'react';
 import auth from '..';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 const SignUpPage = () => {
+
+    const BACKEND_URI = process.env.REACT_APP_FRONTEND_URI || 'http://localhost:8080';
     // Page Specific State
     const [email, setEmail] = React.useState('');
     const [password, setPassword] = React.useState('');
     const [passAgain, setPassAgain] = React.useState('');
     const [showPassword, setShowPassword] = React.useState(false);
-
+    const [uid, setUid] = React.useState('');
     // React-Router Navigation
     const navigate = useNavigate();
 
@@ -44,7 +47,18 @@ const SignUpPage = () => {
     const callSignup = () => {
         if (password === passAgain) {
             createUserWithEmailAndPassword(auth, email, password)
-                .then((userCredential) => {
+                .then ((userCredential) => {
+                  const user = userCredential.user;
+                  const body = {
+                    uid: user.uid,
+                    email: user.email
+                  };
+                  return axios.post(BACKEND_URI + '/api/user/new/', body);
+                })
+                .then((res) => {
+                    console.log(res.data);
+                    const user = res.data;
+                    setUid(user.uid);
                     // Signed in 
                     // dispatch(init(userCredential.user));
                     // navigate('/home')
