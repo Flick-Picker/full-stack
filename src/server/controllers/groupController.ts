@@ -14,8 +14,8 @@ export async function getGroup(req: Request, res: Response) {
 
 export async function newGroup(req: Request, res: Response) {
   try {
-    const { ownerEmail, groupName } = req.body;
-    const group = await service.addGroup(groupName, ownerEmail);
+    const { ownerUid, groupName } = req.body;
+    const group = await service.addGroup(groupName, ownerUid);
     res.send(group);
   } catch (err) {
     res.status(500).send(err);
@@ -27,6 +27,16 @@ export async function postGroup(req: Request, res: Response) {
     const groupData = req.body;
     const user = await service.updateGroup(groupData);
     res.send(user);
+  } catch (err) {
+    res.status(500).send(err);
+  }
+}
+
+export async function addUserToGroup(req: Request, res: Response) {
+  try {
+    const { uid, groupId } = req.body;
+    const group = await service.addUserToGroup(groupId, uid);
+    res.send(group);
   } catch (err) {
     res.status(500).send(err);
   }

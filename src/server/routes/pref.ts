@@ -9,5 +9,6 @@ router.get('/', (req, res) => {
 router.get('/get', controller.getUserPref);
 router.post('/new', controller.newUserPref);
 router.post('/update', controller.postUserPref);
+router.post('/get/group', controller.getGroupPrefs);
 
 module.exports = router;
