@@ -22,7 +22,11 @@ const router = createBrowserRouter([
     {
         path: '/home',
         element: <HomePage />
-    }
+    },
+    {
+      path: '/error',
+      element: <ErrorPage />,
+  }
 ])
 
 export default router;
