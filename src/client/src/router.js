@@ -6,6 +6,7 @@ import HomePage from './pages/HomePage';
 import JoinGroup from './pages/JoinGroup';
 import LoginPage from './pages/LoginPage';
 import SignUpPage from './pages/SignUpPage';
+import Social from './pages/Social';
 
 const router = createBrowserRouter([
 
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
   {
     path: '/group/join',
     element: <JoinGroup />,
+  },
+  {
+    path: '/social',
+    element: <Social />,
   },
   {
       path: '/error',
