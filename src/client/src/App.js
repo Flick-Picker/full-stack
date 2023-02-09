@@ -1,14 +1,25 @@
 import { Box, Button } from '@mui/material';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import React, { useEffect } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
 
 function App() {
-
-  const BACKEND_URI = process.env.REACT_APP_FRONTEND_URI || 'http://localhost:8080';
+  // React-Router Navigation
   const navigate = useNavigate();
+  const BACKEND_URI = process.env.REACT_APP_FRONTEND_URI || 'http://localhost:8080';
 
-  // error check to see if backend is running
+  const handleGoLogin = (e) => {
+    e.preventDefault();
+    navigate('/login');
+  };
+
+  const handleGoSignup = (e) => {
+    e.preventDefault();
+    navigate('/signup');
+  };
+  
+    // error check to see if backend is running
   useEffect(() => {  
     axios.get(BACKEND_URI)
     .then((res) => {})
@@ -18,23 +29,26 @@ function App() {
     });
   }, [BACKEND_URI, navigate]);
 
-
   return (
     <Box
-      display='flex'
-      justifyContent='center'
-      alignItems='center'
-      flexDirection='column'
-      gap='2vh'
-      minHeight='100vh'>
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+      flexDirection="column"
+      gap="2vh"
+      minHeight="100vh">
       <Button
-        href='/login'
-        variant='outlined'
-        sx={{ width: '25ch '}}>Log In</Button>
+        onClick={handleGoLogin}
+        variant="outlined"
+        sx={{ width: '25ch ' }}>
+        Log In
+      </Button>
       <Button
-        href='/signup'
-        variant='outlined'
-        sx={{ width: '25ch '}}>Sign Up</Button>
+        onClick={handleGoSignup}
+        variant="outlined"
+        sx={{ width: '25ch ' }}>
+        Sign Up
+      </Button>
     </Box>
   );
 }
