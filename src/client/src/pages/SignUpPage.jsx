@@ -15,14 +15,14 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 const SignUpPage = () => {
-
-const BACKEND_URI = process.env.REACT_APP_FRONTEND_URI || 'http://localhost:8080';
+  const BACKEND_URI =
+    process.env.REACT_APP_FRONTEND_URI || 'http://localhost:8080';
   // Page Specific State
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
   const [passAgain, setPassAgain] = React.useState('');
   const [showPassword, setShowPassword] = React.useState(false);
-const [uid, setUid] = React.useState('');
+  const [uid, setUid] = React.useState('');
   // React-Router Navigation
   const navigate = useNavigate();
 
@@ -57,24 +57,24 @@ const [uid, setUid] = React.useState('');
     navigate('/');
   };
 
-    const callSignup = () => {
-        if (password === passAgain) {
-            createUserWithEmailAndPassword(auth, email, password)
-                .then ((userCredential) => {
-                  const user = userCredential.user;
-                  const body = {
-                    uid: user.uid,
-                    email: user.email
-                  };
-                  return axios.post(BACKEND_URI + '/api/user/new/', body);
-                })
-                .then((res) => {
-                    console.log(res.data);
-                    const user = res.data;
-                    setUid(user.uid);
-                    // Signed in 
-                    // dispatch(init(userCredential.user));
-                    // navigate('/home')
+  const callSignup = () => {
+    if (password === passAgain) {
+      createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          const user = userCredential.user;
+          const body = {
+            uid: user.uid,
+            email: user.email,
+          };
+          return axios.post(BACKEND_URI + '/api/user/new/', body);
+        })
+        .then((res) => {
+          console.log(res.data);
+          const user = res.data;
+          setUid(user.uid);
+          // Signed in
+          // dispatch(init(userCredential.user));
+          // navigate('/home')
 
           // use this way to make a user login after sign up
           // otherwise redirect directly to logged in
@@ -98,7 +98,8 @@ const [uid, setUid] = React.useState('');
       alignItems="center"
       flexDirection="column"
       gap="2vh"
-      minHeight="100vh">
+      minHeight="100vh"
+    >
       <Button onClick={handleBack}>Back</Button>
       <FormControl variant="standard" required={true}>
         <InputLabel htmlFor="outlined-adornment-email">Email</InputLabel>
@@ -127,7 +128,8 @@ const [uid, setUid] = React.useState('');
                 aria-label="toggle password visibility"
                 onClick={handleClickShowPassword}
                 onMouseDown={handleMouseDownPassword}
-                edge="end">
+                edge="end"
+              >
                 {showPassword ? <Visibility /> : <VisibilityOff />}
               </IconButton>
             </InputAdornment>
@@ -151,7 +153,8 @@ const [uid, setUid] = React.useState('');
                 aria-label="toggle retype password visibility"
                 onClick={handleClickShowPassword}
                 onMouseDown={handleMouseDownPassword}
-                edge="end">
+                edge="end"
+              >
                 {showPassword ? <Visibility /> : <VisibilityOff />}
               </IconButton>
             </InputAdornment>
@@ -164,7 +167,8 @@ const [uid, setUid] = React.useState('');
       <Button
         variant="outlined"
         disabled={!email || !password || !passAgain}
-        onClick={(e) => handleSubmit(e)}>
+        onClick={(e) => handleSubmit(e)}
+      >
         Sign Up
       </Button>
     </Box>
