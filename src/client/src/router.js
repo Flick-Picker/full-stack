@@ -8,6 +8,7 @@ import LoginPage from './pages/LoginPage';
 import SignUpPage from './pages/SignUpPage';
 
 const router = createBrowserRouter([
+
   {
     path: '/',
     element: <App />,
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
     path: '/group/join',
     element: <JoinGroup />,
   },
+  {
+      path: '/error',
+      element: <ErrorPage />,
+  }
 ]);
 
 export default router;

@@ -3,7 +3,15 @@ import * as service from '../services/userService';
 
 export async function getUser(req: Request, res: Response) {
   try {
-    const { uid } = req.body;
+    const { uid } = req.query;
+    if (!uid) {
+      res.status(404).json({ error: 'Params not found' });
+      return;
+    }
+    if (typeof uid !== 'string') {
+      res.status(500).json({ error: 'Invalid params' });
+      return;
+    }
     const user = await service.getUser(uid);
     res.send(user);
   } catch (err) {

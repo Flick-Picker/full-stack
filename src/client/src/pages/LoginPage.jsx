@@ -15,15 +15,19 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import auth from '..';
 import { init } from '../features/token/tokenSlice';
+import axios from 'axios';
 
 const LoginPage = () => {
+
+const BACKEND_URI = process.env.REACT_APP_FRONTEND_URI || 'http://localhost:8080';
   // Page Specific State
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
   const [showPassword, setShowPassword] = React.useState(false);
-
+  const [user, setUser] = React.useState({})
   // Redux Global State
   const dispatch = useDispatch();
+
 
   // Cookie Management
   const [cookies, setCookie] = useCookies([
@@ -74,7 +78,6 @@ const LoginPage = () => {
           expirationTime: userCredential.user.stsTokenManager.expirationTime,
         };
         dispatch(init(obj));
-
         const expires = new Date();
         expires.setTime(obj.expirationTime);
         setCookie('access_token', obj.accessToken, {
@@ -90,6 +93,18 @@ const LoginPage = () => {
           expires,
         });
         navigate('/home');
+      })
+      .then ((userCredential) => {
+        console.log(userCredential);
+        const user = userCredential.user;
+        const params = {
+          uid: user.uid,
+        };
+        return axios.get(BACKEND_URI + '/api/user/get/', {params});
+      })
+      .then(req => {
+        console.log(req.data);
+        setUser(req.data);
       })
       .catch((error) => {
         console.log(error);

@@ -3,7 +3,15 @@ import * as service from '../services/inviteService';
 
 export async function sendFriendInvite(req: Request, res: Response) {
   try {
-    const { senderUid, requestUid } = req.body;
+    const { senderUid, requestUid } = req.query;
+    if (!senderUid || !requestUid) {
+      res.status(404).json({ error: 'Params not found' });
+      return;
+    }
+    if (typeof senderUid !== 'string' || typeof requestUid !== 'string') {
+      res.status(500).json({ error: 'Invalid params' });
+      return;
+    }
     const invite = await service.sendFriendInvite(senderUid, requestUid);
     res.send(invite);
   } catch (err) {
