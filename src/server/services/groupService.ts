@@ -1,6 +1,7 @@
 import {
   getFirestore, getDoc, setDoc, doc, updateDoc, arrayUnion,
 } from 'firebase/firestore/lite';
+import { v4 as uuidv4 } from 'uuid';
 import { Group } from '../models/groupModel';
 import * as userService from './userService';
 
@@ -31,9 +32,8 @@ export const getGroupRef = async (groupId: string) => {
 };
 
 export const addGroup = async (groupName: string, ownerUid: string) => {
-  const id = Math.floor(Math.random() * 1000);
-  const groupId = groupName.concat('#').concat(id.toString());
-  const docRef = doc(db, col, groupId);
+  const id = uuidv4();
+  const docRef = doc(db, col, id);
   let docSnap = await getDoc(docRef);
 
   const userRef = doc(db, 'user', ownerUid);
@@ -46,7 +46,7 @@ export const addGroup = async (groupName: string, ownerUid: string) => {
       usersRef: [userRef],
       votingSessions: [],
     });
-    await userService.addToGroup(ownerUid, groupId, true);
+    await userService.addToGroup(ownerUid, id, true);
   }
   docSnap = await getDoc(docRef);
   return docSnap.data();
