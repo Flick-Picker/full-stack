@@ -126,9 +126,9 @@ const Social = () => {
             />
           </FormControl>
 
-          <Typography variant="h6" component="h6">
+          <Button variant="outlined" size="large">
             Send Friend Request
-          </Typography>
+          </Button>
         </Box>
       </Box>
     </Box>
