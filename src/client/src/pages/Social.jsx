@@ -104,7 +104,6 @@ const Social = () => {
           </Box>
         </Box>
 
-
         <Button variant="outlined" size="large">
           Invite
         </Button>
@@ -116,31 +115,22 @@ const Social = () => {
           flexDirection="row"
           gap="0%"
         >
+          <FormControl variant="standard">
+            <InputLabel htmlFor="outlined-adornment-group-name">
+              Enter user
+            </InputLabel>
+            <OutlinedInput
+              id="outlined-adornment-group-name"
+              sx={{ width: "25ch" }}
+              label="Email"
+            />
+          </FormControl>
 
-<FormControl variant="standard">
-          <InputLabel htmlFor="outlined-adornment-group-name">
-            Enter user
-          </InputLabel>
-          <OutlinedInput
-            id="outlined-adornment-group-name"
-            sx={{ width: '25ch' }}
-            label="Email"
-          />
-        </FormControl>
-
-<Typography variant="h6" component="h6">
-                  Send Friend Request
-        </Typography>
-
-
+          <Typography variant="h6" component="h6">
+            Send Friend Request
+          </Typography>
         </Box>
-
-
-
-
-
       </Box>
-
     </Box>
   );
 };
