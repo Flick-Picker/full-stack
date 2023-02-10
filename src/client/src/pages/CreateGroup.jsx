@@ -6,13 +6,21 @@ import {
   OutlinedInput,
   Typography,
 } from '@mui/material';
+import axios from 'axios';
 import React from 'react';
-import Header from '../components/Header';
-import FriendsList from '../components/FriendsList';
+import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import FriendsList from '../components/FriendsList';
+import Header from '../components/Header';
+import { selectUid } from '../features/token/tokenSlice';
 
 const CreateGroup = () => {
+  const createGroupURI = `${
+    process.env.REACT_APP_FRONTEND_URI || 'http://localhost:8080'
+  }/api/group`;
+
   const [groupName, setGroupName] = React.useState('');
+  const uid = useSelector(selectUid);
 
   const navigate = useNavigate();
 
@@ -23,8 +31,15 @@ const CreateGroup = () => {
 
   const handleCreateGroup = (e) => {
     e.preventDefault();
-    console.log(groupName);
-    // Call create group API here from backend and send invites to friends
+    // Send invites to friends here too
+    const body = {
+      ownerUid: uid,
+      groupName,
+    };
+    axios
+      .post(`${createGroupURI}/new`, body)
+      .then(() => navigate('/home'))
+      .catch((e) => console.log(e));
   };
 
   const handleCancel = (e) => {

@@ -1,40 +1,12 @@
 import { Box, Button, Typography } from '@mui/material';
-import React, { useEffect } from 'react';
-import { useCookies } from 'react-cookie';
-import { useDispatch } from 'react-redux';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
-import { init } from '../features/token/tokenSlice';
 
 const HomePage = () => {
-  // Redux Global State
-  const dispatch = useDispatch();
 
   // React-Router Navigation
   const navigate = useNavigate();
-
-  // Cookie Management
-  const [cookies] = useCookies([
-    'access_token',
-    'refresh_token',
-    'expiration_time',
-  ]);
-
-  // Redirects if there is no active user
-  useEffect(() => {
-    if (cookies.access_token === null) {
-      navigate('/login');
-    } else {
-      const obj = {
-        uid: 0, // Collect uid from db
-        email: 'collect', // Collect email from db
-        accessToken: cookies.access_token,
-        refreshToken: cookies.refresh_token,
-        expirationTime: cookies.expiration_time,
-      };
-      dispatch(init(obj));
-    }
-  }, [dispatch, navigate, cookies]);
 
   const handleJoinGroupClick = (e) => {
     e.preventDefault();
