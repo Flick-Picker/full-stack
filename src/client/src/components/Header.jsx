@@ -18,6 +18,11 @@ const Header = () => {
     navigate('/social');
   };
 
+  const handlePreferencesClick = (e) => {
+    e.preventDefault();
+    navigate('/preferences');
+  };
+
   return (
     <AppBar position="static">
       <Toolbar>
@@ -42,6 +47,7 @@ const Header = () => {
           edge="start"
           color="inherit"
           aria-label="menu"
+          onClick={handlePreferencesClick}
           sx={{ mr: 2 }}>
           <Box display="flex" alignItems="center" flexWrap="wrap">
             <Typography variant="body1" sx={{ mr: 0.5 }}>

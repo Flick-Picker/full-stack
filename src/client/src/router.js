@@ -7,6 +7,7 @@ import JoinGroup from './pages/JoinGroup';
 import LoginPage from './pages/LoginPage';
 import SignUpPage from './pages/SignUpPage';
 import Social from './pages/Social';
+import Preferences from './pages/Preferences';
 
 const router = createBrowserRouter([
 
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
   {
     path: '/social',
     element: <Social />,
+  },
+  {
+    path: '/Preferences',
+    element: <Preferences />,
   },
   {
       path: '/error',
