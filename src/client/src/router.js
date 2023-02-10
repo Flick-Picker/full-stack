@@ -41,7 +41,7 @@ const router = createBrowserRouter([
     element: <Social />,
   },
   {
-    path: '/Preferences',
+    path: '/preferences',
     element: <Preferences />,
   },
   {
