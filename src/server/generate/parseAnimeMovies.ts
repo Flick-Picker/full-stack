@@ -1,16 +1,16 @@
 import fs from 'fs';
-import animeMovie from '../static/anime_movie_batch.json';
+import animeMovie from '../api-json/anime_movie_batch.json';
 import AnimeTvObject from '../classes/animeTvObject';
 
 function parseAnimeMovieGenre(genres: { name: string; }[]) {
-  const returnGenres = new Set<String>();
+  const returnGenres = new Set<string>();
   genres.forEach((genre: { name: string; }) => {
     returnGenres.add(genre.name.toLowerCase());
   });
   return Array.from(returnGenres);
 }
 
-const getAnimeMovie = async () => {
+export const getAnimeMovie = async () => {
   const anime: AnimeTvObject[] = [];
   animeMovie.forEach((movie) => {
     let name = movie.title;
@@ -33,7 +33,3 @@ const getAnimeMovie = async () => {
     if (err) console.log(err);
   });
 };
-
-console.log('Parsing anime movies...');
-getAnimeMovie();
-console.log('Finished parsing anime movies!');

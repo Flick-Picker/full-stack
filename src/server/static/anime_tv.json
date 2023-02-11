@@ -3,18 +3,6 @@
     "genres": [
       "action",
       "adventure",
-      "fantasy"
-    ],
-    "name": "Bleach: Thousand-Year Blood War",
-    "malID": 41467,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/1764/126627l.jpg",
-    "rating": 9.11,
-    "numberOfVotes": 156584
-  },
-  {
-    "genres": [
-      "action",
-      "adventure",
       "drama",
       "fantasy"
     ],
@@ -22,7 +10,19 @@
     "malID": 5114,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1208/94745l.jpg",
     "rating": 9.11,
-    "numberOfVotes": 1954832
+    "numberOfVotes": 1960729
+  },
+  {
+    "genres": [
+      "action",
+      "adventure",
+      "fantasy"
+    ],
+    "name": "Bleach: Thousand-Year Blood War",
+    "malID": 41467,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/1764/126627l.jpg",
+    "rating": 9.1,
+    "numberOfVotes": 166301
   },
   {
     "genres": [
@@ -34,7 +34,7 @@
     "malID": 9253,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1935/127974l.jpg",
     "rating": 9.08,
-    "numberOfVotes": 1298685
+    "numberOfVotes": 1302491
   },
   {
     "genres": [
@@ -46,7 +46,7 @@
     "malID": 28977,
     "imageURL": "https://cdn.myanimelist.net/images/anime/3/72078l.jpg",
     "rating": 9.07,
-    "numberOfVotes": 230084
+    "numberOfVotes": 230959
   },
   {
     "genres": [
@@ -57,7 +57,7 @@
     "malID": 43608,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1160/122627l.jpg",
     "rating": 9.07,
-    "numberOfVotes": 395229
+    "numberOfVotes": 401287
   },
   {
     "genres": [
@@ -68,7 +68,7 @@
     "malID": 38524,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1517/100633l.jpg",
     "rating": 9.06,
-    "numberOfVotes": 1407773
+    "numberOfVotes": 1414088
   },
   {
     "genres": [
@@ -80,7 +80,7 @@
     "malID": 9969,
     "imageURL": "https://cdn.myanimelist.net/images/anime/4/50361l.jpg",
     "rating": 9.04,
-    "numberOfVotes": 219705
+    "numberOfVotes": 220250
   },
   {
     "genres": [
@@ -92,7 +92,7 @@
     "malID": 11061,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1337/99013l.jpg",
     "rating": 9.04,
-    "numberOfVotes": 1591469
+    "numberOfVotes": 1597387
   },
   {
     "genres": [
@@ -104,7 +104,7 @@
     "malID": 15417,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1452/123686l.jpg",
     "rating": 9.03,
-    "numberOfVotes": 153447
+    "numberOfVotes": 153834
   },
   {
     "genres": [
@@ -116,7 +116,7 @@
     "malID": 42938,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1085/114792l.jpg",
     "rating": 9.01,
-    "numberOfVotes": 195821
+    "numberOfVotes": 197279
   },
   {
     "genres": [
@@ -128,7 +128,7 @@
     "malID": 34096,
     "imageURL": "https://cdn.myanimelist.net/images/anime/3/83528l.jpg",
     "rating": 8.99,
-    "numberOfVotes": 133960
+    "numberOfVotes": 134381
   },
   {
     "genres": [
@@ -137,8 +137,8 @@
     "name": "Bocchi the Rock!",
     "malID": 47917,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1448/127956l.jpg",
-    "rating": 8.96,
-    "numberOfVotes": 144484
+    "rating": 8.95,
+    "numberOfVotes": 163195
   },
   {
     "genres": [
@@ -149,7 +149,7 @@
     "malID": 35180,
     "imageURL": "https://cdn.myanimelist.net/images/anime/3/88469l.jpg",
     "rating": 8.94,
-    "numberOfVotes": 185668
+    "numberOfVotes": 186178
   },
   {
     "genres": [
@@ -161,7 +161,7 @@
     "malID": 4181,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1299/110774l.jpg",
     "rating": 8.94,
-    "numberOfVotes": 628210
+    "numberOfVotes": 629352
   },
   {
     "genres": [
@@ -173,11 +173,12 @@
     "malID": 918,
     "imageURL": "https://cdn.myanimelist.net/images/anime/10/73274l.jpg",
     "rating": 8.94,
-    "numberOfVotes": 372542
+    "numberOfVotes": 373338
   },
   {
     "genres": [
       "action",
+      "award winning",
       "drama",
       "sci-fi"
     ],
@@ -185,7 +186,7 @@
     "malID": 2904,
     "imageURL": "https://cdn.myanimelist.net/images/anime/4/9391l.jpg",
     "rating": 8.91,
-    "numberOfVotes": 1117150
+    "numberOfVotes": 1119792
   },
   {
     "genres": [
@@ -197,7 +198,7 @@
     "malID": 35247,
     "imageURL": "https://cdn.myanimelist.net/images/anime/6/87322l.jpg",
     "rating": 8.89,
-    "numberOfVotes": 178097
+    "numberOfVotes": 178564
   },
   {
     "genres": [
@@ -209,7 +210,7 @@
     "malID": 37491,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1776/96566l.jpg",
     "rating": 8.88,
-    "numberOfVotes": 86024
+    "numberOfVotes": 86375
   },
   {
     "genres": [
@@ -220,20 +221,8 @@
     "name": "Monster",
     "malID": 19,
     "imageURL": "https://cdn.myanimelist.net/images/anime/10/18793l.jpg",
-    "rating": 8.85,
-    "numberOfVotes": 338639
-  },
-  {
-    "genres": [
-      "action",
-      "adventure",
-      "drama"
-    ],
-    "name": "Vinland Saga Season 2",
-    "malID": 49387,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/1170/124312l.jpg",
-    "rating": 8.83,
-    "numberOfVotes": 20546
+    "rating": 8.86,
+    "numberOfVotes": 341614
   },
   {
     "genres": [
@@ -244,7 +233,17 @@
     "malID": 47778,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1908/120036l.jpg",
     "rating": 8.82,
-    "numberOfVotes": 677865
+    "numberOfVotes": 686932
+  },
+  {
+    "genres": [
+      "action"
+    ],
+    "name": "Kingdom: Season 3",
+    "malID": 40682,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/1443/111830l.jpg",
+    "rating": 8.82,
+    "numberOfVotes": 31530
   },
   {
     "genres": [
@@ -256,7 +255,7 @@
     "malID": 36838,
     "imageURL": "https://cdn.myanimelist.net/images/anime/12/89603l.jpg",
     "rating": 8.81,
-    "numberOfVotes": 94181
+    "numberOfVotes": 94549
   },
   {
     "genres": [
@@ -268,17 +267,7 @@
     "malID": 37510,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1918/96303l.jpg",
     "rating": 8.81,
-    "numberOfVotes": 861645
-  },
-  {
-    "genres": [
-      "action"
-    ],
-    "name": "Kingdom: Season 3",
-    "malID": 40682,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/1443/111830l.jpg",
-    "rating": 8.81,
-    "numberOfVotes": 31222
+    "numberOfVotes": 866152
   },
   {
     "genres": [
@@ -289,7 +278,19 @@
     "malID": 40028,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1000/110531l.jpg",
     "rating": 8.81,
-    "numberOfVotes": 1157915
+    "numberOfVotes": 1163987
+  },
+  {
+    "genres": [
+      "action",
+      "adventure",
+      "drama"
+    ],
+    "name": "Vinland Saga Season 2",
+    "malID": 49387,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/1170/124312l.jpg",
+    "rating": 8.8,
+    "numberOfVotes": 30102
   },
   {
     "genres": [
@@ -299,18 +300,7 @@
     "malID": 32935,
     "imageURL": "https://cdn.myanimelist.net/images/anime/7/81992l.jpg",
     "rating": 8.79,
-    "numberOfVotes": 735285
-  },
-  {
-    "genres": [
-      "action",
-      "drama"
-    ],
-    "name": "Attack on Titan: The Final Season Part 2",
-    "malID": 48583,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/1948/120625l.jpg",
-    "rating": 8.78,
-    "numberOfVotes": 558746
+    "numberOfVotes": 737535
   },
   {
     "genres": [
@@ -323,28 +313,30 @@
     "malID": 17074,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1807/121534l.jpg",
     "rating": 8.77,
-    "numberOfVotes": 339510
-  },
-  {
-    "genres": [
-      "action"
-    ],
-    "name": "Kingdom: Season 4",
-    "malID": 50160,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/1566/122794l.jpg",
-    "rating": 8.76,
-    "numberOfVotes": 17713
+    "numberOfVotes": 340089
   },
   {
     "genres": [
       "action",
+      "drama"
+    ],
+    "name": "Attack on Titan: The Final Season Part 2",
+    "malID": 48583,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/1948/120625l.jpg",
+    "rating": 8.77,
+    "numberOfVotes": 565159
+  },
+  {
+    "genres": [
+      "action",
+      "award winning",
       "sci-fi"
     ],
     "name": "Cowboy Bebop",
     "malID": 1,
     "imageURL": "https://cdn.myanimelist.net/images/anime/4/19644l.jpg",
     "rating": 8.75,
-    "numberOfVotes": 884109
+    "numberOfVotes": 887144
   },
   {
     "genres": [
@@ -354,7 +346,7 @@
     "malID": 263,
     "imageURL": "https://cdn.myanimelist.net/images/anime/4/86334l.jpg",
     "rating": 8.75,
-    "numberOfVotes": 253650
+    "numberOfVotes": 255039
   },
   {
     "genres": [
@@ -366,7 +358,29 @@
     "malID": 50172,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1228/125011l.jpg",
     "rating": 8.75,
-    "numberOfVotes": 174164
+    "numberOfVotes": 187619
+  },
+  {
+    "genres": [
+      "action"
+    ],
+    "name": "Kingdom: Season 4",
+    "malID": 50160,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/1566/122794l.jpg",
+    "rating": 8.75,
+    "numberOfVotes": 18121
+  },
+  {
+    "genres": [
+      "action",
+      "adventure",
+      "drama"
+    ],
+    "name": "Vinland Saga",
+    "malID": 37521,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/1500/103005l.jpg",
+    "rating": 8.73,
+    "numberOfVotes": 705059
   },
   {
     "genres": [
@@ -379,8 +393,8 @@
     "name": "Mushi-shi: Next Passage Part 2",
     "malID": 24701,
     "imageURL": "https://cdn.myanimelist.net/images/anime/9/68095l.jpg",
-    "rating": 8.74,
-    "numberOfVotes": 98722
+    "rating": 8.73,
+    "numberOfVotes": 98987
   },
   {
     "genres": [
@@ -390,42 +404,7 @@
     "malID": 33095,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1493/124765l.jpg",
     "rating": 8.73,
-    "numberOfVotes": 61421
-  },
-  {
-    "genres": [
-      "action",
-      "adventure",
-      "drama"
-    ],
-    "name": "Vinland Saga",
-    "malID": 37521,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/1500/103005l.jpg",
-    "rating": 8.73,
-    "numberOfVotes": 697129
-  },
-  {
-    "genres": [
-      "action",
-      "drama",
-      "sci-fi"
-    ],
-    "name": "86 Eighty-Six Part 2",
-    "malID": 48569,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/1321/117508l.jpg",
-    "rating": 8.71,
-    "numberOfVotes": 207850
-  },
-  {
-    "genres": [
-      "drama",
-      "sports"
-    ],
-    "name": "Tomorrow's Joe 2",
-    "malID": 2921,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/3/45028l.jpg",
-    "rating": 8.71,
-    "numberOfVotes": 17731
+    "numberOfVotes": 61541
   },
   {
     "genres": [
@@ -437,18 +416,43 @@
     "malID": 45576,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1028/117777l.jpg",
     "rating": 8.71,
-    "numberOfVotes": 432310
+    "numberOfVotes": 436848
   },
   {
     "genres": [
-      "award winning",
-      "mystery"
+      "action",
+      "drama",
+      "sci-fi"
     ],
-    "name": "Odd Taxi",
-    "malID": 46102,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/1981/113348l.jpg",
+    "name": "86 Eighty-Six Part 2",
+    "malID": 48569,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/1321/117508l.jpg",
     "rating": 8.71,
-    "numberOfVotes": 178007
+    "numberOfVotes": 210960
+  },
+  {
+    "genres": [
+      "drama",
+      "sports"
+    ],
+    "name": "Tomorrow's Joe 2",
+    "malID": 2921,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/3/45028l.jpg",
+    "rating": 8.71,
+    "numberOfVotes": 17815
+  },
+  {
+    "genres": [
+      "action",
+      "award winning",
+      "drama",
+      "sci-fi"
+    ],
+    "name": "Code Geass: Lelouch of the Rebellion",
+    "malID": 1575,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/5/50331l.jpg",
+    "rating": 8.7,
+    "numberOfVotes": 1313610
   },
   {
     "genres": [
@@ -462,19 +466,18 @@
     "malID": 21939,
     "imageURL": "https://cdn.myanimelist.net/images/anime/13/58533l.jpg",
     "rating": 8.7,
-    "numberOfVotes": 111289
+    "numberOfVotes": 111561
   },
   {
     "genres": [
-      "action",
-      "drama",
-      "sci-fi"
+      "award winning",
+      "mystery"
     ],
-    "name": "Code Geass: Lelouch of the Rebellion",
-    "malID": 1575,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/5/50331l.jpg",
+    "name": "Odd Taxi",
+    "malID": 46102,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/1981/113348l.jpg",
     "rating": 8.7,
-    "numberOfVotes": 1310617
+    "numberOfVotes": 179497
   },
   {
     "genres": [
@@ -485,29 +488,7 @@
     "malID": 245,
     "imageURL": "https://cdn.myanimelist.net/images/anime/13/11460l.jpg",
     "rating": 8.69,
-    "numberOfVotes": 378120
-  },
-  {
-    "genres": [
-      "action",
-      "comedy"
-    ],
-    "name": "Spy x Family",
-    "malID": 50265,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/1441/122795l.jpg",
-    "rating": 8.69,
-    "numberOfVotes": 720351
-  },
-  {
-    "genres": [
-      "action",
-      "fantasy"
-    ],
-    "name": "Chainsaw Man",
-    "malID": 44511,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/1806/126216l.jpg",
-    "rating": 8.68,
-    "numberOfVotes": 452526
+    "numberOfVotes": 379048
   },
   {
     "genres": [
@@ -521,7 +502,7 @@
     "malID": 41084,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1864/122519l.jpg",
     "rating": 8.68,
-    "numberOfVotes": 124514
+    "numberOfVotes": 128869
   },
   {
     "genres": [
@@ -533,7 +514,18 @@
     "malID": 21,
     "imageURL": "https://cdn.myanimelist.net/images/anime/6/73245l.jpg",
     "rating": 8.68,
-    "numberOfVotes": 1170663
+    "numberOfVotes": 1176660
+  },
+  {
+    "genres": [
+      "action",
+      "comedy"
+    ],
+    "name": "Spy x Family",
+    "malID": 50265,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/1441/122795l.jpg",
+    "rating": 8.68,
+    "numberOfVotes": 732306
   },
   {
     "genres": [
@@ -547,7 +539,7 @@
     "malID": 34599,
     "imageURL": "https://cdn.myanimelist.net/images/anime/6/86733l.jpg",
     "rating": 8.67,
-    "numberOfVotes": 669045
+    "numberOfVotes": 672378
   },
   {
     "genres": [
@@ -561,7 +553,7 @@
     "malID": 457,
     "imageURL": "https://cdn.myanimelist.net/images/anime/2/73862l.jpg",
     "rating": 8.67,
-    "numberOfVotes": 262869
+    "numberOfVotes": 263445
   },
   {
     "genres": [
@@ -572,7 +564,18 @@
     "malID": 33352,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1795/95088l.jpg",
     "rating": 8.67,
-    "numberOfVotes": 880330
+    "numberOfVotes": 883928
+  },
+  {
+    "genres": [
+      "action",
+      "fantasy"
+    ],
+    "name": "Chainsaw Man",
+    "malID": 44511,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/1806/126216l.jpg",
+    "rating": 8.66,
+    "numberOfVotes": 486729
   },
   {
     "genres": [
@@ -582,7 +585,7 @@
     "malID": 5258,
     "imageURL": "https://cdn.myanimelist.net/images/anime/8/56617l.jpg",
     "rating": 8.66,
-    "numberOfVotes": 150845
+    "numberOfVotes": 151393
   },
   {
     "genres": [
@@ -593,8 +596,8 @@
     "name": "Jujutsu Kaisen",
     "malID": 40748,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1171/109222l.jpg",
-    "rating": 8.66,
-    "numberOfVotes": 1373450
+    "rating": 8.65,
+    "numberOfVotes": 1382127
   },
   {
     "genres": [
@@ -606,7 +609,7 @@
     "malID": 11665,
     "imageURL": "https://cdn.myanimelist.net/images/anime/3/37449l.jpg",
     "rating": 8.65,
-    "numberOfVotes": 102582
+    "numberOfVotes": 102787
   },
   {
     "genres": [
@@ -617,7 +620,7 @@
     "malID": 23273,
     "imageURL": "https://cdn.myanimelist.net/images/anime/3/67177l.jpg",
     "rating": 8.65,
-    "numberOfVotes": 1252953
+    "numberOfVotes": 1256267
   },
   {
     "genres": [
@@ -627,7 +630,7 @@
     "malID": 28891,
     "imageURL": "https://cdn.myanimelist.net/images/anime/9/76662l.jpg",
     "rating": 8.64,
-    "numberOfVotes": 873372
+    "numberOfVotes": 875939
   },
   {
     "genres": [
@@ -637,7 +640,7 @@
     "malID": 40591,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1764/106659l.jpg",
     "rating": 8.64,
-    "numberOfVotes": 765117
+    "numberOfVotes": 768913
   },
   {
     "genres": [
@@ -650,7 +653,7 @@
     "malID": 2001,
     "imageURL": "https://cdn.myanimelist.net/images/anime/4/5123l.jpg",
     "rating": 8.63,
-    "numberOfVotes": 849990
+    "numberOfVotes": 851761
   },
   {
     "genres": [
@@ -662,7 +665,7 @@
     "malID": 34591,
     "imageURL": "https://cdn.myanimelist.net/images/anime/6/84416l.jpg",
     "rating": 8.62,
-    "numberOfVotes": 62670
+    "numberOfVotes": 62835
   },
   {
     "genres": [
@@ -674,7 +677,7 @@
     "malID": 22135,
     "imageURL": "https://cdn.myanimelist.net/images/anime/10/58041l.jpg",
     "rating": 8.62,
-    "numberOfVotes": 169535
+    "numberOfVotes": 170079
   },
   {
     "genres": [
@@ -685,7 +688,7 @@
     "malID": 35760,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1173/92110l.jpg",
     "rating": 8.62,
-    "numberOfVotes": 1443724
+    "numberOfVotes": 1449834
   },
   {
     "genres": [
@@ -696,17 +699,7 @@
     "malID": 1535,
     "imageURL": "https://cdn.myanimelist.net/images/anime/9/9453l.jpg",
     "rating": 8.62,
-    "numberOfVotes": 2546631
-  },
-  {
-    "genres": [
-      "sports"
-    ],
-    "name": "Hajime No Ippo: The Fighting!",
-    "malID": 19647,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/6/56147l.jpg",
-    "rating": 8.59,
-    "numberOfVotes": 127749
+    "numberOfVotes": 2553821
   },
   {
     "genres": [
@@ -716,9 +709,19 @@
     ],
     "name": "Bungo Stray Dogs 4",
     "malID": 50330,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/1720/126608l.jpg",
-    "rating": 8.58,
-    "numberOfVotes": 9588
+    "imageURL": "https://cdn.myanimelist.net/images/anime/1263/132759l.jpg",
+    "rating": 8.59,
+    "numberOfVotes": 12583
+  },
+  {
+    "genres": [
+      "sports"
+    ],
+    "name": "Hajime No Ippo: The Fighting!",
+    "malID": 19647,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/6/56147l.jpg",
+    "rating": 8.59,
+    "numberOfVotes": 128274
   },
   {
     "genres": [
@@ -730,7 +733,7 @@
     "malID": 37991,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1572/95010l.jpg",
     "rating": 8.58,
-    "numberOfVotes": 609237
+    "numberOfVotes": 612270
   },
   {
     "genres": [
@@ -742,7 +745,7 @@
     "malID": 10379,
     "imageURL": "https://cdn.myanimelist.net/images/anime/8/82394l.jpg",
     "rating": 8.58,
-    "numberOfVotes": 111387
+    "numberOfVotes": 111598
   },
   {
     "genres": [
@@ -754,18 +757,7 @@
     "malID": 32983,
     "imageURL": "https://cdn.myanimelist.net/images/anime/11/81755l.jpg",
     "rating": 8.57,
-    "numberOfVotes": 69374
-  },
-  {
-    "genres": [
-      "adventure",
-      "fantasy"
-    ],
-    "name": "Ranking of Kings",
-    "malID": 40834,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/1347/117616l.jpg",
-    "rating": 8.57,
-    "numberOfVotes": 267895
+    "numberOfVotes": 69546
   },
   {
     "genres": [
@@ -775,7 +767,7 @@
     "malID": 28735,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1354/124768l.jpg",
     "rating": 8.57,
-    "numberOfVotes": 89756
+    "numberOfVotes": 89896
   },
   {
     "genres": [
@@ -788,7 +780,18 @@
     "malID": 7785,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1633/123689l.jpg",
     "rating": 8.57,
-    "numberOfVotes": 134924
+    "numberOfVotes": 135336
+  },
+  {
+    "genres": [
+      "adventure",
+      "fantasy"
+    ],
+    "name": "Ranking of Kings",
+    "malID": 40834,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/1347/117616l.jpg",
+    "rating": 8.56,
+    "numberOfVotes": 271224
   },
   {
     "genres": [
@@ -800,7 +803,7 @@
     "malID": 11741,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1522/117645l.jpg",
     "rating": 8.56,
-    "numberOfVotes": 669908
+    "numberOfVotes": 671386
   },
   {
     "genres": [
@@ -812,7 +815,7 @@
     "malID": 40417,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1972/111635l.jpg",
     "rating": 8.56,
-    "numberOfVotes": 223335
+    "numberOfVotes": 224793
   },
   {
     "genres": [
@@ -822,7 +825,7 @@
     "malID": 40776,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1453/106768l.jpg",
     "rating": 8.55,
-    "numberOfVotes": 423478
+    "numberOfVotes": 425743
   },
   {
     "genres": [
@@ -836,7 +839,7 @@
     "malID": 33,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1384/119988l.jpg",
     "rating": 8.55,
-    "numberOfVotes": 310070
+    "numberOfVotes": 311728
   },
   {
     "genres": [
@@ -848,7 +851,17 @@
     "malID": 5300,
     "imageURL": "https://cdn.myanimelist.net/images/anime/4/79738l.jpg",
     "rating": 8.55,
-    "numberOfVotes": 118679
+    "numberOfVotes": 118891
+  },
+  {
+    "genres": [
+      "sports"
+    ],
+    "name": "Slam Dunk",
+    "malID": 170,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/12/86890l.jpg",
+    "rating": 8.54,
+    "numberOfVotes": 125380
   },
   {
     "genres": [
@@ -860,17 +873,7 @@
     "malID": 12365,
     "imageURL": "https://cdn.myanimelist.net/images/anime/6/41845l.jpg",
     "rating": 8.54,
-    "numberOfVotes": 185974
-  },
-  {
-    "genres": [
-      "sports"
-    ],
-    "name": "Slam Dunk",
-    "malID": 170,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/12/86890l.jpg",
-    "rating": 8.54,
-    "numberOfVotes": 125041
+    "numberOfVotes": 186259
   },
   {
     "genres": [
@@ -881,7 +884,7 @@
     "malID": 877,
     "imageURL": "https://cdn.myanimelist.net/images/anime/2/11232l.jpg",
     "rating": 8.53,
-    "numberOfVotes": 226512
+    "numberOfVotes": 227597
   },
   {
     "genres": [
@@ -894,7 +897,7 @@
     "malID": 16498,
     "imageURL": "https://cdn.myanimelist.net/images/anime/10/47347l.jpg",
     "rating": 8.53,
-    "numberOfVotes": 2581838
+    "numberOfVotes": 2589364
   },
   {
     "genres": [
@@ -906,7 +909,7 @@
     "malID": 35839,
     "imageURL": "https://cdn.myanimelist.net/images/anime/6/89879l.jpg",
     "rating": 8.53,
-    "numberOfVotes": 200939
+    "numberOfVotes": 201529
   },
   {
     "genres": [
@@ -918,53 +921,7 @@
     "malID": 47194,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1120/120796l.jpg",
     "rating": 8.53,
-    "numberOfVotes": 124383
-  },
-  {
-    "genres": [
-      "slice of life"
-    ],
-    "name": "Laid-Back Camp Season 2",
-    "malID": 38474,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/1255/110636l.jpg",
-    "rating": 8.53,
-    "numberOfVotes": 80605
-  },
-  {
-    "genres": [
-      "action",
-      "comedy",
-      "sci-fi"
-    ],
-    "name": "Gintama.: Slip Arc",
-    "malID": 35843,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/11/88325l.jpg",
-    "rating": 8.52,
-    "numberOfVotes": 93583
-  },
-  {
-    "genres": [
-      "action",
-      "award winning",
-      "fantasy"
-    ],
-    "name": "Demon Slayer: Kimetsu no Yaiba",
-    "malID": 38000,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/1286/99889l.jpg",
-    "rating": 8.52,
-    "numberOfVotes": 1849508
-  },
-  {
-    "genres": [
-      "action",
-      "mystery",
-      "sci-fi"
-    ],
-    "name": "Ghost in the Shell: Stand Alone Complex 2nd GIG",
-    "malID": 801,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/1480/100555l.jpg",
-    "rating": 8.52,
-    "numberOfVotes": 100307
+    "numberOfVotes": 130178
   },
   {
     "genres": [
@@ -975,8 +932,18 @@
     "name": "Steins;Gate 0",
     "malID": 30484,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1375/93521l.jpg",
-    "rating": 8.52,
-    "numberOfVotes": 388275
+    "rating": 8.53,
+    "numberOfVotes": 389647
+  },
+  {
+    "genres": [
+      "slice of life"
+    ],
+    "name": "Laid-Back Camp Season 2",
+    "malID": 38474,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/1255/110636l.jpg",
+    "rating": 8.53,
+    "numberOfVotes": 81222
   },
   {
     "genres": [
@@ -988,18 +955,55 @@
     "malID": 37779,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1830/118780l.jpg",
     "rating": 8.52,
-    "numberOfVotes": 1182546
+    "numberOfVotes": 1186577
   },
   {
     "genres": [
       "action",
+      "comedy",
+      "sci-fi"
+    ],
+    "name": "Gintama.: Slip Arc",
+    "malID": 35843,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/11/88325l.jpg",
+    "rating": 8.52,
+    "numberOfVotes": 93897
+  },
+  {
+    "genres": [
+      "action",
+      "award winning",
+      "fantasy"
+    ],
+    "name": "Demon Slayer: Kimetsu no Yaiba",
+    "malID": 38000,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/1286/99889l.jpg",
+    "rating": 8.52,
+    "numberOfVotes": 1858201
+  },
+  {
+    "genres": [
+      "action",
+      "mystery",
+      "sci-fi"
+    ],
+    "name": "Ghost in the Shell: Stand Alone Complex 2nd GIG",
+    "malID": 801,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/1480/100555l.jpg",
+    "rating": 8.52,
+    "numberOfVotes": 100447
+  },
+  {
+    "genres": [
+      "action",
+      "adventure",
       "comedy"
     ],
-    "name": "Assassination Classroom Second Season",
-    "malID": 30654,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/8/77966l.jpg",
-    "rating": 8.5,
-    "numberOfVotes": 820491
+    "name": "Samurai Champloo",
+    "malID": 205,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/1375/121599l.jpg",
+    "rating": 8.51,
+    "numberOfVotes": 599538
   },
   {
     "genres": [
@@ -1011,41 +1015,7 @@
     "malID": 31933,
     "imageURL": "https://cdn.myanimelist.net/images/anime/3/79156l.jpg",
     "rating": 8.5,
-    "numberOfVotes": 697497
-  },
-  {
-    "genres": [
-      "comedy",
-      "sci-fi"
-    ],
-    "name": "Space Brothers",
-    "malID": 12431,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/7/37573l.jpg",
-    "rating": 8.5,
-    "numberOfVotes": 50463
-  },
-  {
-    "genres": [
-      "action",
-      "comedy"
-    ],
-    "name": "One Punch Man",
-    "malID": 30276,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/12/76049l.jpg",
-    "rating": 8.5,
-    "numberOfVotes": 2069419
-  },
-  {
-    "genres": [
-      "action",
-      "adventure",
-      "comedy"
-    ],
-    "name": "Samurai Champloo",
-    "malID": 205,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/1375/121599l.jpg",
-    "rating": 8.5,
-    "numberOfVotes": 598166
+    "numberOfVotes": 700582
   },
   {
     "genres": [
@@ -1057,7 +1027,40 @@
     "malID": 25777,
     "imageURL": "https://cdn.myanimelist.net/images/anime/4/84177l.jpg",
     "rating": 8.5,
-    "numberOfVotes": 1699440
+    "numberOfVotes": 1705278
+  },
+  {
+    "genres": [
+      "comedy",
+      "sci-fi"
+    ],
+    "name": "Space Brothers",
+    "malID": 12431,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/7/37573l.jpg",
+    "rating": 8.5,
+    "numberOfVotes": 50552
+  },
+  {
+    "genres": [
+      "action",
+      "comedy"
+    ],
+    "name": "One Punch Man",
+    "malID": 30276,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/12/76049l.jpg",
+    "rating": 8.5,
+    "numberOfVotes": 2075337
+  },
+  {
+    "genres": [
+      "action",
+      "comedy"
+    ],
+    "name": "Assassination Classroom Second Season",
+    "malID": 30654,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/8/77966l.jpg",
+    "rating": 8.5,
+    "numberOfVotes": 823148
   },
   {
     "genres": [
@@ -1069,7 +1072,7 @@
     "malID": 32182,
     "imageURL": "https://cdn.myanimelist.net/images/anime/8/80356l.jpg",
     "rating": 8.49,
-    "numberOfVotes": 1156565
+    "numberOfVotes": 1161828
   },
   {
     "genres": [
@@ -1081,7 +1084,7 @@
     "malID": 3297,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1394/129606l.jpg",
     "rating": 8.49,
-    "numberOfVotes": 30122
+    "numberOfVotes": 30197
   },
   {
     "genres": [
@@ -1094,7 +1097,7 @@
     "malID": 36649,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1190/93472l.jpg",
     "rating": 8.49,
-    "numberOfVotes": 334815
+    "numberOfVotes": 336465
   },
   {
     "genres": [
@@ -1105,7 +1108,7 @@
     "malID": 6114,
     "imageURL": "https://cdn.myanimelist.net/images/anime/9/72697l.jpg",
     "rating": 8.48,
-    "numberOfVotes": 149070
+    "numberOfVotes": 149357
   },
   {
     "genres": [
@@ -1116,7 +1119,7 @@
     "malID": 37379,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1898/110709l.jpg",
     "rating": 8.47,
-    "numberOfVotes": 55793
+    "numberOfVotes": 56043
   },
   {
     "genres": [
@@ -1126,19 +1129,7 @@
     "malID": 10165,
     "imageURL": "https://cdn.myanimelist.net/images/anime/3/75617l.jpg",
     "rating": 8.46,
-    "numberOfVotes": 340309
-  },
-  {
-    "genres": [
-      "drama",
-      "fantasy",
-      "suspense"
-    ],
-    "name": "Re:ZERO -Starting Life in Another World- Season 2 Part 2",
-    "malID": 42203,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/1724/117421l.jpg",
-    "rating": 8.46,
-    "numberOfVotes": 446080
+    "numberOfVotes": 341339
   },
   {
     "genres": [
@@ -1150,7 +1141,19 @@
     "malID": 31181,
     "imageURL": "https://cdn.myanimelist.net/images/anime/8/76479l.jpg",
     "rating": 8.45,
-    "numberOfVotes": 221445
+    "numberOfVotes": 221928
+  },
+  {
+    "genres": [
+      "drama",
+      "fantasy",
+      "suspense"
+    ],
+    "name": "Re:ZERO -Starting Life in Another World- Season 2 Part 2",
+    "malID": 42203,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/1724/117421l.jpg",
+    "rating": 8.45,
+    "numberOfVotes": 448557
   },
   {
     "genres": [
@@ -1162,7 +1165,7 @@
     "malID": 392,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1228/111372l.jpg",
     "rating": 8.45,
-    "numberOfVotes": 307434
+    "numberOfVotes": 308286
   },
   {
     "genres": [
@@ -1173,7 +1176,7 @@
     "malID": 40059,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1763/108108l.jpg",
     "rating": 8.45,
-    "numberOfVotes": 69545
+    "numberOfVotes": 70006
   },
   {
     "genres": [
@@ -1183,7 +1186,7 @@
     "malID": 49721,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1861/120361l.jpg",
     "rating": 8.45,
-    "numberOfVotes": 67592
+    "numberOfVotes": 68320
   },
   {
     "genres": [
@@ -1193,7 +1196,7 @@
     "malID": 20583,
     "imageURL": "https://cdn.myanimelist.net/images/anime/7/76014l.jpg",
     "rating": 8.44,
-    "numberOfVotes": 1129354
+    "numberOfVotes": 1133035
   },
   {
     "genres": [
@@ -1206,7 +1209,7 @@
     "malID": 26055,
     "imageURL": "https://cdn.myanimelist.net/images/anime/11/75045l.jpg",
     "rating": 8.44,
-    "numberOfVotes": 716716
+    "numberOfVotes": 719816
   },
   {
     "genres": [
@@ -1217,7 +1220,7 @@
     "malID": 38889,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1422/111621l.jpg",
     "rating": 8.43,
-    "numberOfVotes": 82278
+    "numberOfVotes": 82755
   },
   {
     "genres": [
@@ -1229,7 +1232,7 @@
     "malID": 467,
     "imageURL": "https://cdn.myanimelist.net/images/anime/11/50857l.jpg",
     "rating": 8.43,
-    "numberOfVotes": 158108
+    "numberOfVotes": 158313
   },
   {
     "genres": [
@@ -1242,7 +1245,7 @@
     "malID": 2246,
     "imageURL": "https://cdn.myanimelist.net/images/anime/3/20713l.jpg",
     "rating": 8.43,
-    "numberOfVotes": 83544
+    "numberOfVotes": 83785
   },
   {
     "genres": [
@@ -1253,7 +1256,7 @@
     "malID": 34612,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1961/91383l.jpg",
     "rating": 8.43,
-    "numberOfVotes": 347634
+    "numberOfVotes": 348987
   },
   {
     "genres": [
@@ -1263,7 +1266,18 @@
     "malID": 37105,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1302/94882l.jpg",
     "rating": 8.43,
-    "numberOfVotes": 375371
+    "numberOfVotes": 377096
+  },
+  {
+    "genres": [
+      "comedy",
+      "supernatural"
+    ],
+    "name": "The Disastrous Life of Saiki K.",
+    "malID": 33255,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/11/80167l.jpg",
+    "rating": 8.42,
+    "numberOfVotes": 557915
   },
   {
     "genres": [
@@ -1275,18 +1289,7 @@
     "malID": 46095,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1637/115052l.jpg",
     "rating": 8.42,
-    "numberOfVotes": 211616
-  },
-  {
-    "genres": [
-      "comedy",
-      "supernatural"
-    ],
-    "name": "The Disastrous Life of Saiki K.",
-    "malID": 33255,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/11/80167l.jpg",
-    "rating": 8.42,
-    "numberOfVotes": 555515
+    "numberOfVotes": 212776
   },
   {
     "genres": [
@@ -1298,7 +1301,7 @@
     "malID": 136,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1305/132237l.jpg",
     "rating": 8.41,
-    "numberOfVotes": 268278
+    "numberOfVotes": 269026
   },
   {
     "genres": [
@@ -1308,7 +1311,7 @@
     "malID": 37999,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1295/106551l.jpg",
     "rating": 8.41,
-    "numberOfVotes": 985907
+    "numberOfVotes": 990014
   },
   {
     "genres": [
@@ -1318,7 +1321,7 @@
     "malID": 5028,
     "imageURL": "https://cdn.myanimelist.net/images/anime/9/75218l.jpg",
     "rating": 8.41,
-    "numberOfVotes": 39666
+    "numberOfVotes": 39723
   },
   {
     "genres": [
@@ -1331,7 +1334,7 @@
     "malID": 35557,
     "imageURL": "https://cdn.myanimelist.net/images/anime/3/88293l.jpg",
     "rating": 8.4,
-    "numberOfVotes": 178926
+    "numberOfVotes": 179697
   },
   {
     "genres": [
@@ -1342,7 +1345,7 @@
     "malID": 37965,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1936/129119l.jpg",
     "rating": 8.4,
-    "numberOfVotes": 126913
+    "numberOfVotes": 127308
   },
   {
     "genres": [
@@ -1353,7 +1356,7 @@
     "malID": 31646,
     "imageURL": "https://cdn.myanimelist.net/images/anime/6/82898l.jpg",
     "rating": 8.39,
-    "numberOfVotes": 263912
+    "numberOfVotes": 264577
   },
   {
     "genres": [
@@ -1364,7 +1367,7 @@
     "malID": 14397,
     "imageURL": "https://cdn.myanimelist.net/images/anime/6/47435l.jpg",
     "rating": 8.39,
-    "numberOfVotes": 122917
+    "numberOfVotes": 123180
   },
   {
     "genres": [
@@ -1376,7 +1379,7 @@
     "malID": 5941,
     "imageURL": "https://cdn.myanimelist.net/images/anime/6/22103l.jpg",
     "rating": 8.39,
-    "numberOfVotes": 48707
+    "numberOfVotes": 48781
   },
   {
     "genres": [
@@ -1389,17 +1392,7 @@
     "malID": 39551,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1271/109841l.jpg",
     "rating": 8.39,
-    "numberOfVotes": 467274
-  },
-  {
-    "genres": [
-      "slice of life"
-    ],
-    "name": "Non Non Biyori Nonstop",
-    "malID": 39808,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/1033/111540l.jpg",
-    "rating": 8.39,
-    "numberOfVotes": 40751
+    "numberOfVotes": 470712
   },
   {
     "genres": [
@@ -1409,7 +1402,17 @@
     "malID": 22789,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1426/111248l.jpg",
     "rating": 8.38,
-    "numberOfVotes": 321487
+    "numberOfVotes": 322197
+  },
+  {
+    "genres": [
+      "slice of life"
+    ],
+    "name": "Non Non Biyori Nonstop",
+    "malID": 39808,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/1033/111540l.jpg",
+    "rating": 8.38,
+    "numberOfVotes": 40969
   },
   {
     "genres": [
@@ -1420,7 +1423,7 @@
     "malID": 49926,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1065/118763l.jpg",
     "rating": 8.38,
-    "numberOfVotes": 320133
+    "numberOfVotes": 324873
   },
   {
     "genres": [
@@ -1433,7 +1436,7 @@
     "malID": 2251,
     "imageURL": "https://cdn.myanimelist.net/images/anime/3/14547l.jpg",
     "rating": 8.37,
-    "numberOfVotes": 365887
+    "numberOfVotes": 366517
   },
   {
     "genres": [
@@ -1445,7 +1448,28 @@
     "malID": 41025,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1880/118484l.jpg",
     "rating": 8.37,
-    "numberOfVotes": 315752
+    "numberOfVotes": 318140
+  },
+  {
+    "genres": [
+      "comedy",
+      "romance"
+    ],
+    "name": "My Teen Romantic Comedy SNAFU Climax!",
+    "malID": 39547,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/1958/107912l.jpg",
+    "rating": 8.37,
+    "numberOfVotes": 356191
+  },
+  {
+    "genres": [
+      "slice of life"
+    ],
+    "name": "Bunny Drop",
+    "malID": 10162,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/2/29665l.jpg",
+    "rating": 8.37,
+    "numberOfVotes": 233600
   },
   {
     "genres": [
@@ -1457,7 +1481,7 @@
     "malID": 39535,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1530/117776l.jpg",
     "rating": 8.37,
-    "numberOfVotes": 656138
+    "numberOfVotes": 660817
   },
   {
     "genres": [
@@ -1467,29 +1491,8 @@
     "name": "Spy x Family Part 2",
     "malID": 50602,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1111/127508l.jpg",
-    "rating": 8.37,
-    "numberOfVotes": 260191
-  },
-  {
-    "genres": [
-      "slice of life"
-    ],
-    "name": "Bunny Drop",
-    "malID": 10162,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/2/29665l.jpg",
-    "rating": 8.37,
-    "numberOfVotes": 233174
-  },
-  {
-    "genres": [
-      "comedy",
-      "romance"
-    ],
-    "name": "My Teen Romantic Comedy SNAFU Climax!",
-    "malID": 39547,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/1958/107912l.jpg",
-    "rating": 8.37,
-    "numberOfVotes": 354464
+    "rating": 8.36,
+    "numberOfVotes": 280850
   },
   {
     "genres": [
@@ -1499,7 +1502,7 @@
     "malID": 38883,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1813/105367l.jpg",
     "rating": 8.36,
-    "numberOfVotes": 516535
+    "numberOfVotes": 518745
   },
   {
     "genres": [
@@ -1511,19 +1514,7 @@
     "malID": 9756,
     "imageURL": "https://cdn.myanimelist.net/images/anime/11/55225l.jpg",
     "rating": 8.36,
-    "numberOfVotes": 707727
-  },
-  {
-    "genres": [
-      "drama",
-      "fantasy",
-      "suspense"
-    ],
-    "name": "Re:ZERO -Starting Life in Another World- Season 2",
-    "malID": 39587,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/1444/108005l.jpg",
-    "rating": 8.35,
-    "numberOfVotes": 574589
+    "numberOfVotes": 709332
   },
   {
     "genres": [
@@ -1535,31 +1526,19 @@
     "malID": 10030,
     "imageURL": "https://cdn.myanimelist.net/images/anime/3/34923l.jpg",
     "rating": 8.35,
-    "numberOfVotes": 203665
+    "numberOfVotes": 203986
   },
   {
     "genres": [
-      "boys love",
       "drama",
-      "romance"
+      "fantasy",
+      "suspense"
     ],
-    "name": "Given",
-    "malID": 39533,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/1666/102238l.jpg",
-    "rating": 8.34,
-    "numberOfVotes": 280054
-  },
-  {
-    "genres": [
-      "action",
-      "horror",
-      "sci-fi"
-    ],
-    "name": "Parasyte: The Maxim",
-    "malID": 22535,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/3/73178l.jpg",
-    "rating": 8.34,
-    "numberOfVotes": 1072708
+    "name": "Re:ZERO -Starting Life in Another World- Season 2",
+    "malID": 39587,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/1444/108005l.jpg",
+    "rating": 8.35,
+    "numberOfVotes": 577042
   },
   {
     "genres": [
@@ -1574,7 +1553,7 @@
     "malID": 30,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1314/108941l.jpg",
     "rating": 8.34,
-    "numberOfVotes": 989135
+    "numberOfVotes": 992886
   },
   {
     "genres": [
@@ -1586,49 +1565,31 @@
     "malID": 13601,
     "imageURL": "https://cdn.myanimelist.net/images/anime/5/43399l.jpg",
     "rating": 8.34,
-    "numberOfVotes": 741336
+    "numberOfVotes": 742896
   },
   {
     "genres": [
-      "fantasy",
-      "slice of life"
-    ],
-    "name": "Miss Kobayashi's Dragon Maid S",
-    "malID": 39247,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/1252/115539l.jpg",
-    "rating": 8.33,
-    "numberOfVotes": 236748
-  },
-  {
-    "genres": [
-      "sports"
-    ],
-    "name": "Major S6",
-    "malID": 7655,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/2/75216l.jpg",
-    "rating": 8.33,
-    "numberOfVotes": 35159
-  },
-  {
-    "genres": [
-      "sports"
-    ],
-    "name": "One Outs",
-    "malID": 5040,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/7/21065l.jpg",
-    "rating": 8.33,
-    "numberOfVotes": 109535
-  },
-  {
-    "genres": [
+      "boys love",
       "drama",
       "romance"
     ],
-    "name": "The Rose of Versailles",
-    "malID": 338,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/9/57043l.jpg",
-    "rating": 8.33,
-    "numberOfVotes": 27371
+    "name": "Given",
+    "malID": 39533,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/1666/102238l.jpg",
+    "rating": 8.34,
+    "numberOfVotes": 281440
+  },
+  {
+    "genres": [
+      "action",
+      "horror",
+      "sci-fi"
+    ],
+    "name": "Parasyte: The Maxim",
+    "malID": 22535,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/3/73178l.jpg",
+    "rating": 8.34,
+    "numberOfVotes": 1075874
   },
   {
     "genres": [
@@ -1640,7 +1601,19 @@
     "malID": 5081,
     "imageURL": "https://cdn.myanimelist.net/images/anime/11/75274l.jpg",
     "rating": 8.33,
-    "numberOfVotes": 697467
+    "numberOfVotes": 698601
+  },
+  {
+    "genres": [
+      "adventure",
+      "drama",
+      "slice of life"
+    ],
+    "name": "Romeo and the Black Brothers",
+    "malID": 2559,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/4/17979l.jpg",
+    "rating": 8.33,
+    "numberOfVotes": 16337
   },
   {
     "genres": [
@@ -1650,7 +1623,49 @@
     "malID": 17389,
     "imageURL": "https://cdn.myanimelist.net/images/anime/13/53589l.jpg",
     "rating": 8.33,
-    "numberOfVotes": 55130
+    "numberOfVotes": 55388
+  },
+  {
+    "genres": [
+      "fantasy",
+      "slice of life"
+    ],
+    "name": "Miss Kobayashi's Dragon Maid S",
+    "malID": 39247,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/1252/115539l.jpg",
+    "rating": 8.33,
+    "numberOfVotes": 238388
+  },
+  {
+    "genres": [
+      "sports"
+    ],
+    "name": "Major S6",
+    "malID": 7655,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/2/75216l.jpg",
+    "rating": 8.33,
+    "numberOfVotes": 35214
+  },
+  {
+    "genres": [
+      "sports"
+    ],
+    "name": "One Outs",
+    "malID": 5040,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/7/21065l.jpg",
+    "rating": 8.33,
+    "numberOfVotes": 109754
+  },
+  {
+    "genres": [
+      "drama",
+      "romance"
+    ],
+    "name": "The Rose of Versailles",
+    "malID": 338,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/9/57043l.jpg",
+    "rating": 8.33,
+    "numberOfVotes": 27438
   },
   {
     "genres": [
@@ -1661,7 +1676,18 @@
     "malID": 9989,
     "imageURL": "https://cdn.myanimelist.net/images/anime/5/79697l.jpg",
     "rating": 8.32,
-    "numberOfVotes": 934012
+    "numberOfVotes": 935912
+  },
+  {
+    "genres": [
+      "action",
+      "drama"
+    ],
+    "name": "Initial D First Stage",
+    "malID": 185,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/1384/127972l.jpg",
+    "rating": 8.32,
+    "numberOfVotes": 170264
   },
   {
     "genres": [
@@ -1673,18 +1699,7 @@
     "malID": 28701,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1881/124810l.jpg",
     "rating": 8.32,
-    "numberOfVotes": 529783
-  },
-  {
-    "genres": [
-      "action",
-      "drama"
-    ],
-    "name": "Initial D First Stage",
-    "malID": 185,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/1384/127972l.jpg",
-    "rating": 8.32,
-    "numberOfVotes": 169419
+    "numberOfVotes": 530985
   },
   {
     "genres": [
@@ -1696,7 +1711,7 @@
     "malID": 6594,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1112/119225l.jpg",
     "rating": 8.32,
-    "numberOfVotes": 205145
+    "numberOfVotes": 205525
   },
   {
     "genres": [
@@ -1707,7 +1722,7 @@
     "malID": 5420,
     "imageURL": "https://cdn.myanimelist.net/images/anime/9/19845l.jpg",
     "rating": 8.32,
-    "numberOfVotes": 20192
+    "numberOfVotes": 20227
   },
   {
     "genres": [
@@ -1719,19 +1734,7 @@
     "malID": 5341,
     "imageURL": "https://cdn.myanimelist.net/images/anime/6/59399l.jpg",
     "rating": 8.32,
-    "numberOfVotes": 261714
-  },
-  {
-    "genres": [
-      "adventure",
-      "drama",
-      "slice of life"
-    ],
-    "name": "Romeo and the Black Brothers",
-    "malID": 2559,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/4/17979l.jpg",
-    "rating": 8.32,
-    "numberOfVotes": 16316
+    "numberOfVotes": 262151
   },
   {
     "genres": [
@@ -1744,7 +1747,7 @@
     "malID": 41487,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1033/118296l.jpg",
     "rating": 8.32,
-    "numberOfVotes": 355010
+    "numberOfVotes": 358276
   },
   {
     "genres": [
@@ -1756,7 +1759,7 @@
     "malID": 4081,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1681/108439l.jpg",
     "rating": 8.31,
-    "numberOfVotes": 175727
+    "numberOfVotes": 176072
   },
   {
     "genres": [
@@ -1768,7 +1771,7 @@
     "malID": 1210,
     "imageURL": "https://cdn.myanimelist.net/images/anime/3/52675l.jpg",
     "rating": 8.31,
-    "numberOfVotes": 313335
+    "numberOfVotes": 314194
   },
   {
     "genres": [
@@ -1779,7 +1782,7 @@
     "malID": 12531,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1604/98654l.jpg",
     "rating": 8.31,
-    "numberOfVotes": 162609
+    "numberOfVotes": 162936
   },
   {
     "genres": [
@@ -1791,17 +1794,7 @@
     "malID": 31043,
     "imageURL": "https://cdn.myanimelist.net/images/anime/10/77957l.jpg",
     "rating": 8.31,
-    "numberOfVotes": 1264578
-  },
-  {
-    "genres": [
-      "sports"
-    ],
-    "name": "Ace of Diamond: Second Season",
-    "malID": 30230,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/9/74398l.jpg",
-    "rating": 8.3,
-    "numberOfVotes": 71566
+    "numberOfVotes": 1268228
   },
   {
     "genres": [
@@ -1811,7 +1804,7 @@
     "malID": 31988,
     "imageURL": "https://cdn.myanimelist.net/images/anime/10/81155l.jpg",
     "rating": 8.3,
-    "numberOfVotes": 109318
+    "numberOfVotes": 109601
   },
   {
     "genres": [
@@ -1821,7 +1814,78 @@
     "malID": 24415,
     "imageURL": "https://cdn.myanimelist.net/images/anime/4/68299l.jpg",
     "rating": 8.3,
-    "numberOfVotes": 437680
+    "numberOfVotes": 439037
+  },
+  {
+    "genres": [
+      "sports"
+    ],
+    "name": "Ace of Diamond: Second Season",
+    "malID": 30230,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/9/74398l.jpg",
+    "rating": 8.3,
+    "numberOfVotes": 71750
+  },
+  {
+    "genres": [
+      "drama",
+      "horror",
+      "mystery",
+      "sci-fi",
+      "supernatural"
+    ],
+    "name": "From the New World",
+    "malID": 13125,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/1367/131974l.jpg",
+    "rating": 8.29,
+    "numberOfVotes": 266408
+  },
+  {
+    "genres": [
+      "award winning",
+      "comedy",
+      "drama"
+    ],
+    "name": "Shirobako",
+    "malID": 25835,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/1918/93511l.jpg",
+    "rating": 8.29,
+    "numberOfVotes": 136515
+  },
+  {
+    "genres": [
+      "action",
+      "sci-fi",
+      "supernatural"
+    ],
+    "name": "World Trigger 3rd Season",
+    "malID": 44940,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/1617/117474l.jpg",
+    "rating": 8.29,
+    "numberOfVotes": 35323
+  },
+  {
+    "genres": [
+      "drama",
+      "sports"
+    ],
+    "name": "Tomorrow's Joe",
+    "malID": 2402,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/5/64671l.jpg",
+    "rating": 8.29,
+    "numberOfVotes": 21210
+  },
+  {
+    "genres": [
+      "comedy",
+      "drama",
+      "slice of life"
+    ],
+    "name": "Beck: Mongolian Chop Squad",
+    "malID": 57,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/11/11636l.jpg",
+    "rating": 8.29,
+    "numberOfVotes": 134121
   },
   {
     "genres": [
@@ -1834,56 +1898,7 @@
     "malID": 45,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1346/119505l.jpg",
     "rating": 8.29,
-    "numberOfVotes": 226395
-  },
-  {
-    "genres": [
-      "drama",
-      "horror",
-      "mystery",
-      "sci-fi",
-      "supernatural"
-    ],
-    "name": "From the New World",
-    "malID": 13125,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/12/36775l.jpg",
-    "rating": 8.29,
-    "numberOfVotes": 266036
-  },
-  {
-    "genres": [
-      "award winning",
-      "comedy",
-      "drama"
-    ],
-    "name": "Shirobako",
-    "malID": 25835,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/1918/93511l.jpg",
-    "rating": 8.29,
-    "numberOfVotes": 136309
-  },
-  {
-    "genres": [
-      "drama",
-      "sports"
-    ],
-    "name": "Tomorrow's Joe",
-    "malID": 2402,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/5/64671l.jpg",
-    "rating": 8.29,
-    "numberOfVotes": 21136
-  },
-  {
-    "genres": [
-      "comedy",
-      "drama",
-      "slice of life"
-    ],
-    "name": "Beck: Mongolian Chop Squad",
-    "malID": 57,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/11/11636l.jpg",
-    "rating": 8.29,
-    "numberOfVotes": 133877
+    "numberOfVotes": 226825
   },
   {
     "genres": [
@@ -1895,18 +1910,7 @@
     "malID": 38691,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1613/102576l.jpg",
     "rating": 8.29,
-    "numberOfVotes": 942572
-  },
-  {
-    "genres": [
-      "action",
-      "adventure"
-    ],
-    "name": "Golden Kamuy Season 4",
-    "malID": 50528,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/1855/128059l.jpg",
-    "rating": 8.29,
-    "numberOfVotes": 7741
+    "numberOfVotes": 946393
   },
   {
     "genres": [
@@ -1918,19 +1922,27 @@
     "malID": 486,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1763/95397l.jpg",
     "rating": 8.29,
-    "numberOfVotes": 90468
+    "numberOfVotes": 90677
   },
   {
     "genres": [
-      "action",
-      "sci-fi",
-      "supernatural"
+      "sports"
     ],
-    "name": "World Trigger 3rd Season",
-    "malID": 44940,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/1617/117474l.jpg",
-    "rating": 8.29,
-    "numberOfVotes": 34916
+    "name": "Blue Lock",
+    "malID": 49596,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/1258/126929l.jpg",
+    "rating": 8.28,
+    "numberOfVotes": 106465
+  },
+  {
+    "genres": [
+      "action"
+    ],
+    "name": "My Hero Academia Season 6",
+    "malID": 49918,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/1483/126005l.jpg",
+    "rating": 8.28,
+    "numberOfVotes": 81008
   },
   {
     "genres": [
@@ -1942,7 +1954,7 @@
     "malID": 10087,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1887/117644l.jpg",
     "rating": 8.28,
-    "numberOfVotes": 812463
+    "numberOfVotes": 814211
   },
   {
     "genres": [
@@ -1952,7 +1964,18 @@
     "malID": 19363,
     "imageURL": "https://cdn.myanimelist.net/images/anime/8/57995l.jpg",
     "rating": 8.28,
-    "numberOfVotes": 85945
+    "numberOfVotes": 86075
+  },
+  {
+    "genres": [
+      "action",
+      "adventure"
+    ],
+    "name": "Golden Kamuy Season 4",
+    "malID": 50528,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/1855/128059l.jpg",
+    "rating": 8.28,
+    "numberOfVotes": 8007
   },
   {
     "genres": [
@@ -1962,7 +1985,17 @@
     "malID": 3002,
     "imageURL": "https://cdn.myanimelist.net/images/anime/12/80032l.jpg",
     "rating": 8.28,
-    "numberOfVotes": 150597
+    "numberOfVotes": 151014
+  },
+  {
+    "genres": [
+      "slice of life"
+    ],
+    "name": "Laid-Back Camp",
+    "malID": 34798,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/4/89877l.jpg",
+    "rating": 8.27,
+    "numberOfVotes": 196698
   },
   {
     "genres": [
@@ -1974,55 +2007,7 @@
     "malID": 41457,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1987/117507l.jpg",
     "rating": 8.27,
-    "numberOfVotes": 317755
-  },
-  {
-    "genres": [
-      "sports"
-    ],
-    "name": "Aoashi",
-    "malID": 49052,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/1731/120871l.jpg",
-    "rating": 8.27,
-    "numberOfVotes": 75646
-  },
-  {
-    "genres": [
-      "sports"
-    ],
-    "name": "Blue Lock",
-    "malID": 49596,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/1258/126929l.jpg",
-    "rating": 8.27,
-    "numberOfVotes": 98865
-  },
-  {
-    "genres": [
-      "action"
-    ],
-    "name": "My Hero Academia Season 6",
-    "malID": 49918,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/1483/126005l.jpg",
-    "rating": 8.27,
-    "numberOfVotes": 75389
-  },
-  {
-    "genres": [],
-    "name": "Initial D Final Stage",
-    "malID": 22507,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/1404/101364l.jpg",
-    "rating": 8.27,
-    "numberOfVotes": 64943
-  },
-  {
-    "genres": [
-      "slice of life"
-    ],
-    "name": "Laid-Back Camp",
-    "malID": 34798,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/4/89877l.jpg",
-    "rating": 8.27,
-    "numberOfVotes": 195903
+    "numberOfVotes": 320972
   },
   {
     "genres": [
@@ -2034,7 +2019,25 @@
     "malID": 32937,
     "imageURL": "https://cdn.myanimelist.net/images/anime/2/83188l.jpg",
     "rating": 8.27,
-    "numberOfVotes": 928178
+    "numberOfVotes": 930846
+  },
+  {
+    "genres": [
+      "sports"
+    ],
+    "name": "Aoashi",
+    "malID": 49052,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/1731/120871l.jpg",
+    "rating": 8.27,
+    "numberOfVotes": 77420
+  },
+  {
+    "genres": [],
+    "name": "Initial D Final Stage",
+    "malID": 22507,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/1404/101364l.jpg",
+    "rating": 8.27,
+    "numberOfVotes": 65269
   },
   {
     "genres": [
@@ -2045,10 +2048,11 @@
     "malID": 1698,
     "imageURL": "https://cdn.myanimelist.net/images/anime/9/11986l.jpg",
     "rating": 8.27,
-    "numberOfVotes": 125251
+    "numberOfVotes": 125390
   },
   {
     "genres": [
+      "award winning",
       "drama",
       "romance",
       "sci-fi"
@@ -2057,7 +2061,7 @@
     "malID": 329,
     "imageURL": "https://cdn.myanimelist.net/images/anime/8/50463l.jpg",
     "rating": 8.27,
-    "numberOfVotes": 72960
+    "numberOfVotes": 73094
   },
   {
     "genres": [
@@ -2068,7 +2072,7 @@
     "malID": 48736,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1179/119897l.jpg",
     "rating": 8.27,
-    "numberOfVotes": 505949
+    "numberOfVotes": 511966
   },
   {
     "genres": [
@@ -2079,17 +2083,7 @@
     "malID": 23327,
     "imageURL": "https://cdn.myanimelist.net/images/anime/3/64451l.jpg",
     "rating": 8.26,
-    "numberOfVotes": 83941
-  },
-  {
-    "genres": [
-      "sports"
-    ],
-    "name": "Ace of Diamond Act II",
-    "malID": 38731,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/1153/100511l.jpg",
-    "rating": 8.26,
-    "numberOfVotes": 40317
+    "numberOfVotes": 84147
   },
   {
     "genres": [
@@ -2100,7 +2094,27 @@
     "malID": 43325,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1200/111522l.jpg",
     "rating": 8.26,
-    "numberOfVotes": 93351
+    "numberOfVotes": 94187
+  },
+  {
+    "genres": [
+      "sports"
+    ],
+    "name": "Ace of Diamond Act II",
+    "malID": 38731,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/1153/100511l.jpg",
+    "rating": 8.26,
+    "numberOfVotes": 40493
+  },
+  {
+    "genres": [
+      "suspense"
+    ],
+    "name": "Kaiji: Against All Rules",
+    "malID": 10271,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/10/30599l.jpg",
+    "rating": 8.25,
+    "numberOfVotes": 99684
   },
   {
     "genres": [
@@ -2112,7 +2126,7 @@
     "malID": 1735,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1565/111305l.jpg",
     "rating": 8.25,
-    "numberOfVotes": 1516781
+    "numberOfVotes": 1522616
   },
   {
     "genres": [
@@ -2124,17 +2138,7 @@
     "malID": 37450,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1301/93586l.jpg",
     "rating": 8.25,
-    "numberOfVotes": 1003108
-  },
-  {
-    "genres": [
-      "suspense"
-    ],
-    "name": "Kaiji: Against All Rules",
-    "malID": 10271,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/10/30599l.jpg",
-    "rating": 8.25,
-    "numberOfVotes": 99383
+    "numberOfVotes": 1006771
   },
   {
     "genres": [
@@ -2144,42 +2148,7 @@
     "malID": 11843,
     "imageURL": "https://cdn.myanimelist.net/images/anime/3/33257l.jpg",
     "rating": 8.24,
-    "numberOfVotes": 390302
-  },
-  {
-    "genres": [
-      "action",
-      "adventure",
-      "supernatural"
-    ],
-    "name": "Dororo",
-    "malID": 37520,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/1879/100467l.jpg",
-    "rating": 8.24,
-    "numberOfVotes": 560979
-  },
-  {
-    "genres": [
-      "action",
-      "adventure"
-    ],
-    "name": "Golden Kamuy Season 2",
-    "malID": 37989,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/1180/95018l.jpg",
-    "rating": 8.24,
-    "numberOfVotes": 98406
-  },
-  {
-    "genres": [
-      "action",
-      "adventure",
-      "mystery"
-    ],
-    "name": "Great Pretender",
-    "malID": 40052,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/1418/107954l.jpg",
-    "rating": 8.24,
-    "numberOfVotes": 284458
+    "numberOfVotes": 391244
   },
   {
     "genres": [
@@ -2190,7 +2159,7 @@
     "malID": 5690,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1084/119096l.jpg",
     "rating": 8.24,
-    "numberOfVotes": 67426
+    "numberOfVotes": 67483
   },
   {
     "genres": [
@@ -2202,7 +2171,7 @@
     "malID": 31240,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1522/128039l.jpg",
     "rating": 8.24,
-    "numberOfVotes": 1310207
+    "numberOfVotes": 1313604
   },
   {
     "genres": [
@@ -2213,17 +2182,42 @@
     "malID": 44055,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1182/119308l.jpg",
     "rating": 8.24,
-    "numberOfVotes": 61501
+    "numberOfVotes": 62563
   },
   {
     "genres": [
-      "action"
+      "action",
+      "adventure",
+      "supernatural"
     ],
-    "name": "Lycoris Recoil",
-    "malID": 50709,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/1392/124401l.jpg",
-    "rating": 8.23,
-    "numberOfVotes": 156834
+    "name": "Dororo",
+    "malID": 37520,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/1879/100467l.jpg",
+    "rating": 8.24,
+    "numberOfVotes": 563371
+  },
+  {
+    "genres": [
+      "action",
+      "adventure"
+    ],
+    "name": "Golden Kamuy Season 2",
+    "malID": 37989,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/1180/95018l.jpg",
+    "rating": 8.24,
+    "numberOfVotes": 98959
+  },
+  {
+    "genres": [
+      "action",
+      "adventure",
+      "mystery"
+    ],
+    "name": "Great Pretender",
+    "malID": 40052,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/1418/107954l.jpg",
+    "rating": 8.24,
+    "numberOfVotes": 285824
   },
   {
     "genres": [
@@ -2233,7 +2227,7 @@
     "malID": 1842,
     "imageURL": "https://cdn.myanimelist.net/images/anime/9/73971l.jpg",
     "rating": 8.23,
-    "numberOfVotes": 41581
+    "numberOfVotes": 41647
   },
   {
     "genres": [
@@ -2245,7 +2239,17 @@
     "malID": 2966,
     "imageURL": "https://cdn.myanimelist.net/images/anime/5/59401l.jpg",
     "rating": 8.23,
-    "numberOfVotes": 373063
+    "numberOfVotes": 373735
+  },
+  {
+    "genres": [
+      "drama"
+    ],
+    "name": "IDOLiSH7 Third BEAT! Part 2",
+    "malID": 46654,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/1458/125998l.jpg",
+    "rating": 8.24,
+    "numberOfVotes": 1278
   },
   {
     "genres": [
@@ -2257,19 +2261,7 @@
     "malID": 33051,
     "imageURL": "https://cdn.myanimelist.net/images/anime/6/80899l.jpg",
     "rating": 8.23,
-    "numberOfVotes": 73441
-  },
-  {
-    "genres": [
-      "action",
-      "mystery",
-      "supernatural"
-    ],
-    "name": "Bungo Stray Dogs 3",
-    "malID": 38003,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/1037/100463l.jpg",
-    "rating": 8.22,
-    "numberOfVotes": 285099
+    "numberOfVotes": 73712
   },
   {
     "genres": [
@@ -2281,49 +2273,29 @@
     "malID": 38680,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1447/99827l.jpg",
     "rating": 8.22,
-    "numberOfVotes": 348151
+    "numberOfVotes": 350015
   },
   {
     "genres": [
-      "sports"
+      "action"
     ],
-    "name": "Kuroko's Basketball 2",
-    "malID": 16894,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/9/56155l.jpg",
+    "name": "Lycoris Recoil",
+    "malID": 50709,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/1392/124401l.jpg",
     "rating": 8.22,
-    "numberOfVotes": 508614
+    "numberOfVotes": 162091
   },
   {
     "genres": [
       "action",
       "adventure",
-      "fantasy"
+      "sci-fi"
     ],
-    "name": "Magi: The Kingdom of Magic",
-    "malID": 18115,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/13/55039l.jpg",
+    "name": "Trigun",
+    "malID": 6,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/7/20310l.jpg",
     "rating": 8.22,
-    "numberOfVotes": 435176
-  },
-  {
-    "genres": [
-      "sports"
-    ],
-    "name": "Major S1",
-    "malID": 627,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/13/73973l.jpg",
-    "rating": 8.22,
-    "numberOfVotes": 48966
-  },
-  {
-    "genres": [
-      "comedy"
-    ],
-    "name": "SKET Dance",
-    "malID": 9863,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/9/73974l.jpg",
-    "rating": 8.22,
-    "numberOfVotes": 81219
+    "numberOfVotes": 344925
   },
   {
     "genres": [
@@ -2336,7 +2308,7 @@
     "malID": 3091,
     "imageURL": "https://cdn.myanimelist.net/images/anime/9/8626l.jpg",
     "rating": 8.22,
-    "numberOfVotes": 63528
+    "numberOfVotes": 63611
   },
   {
     "genres": [
@@ -2347,58 +2319,61 @@
     "malID": 23847,
     "imageURL": "https://cdn.myanimelist.net/images/anime/11/75376l.jpg",
     "rating": 8.22,
-    "numberOfVotes": 640350
+    "numberOfVotes": 642047
   },
   {
     "genres": [
+      "sports"
+    ],
+    "name": "Kuroko's Basketball 2",
+    "malID": 16894,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/9/56155l.jpg",
+    "rating": 8.22,
+    "numberOfVotes": 509962
+  },
+  {
+    "genres": [
+      "action",
+      "adventure",
+      "fantasy"
+    ],
+    "name": "Magi: The Kingdom of Magic",
+    "malID": 18115,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/13/55039l.jpg",
+    "rating": 8.22,
+    "numberOfVotes": 436035
+  },
+  {
+    "genres": [
+      "sports"
+    ],
+    "name": "Major S1",
+    "malID": 627,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/13/73973l.jpg",
+    "rating": 8.22,
+    "numberOfVotes": 49051
+  },
+  {
+    "genres": [
+      "action",
+      "mystery",
       "supernatural"
     ],
-    "name": "The Case Study of Vanitas Part 2",
-    "malID": 49114,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/1247/120579l.jpg",
-    "rating": 8.21,
-    "numberOfVotes": 94517
-  },
-  {
-    "genres": [
-      "drama",
-      "romance"
-    ],
-    "name": "Honey and Clover II",
-    "malID": 1142,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/6/11040l.jpg",
-    "rating": 8.21,
-    "numberOfVotes": 52597
-  },
-  {
-    "genres": [
-      "drama"
-    ],
-    "name": "IDOLISH7 Third BEAT!",
-    "malID": 45577,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/1646/115723l.jpg",
-    "rating": 8.21,
-    "numberOfVotes": 5449
-  },
-  {
-    "genres": [
-      "drama"
-    ],
-    "name": "IDOLiSH7 Third BEAT! Part 2",
-    "malID": 46654,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/1458/125998l.jpg",
-    "rating": 8.21,
-    "numberOfVotes": 1211
+    "name": "Bungo Stray Dogs 3",
+    "malID": 38003,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/1037/100463l.jpg",
+    "rating": 8.22,
+    "numberOfVotes": 287348
   },
   {
     "genres": [
       "comedy"
     ],
-    "name": "Ya Boy Kongming!",
-    "malID": 50380,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/1970/122297l.jpg",
-    "rating": 8.21,
-    "numberOfVotes": 110276
+    "name": "SKET Dance",
+    "malID": 9863,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/9/73974l.jpg",
+    "rating": 8.22,
+    "numberOfVotes": 81313
   },
   {
     "genres": [
@@ -2411,19 +2386,38 @@
     "malID": 2150,
     "imageURL": "https://cdn.myanimelist.net/images/anime/13/26765l.jpg",
     "rating": 8.21,
-    "numberOfVotes": 11065
+    "numberOfVotes": 11095
   },
   {
     "genres": [
-      "action",
-      "adventure",
-      "sci-fi"
+      "drama",
+      "romance"
     ],
-    "name": "Trigun",
-    "malID": 6,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/7/20310l.jpg",
+    "name": "Honey and Clover II",
+    "malID": 1142,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/6/11040l.jpg",
     "rating": 8.21,
-    "numberOfVotes": 343372
+    "numberOfVotes": 52652
+  },
+  {
+    "genres": [
+      "drama"
+    ],
+    "name": "IDOLISH7 Third BEAT!",
+    "malID": 45577,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/1646/115723l.jpg",
+    "rating": 8.21,
+    "numberOfVotes": 5510
+  },
+  {
+    "genres": [
+      "supernatural"
+    ],
+    "name": "The Case Study of Vanitas Part 2",
+    "malID": 49114,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/1247/120579l.jpg",
+    "rating": 8.21,
+    "numberOfVotes": 95707
   },
   {
     "genres": [
@@ -2433,7 +2427,7 @@
     "malID": 558,
     "imageURL": "https://cdn.myanimelist.net/images/anime/6/73972l.jpg",
     "rating": 8.2,
-    "numberOfVotes": 43481
+    "numberOfVotes": 43549
   },
   {
     "genres": [
@@ -2443,7 +2437,19 @@
     "malID": 3226,
     "imageURL": "https://cdn.myanimelist.net/images/anime/9/75217l.jpg",
     "rating": 8.2,
-    "numberOfVotes": 39040
+    "numberOfVotes": 39097
+  },
+  {
+    "genres": [
+      "action",
+      "mystery",
+      "supernatural"
+    ],
+    "name": "Bungo Stray Dogs 2",
+    "malID": 32867,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/1572/133096l.jpg",
+    "rating": 8.2,
+    "numberOfVotes": 441894
   },
   {
     "genres": [
@@ -2454,7 +2460,17 @@
     "malID": 40729,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1190/113352l.jpg",
     "rating": 8.2,
-    "numberOfVotes": 72955
+    "numberOfVotes": 73393
+  },
+  {
+    "genres": [
+      "comedy"
+    ],
+    "name": "Ya Boy Kongming!",
+    "malID": 50380,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/1970/122297l.jpg",
+    "rating": 8.2,
+    "numberOfVotes": 112273
   },
   {
     "genres": [
@@ -2467,19 +2483,7 @@
     "malID": 35838,
     "imageURL": "https://cdn.myanimelist.net/images/anime/12/88321l.jpg",
     "rating": 8.2,
-    "numberOfVotes": 117458
-  },
-  {
-    "genres": [
-      "action",
-      "mystery",
-      "supernatural"
-    ],
-    "name": "Bungo Stray Dogs 2",
-    "malID": 32867,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/5/88585l.jpg",
-    "rating": 8.2,
-    "numberOfVotes": 439445
+    "numberOfVotes": 117893
   },
   {
     "genres": [
@@ -2489,7 +2493,7 @@
     "malID": 42897,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1695/111486l.jpg",
     "rating": 8.2,
-    "numberOfVotes": 696070
+    "numberOfVotes": 700374
   },
   {
     "genres": [
@@ -2502,7 +2506,7 @@
     "malID": 6811,
     "imageURL": "https://cdn.myanimelist.net/images/anime/7/75570l.jpg",
     "rating": 8.2,
-    "numberOfVotes": 134576
+    "numberOfVotes": 134848
   },
   {
     "genres": [
@@ -2514,17 +2518,7 @@
     "malID": 25681,
     "imageURL": "https://cdn.myanimelist.net/images/anime/8/69187l.jpg",
     "rating": 8.2,
-    "numberOfVotes": 198238
-  },
-  {
-    "genres": [
-      "comedy"
-    ],
-    "name": "Asobi Asobase - workshop of fun -",
-    "malID": 37171,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/1139/95077l.jpg",
-    "rating": 8.19,
-    "numberOfVotes": 205298
+    "numberOfVotes": 199014
   },
   {
     "genres": [
@@ -2536,7 +2530,7 @@
     "malID": 7674,
     "imageURL": "https://cdn.myanimelist.net/images/anime/6/26138l.jpg",
     "rating": 8.19,
-    "numberOfVotes": 284529
+    "numberOfVotes": 284987
   },
   {
     "genres": [
@@ -2549,7 +2543,7 @@
     "malID": 34636,
     "imageURL": "https://cdn.myanimelist.net/images/anime/5/86739l.jpg",
     "rating": 8.19,
-    "numberOfVotes": 138023
+    "numberOfVotes": 138436
   },
   {
     "genres": [
@@ -2560,7 +2554,7 @@
     "malID": 10800,
     "imageURL": "https://cdn.myanimelist.net/images/anime/3/35749l.jpg",
     "rating": 8.19,
-    "numberOfVotes": 173484
+    "numberOfVotes": 173835
   },
   {
     "genres": [
@@ -2572,7 +2566,17 @@
     "malID": 22297,
     "imageURL": "https://cdn.myanimelist.net/images/anime/12/67333l.jpg",
     "rating": 8.19,
-    "numberOfVotes": 632002
+    "numberOfVotes": 633572
+  },
+  {
+    "genres": [
+      "comedy"
+    ],
+    "name": "Asobi Asobase - workshop of fun -",
+    "malID": 37171,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/1139/95077l.jpg",
+    "rating": 8.19,
+    "numberOfVotes": 206142
   },
   {
     "genres": [
@@ -2585,7 +2589,7 @@
     "malID": 18195,
     "imageURL": "https://cdn.myanimelist.net/images/anime/10/55049l.jpg",
     "rating": 8.19,
-    "numberOfVotes": 74510
+    "numberOfVotes": 74606
   },
   {
     "genres": [
@@ -2597,7 +2601,7 @@
     "malID": 1453,
     "imageURL": "https://cdn.myanimelist.net/images/anime/6/17576l.jpg",
     "rating": 8.19,
-    "numberOfVotes": 17324
+    "numberOfVotes": 17394
   },
   {
     "genres": [
@@ -2608,10 +2612,11 @@
     "malID": 32843,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1899/101966l.jpg",
     "rating": 8.19,
-    "numberOfVotes": 12587
+    "numberOfVotes": 12626
   },
   {
     "genres": [
+      "award winning",
       "comedy",
       "drama",
       "fantasy",
@@ -2621,17 +2626,7 @@
     "malID": 440,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1078/95285l.jpg",
     "rating": 8.19,
-    "numberOfVotes": 58878
-  },
-  {
-    "genres": [
-      "action"
-    ],
-    "name": "Black Lagoon: The Second Barrage",
-    "malID": 1519,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/3/83748l.jpg",
-    "rating": 8.18,
-    "numberOfVotes": 296822
+    "numberOfVotes": 59064
   },
   {
     "genres": [
@@ -2643,7 +2638,28 @@
     "malID": 40852,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1711/110614l.jpg",
     "rating": 8.18,
-    "numberOfVotes": 502328
+    "numberOfVotes": 505291
+  },
+  {
+    "genres": [
+      "action",
+      "sci-fi"
+    ],
+    "name": "A Certain Scientific Railgun T",
+    "malID": 38481,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/1819/103287l.jpg",
+    "rating": 8.18,
+    "numberOfVotes": 83891
+  },
+  {
+    "genres": [
+      "slice of life"
+    ],
+    "name": "Non Non Biyori Repeat",
+    "malID": 23623,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/9/75105l.jpg",
+    "rating": 8.18,
+    "numberOfVotes": 95168
   },
   {
     "genres": [
@@ -2655,39 +2671,7 @@
     "malID": 1889,
     "imageURL": "https://cdn.myanimelist.net/images/anime/12/14114l.jpg",
     "rating": 8.18,
-    "numberOfVotes": 242702
-  },
-  {
-    "genres": [
-      "slice of life"
-    ],
-    "name": "Non Non Biyori Repeat",
-    "malID": 23623,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/9/75105l.jpg",
-    "rating": 8.18,
-    "numberOfVotes": 94975
-  },
-  {
-    "genres": [
-      "action",
-      "sci-fi"
-    ],
-    "name": "A Certain Scientific Railgun T",
-    "malID": 38481,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/1819/103287l.jpg",
-    "rating": 8.18,
-    "numberOfVotes": 83552
-  },
-  {
-    "genres": [
-      "gourmet",
-      "ecchi"
-    ],
-    "name": "Food Wars! Shokugeki no Soma",
-    "malID": 28171,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/3/72943l.jpg",
-    "rating": 8.17,
-    "numberOfVotes": 946998
+    "numberOfVotes": 243148
   },
   {
     "genres": [
@@ -2699,7 +2683,17 @@
     "malID": 962,
     "imageURL": "https://cdn.myanimelist.net/images/anime/2/77621l.jpg",
     "rating": 8.17,
-    "numberOfVotes": 28150
+    "numberOfVotes": 28206
+  },
+  {
+    "genres": [
+      "action"
+    ],
+    "name": "Black Lagoon: The Second Barrage",
+    "malID": 1519,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/3/83748l.jpg",
+    "rating": 8.17,
+    "numberOfVotes": 297594
   },
   {
     "genres": [
@@ -2711,17 +2705,51 @@
     "malID": 235,
     "imageURL": "https://cdn.myanimelist.net/images/anime/7/75199l.jpg",
     "rating": 8.17,
-    "numberOfVotes": 150288
+    "numberOfVotes": 150667
   },
   {
     "genres": [
+      "award winning",
       "comedy"
     ],
     "name": "K-ON! Season 2",
     "malID": 7791,
     "imageURL": "https://cdn.myanimelist.net/images/anime/12/76121l.jpg",
     "rating": 8.17,
-    "numberOfVotes": 361526
+    "numberOfVotes": 362441
+  },
+  {
+    "genres": [
+      "gourmet",
+      "ecchi"
+    ],
+    "name": "Food Wars! Shokugeki no Soma",
+    "malID": 28171,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/3/72943l.jpg",
+    "rating": 8.17,
+    "numberOfVotes": 948898
+  },
+  {
+    "genres": [
+      "action",
+      "fantasy"
+    ],
+    "name": "Noragami Aragoto",
+    "malID": 30503,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/1689/94850l.jpg",
+    "rating": 8.16,
+    "numberOfVotes": 848450
+  },
+  {
+    "genres": [
+      "comedy",
+      "romance"
+    ],
+    "name": "Ouran High School Host Club",
+    "malID": 853,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/2/71992l.jpg",
+    "rating": 8.16,
+    "numberOfVotes": 642372
   },
   {
     "genres": [
@@ -2735,7 +2763,7 @@
     "malID": 232,
     "imageURL": "https://cdn.myanimelist.net/images/anime/8/60781l.jpg",
     "rating": 8.16,
-    "numberOfVotes": 207964
+    "numberOfVotes": 208406
   },
   {
     "genres": [
@@ -2747,7 +2775,7 @@
     "malID": 28223,
     "imageURL": "https://cdn.myanimelist.net/images/anime/5/71553l.jpg",
     "rating": 8.16,
-    "numberOfVotes": 938818
+    "numberOfVotes": 941582
   },
   {
     "genres": [
@@ -2760,7 +2788,7 @@
     "malID": 813,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1607/117271l.jpg",
     "rating": 8.16,
-    "numberOfVotes": 794792
+    "numberOfVotes": 796667
   },
   {
     "genres": [
@@ -2771,29 +2799,28 @@
     "malID": 40911,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1464/108330l.jpg",
     "rating": 8.16,
-    "numberOfVotes": 150086
+    "numberOfVotes": 151206
   },
   {
     "genres": [
-      "action",
-      "fantasy"
+      "drama",
+      "suspense"
     ],
-    "name": "Noragami Aragoto",
-    "malID": 30503,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/1689/94850l.jpg",
-    "rating": 8.16,
-    "numberOfVotes": 846551
+    "name": "Classroom of the Elite II",
+    "malID": 51096,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/1010/124180l.jpg",
+    "rating": 8.15,
+    "numberOfVotes": 234428
   },
   {
     "genres": [
-      "comedy",
-      "romance"
+      "drama"
     ],
-    "name": "Ouran High School Host Club",
-    "malID": 853,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/2/71992l.jpg",
-    "rating": 8.16,
-    "numberOfVotes": 640952
+    "name": "IDOLiSH7 Second BEAT!",
+    "malID": 37962,
+    "imageURL": "https://cdn.myanimelist.net/images/anime/1962/106361l.jpg",
+    "rating": 8.15,
+    "numberOfVotes": 9112
   },
   {
     "genres": [
@@ -2806,7 +2833,7 @@
     "malID": 11597,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1044/103654l.jpg",
     "rating": 8.15,
-    "numberOfVotes": 413295
+    "numberOfVotes": 413981
   },
   {
     "genres": [
@@ -2817,17 +2844,7 @@
     "malID": 36296,
     "imageURL": "https://cdn.myanimelist.net/images/anime/1580/93526l.jpg",
     "rating": 8.15,
-    "numberOfVotes": 235096
-  },
-  {
-    "genres": [
-      "drama"
-    ],
-    "name": "IDOLiSH7 Second BEAT!",
-    "malID": 37962,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/1962/106361l.jpg",
-    "rating": 8.15,
-    "numberOfVotes": 9009
+    "numberOfVotes": 235672
   },
   {
     "genres": [
@@ -2838,7 +2855,7 @@
     "malID": 18,
     "imageURL": "https://cdn.myanimelist.net/images/anime/9/10521l.jpg",
     "rating": 8.15,
-    "numberOfVotes": 93897
+    "numberOfVotes": 94304
   },
   {
     "genres": [
@@ -2849,17 +2866,6 @@
     "malID": 186,
     "imageURL": "https://cdn.myanimelist.net/images/anime/8/12750l.jpg",
     "rating": 8.15,
-    "numberOfVotes": 119623
-  },
-  {
-    "genres": [
-      "drama",
-      "suspense"
-    ],
-    "name": "Classroom of the Elite II",
-    "malID": 51096,
-    "imageURL": "https://cdn.myanimelist.net/images/anime/1010/124180l.jpg",
-    "rating": 8.15,
-    "numberOfVotes": 228830
+    "numberOfVotes": 120180
   }
 ]
