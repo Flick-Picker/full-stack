@@ -8,7 +8,9 @@ function parseTVGenres(genreIDs: number[]) {
   genreIDs.forEach((genreID) => {
     tvGenres.genres.forEach((genre) => {
       if (genre.id === genreID) {
-        genres.add(genre.name);
+        genre.name.split('&').forEach((name) => {
+          genres.add(name.trim());
+        });
       }
     });
   });
@@ -36,6 +38,6 @@ const getTVShows = async () => {
   });
 };
 
-console.log('Parsing movies...');
+console.log('Parsing tv shows...');
 getTVShows();
-console.log('Finished parsing movies!');
+console.log('Finished parsing tv shows!');
