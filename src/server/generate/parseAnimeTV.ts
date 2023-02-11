@@ -1,5 +1,5 @@
 import fs from 'fs';
-import animeTV from '../static/anime_tv_batch.json';
+import animeTV from '../api-json/anime_tv_batch.json';
 import AnimeTvObject from '../classes/animeTvObject';
 
 function parseAnimeTvGenre(genres: { name: string; }[]) {
@@ -10,7 +10,7 @@ function parseAnimeTvGenre(genres: { name: string; }[]) {
   return Array.from(returnGenres);
 }
 
-const getAnimeTv = async () => {
+export const getAnimeTv = async () => {
   const anime: AnimeTvObject[] = [];
   animeTV.forEach((show) => {
     let name = show.title;
@@ -33,7 +33,3 @@ const getAnimeTv = async () => {
     if (err) console.log(err);
   });
 };
-
-console.log('Parsing anime tv...');
-getAnimeTv();
-console.log('Finished parsing anime tv!');
