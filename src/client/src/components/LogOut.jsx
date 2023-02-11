@@ -17,8 +17,9 @@ const LogOut = (props) => {
   // Cookie Management
   const [cookies, setCookie, removeCookie] = useCookies([
     'access_token',
-    'refresh_token',
-    'expiration_time',
+    'uid',
+    // 'refresh_token',
+    // 'expiration_time',
   ]);
 
   const handleLogOut = (e) => {
@@ -28,8 +29,9 @@ const LogOut = (props) => {
         dispatch(remove());
 
         removeCookie('access_token');
-        removeCookie('refresh_token');
-        removeCookie('expiration_time');
+        removeCookie('uid');
+        // removeCookie('refresh_token');
+        // removeCookie('expiration_time');
 
         navigate('/');
       })

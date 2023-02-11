@@ -28,8 +28,9 @@ const LoginPage = () => {
   // Cookie Management
   const [cookies, setCookie] = useCookies([
     'access_token',
-    'refresh_token',
-    'expiration_time',
+    'uid',
+    // 'refresh_token',
+    // 'expiration_time',
   ]);
 
   // React-Router Navigation
@@ -70,24 +71,29 @@ const LoginPage = () => {
           uid: userCredential.user.uid,
           email: userCredential.user.email,
           accessToken: userCredential.user.stsTokenManager.accessToken,
-          refreshToken: userCredential.user.stsTokenManager.refreshToken,
-          expirationTime: userCredential.user.stsTokenManager.expirationTime,
+          // refreshToken: userCredential.user.stsTokenManager.refreshToken,
+          // expirationTime: userCredential.user.stsTokenManager.expirationTime,
         };
         dispatch(init(obj));
+
         const expires = new Date();
         expires.setTime(obj.expirationTime);
         setCookie('access_token', obj.accessToken, {
           path: '/',
           expires,
         });
-        setCookie('refresh_token', obj.refreshToken, {
+        setCookie('uid', obj.uid, {
           path: '/',
           expires,
         });
-        setCookie('expiration_time', obj.expirationTime, {
-          path: '/',
-          expires,
-        });
+        // setCookie('refresh_token', obj.refreshToken, {
+        //   path: '/',
+        //   expires,
+        // });
+        // setCookie('expiration_time', obj.expirationTime, {
+        //   path: '/',
+        //   expires,
+        // });
         navigate('/home');
       })
       .catch((error) => {

@@ -1,12 +1,28 @@
 import { Box, Button, Typography } from '@mui/material';
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
+import { selectUid } from '../features/token/tokenSlice';
 
 const HomePage = () => {
+  const homePageURI = `${
+    process.env.REACT_APP_FRONTEND_URI || 'http://localhost:8080'
+  }/api`;
+
+  const [userGroups, setUserGroups] = useState();
+  const uid = useSelector(selectUid);
 
   // React-Router Navigation
   const navigate = useNavigate();
+
+  useEffect(() => {
+    axios
+      .get(`${homePageURI}/user/get?uid=${uid}`)
+      .then((res) => setUserGroups(res.data.groupsOwned)) // Change this to groupsJoined when fixed
+      .catch((e) => console.log(e));
+  }, [homePageURI, uid]);
 
   const handleJoinGroupClick = (e) => {
     e.preventDefault();
@@ -16,6 +32,10 @@ const HomePage = () => {
   const handleCreateGroupClick = (e) => {
     e.preventDefault();
     navigate('/group/create');
+  };
+
+  const handleGoToGroupClick = (groupId) => {
+    navigate('/group/vote', { state: { groupId } });
   };
 
   return (
@@ -35,10 +55,25 @@ const HomePage = () => {
         <Button variant="outlined" size="large">
           Just me
         </Button>
-        <Typography variant="h6" component="h6">
-          You currently have no groups. Create or join a group to get started.
-        </Typography>
-        {/* TODO: This above typography needs to check if there are existing groups */}
+        <Box>
+          {userGroups ? (
+            userGroups.map((groupId, i) => {
+              return (
+                <Button
+                  key={i}
+                  variant="outlined"
+                  onClick={() => handleGoToGroupClick(groupId)}>
+                  {groupId}
+                </Button>
+              );
+            })
+          ) : (
+            <Typography variant="h6" component="h6">
+              You currently have no groups. Create or join a group to get
+              started.
+            </Typography>
+          )}
+        </Box>
         <Box
           display="flex"
           justifyContent="center"

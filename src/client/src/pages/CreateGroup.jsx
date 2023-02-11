@@ -42,11 +42,6 @@ const CreateGroup = () => {
       .catch((e) => console.log(e));
   };
 
-  const handleCancel = (e) => {
-    e.preventDefault();
-    navigate('/home');
-  };
-
   return (
     <Box>
       <Header />
@@ -92,9 +87,6 @@ const CreateGroup = () => {
         </Box>
         <Button variant="outlined" onClick={handleCreateGroup}>
           Create Group
-        </Button>
-        <Button variant="outlined" onClick={handleCancel}>
-          Cancel
         </Button>
       </Box>
     </Box>
