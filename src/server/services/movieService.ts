@@ -24,7 +24,7 @@ export const getGenres = async (mediatype: string) => {
   }
 };
 
-export const discoverMedia = async (mediatype: string, genres: string, page: number) => {
+export const discoverMedia = async (mediatype: string, page: number) => {
   try {
     const requrl = `${TMDB_API_URL}/discover/${mediatype}`;
     const media = await axios.get(requrl, {
@@ -32,7 +32,6 @@ export const discoverMedia = async (mediatype: string, genres: string, page: num
         api_key: TMDB_KEY,
         language: 'en-US',
         sort_by: 'popularity.desc',
-        with_genres: genres,
         with_original_language: 'en',
         page: page.toString(),
       },
