@@ -1,21 +1,26 @@
 import fs from 'fs';
-import movieList from '../static/movie_batch.json';
+import movieList from '../api-json/movie_batch.json';
 import MovieObject from '../classes/movieObject';
-import movieGenres from '../static/movie_genres.json';
+import movieGenres from '../api-json/movie_genres.json';
 
 function parseMovieGenres(genreIDs: number[]) {
   const genres = new Set<string>();
   genreIDs.forEach((genreID) => {
+    let foundGenre = false;
     movieGenres.genres.forEach((genre) => {
       if (genre.id === genreID) {
-        genres.add(genre.name);
+        genres.add(genre.name.toLowerCase());
+        foundGenre = true;
       }
     });
+    if (!foundGenre) {
+      console.log('could not find genre');
+    }
   });
   return Array.from(genres);
 }
 
-const getMovies = async () => {
+export const getMovies = async () => {
   const movies: MovieObject[] = [];
   movieList.forEach((movie) => {
     const imgURL = `https://www.themoviedb.org/t/p/w600_and_h900_bestv2${movie.poster_path}`;
@@ -35,7 +40,3 @@ const getMovies = async () => {
     if (err) console.log(err);
   });
 };
-
-console.log('Parsing movies...');
-getMovies();
-console.log('Finished parsing movies!');
