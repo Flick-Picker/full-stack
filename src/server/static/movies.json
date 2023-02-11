@@ -1,2560 +1,2574 @@
 [
   {
+    "name": "Black Panther: Wakanda Forever",
+    "genres": [
+      "action",
+      "adventure",
+      "science fiction"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/sv1xJUazXeYqALzczSZ3O6nkH75.jpg",
+    "rating": 7.5,
+    "numberOfVotes": 2531,
+    "popularity": 10722.223,
+    "releaseDate": "2022-11-09"
+  },
+  {
     "name": "Puss in Boots: The Last Wish",
     "genres": [
-      "Animation",
-      "Action",
-      "Adventure",
-      "Comedy",
-      "Family",
-      "Fantasy"
+      "animation",
+      "adventure",
+      "comedy",
+      "family",
+      "fantasy"
     ],
     "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/kuf6dutpsT0vSVehic3EZIqkOBt.jpg",
     "rating": 8.6,
-    "numberOfVotes": 2271,
-    "popularity": 8842.129,
+    "numberOfVotes": 3278,
+    "popularity": 5840.194,
     "releaseDate": "2022-12-07"
   },
   {
     "name": "M3GAN",
     "genres": [
-      "Science Fiction",
-      "Horror",
-      "Comedy"
+      "science fiction",
+      "horror",
+      "comedy"
     ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/7CNCv9uhqdwK7Fv4bR4nmDysnd9.jpg",
-    "rating": 7.1,
-    "numberOfVotes": 365,
-    "popularity": 5251.481,
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/d9nBoowhjiiYc4FBNtQkPY7c11H.jpg",
+    "rating": 7.6,
+    "numberOfVotes": 1298,
+    "popularity": 3864.943,
     "releaseDate": "2022-12-28"
+  },
+  {
+    "name": "Shotgun Wedding",
+    "genres": [
+      "action",
+      "romance",
+      "comedy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/t79ozwWnwekO0ADIzsFP1E5SkvR.jpg",
+    "rating": 6.3,
+    "numberOfVotes": 244,
+    "popularity": 3291.567,
+    "releaseDate": "2022-12-28"
+  },
+  {
+    "name": "Transfusion",
+    "genres": [
+      "crime",
+      "thriller",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/bxh5xCCW9Ynfg6EZJWUkc1zqTnr.jpg",
+    "rating": 6.6,
+    "numberOfVotes": 30,
+    "popularity": 2922.401,
+    "releaseDate": "2023-01-05"
+  },
+  {
+    "name": "Detective Knight: Independence",
+    "genres": [
+      "action",
+      "thriller",
+      "crime"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/jrPKVQGjc3YZXm07OYMriIB47HM.jpg",
+    "rating": 6.7,
+    "numberOfVotes": 21,
+    "popularity": 2467.076,
+    "releaseDate": "2023-01-20"
   },
   {
     "name": "Avatar: The Way of Water",
     "genres": [
-      "Science Fiction",
-      "Adventure",
-      "Action"
+      "science fiction",
+      "adventure",
+      "action"
     ],
     "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg",
     "rating": 7.7,
-    "numberOfVotes": 4445,
-    "popularity": 2903.334,
+    "numberOfVotes": 5034,
+    "popularity": 2298.707,
     "releaseDate": "2022-12-14"
   },
   {
     "name": "Devotion",
     "genres": [
-      "War",
-      "History",
-      "Drama"
+      "war",
+      "history",
+      "drama"
     ],
     "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/26yQPXymbWeCLKwcmyL8dRjAzth.jpg",
-    "rating": 6.9,
-    "numberOfVotes": 75,
-    "popularity": 2802.532,
+    "rating": 7.6,
+    "numberOfVotes": 232,
+    "popularity": 1988.737,
     "releaseDate": "2022-11-23"
   },
   {
-    "name": "The Enforcer",
+    "name": "Kids vs. Aliens",
     "genres": [
-      "Action",
-      "Thriller",
-      "Drama"
+      "science fiction",
+      "horror",
+      "adventure",
+      "action"
     ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/72V1r1G8S87ELagVxjqAUdChMCt.jpg",
-    "rating": 6.8,
-    "numberOfVotes": 64,
-    "popularity": 2453.075,
-    "releaseDate": "2022-09-22"
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/wQ53sO5n9LCFbssV3oQ4CuajL1L.jpg",
+    "rating": 6,
+    "numberOfVotes": 2,
+    "popularity": 1937.846,
+    "releaseDate": "2023-01-20"
   },
   {
-    "name": "Violent Night",
+    "name": "Wolf Hound",
     "genres": [
-      "Action",
-      "Comedy",
-      "Crime",
-      "Thriller"
+      "war",
+      "action"
     ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/1XSYOP0JjjyMz1irihvWywro82r.jpg",
-    "rating": 7.7,
-    "numberOfVotes": 977,
-    "popularity": 1763.281,
-    "releaseDate": "2022-11-30"
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/gHC0eFvXXNokP3sSNCTG2uks87R.jpg",
+    "rating": 7.2,
+    "numberOfVotes": 36,
+    "popularity": 1677.108,
+    "releaseDate": "2022-06-03"
+  },
+  {
+    "name": "Teen Wolf: The Movie",
+    "genres": [
+      "action",
+      "fantasy",
+      "tv movie"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/wAkpPm3wcHRqZl8XjUI3Y2chYq2.jpg",
+    "rating": 8.2,
+    "numberOfVotes": 324,
+    "popularity": 1606.576,
+    "releaseDate": "2023-01-18"
   },
   {
     "name": "Black Adam",
     "genres": [
-      "Fantasy",
-      "Action",
-      "Science Fiction"
+      "fantasy",
+      "action",
+      "science fiction"
     ],
     "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/pFlaoHTZeyNkG83vxsAJiGzfSsa.jpg",
     "rating": 7.2,
-    "numberOfVotes": 3796,
-    "popularity": 1536.32,
-    "releaseDate": "2022-10-21"
+    "numberOfVotes": 4038,
+    "popularity": 1448.544,
+    "releaseDate": "2022-10-19"
+  },
+  {
+    "name": "The Offering",
+    "genres": [
+      "horror"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/tbaTFgGIaTL1Uhd0SMob6Dhi5cK.jpg",
+    "rating": 5.3,
+    "numberOfVotes": 34,
+    "popularity": 1423.163,
+    "releaseDate": "2023-01-11"
   },
   {
     "name": "Avatar",
     "genres": [
-      "Action",
-      "Adventure",
-      "Fantasy",
-      "Science Fiction"
+      "action",
+      "adventure",
+      "fantasy",
+      "science fiction"
     ],
     "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/jRXYjXNq0Cs2TcJjLkki24MLp7u.jpg",
     "rating": 7.6,
-    "numberOfVotes": 27905,
-    "popularity": 1454.883,
+    "numberOfVotes": 28203,
+    "popularity": 1355.52,
     "releaseDate": "2009-12-15"
   },
   {
     "name": "Glass Onion: A Knives Out Mystery",
     "genres": [
-      "Comedy",
-      "Crime",
-      "Mystery"
+      "comedy",
+      "crime",
+      "mystery"
     ],
     "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/vDGr1YdrlfbU9wxTOdpf3zChmv9.jpg",
     "rating": 7.1,
-    "numberOfVotes": 2837,
-    "popularity": 1399.161,
+    "numberOfVotes": 3202,
+    "popularity": 1345.211,
     "releaseDate": "2022-11-23"
-  },
-  {
-    "name": "Black Panther: Wakanda Forever",
-    "genres": [
-      "Action",
-      "Adventure",
-      "Science Fiction"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/sv1xJUazXeYqALzczSZ3O6nkH75.jpg",
-    "rating": 7.5,
-    "numberOfVotes": 1662,
-    "popularity": 1333.134,
-    "releaseDate": "2022-11-09"
-  },
-  {
-    "name": "Encanto at the Hollywood Bowl",
-    "genres": [
-      "Music"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/sa3Ku5yNVjp8NloWxJoI9dQjvOi.jpg",
-    "rating": 6.7,
-    "numberOfVotes": 22,
-    "popularity": 1320.304,
-    "releaseDate": "2022-12-28"
-  },
-  {
-    "name": "Roald Dahl's Matilda the Musical",
-    "genres": [
-      "Family",
-      "Comedy",
-      "Fantasy"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ga8R3OiOMMgSvZ4cOj8x7prUNYZ.jpg",
-    "rating": 6.9,
-    "numberOfVotes": 371,
-    "popularity": 1161.909,
-    "releaseDate": "2022-11-25"
-  },
-  {
-    "name": "The Woman King",
-    "genres": [
-      "Action",
-      "Drama",
-      "History"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/438QXt1E3WJWb3PqNniK0tAE5c1.jpg",
-    "rating": 7.9,
-    "numberOfVotes": 1084,
-    "popularity": 1082.358,
-    "releaseDate": "2022-09-16"
-  },
-  {
-    "name": "Prey for the Devil",
-    "genres": [
-      "Horror",
-      "Thriller"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/w3s6XEDNVGq5LUlghqs6VlvsvL6.jpg",
-    "rating": 7.3,
-    "numberOfVotes": 404,
-    "popularity": 1070.135,
-    "releaseDate": "2022-10-23"
-  },
-  {
-    "name": "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",
-    "genres": [
-      "Adventure",
-      "Family",
-      "Fantasy"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/iREd0rNCjYdf5Ar0vfaW32yrkm.jpg",
-    "rating": 7.1,
-    "numberOfVotes": 9188,
-    "popularity": 1068.903,
-    "releaseDate": "2005-12-07"
-  },
-  {
-    "name": "Savage Salvation",
-    "genres": [
-      "Action",
-      "Thriller",
-      "Crime",
-      "Drama"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fJRt3mmZEvf8gQzoNLzjPtWpc9o.jpg",
-    "rating": 5.6,
-    "numberOfVotes": 38,
-    "popularity": 1022.136,
-    "releaseDate": "2022-12-02"
-  },
-  {
-    "name": "Girl at the Window",
-    "genres": [
-      "Thriller",
-      "Horror"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/y8PhaJDd4YcYX7DVKJxoDwBUCZO.jpg",
-    "rating": 4.9,
-    "numberOfVotes": 14,
-    "popularity": 981.574,
-    "releaseDate": "2022-08-18"
-  },
-  {
-    "name": "The Pale Blue Eye",
-    "genres": [
-      "Mystery",
-      "Crime",
-      "Horror"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/9xkGlFRqrN8btTLU0KQvOfn2PHr.jpg",
-    "rating": 7.1,
-    "numberOfVotes": 770,
-    "popularity": 959.783,
-    "releaseDate": "2022-12-22"
-  },
-  {
-    "name": "Detective Knight: Rogue",
-    "genres": [
-      "Action",
-      "Crime"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/2wj5iUJ2B5AQ1lFctJgUrHHsp9B.jpg",
-    "rating": 6,
-    "numberOfVotes": 44,
-    "popularity": 918.33,
-    "releaseDate": "2022-10-21"
-  },
-  {
-    "name": "High Heat",
-    "genres": [
-      "Action",
-      "Comedy",
-      "Crime"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/mmD0NVdhiRiCu64YKem5GK5PSfy.jpg",
-    "rating": 5.1,
-    "numberOfVotes": 27,
-    "popularity": 894.712,
-    "releaseDate": "2022-12-16"
-  },
-  {
-    "name": "Terrifier 2",
-    "genres": [
-      "Horror"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/8gLhu8UFPZfH2Hv11JhTZkb9CVl.jpg",
-    "rating": 7,
-    "numberOfVotes": 915,
-    "popularity": 863.332,
-    "releaseDate": "2022-10-06"
-  },
-  {
-    "name": "Guillermo del Toro's Pinocchio",
-    "genres": [
-      "Animation",
-      "Fantasy",
-      "Drama"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/vx1u0uwxdlhV2MUzj4VlcMB0N6m.jpg",
-    "rating": 8.4,
-    "numberOfVotes": 1626,
-    "popularity": 768.887,
-    "releaseDate": "2022-11-18"
-  },
-  {
-    "name": "The Independent",
-    "genres": [
-      "Thriller",
-      "Drama"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/jhlc1nsD8nnnGymEFaZ0twMH6M6.jpg",
-    "rating": 7.6,
-    "numberOfVotes": 53,
-    "popularity": 731.131,
-    "releaseDate": "2022-11-02"
-  },
-  {
-    "name": "Strange World",
-    "genres": [
-      "Animation",
-      "Science Fiction",
-      "Adventure",
-      "Family"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fHMqfsYyl3lskPK2RiFRwhzwuep.jpg",
-    "rating": 6.6,
-    "numberOfVotes": 685,
-    "popularity": 685.757,
-    "releaseDate": "2022-11-23"
-  },
-  {
-    "name": "Puss in Boots",
-    "genres": [
-      "Action",
-      "Animation",
-      "Adventure",
-      "Comedy",
-      "Family",
-      "Western"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/n4UkIqNYSTr4DPoHCVfLrL8mbre.jpg",
-    "rating": 6.5,
-    "numberOfVotes": 2975,
-    "popularity": 683.235,
-    "releaseDate": "2011-10-27"
-  },
-  {
-    "name": "Fall",
-    "genres": [
-      "Thriller"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/v28T5F1IygM8vXWZIycfNEm3xcL.jpg",
-    "rating": 7.3,
-    "numberOfVotes": 2312,
-    "popularity": 679.069,
-    "releaseDate": "2022-08-11"
-  },
-  {
-    "name": "R.I.P.D. 2: Rise of the Damned",
-    "genres": [
-      "Fantasy",
-      "Action",
-      "Comedy",
-      "Crime"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/g4yJTzMtOBUTAR2Qnmj8TYIcFVq.jpg",
-    "rating": 6.6,
-    "numberOfVotes": 332,
-    "popularity": 651.265,
-    "releaseDate": "2022-11-15"
-  },
-  {
-    "name": "Hex",
-    "genres": [
-      "Action",
-      "Horror",
-      "Thriller"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/xFJHb43ZAnnuiDztxZYsmyopweb.jpg",
-    "rating": 5.8,
-    "numberOfVotes": 26,
-    "popularity": 650.323,
-    "releaseDate": "2022-11-01"
-  },
-  {
-    "name": "The Boss Baby: Christmas Bonus",
-    "genres": [
-      "Animation",
-      "Family",
-      "Adventure"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/iMmMxF6f2OonUrXrHKBLSYAhXly.jpg",
-    "rating": 6.7,
-    "numberOfVotes": 176,
-    "popularity": 646.203,
-    "releaseDate": "2022-12-06"
-  },
-  {
-    "name": "One Way",
-    "genres": [
-      "Action",
-      "Crime",
-      "Thriller"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/uQCxOziq79P3wDsRwQhhkhQyDsJ.jpg",
-    "rating": 6.8,
-    "numberOfVotes": 67,
-    "popularity": 621.716,
-    "releaseDate": "2022-09-02"
-  },
-  {
-    "name": "Medieval",
-    "genres": [
-      "History",
-      "Action",
-      "Drama"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/eeUNWsdoiOijOZAMaWFDA5Pb1n8.jpg",
-    "rating": 7.2,
-    "numberOfVotes": 297,
-    "popularity": 600.431,
-    "releaseDate": "2022-09-08"
-  },
-  {
-    "name": "Smile",
-    "genres": [
-      "Horror",
-      "Mystery",
-      "Thriller"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/aPqcQwu4VGEewPhagWNncDbJ9Xp.jpg",
-    "rating": 6.8,
-    "numberOfVotes": 1499,
-    "popularity": 525.614,
-    "releaseDate": "2022-09-23"
-  },
-  {
-    "name": "Monstrous",
-    "genres": [
-      "Horror",
-      "Mystery",
-      "Thriller"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ec3aX4DyjepEhPkpIUukaBxKpN3.jpg",
-    "rating": 6.1,
-    "numberOfVotes": 173,
-    "popularity": 508.905,
-    "releaseDate": "2022-05-13"
-  },
-  {
-    "name": "Night at the Museum: Kahmunrah Rises Again",
-    "genres": [
-      "Animation",
-      "Comedy",
-      "Family",
-      "Fantasy"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/mkRQn520JQD07BNP03NK3iKCaPD.jpg",
-    "rating": 7.1,
-    "numberOfVotes": 147,
-    "popularity": 505.828,
-    "releaseDate": "2022-12-09"
-  },
-  {
-    "name": "Avatar: The Deep Dive - A Special Edition of 20/20",
-    "genres": [
-      "Documentary"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/rtVeIsmeXnpjNbEKnm9Say58XjV.jpg",
-    "rating": 6.9,
-    "numberOfVotes": 11,
-    "popularity": 504.4,
-    "releaseDate": "2022-12-14"
-  },
-  {
-    "name": "Top Gun: Maverick",
-    "genres": [
-      "Action",
-      "Drama"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/62HCnUTziyWcpDaBO2i1DX17ljH.jpg",
-    "rating": 8.3,
-    "numberOfVotes": 5733,
-    "popularity": 498.778,
-    "releaseDate": "2022-05-24"
-  },
-  {
-    "name": "Life in a Year",
-    "genres": [
-      "Drama",
-      "Romance"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/bP7u19opmHXYeTCUwGjlLldmUMc.jpg",
-    "rating": 8.3,
-    "numberOfVotes": 1241,
-    "popularity": 496.997,
-    "releaseDate": "2020-11-27"
-  },
-  {
-    "name": "Abandoned",
-    "genres": [
-      "Horror",
-      "Mystery",
-      "Thriller"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/cO9ywQ2AMHM9EoBJsJGH1Gl9U5L.jpg",
-    "rating": 6.3,
-    "numberOfVotes": 169,
-    "popularity": 483.191,
-    "releaseDate": "2022-06-17"
-  },
-  {
-    "name": "Pinocchio",
-    "genres": [
-      "Fantasy",
-      "Adventure",
-      "Family"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/g8sclIV4gj1TZqUpnL82hKOTK3B.jpg",
-    "rating": 6.6,
-    "numberOfVotes": 1255,
-    "popularity": 470.35,
-    "releaseDate": "2022-09-07"
-  },
-  {
-    "name": "Jurassic World Dominion",
-    "genres": [
-      "Adventure",
-      "Action",
-      "Science Fiction"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/kAVRgw7GgK1CfYEJq8ME6EvRIgU.jpg",
-    "rating": 6.9,
-    "numberOfVotes": 4279,
-    "popularity": 469.013,
-    "releaseDate": "2022-06-01"
-  },
-  {
-    "name": "The Menu",
-    "genres": [
-      "Comedy",
-      "Horror",
-      "Thriller"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fPtUgMcLIboqlTlPrq0bQpKK8eq.jpg",
-    "rating": 7.3,
-    "numberOfVotes": 1735,
-    "popularity": 450.692,
-    "releaseDate": "2022-11-18"
-  },
-  {
-    "name": "Jeepers Creepers: Reborn",
-    "genres": [
-      "Horror",
-      "Thriller",
-      "Mystery"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/qVVegwPsW6n9unBtLWq1rzOutka.jpg",
-    "rating": 5.8,
-    "numberOfVotes": 597,
-    "popularity": 448.782,
-    "releaseDate": "2022-09-19"
-  },
-  {
-    "name": "Spider-Man: No Way Home",
-    "genres": [
-      "Action",
-      "Adventure",
-      "Science Fiction"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/uJYYizSuA9Y3DCs0qS4qWvHfZg4.jpg",
-    "rating": 8,
-    "numberOfVotes": 16450,
-    "popularity": 441.48,
-    "releaseDate": "2021-12-15"
-  },
-  {
-    "name": "Lyle, Lyle, Crocodile",
-    "genres": [
-      "Comedy",
-      "Family",
-      "Music"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/irIS5Tn3TXjNi1R9BpWvGAN4CZ1.jpg",
-    "rating": 7.7,
-    "numberOfVotes": 288,
-    "popularity": 420.474,
-    "releaseDate": "2022-10-07"
-  },
-  {
-    "name": "Project Gemini",
-    "genres": [
-      "Science Fiction"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/eX6tDFp4RhhjZaa1HUDUzFGPWYk.jpg",
-    "rating": 5.6,
-    "numberOfVotes": 213,
-    "popularity": 412.408,
-    "releaseDate": "2022-01-06"
-  },
-  {
-    "name": "The Minute You Wake Up Dead",
-    "genres": [
-      "Thriller",
-      "Crime"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/pUPwTbnAqfm95BZjNBnMMf39ChT.jpg",
-    "rating": 5.6,
-    "numberOfVotes": 33,
-    "popularity": 401.5,
-    "releaseDate": "2022-11-04"
-  },
-  {
-    "name": "Disenchanted",
-    "genres": [
-      "Comedy",
-      "Family",
-      "Fantasy"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/4x3pt6hoLblBeHebUa4OyiVXFiM.jpg",
-    "rating": 7.1,
-    "numberOfVotes": 696,
-    "popularity": 393.178,
-    "releaseDate": "2022-11-18"
-  },
-  {
-    "name": "Bullet Train",
-    "genres": [
-      "Action",
-      "Comedy",
-      "Thriller"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/tVxDe01Zy3kZqaZRNiXFGDICdZk.jpg",
-    "rating": 7.5,
-    "numberOfVotes": 3154,
-    "popularity": 389.836,
-    "releaseDate": "2022-07-03"
-  },
-  {
-    "name": "Blowback",
-    "genres": [
-      "Action",
-      "Thriller",
-      "Crime"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fHQHC32dhom8u0OxC2hs2gYQh0M.jpg",
-    "rating": 6.2,
-    "numberOfVotes": 36,
-    "popularity": 388.771,
-    "releaseDate": "2022-06-17"
-  },
-  {
-    "name": "Avatar: Creating the World of Pandora",
-    "genres": [
-      "Documentary"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/sjf3xjuofCtDhZghJRzXlTiEjJe.jpg",
-    "rating": 7.3,
-    "numberOfVotes": 38,
-    "popularity": 383.044,
-    "releaseDate": "2010-02-07"
   },
   {
     "name": "Babylon",
     "genres": [
-      "Drama",
-      "Comedy"
+      "drama",
+      "comedy"
     ],
     "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/wjOHjWCUE0YzDiEzKv8AfqHj3ir.jpg",
-    "rating": 7.9,
-    "numberOfVotes": 232,
-    "popularity": 377.232,
+    "rating": 7.7,
+    "numberOfVotes": 800,
+    "popularity": 1344.657,
     "releaseDate": "2022-12-22"
   },
   {
-    "name": "Sonic the Hedgehog 2",
+    "name": "Violent Night",
     "genres": [
-      "Action",
-      "Adventure",
-      "Family",
-      "Comedy"
+      "action",
+      "comedy",
+      "crime",
+      "thriller"
     ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6DrHO1jr3qVrViUO6s6kFiAGM7.jpg",
-    "rating": 7.6,
-    "numberOfVotes": 3600,
-    "popularity": 372.747,
-    "releaseDate": "2022-04-08"
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/1XSYOP0JjjyMz1irihvWywro82r.jpg",
+    "rating": 7.7,
+    "numberOfVotes": 1112,
+    "popularity": 1295.373,
+    "releaseDate": "2022-11-30"
+  },
+  {
+    "name": "There's Something Wrong with the Children",
+    "genres": [
+      "horror",
+      "mystery",
+      "thriller"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/e49Sr3Lxfk2psYhv1SzQjs7MeGo.jpg",
+    "rating": 6.2,
+    "numberOfVotes": 54,
+    "popularity": 1238.123,
+    "releaseDate": "2023-01-17"
+  },
+  {
+    "name": "Prey for the Devil",
+    "genres": [
+      "horror",
+      "thriller"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/iCvgemXf2Kpr2LvpDmt5J9NhjKM.jpg",
+    "rating": 7.3,
+    "numberOfVotes": 478,
+    "popularity": 1182.06,
+    "releaseDate": "2022-10-23"
+  },
+  {
+    "name": "Encanto at the Hollywood Bowl",
+    "genres": [
+      "music"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/sa3Ku5yNVjp8NloWxJoI9dQjvOi.jpg",
+    "rating": 7.5,
+    "numberOfVotes": 82,
+    "popularity": 1090.399,
+    "releaseDate": "2022-12-28"
+  },
+  {
+    "name": "The Price We Pay",
+    "genres": [
+      "action",
+      "thriller",
+      "mystery",
+      "crime",
+      "horror"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/8fwJt0qZieQ7dKaiiqehObWpXYT.jpg",
+    "rating": 6.3,
+    "numberOfVotes": 24,
+    "popularity": 1038.845,
+    "releaseDate": "2023-01-13"
+  },
+  {
+    "name": "Roald Dahl's Matilda the Musical",
+    "genres": [
+      "family",
+      "comedy",
+      "fantasy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ga8R3OiOMMgSvZ4cOj8x7prUNYZ.jpg",
+    "rating": 7,
+    "numberOfVotes": 471,
+    "popularity": 988.864,
+    "releaseDate": "2022-11-25"
+  },
+  {
+    "name": "Savage Salvation",
+    "genres": [
+      "action",
+      "mystery",
+      "thriller",
+      "crime"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fJRt3mmZEvf8gQzoNLzjPtWpc9o.jpg",
+    "rating": 6.6,
+    "numberOfVotes": 90,
+    "popularity": 973.428,
+    "releaseDate": "2022-12-02"
+  },
+  {
+    "name": "Guillermo del Toro's Pinocchio",
+    "genres": [
+      "animation",
+      "fantasy",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/vx1u0uwxdlhV2MUzj4VlcMB0N6m.jpg",
+    "rating": 8.3,
+    "numberOfVotes": 1775,
+    "popularity": 941.785,
+    "releaseDate": "2022-11-18"
+  },
+  {
+    "name": "High Heat",
+    "genres": [
+      "action",
+      "comedy",
+      "crime"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/mmD0NVdhiRiCu64YKem5GK5PSfy.jpg",
+    "rating": 6,
+    "numberOfVotes": 43,
+    "popularity": 919.276,
+    "releaseDate": "2022-12-16"
+  },
+  {
+    "name": "The Woman King",
+    "genres": [
+      "action",
+      "drama",
+      "history"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/438QXt1E3WJWb3PqNniK0tAE5c1.jpg",
+    "rating": 7.8,
+    "numberOfVotes": 1198,
+    "popularity": 890.187,
+    "releaseDate": "2022-09-16"
+  },
+  {
+    "name": "Winnie the Pooh: Blood and Honey",
+    "genres": [
+      "horror",
+      "thriller"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/wtFwgFFk1ze789ghcadWGEVjj3N.jpg",
+    "rating": 6.9,
+    "numberOfVotes": 12,
+    "popularity": 829.232,
+    "releaseDate": "2023-01-27"
+  },
+  {
+    "name": "Terrifier 2",
+    "genres": [
+      "horror"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/8gLhu8UFPZfH2Hv11JhTZkb9CVl.jpg",
+    "rating": 7,
+    "numberOfVotes": 985,
+    "popularity": 776.359,
+    "releaseDate": "2022-10-06"
+  },
+  {
+    "name": "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",
+    "genres": [
+      "adventure",
+      "family",
+      "fantasy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/iREd0rNCjYdf5Ar0vfaW32yrkm.jpg",
+    "rating": 7.1,
+    "numberOfVotes": 9277,
+    "popularity": 748.264,
+    "releaseDate": "2005-12-07"
+  },
+  {
+    "name": "You People",
+    "genres": [
+      "romance",
+      "comedy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/x5E4TndwASNkaK2hwgeYfsIVo2x.jpg",
+    "rating": 6,
+    "numberOfVotes": 228,
+    "popularity": 737.024,
+    "releaseDate": "2023-01-20"
+  },
+  {
+    "name": "Fall",
+    "genres": [
+      "thriller"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/v28T5F1IygM8vXWZIycfNEm3xcL.jpg",
+    "rating": 7.3,
+    "numberOfVotes": 2378,
+    "popularity": 726.786,
+    "releaseDate": "2022-08-11"
+  },
+  {
+    "name": "Strange World",
+    "genres": [
+      "animation",
+      "science fiction",
+      "adventure",
+      "family"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fHMqfsYyl3lskPK2RiFRwhzwuep.jpg",
+    "rating": 6.6,
+    "numberOfVotes": 756,
+    "popularity": 693.787,
+    "releaseDate": "2022-11-23"
+  },
+  {
+    "name": "The Independent",
+    "genres": [
+      "thriller",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/jhlc1nsD8nnnGymEFaZ0twMH6M6.jpg",
+    "rating": 7.5,
+    "numberOfVotes": 65,
+    "popularity": 663.942,
+    "releaseDate": "2022-11-02"
+  },
+  {
+    "name": "Tinker Bell and the Legend of the NeverBeast",
+    "genres": [
+      "adventure",
+      "animation",
+      "family"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/3S0mmmpYStB3GqodRghcfOt81wQ.jpg",
+    "rating": 7.2,
+    "numberOfVotes": 846,
+    "popularity": 649.822,
+    "releaseDate": "2014-12-12"
+  },
+  {
+    "name": "The Boss Baby: Christmas Bonus",
+    "genres": [
+      "animation",
+      "family",
+      "adventure"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/iMmMxF6f2OonUrXrHKBLSYAhXly.jpg",
+    "rating": 6.8,
+    "numberOfVotes": 201,
+    "popularity": 617.068,
+    "releaseDate": "2022-12-06"
+  },
+  {
+    "name": "R.I.P.D. 2: Rise of the Damned",
+    "genres": [
+      "fantasy",
+      "action",
+      "comedy",
+      "crime"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/g4yJTzMtOBUTAR2Qnmj8TYIcFVq.jpg",
+    "rating": 6.6,
+    "numberOfVotes": 365,
+    "popularity": 581.817,
+    "releaseDate": "2022-11-15"
+  },
+  {
+    "name": "Candy Land",
+    "genres": [
+      "horror",
+      "thriller"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/r7ZipEd9oHHVVXTcvbx3Sd3Tukv.jpg",
+    "rating": 7,
+    "numberOfVotes": 22,
+    "popularity": 574.183,
+    "releaseDate": "2023-01-06"
+  },
+  {
+    "name": "Knock at the Cabin",
+    "genres": [
+      "horror",
+      "mystery",
+      "thriller"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/dm06L9pxDOL9jNSK4Cb6y139rrG.jpg",
+    "rating": 6.7,
+    "numberOfVotes": 127,
+    "popularity": 558.827,
+    "releaseDate": "2023-02-01"
+  },
+  {
+    "name": "Hex",
+    "genres": [
+      "action",
+      "horror",
+      "thriller"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/xFJHb43ZAnnuiDztxZYsmyopweb.jpg",
+    "rating": 6.2,
+    "numberOfVotes": 36,
+    "popularity": 551.435,
+    "releaseDate": "2022-11-01"
+  },
+  {
+    "name": "Medieval",
+    "genres": [
+      "history",
+      "action",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/eeUNWsdoiOijOZAMaWFDA5Pb1n8.jpg",
+    "rating": 7.2,
+    "numberOfVotes": 319,
+    "popularity": 547.237,
+    "releaseDate": "2022-09-08"
+  },
+  {
+    "name": "Jurassic World Dominion",
+    "genres": [
+      "adventure",
+      "action",
+      "science fiction"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/kAVRgw7GgK1CfYEJq8ME6EvRIgU.jpg",
+    "rating": 6.9,
+    "numberOfVotes": 4370,
+    "popularity": 546.159,
+    "releaseDate": "2022-06-01"
+  },
+  {
+    "name": "Detective Knight: Rogue",
+    "genres": [
+      "action",
+      "crime"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/2wj5iUJ2B5AQ1lFctJgUrHHsp9B.jpg",
+    "rating": 6.9,
+    "numberOfVotes": 71,
+    "popularity": 544.06,
+    "releaseDate": "2022-10-21"
+  },
+  {
+    "name": "Night at the Museum: Kahmunrah Rises Again",
+    "genres": [
+      "animation",
+      "comedy",
+      "family",
+      "fantasy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/mkRQn520JQD07BNP03NK3iKCaPD.jpg",
+    "rating": 7,
+    "numberOfVotes": 164,
+    "popularity": 518.118,
+    "releaseDate": "2022-12-09"
+  },
+  {
+    "name": "Smile",
+    "genres": [
+      "horror",
+      "mystery",
+      "thriller"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/aPqcQwu4VGEewPhagWNncDbJ9Xp.jpg",
+    "rating": 6.8,
+    "numberOfVotes": 1580,
+    "popularity": 498.291,
+    "releaseDate": "2022-09-23"
+  },
+  {
+    "name": "Top Gun: Maverick",
+    "genres": [
+      "action",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/62HCnUTziyWcpDaBO2i1DX17ljH.jpg",
+    "rating": 8.3,
+    "numberOfVotes": 5932,
+    "popularity": 498.121,
+    "releaseDate": "2022-05-24"
+  },
+  {
+    "name": "Abandoned",
+    "genres": [
+      "horror",
+      "mystery",
+      "thriller"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/cO9ywQ2AMHM9EoBJsJGH1Gl9U5L.jpg",
+    "rating": 6.4,
+    "numberOfVotes": 185,
+    "popularity": 491.161,
+    "releaseDate": "2022-06-17"
+  },
+  {
+    "name": "Lyle, Lyle, Crocodile",
+    "genres": [
+      "comedy",
+      "family",
+      "music"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/irIS5Tn3TXjNi1R9BpWvGAN4CZ1.jpg",
+    "rating": 7.7,
+    "numberOfVotes": 312,
+    "popularity": 484.047,
+    "releaseDate": "2022-10-07"
+  },
+  {
+    "name": "Jeepers Creepers: Reborn",
+    "genres": [
+      "horror",
+      "thriller",
+      "mystery"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/qVVegwPsW6n9unBtLWq1rzOutka.jpg",
+    "rating": 5.8,
+    "numberOfVotes": 620,
+    "popularity": 477.589,
+    "releaseDate": "2022-09-19"
   },
   {
     "name": "Thor: Love and Thunder",
     "genres": [
-      "Fantasy",
-      "Action",
-      "Comedy"
+      "fantasy",
+      "action",
+      "comedy"
     ],
     "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/pIkRyD18kl4FhoCNQuWxWu5cBLM.jpg",
-    "rating": 6.7,
-    "numberOfVotes": 5244,
-    "popularity": 366.227,
+    "rating": 6.6,
+    "numberOfVotes": 5339,
+    "popularity": 470.376,
     "releaseDate": "2022-07-06"
   },
   {
-    "name": "Prey",
+    "name": "The Pale Blue Eye",
     "genres": [
-      "Thriller",
-      "Action",
-      "Science Fiction"
+      "mystery",
+      "crime",
+      "horror"
     ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ujr5pztc1oitbe7ViMUOilFaJ7s.jpg",
-    "rating": 7.8,
-    "numberOfVotes": 5047,
-    "popularity": 355.152,
-    "releaseDate": "2022-08-02"
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/9xkGlFRqrN8btTLU0KQvOfn2PHr.jpg",
+    "rating": 7,
+    "numberOfVotes": 962,
+    "popularity": 454.802,
+    "releaseDate": "2022-12-22"
   },
   {
-    "name": "Orphan: First Kill",
+    "name": "Spider-Man: No Way Home",
     "genres": [
-      "Horror",
-      "Thriller"
+      "action",
+      "adventure",
+      "science fiction"
     ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/pHkKbIRoCe7zIFvqan9LFSaQAde.jpg",
-    "rating": 6.8,
-    "numberOfVotes": 1505,
-    "popularity": 352.358,
-    "releaseDate": "2022-07-27"
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/uJYYizSuA9Y3DCs0qS4qWvHfZg4.jpg",
+    "rating": 8,
+    "numberOfVotes": 16603,
+    "popularity": 451.666,
+    "releaseDate": "2021-12-15"
   },
   {
-    "name": "Dog Gone",
+    "name": "Project Gemini",
     "genres": [
-      "Family",
-      "Adventure",
-      "Drama"
+      "science fiction",
+      "horror"
     ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/eYWdLZCS9W1Xli9bynzFSddLx02.jpg",
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/eX6tDFp4RhhjZaa1HUDUzFGPWYk.jpg",
+    "rating": 5.7,
+    "numberOfVotes": 244,
+    "popularity": 427.921,
+    "releaseDate": "2022-01-06"
+  },
+  {
+    "name": "Avatar: The Deep Dive - A Special Edition of 20/20",
+    "genres": [
+      "documentary"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/rtVeIsmeXnpjNbEKnm9Say58XjV.jpg",
+    "rating": 7.5,
+    "numberOfVotes": 15,
+    "popularity": 427.323,
+    "releaseDate": "2022-12-14"
+  },
+  {
+    "name": "Plane",
+    "genres": [
+      "action",
+      "adventure",
+      "thriller"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/2g9ZBjUfF1X53EinykJqiBieUaO.jpg",
     "rating": 6.7,
-    "numberOfVotes": 62,
-    "popularity": 349.303,
+    "numberOfVotes": 138,
+    "popularity": 423.816,
     "releaseDate": "2023-01-13"
   },
   {
-    "name": "Blade of the 47 Ronin",
+    "name": "Girl at the Window",
     "genres": [
-      "Action",
-      "Fantasy",
-      "Thriller"
+      "thriller",
+      "horror"
     ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/kjFDIlUCJkcpFxYKtE6OsGcAfQQ.jpg",
-    "rating": 6.7,
-    "numberOfVotes": 112,
-    "popularity": 341.441,
-    "releaseDate": "2022-10-25"
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/y8PhaJDd4YcYX7DVKJxoDwBUCZO.jpg",
+    "rating": 6.5,
+    "numberOfVotes": 34,
+    "popularity": 419.549,
+    "releaseDate": "2022-08-18"
   },
   {
-    "name": "All My Friends Hate Me",
+    "name": "Sonic the Hedgehog 2",
     "genres": [
-      "Comedy",
-      "Thriller",
-      "Horror"
+      "action",
+      "adventure",
+      "family",
+      "comedy"
     ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/bZmhUlFCAnkqZY3ef5AJhdiNesh.jpg",
-    "rating": 6.2,
-    "numberOfVotes": 56,
-    "popularity": 338.673,
-    "releaseDate": "2022-03-11"
-  },
-  {
-    "name": "Minions: The Rise of Gru",
-    "genres": [
-      "Animation",
-      "Comedy",
-      "Family"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/wKiOkZTN9lUUUNZLmtnwubZYONg.jpg",
-    "rating": 7.5,
-    "numberOfVotes": 2536,
-    "popularity": 337.056,
-    "releaseDate": "2022-06-29"
-  },
-  {
-    "name": "Maneater",
-    "genres": [
-      "Thriller",
-      "Horror"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/pwf3DGuWB1AptvIzHhlGxDUNnQX.jpg",
-    "rating": 5.1,
-    "numberOfVotes": 29,
-    "popularity": 328.347,
-    "releaseDate": "2022-08-26"
-  },
-  {
-    "name": "Sing 2",
-    "genres": [
-      "Animation",
-      "Adventure",
-      "Comedy"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/aWeKITRFbbwY8txG5uCj4rMCfSP.jpg",
-    "rating": 8,
-    "numberOfVotes": 3427,
-    "popularity": 319.434,
-    "releaseDate": "2021-12-01"
-  },
-  {
-    "name": "Encanto",
-    "genres": [
-      "Animation",
-      "Comedy",
-      "Family",
-      "Fantasy"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/4j0PNHkMr5ax3IA8tjtxcmPU3QT.jpg",
-    "rating": 7.7,
-    "numberOfVotes": 7843,
-    "popularity": 316.15,
-    "releaseDate": "2021-10-13"
-  },
-  {
-    "name": "The Lair",
-    "genres": [
-      "Action",
-      "Horror"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ifRFLx83Xk1DcwAS3OScgI6HmWO.jpg",
-    "rating": 5.7,
-    "numberOfVotes": 61,
-    "popularity": 314.23,
-    "releaseDate": "2022-10-28"
-  },
-  {
-    "name": "Scream",
-    "genres": [
-      "Horror",
-      "Mystery",
-      "Thriller"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fFE6E9jRKaiy7LHxk4jH1jIWzyT.jpg",
-    "rating": 6.7,
-    "numberOfVotes": 2003,
-    "popularity": 312.885,
-    "releaseDate": "2022-01-12"
-  },
-  {
-    "name": "Beast",
-    "genres": [
-      "Thriller",
-      "Adventure",
-      "Horror"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/xIGr7UHsKf0URWmyyd5qFMAq4d8.jpg",
-    "rating": 6.9,
-    "numberOfVotes": 973,
-    "popularity": 308.352,
-    "releaseDate": "2022-08-11"
-  },
-  {
-    "name": "The Batman",
-    "genres": [
-      "Crime",
-      "Mystery",
-      "Thriller"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/74xTEgt7R36Fpooo50r9T25onhq.jpg",
-    "rating": 7.7,
-    "numberOfVotes": 7281,
-    "popularity": 300.355,
-    "releaseDate": "2022-03-02"
-  },
-  {
-    "name": "Alien Sniperess",
-    "genres": [
-      "Action",
-      "Science Fiction",
-      "Fantasy"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/bI1ZDRkerXrcaFa5kWjEMw80aqE.jpg",
-    "rating": 3.9,
-    "numberOfVotes": 13,
-    "popularity": 300.2,
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6DrHO1jr3qVrViUO6s6kFiAGM7.jpg",
+    "rating": 7.6,
+    "numberOfVotes": 3658,
+    "popularity": 416.222,
     "releaseDate": "2022-04-08"
   },
   {
-    "name": "Doctor Strange in the Multiverse of Madness",
+    "name": "Bullet Train",
     "genres": [
-      "Fantasy",
-      "Action",
-      "Adventure"
+      "action",
+      "comedy",
+      "thriller"
     ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fwBl3J2aEXru6mrr9Xg8O99Iz2K.jpg",
-    "rating": 7.4,
-    "numberOfVotes": 6785,
-    "popularity": 296.208,
-    "releaseDate": "2022-05-04"
-  },
-  {
-    "name": "A Man Called Otto",
-    "genres": [
-      "Comedy",
-      "Drama"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/d7uLLwLsRwwQlTigSBnPj4CU2sP.jpg",
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/tVxDe01Zy3kZqaZRNiXFGDICdZk.jpg",
     "rating": 7.5,
-    "numberOfVotes": 61,
-    "popularity": 294.761,
-    "releaseDate": "2022-12-30"
+    "numberOfVotes": 3291,
+    "popularity": 396.407,
+    "releaseDate": "2022-07-03"
   },
   {
-    "name": "Emancipation",
+    "name": "Avatar: Creating the World of Pandora",
     "genres": [
-      "History",
-      "Drama",
-      "Thriller",
-      "Action"
+      "documentary"
     ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/s9sUK1vAaOcxJfKzNTszrNkPhkH.jpg",
-    "rating": 8.1,
-    "numberOfVotes": 704,
-    "popularity": 293.708,
-    "releaseDate": "2022-12-02"
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/d9oqcfeCyc3zmMal6eJbfj3gatc.jpg",
+    "rating": 7.2,
+    "numberOfVotes": 40,
+    "popularity": 393.403,
+    "releaseDate": "2010-02-07"
   },
   {
-    "name": "Luck",
+    "name": "Disenchanted",
     "genres": [
-      "Animation",
-      "Adventure",
-      "Comedy",
-      "Fantasy"
+      "comedy",
+      "family",
+      "fantasy"
     ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/1HOYvwGFioUFL58UVvDRG6beEDm.jpg",
-    "rating": 7.9,
-    "numberOfVotes": 1099,
-    "popularity": 286.898,
-    "releaseDate": "2022-08-05"
-  },
-  {
-    "name": "Dangerous Game: The Legacy Murders",
-    "genres": [
-      "Thriller",
-      "Horror"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/1Dlj0TbLNtGHq42HE0fLnawtyyD.jpg",
-    "rating": 7.6,
-    "numberOfVotes": 38,
-    "popularity": 286.259,
-    "releaseDate": "2022-10-21"
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/uyNLq2Dc3s4IOdcYTU8ZtM2lTjb.jpg",
+    "rating": 7,
+    "numberOfVotes": 722,
+    "popularity": 380.823,
+    "releaseDate": "2022-11-18"
   },
   {
     "name": "Paradise City",
     "genres": [
-      "Action",
-      "Crime",
-      "Thriller"
+      "action",
+      "crime",
+      "thriller"
     ],
     "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/xdmmd437QdjcCls8yCQxrH5YYM4.jpg",
     "rating": 5.5,
-    "numberOfVotes": 55,
-    "popularity": 283.913,
+    "numberOfVotes": 57,
+    "popularity": 371.952,
     "releaseDate": "2022-11-11"
-  },
-  {
-    "name": "Turning Red",
-    "genres": [
-      "Animation",
-      "Family",
-      "Comedy",
-      "Fantasy"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/qsdjk9oAKSQMWs0Vt5Pyfh6O4GZ.jpg",
-    "rating": 7.5,
-    "numberOfVotes": 3794,
-    "popularity": 283.517,
-    "releaseDate": "2022-03-10"
-  },
-  {
-    "name": "Hellraiser",
-    "genres": [
-      "Horror",
-      "Mystery"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/f9ZAIUxTTk23vo1BC9Ur1Rx5c2E.jpg",
-    "rating": 6.5,
-    "numberOfVotes": 417,
-    "popularity": 280.741,
-    "releaseDate": "2022-09-28"
-  },
-  {
-    "name": "On the Line",
-    "genres": [
-      "Thriller"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/a14BbSHvLgzCdbDD6tAL8OBVKL1.jpg",
-    "rating": 6.3,
-    "numberOfVotes": 236,
-    "popularity": 280.019,
-    "releaseDate": "2022-10-31"
-  },
-  {
-    "name": "The Jack in the Box: Awakening",
-    "genres": [
-      "Horror"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/3Ib8vlWTrAKRrTWUrTrZPOMW4jp.jpg",
-    "rating": 6.4,
-    "numberOfVotes": 210,
-    "popularity": 277.415,
-    "releaseDate": "2022-02-24"
-  },
-  {
-    "name": "In the Forest",
-    "genres": [
-      "Horror",
-      "Thriller"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/pWKTaGN9WMcKHKAir9POsKm4vEo.jpg",
-    "rating": 6.1,
-    "numberOfVotes": 16,
-    "popularity": 275.846,
-    "releaseDate": "2022-01-28"
-  },
-  {
-    "name": "Emily the Criminal",
-    "genres": [
-      "Crime",
-      "Drama",
-      "Thriller"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/iZvzMpREGiqDQ5eYbx8z70qPgst.jpg",
-    "rating": 6.9,
-    "numberOfVotes": 376,
-    "popularity": 272.35,
-    "releaseDate": "2022-08-12"
-  },
-  {
-    "name": "Terrifier",
-    "genres": [
-      "Horror",
-      "Thriller"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6PQqC4SbY910VvyVad6mvsboILU.jpg",
-    "rating": 6.6,
-    "numberOfVotes": 1333,
-    "popularity": 272.254,
-    "releaseDate": "2016-03-15"
-  },
-  {
-    "name": "Scrooge: A Christmas Carol",
-    "genres": [
-      "Animation",
-      "Family",
-      "Fantasy",
-      "Drama"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/oyGb5JpEYMEqDDjfJKLEvPTVSjK.jpg",
-    "rating": 6.7,
-    "numberOfVotes": 242,
-    "popularity": 267.517,
-    "releaseDate": "2022-11-18"
-  },
-  {
-    "name": "Avatar: Scene Deconstruction",
-    "genres": [
-      "Documentary"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/uCreCQFReeF0RiIXkQypRYHwikx.jpg",
-    "rating": 7.7,
-    "numberOfVotes": 13,
-    "popularity": 264.376,
-    "releaseDate": "2009-12-18"
-  },
-  {
-    "name": "The Guardians of the Galaxy Holiday Special",
-    "genres": [
-      "Comedy",
-      "Science Fiction",
-      "Adventure"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/8dqXyslZ2hv49Oiob9UjlGSHSTR.jpg",
-    "rating": 7.4,
-    "numberOfVotes": 1063,
-    "popularity": 255.177,
-    "releaseDate": "2022-11-25"
-  },
-  {
-    "name": "Samaritan",
-    "genres": [
-      "Action",
-      "Drama",
-      "Science Fiction"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/vwq5iboxYoaSpOmEQrhq9tHicq7.jpg",
-    "rating": 6.8,
-    "numberOfVotes": 1516,
-    "popularity": 254.161,
-    "releaseDate": "2022-08-25"
-  },
-  {
-    "name": "Orgasm Inc: The Story of OneTaste",
-    "genres": [
-      "Documentary"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/yqI3XQ1nmvxFpBus1BescRrRBAj.jpg",
-    "rating": 6.5,
-    "numberOfVotes": 41,
-    "popularity": 251.606,
-    "releaseDate": "2022-11-05"
-  },
-  {
-    "name": "Enola Holmes 2",
-    "genres": [
-      "Mystery",
-      "Adventure",
-      "Comedy",
-      "Crime"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/tegBpjM5ODoYoM1NjaiHVLEA0QM.jpg",
-    "rating": 7.7,
-    "numberOfVotes": 1663,
-    "popularity": 251.123,
-    "releaseDate": "2022-11-04"
-  },
-  {
-    "name": "Diary of a Wimpy Kid: Rodrick Rules",
-    "genres": [
-      "Animation",
-      "Comedy",
-      "Family"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/iW6ixzkrvdrcxk0umiLZMtlSl9L.jpg",
-    "rating": 6.8,
-    "numberOfVotes": 74,
-    "popularity": 248.335,
-    "releaseDate": "2022-12-02"
-  },
-  {
-    "name": "The Infernal Machine",
-    "genres": [
-      "Thriller",
-      "Mystery"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/bSqpOGzaKBdGkBLmcm1JJIVryYy.jpg",
-    "rating": 6.7,
-    "numberOfVotes": 156,
-    "popularity": 246.963,
-    "releaseDate": "2022-09-23"
-  },
-  {
-    "name": "Slumberland",
-    "genres": [
-      "Family",
-      "Fantasy",
-      "Adventure",
-      "Drama"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/eCgBLNAFC4XDZ4DiyQ80PIJdSHU.jpg",
-    "rating": 7.6,
-    "numberOfVotes": 542,
-    "popularity": 246.296,
-    "releaseDate": "2022-11-18"
-  },
-  {
-    "name": "The Invitation",
-    "genres": [
-      "Horror",
-      "Thriller"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/jcTq6gIskCsHlKDvCKKouEfiU66.jpg",
-    "rating": 6.4,
-    "numberOfVotes": 429,
-    "popularity": 242.366,
-    "releaseDate": "2022-08-24"
-  },
-  {
-    "name": "DC League of Super-Pets",
-    "genres": [
-      "Animation",
-      "Action",
-      "Family",
-      "Comedy",
-      "Science Fiction"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/r7XifzvtezNt31ypvsmb6Oqxw49.jpg",
-    "rating": 7.4,
-    "numberOfVotes": 1073,
-    "popularity": 240.533,
-    "releaseDate": "2022-07-27"
-  },
-  {
-    "name": "House Party",
-    "genres": [
-      "Comedy"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/KiyKR9m6h01eIvGObGmpt16U3F.jpg",
-    "rating": 7.1,
-    "numberOfVotes": 16,
-    "popularity": 240.251,
-    "releaseDate": "2023-01-12"
-  },
-  {
-    "name": "Uncharted",
-    "genres": [
-      "Action",
-      "Adventure"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/rJHC1RUORuUhtfNb4Npclx0xnOf.jpg",
-    "rating": 7.1,
-    "numberOfVotes": 4251,
-    "popularity": 235.967,
-    "releaseDate": "2022-02-10"
-  },
-  {
-    "name": "Blue's Big City Adventure",
-    "genres": [
-      "Family",
-      "Adventure",
-      "Music",
-      "Animation"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/5JV5nDPMYQLaZz2n0SmxQfMYfLn.jpg",
-    "rating": 7.6,
-    "numberOfVotes": 78,
-    "popularity": 235.077,
-    "releaseDate": "2022-11-18"
-  },
-  {
-    "name": "Tom and Jerry Snowman's Land",
-    "genres": [
-      "Family",
-      "Comedy",
-      "Animation",
-      "Adventure"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/memqWrs4zmLgMBfzTfebrOXbytG.jpg",
-    "rating": 7.4,
-    "numberOfVotes": 22,
-    "popularity": 233.044,
-    "releaseDate": "2022-09-06"
-  },
-  {
-    "name": "The Friendship Game",
-    "genres": [
-      "Science Fiction",
-      "Horror"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/qXaJkaVTNMhrOylFi6xrWnBQGE8.jpg",
-    "rating": 5.6,
-    "numberOfVotes": 25,
-    "popularity": 232.758,
-    "releaseDate": "2022-11-11"
-  },
-  {
-    "name": "Shrek",
-    "genres": [
-      "Animation",
-      "Comedy",
-      "Fantasy",
-      "Adventure",
-      "Family"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/o04jZs5SXhbvhqO4981W7KJXOWZ.jpg",
-    "rating": 7.7,
-    "numberOfVotes": 14766,
-    "popularity": 229.373,
-    "releaseDate": "2001-05-18"
-  },
-  {
-    "name": "Corrective Measures",
-    "genres": [
-      "Science Fiction",
-      "Action"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/aHFq9NMhavOL0jtQvmHQ1c5e0ya.jpg",
-    "rating": 5.2,
-    "numberOfVotes": 42,
-    "popularity": 228.436,
-    "releaseDate": "2022-04-29"
-  },
-  {
-    "name": "Hotel Transylvania: Transformania",
-    "genres": [
-      "Animation",
-      "Comedy",
-      "Family",
-      "Fantasy",
-      "Adventure"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/teCy1egGQa0y8ULJvlrDHQKnxBL.jpg",
-    "rating": 7.1,
-    "numberOfVotes": 1373,
-    "popularity": 228.216,
-    "releaseDate": "2022-02-25"
-  },
-  {
-    "name": "Puss in Boots: The Three Diablos",
-    "genres": [
-      "Adventure",
-      "Animation",
-      "Comedy",
-      "Family"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ptvbHUWpU8Nh6vrmSvjx4ESDgfC.jpg",
-    "rating": 6.6,
-    "numberOfVotes": 379,
-    "popularity": 227.489,
-    "releaseDate": "2012-02-07"
-  },
-  {
-    "name": "Secret Headquarters",
-    "genres": [
-      "Science Fiction",
-      "Family",
-      "Action",
-      "Adventure"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/8PsHogUfvjWPGdWAI5uslDhHDx7.jpg",
-    "rating": 6.8,
-    "numberOfVotes": 207,
-    "popularity": 225.572,
-    "releaseDate": "2022-08-12"
-  },
-  {
-    "name": "Megan",
-    "genres": [
-      "Thriller"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/8sslkaeiNMCr9huGkWDuUdTSsOV.jpg",
-    "rating": 5.6,
-    "numberOfVotes": 6,
-    "popularity": 225.196,
-    "releaseDate": "2020-03-14"
-  },
-  {
-    "name": "The Hip Hop Nutcracker",
-    "genres": [
-      "Music"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/iqOGxcKViTtU7pwC24xUb1bDslw.jpg",
-    "rating": 6,
-    "numberOfVotes": 14,
-    "popularity": 223.227,
-    "releaseDate": "2022-11-25"
-  },
-  {
-    "name": "After Ever Happy",
-    "genres": [
-      "Romance",
-      "Drama"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6b7swg6DLqXCO3XUsMnv6RwDMW2.jpg",
-    "rating": 6.9,
-    "numberOfVotes": 752,
-    "popularity": 221.429,
-    "releaseDate": "2022-08-24"
-  },
-  {
-    "name": "The Soccer Football Movie",
-    "genres": [
-      "Animation",
-      "Comedy",
-      "Family"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/sWoYDNPNZs5MtzPbirXV73tIHrA.jpg",
-    "rating": 6.2,
-    "numberOfVotes": 76,
-    "popularity": 220.746,
-    "releaseDate": "2022-11-09"
-  },
-  {
-    "name": "Interstellar",
-    "genres": [
-      "Adventure",
-      "Drama",
-      "Science Fiction"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
-    "rating": 8.4,
-    "numberOfVotes": 30326,
-    "popularity": 219.886,
-    "releaseDate": "2014-11-05"
-  },
-  {
-    "name": "The Black Phone",
-    "genres": [
-      "Horror",
-      "Thriller"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/lr11mCT85T1JanlgjMuhs9nMht4.jpg",
-    "rating": 7.8,
-    "numberOfVotes": 3422,
-    "popularity": 216.552,
-    "releaseDate": "2022-06-22"
-  },
-  {
-    "name": "Shrek 2",
-    "genres": [
-      "Animation",
-      "Family",
-      "Comedy",
-      "Fantasy",
-      "Adventure",
-      "Romance"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/2yYP0PQjG8zVqturh1BAqu2Tixl.jpg",
-    "rating": 7.2,
-    "numberOfVotes": 10584,
-    "popularity": 214.733,
-    "releaseDate": "2004-05-19"
-  },
-  {
-    "name": "Hocus Pocus 2",
-    "genres": [
-      "Fantasy",
-      "Comedy",
-      "Family"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/7ze7YNmUaX81ufctGqt0AgHxRtL.jpg",
-    "rating": 7.5,
-    "numberOfVotes": 1279,
-    "popularity": 213.732,
-    "releaseDate": "2022-09-27"
-  },
-  {
-    "name": "X",
-    "genres": [
-      "Horror",
-      "Mystery",
-      "Thriller"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/woTQx9Q4b8aO13jR9dsj8C9JESy.jpg",
-    "rating": 6.8,
-    "numberOfVotes": 1583,
-    "popularity": 211.719,
-    "releaseDate": "2022-03-18"
-  },
-  {
-    "name": "Avengers: Infinity War",
-    "genres": [
-      "Adventure",
-      "Action",
-      "Science Fiction"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg",
-    "rating": 8.3,
-    "numberOfVotes": 26139,
-    "popularity": 211,
-    "releaseDate": "2018-04-25"
-  },
-  {
-    "name": "Margaux",
-    "genres": [
-      "Horror",
-      "Science Fiction"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/uNzgeMetu9l4q9NDw7gtiUFwPOJ.jpg",
-    "rating": 6.8,
-    "numberOfVotes": 65,
-    "popularity": 207.41,
-    "releaseDate": "2022-09-09"
-  },
-  {
-    "name": "Whisper",
-    "genres": [
-      "Horror",
-      "Thriller"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/3zunvPLgM9qGFr8ob2BpaKSuAJI.jpg",
-    "rating": 6.4,
-    "numberOfVotes": 50,
-    "popularity": 203.369,
-    "releaseDate": "2022-01-23"
-  },
-  {
-    "name": "Watcher",
-    "genres": [
-      "Mystery",
-      "Thriller",
-      "Horror"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/kKH4S0eiyYy8xfcTEHV9N16u2Q7.jpg",
-    "rating": 6.6,
-    "numberOfVotes": 448,
-    "popularity": 200.39,
-    "releaseDate": "2022-06-03"
-  },
-  {
-    "name": "Frank and Penelope",
-    "genres": [
-      "Thriller",
-      "Horror",
-      "Crime"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/5NpXoAi3nEQkEgLO09nmotPfyNa.jpg",
-    "rating": 7.7,
-    "numberOfVotes": 65,
-    "popularity": 200.282,
-    "releaseDate": "2022-06-03"
-  },
-  {
-    "name": "Puss in Book: Trapped in an Epic Tale",
-    "genres": [
-      "Family",
-      "Fantasy",
-      "Animation",
-      "Comedy",
-      "Adventure"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/7oaCHEtTsPaFtL9rvlRbbiiz1bP.jpg",
-    "rating": 6.6,
-    "numberOfVotes": 189,
-    "popularity": 199.929,
-    "releaseDate": "2017-06-16"
-  },
-  {
-    "name": "The School for Good and Evil",
-    "genres": [
-      "Fantasy",
-      "Action",
-      "Drama"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6oZeEu1GDILdwezmZ5e2xWISf1C.jpg",
-    "rating": 7.2,
-    "numberOfVotes": 818,
-    "popularity": 199.611,
-    "releaseDate": "2022-10-19"
-  },
-  {
-    "name": "The Ledge",
-    "genres": [
-      "Thriller",
-      "Adventure"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/S99eCSnRFfeZJmDaIGIZF58H7w.jpg",
-    "rating": 6.1,
-    "numberOfVotes": 148,
-    "popularity": 199.317,
-    "releaseDate": "2022-02-18"
-  },
-  {
-    "name": "Fantastic Beasts: The Secrets of Dumbledore",
-    "genres": [
-      "Fantasy",
-      "Adventure",
-      "Action"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/jrgifaYeUtTnaH7NF5Drkgjg2MB.jpg",
-    "rating": 6.8,
-    "numberOfVotes": 3236,
-    "popularity": 197.147,
-    "releaseDate": "2022-04-06"
   },
   {
     "name": "The Whale",
     "genres": [
-      "Drama"
+      "drama"
     ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/63Dsk2P2bu0KXLslShS5I60wsOD.jpg",
-    "rating": 7.2,
-    "numberOfVotes": 36,
-    "popularity": 193.986,
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/k2ez0xoCc2uDkRPqktGhW1qZzuP.jpg",
+    "rating": 7.4,
+    "numberOfVotes": 82,
+    "popularity": 368.545,
     "releaseDate": "2022-12-09"
+  },
+  {
+    "name": "Prey",
+    "genres": [
+      "thriller",
+      "action",
+      "science fiction"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ujr5pztc1oitbe7ViMUOilFaJ7s.jpg",
+    "rating": 7.8,
+    "numberOfVotes": 5133,
+    "popularity": 361.157,
+    "releaseDate": "2022-08-02"
+  },
+  {
+    "name": "Puss in Boots",
+    "genres": [
+      "action",
+      "animation",
+      "adventure",
+      "comedy",
+      "family",
+      "western"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/n4UkIqNYSTr4DPoHCVfLrL8mbre.jpg",
+    "rating": 6.5,
+    "numberOfVotes": 3059,
+    "popularity": 359.976,
+    "releaseDate": "2011-10-27"
+  },
+  {
+    "name": "Blade of the 47 Ronin",
+    "genres": [
+      "action",
+      "fantasy",
+      "thriller"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/kjFDIlUCJkcpFxYKtE6OsGcAfQQ.jpg",
+    "rating": 6.7,
+    "numberOfVotes": 121,
+    "popularity": 344.795,
+    "releaseDate": "2022-10-25"
+  },
+  {
+    "name": "The Minute You Wake Up Dead",
+    "genres": [
+      "thriller",
+      "crime"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/pUPwTbnAqfm95BZjNBnMMf39ChT.jpg",
+    "rating": 5.6,
+    "numberOfVotes": 35,
+    "popularity": 340.974,
+    "releaseDate": "2022-11-04"
+  },
+  {
+    "name": "The Batman",
+    "genres": [
+      "crime",
+      "mystery",
+      "thriller"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/74xTEgt7R36Fpooo50r9T25onhq.jpg",
+    "rating": 7.7,
+    "numberOfVotes": 7423,
+    "popularity": 331.984,
+    "releaseDate": "2022-03-02"
+  },
+  {
+    "name": "Minions: The Rise of Gru",
+    "genres": [
+      "animation",
+      "comedy",
+      "family"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/wKiOkZTN9lUUUNZLmtnwubZYONg.jpg",
+    "rating": 7.5,
+    "numberOfVotes": 2581,
+    "popularity": 330.663,
+    "releaseDate": "2022-06-29"
+  },
+  {
+    "name": "Darby and the Dead",
+    "genres": [
+      "comedy",
+      "fantasy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/v1mtYW0qShlS3YFy10D8GqTk6LI.jpg",
+    "rating": 6.6,
+    "numberOfVotes": 24,
+    "popularity": 322.871,
+    "releaseDate": "2022-12-02"
+  },
+  {
+    "name": "Monstrous",
+    "genres": [
+      "horror",
+      "mystery",
+      "thriller"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ec3aX4DyjepEhPkpIUukaBxKpN3.jpg",
+    "rating": 6.2,
+    "numberOfVotes": 181,
+    "popularity": 321.405,
+    "releaseDate": "2022-05-13"
+  },
+  {
+    "name": "Doctor Strange in the Multiverse of Madness",
+    "genres": [
+      "fantasy",
+      "action",
+      "adventure"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/9Gtg2DzBhmYamXBS1hKAhiwbBKS.jpg",
+    "rating": 7.4,
+    "numberOfVotes": 6881,
+    "popularity": 318.133,
+    "releaseDate": "2022-05-04"
+  },
+  {
+    "name": "Turning Red",
+    "genres": [
+      "animation",
+      "family",
+      "comedy",
+      "fantasy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/qsdjk9oAKSQMWs0Vt5Pyfh6O4GZ.jpg",
+    "rating": 7.5,
+    "numberOfVotes": 3851,
+    "popularity": 313.815,
+    "releaseDate": "2022-03-10"
+  },
+  {
+    "name": "Maneater",
+    "genres": [
+      "thriller",
+      "horror"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/pwf3DGuWB1AptvIzHhlGxDUNnQX.jpg",
+    "rating": 5.2,
+    "numberOfVotes": 34,
+    "popularity": 310.958,
+    "releaseDate": "2022-08-26"
+  },
+  {
+    "name": "Luck",
+    "genres": [
+      "animation",
+      "adventure",
+      "comedy",
+      "fantasy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/1HOYvwGFioUFL58UVvDRG6beEDm.jpg",
+    "rating": 7.9,
+    "numberOfVotes": 1122,
+    "popularity": 306.781,
+    "releaseDate": "2022-08-05"
+  },
+  {
+    "name": "Beast",
+    "genres": [
+      "thriller",
+      "action",
+      "adventure",
+      "horror"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/xIGr7UHsKf0URWmyyd5qFMAq4d8.jpg",
+    "rating": 6.9,
+    "numberOfVotes": 994,
+    "popularity": 306.084,
+    "releaseDate": "2022-08-11"
+  },
+  {
+    "name": "Encanto",
+    "genres": [
+      "animation",
+      "comedy",
+      "family",
+      "fantasy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/4j0PNHkMr5ax3IA8tjtxcmPU3QT.jpg",
+    "rating": 7.7,
+    "numberOfVotes": 7901,
+    "popularity": 305.9,
+    "releaseDate": "2021-10-13"
+  },
+  {
+    "name": "Orphan: First Kill",
+    "genres": [
+      "horror",
+      "thriller"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/pHkKbIRoCe7zIFvqan9LFSaQAde.jpg",
+    "rating": 6.8,
+    "numberOfVotes": 1548,
+    "popularity": 300.956,
+    "releaseDate": "2022-07-27"
+  },
+  {
+    "name": "Emily the Criminal",
+    "genres": [
+      "crime",
+      "drama",
+      "thriller"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/iZvzMpREGiqDQ5eYbx8z70qPgst.jpg",
+    "rating": 6.9,
+    "numberOfVotes": 398,
+    "popularity": 299.931,
+    "releaseDate": "2022-08-12"
+  },
+  {
+    "name": "One Way",
+    "genres": [
+      "action",
+      "crime",
+      "thriller"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/uQCxOziq79P3wDsRwQhhkhQyDsJ.jpg",
+    "rating": 6.7,
+    "numberOfVotes": 73,
+    "popularity": 299.696,
+    "releaseDate": "2022-09-02"
+  },
+  {
+    "name": "On the Line",
+    "genres": [
+      "thriller"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/a14BbSHvLgzCdbDD6tAL8OBVKL1.jpg",
+    "rating": 6.2,
+    "numberOfVotes": 251,
+    "popularity": 290.28,
+    "releaseDate": "2022-10-31"
+  },
+  {
+    "name": "Avatar: Scene Deconstruction",
+    "genres": [
+      "documentary"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/uCreCQFReeF0RiIXkQypRYHwikx.jpg",
+    "rating": 7.7,
+    "numberOfVotes": 13,
+    "popularity": 287.053,
+    "releaseDate": "2009-12-18"
+  },
+  {
+    "name": "Sing 2",
+    "genres": [
+      "animation",
+      "adventure",
+      "comedy",
+      "family"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/aWeKITRFbbwY8txG5uCj4rMCfSP.jpg",
+    "rating": 8,
+    "numberOfVotes": 3468,
+    "popularity": 283.627,
+    "releaseDate": "2021-12-01"
+  },
+  {
+    "name": "Uncharted",
+    "genres": [
+      "action",
+      "adventure"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/rJHC1RUORuUhtfNb4Npclx0xnOf.jpg",
+    "rating": 7,
+    "numberOfVotes": 4329,
+    "popularity": 282.61,
+    "releaseDate": "2022-02-10"
+  },
+  {
+    "name": "Diary of a Wimpy Kid: Rodrick Rules",
+    "genres": [
+      "animation",
+      "comedy",
+      "family"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/iW6ixzkrvdrcxk0umiLZMtlSl9L.jpg",
+    "rating": 6.8,
+    "numberOfVotes": 77,
+    "popularity": 280.997,
+    "releaseDate": "2022-12-02"
+  },
+  {
+    "name": "Shark Bait",
+    "genres": [
+      "horror",
+      "thriller",
+      "action",
+      "adventure"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/bVUgMgVozyFScDM3quP412kXrT.jpg",
+    "rating": 5.9,
+    "numberOfVotes": 204,
+    "popularity": 279.847,
+    "releaseDate": "2022-05-13"
+  },
+  {
+    "name": "Blue's Big City Adventure",
+    "genres": [
+      "family",
+      "adventure",
+      "music",
+      "animation"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/5JV5nDPMYQLaZz2n0SmxQfMYfLn.jpg",
+    "rating": 7.6,
+    "numberOfVotes": 80,
+    "popularity": 277.676,
+    "releaseDate": "2022-11-18"
+  },
+  {
+    "name": "Orgasm Inc: The Story of OneTaste",
+    "genres": [
+      "documentary"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/yqI3XQ1nmvxFpBus1BescRrRBAj.jpg",
+    "rating": 6.6,
+    "numberOfVotes": 46,
+    "popularity": 275.275,
+    "releaseDate": "2022-11-05"
+  },
+  {
+    "name": "DC League of Super-Pets",
+    "genres": [
+      "animation",
+      "action",
+      "family",
+      "comedy",
+      "science fiction"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/r7XifzvtezNt31ypvsmb6Oqxw49.jpg",
+    "rating": 7.4,
+    "numberOfVotes": 1102,
+    "popularity": 268.809,
+    "releaseDate": "2022-07-27"
+  },
+  {
+    "name": "The Infernal Machine",
+    "genres": [
+      "thriller",
+      "mystery"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/bSqpOGzaKBdGkBLmcm1JJIVryYy.jpg",
+    "rating": 6.7,
+    "numberOfVotes": 164,
+    "popularity": 261.383,
+    "releaseDate": "2022-09-23"
+  },
+  {
+    "name": "A Man Called Otto",
+    "genres": [
+      "comedy",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/d7uLLwLsRwwQlTigSBnPj4CU2sP.jpg",
+    "rating": 7.4,
+    "numberOfVotes": 100,
+    "popularity": 260.2,
+    "releaseDate": "2022-12-28"
+  },
+  {
+    "name": "House Party",
+    "genres": [
+      "comedy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/KiyKR9m6h01eIvGObGmpt16U3F.jpg",
+    "rating": 7,
+    "numberOfVotes": 29,
+    "popularity": 258.215,
+    "releaseDate": "2023-01-12"
+  },
+  {
+    "name": "Hellraiser",
+    "genres": [
+      "horror",
+      "mystery"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/f9ZAIUxTTk23vo1BC9Ur1Rx5c2E.jpg",
+    "rating": 6.5,
+    "numberOfVotes": 430,
+    "popularity": 258.101,
+    "releaseDate": "2022-09-28"
+  },
+  {
+    "name": "Harry Potter and the Philosopher's Stone",
+    "genres": [
+      "adventure",
+      "fantasy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/wuMc08IPKEatf9rnMNXvIDxqP4W.jpg",
+    "rating": 7.9,
+    "numberOfVotes": 24042,
+    "popularity": 256.786,
+    "releaseDate": "2001-11-16"
+  },
+  {
+    "name": "Avengers: Infinity War",
+    "genres": [
+      "adventure",
+      "action",
+      "science fiction"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg",
+    "rating": 8.3,
+    "numberOfVotes": 26249,
+    "popularity": 254.674,
+    "releaseDate": "2018-04-25"
+  },
+  {
+    "name": "Scrooge: A Christmas Carol",
+    "genres": [
+      "animation",
+      "family",
+      "fantasy",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/oyGb5JpEYMEqDDjfJKLEvPTVSjK.jpg",
+    "rating": 6.7,
+    "numberOfVotes": 247,
+    "popularity": 253.011,
+    "releaseDate": "2022-11-18"
+  },
+  {
+    "name": "The Lair",
+    "genres": [
+      "horror",
+      "action"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ifRFLx83Xk1DcwAS3OScgI6HmWO.jpg",
+    "rating": 5.8,
+    "numberOfVotes": 74,
+    "popularity": 251.744,
+    "releaseDate": "2022-10-28"
+  },
+  {
+    "name": "The Invitation",
+    "genres": [
+      "horror",
+      "thriller"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/jcTq6gIskCsHlKDvCKKouEfiU66.jpg",
+    "rating": 6.4,
+    "numberOfVotes": 446,
+    "popularity": 250.972,
+    "releaseDate": "2022-08-24"
+  },
+  {
+    "name": "The Super Mario Bros. Movie",
+    "genres": [
+      "animation",
+      "adventure",
+      "comedy",
+      "family",
+      "fantasy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/hGFjtg1p473Lo8F2LVIQydBHZ1X.jpg",
+    "rating": 0,
+    "numberOfVotes": 0,
+    "popularity": 249.061,
+    "releaseDate": "2023-03-23"
+  },
+  {
+    "name": "The Menu",
+    "genres": [
+      "horror",
+      "thriller"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fPtUgMcLIboqlTlPrq0bQpKK8eq.jpg",
+    "rating": 7.3,
+    "numberOfVotes": 2203,
+    "popularity": 245.947,
+    "releaseDate": "2022-11-17"
+  },
+  {
+    "name": "Shrek",
+    "genres": [
+      "animation",
+      "comedy",
+      "fantasy",
+      "adventure",
+      "family"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/o04jZs5SXhbvhqO4981W7KJXOWZ.jpg",
+    "rating": 7.7,
+    "numberOfVotes": 14872,
+    "popularity": 244.274,
+    "releaseDate": "2001-05-18"
+  },
+  {
+    "name": "Scream",
+    "genres": [
+      "horror",
+      "mystery",
+      "thriller"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fFE6E9jRKaiy7LHxk4jH1jIWzyT.jpg",
+    "rating": 6.7,
+    "numberOfVotes": 2058,
+    "popularity": 244.129,
+    "releaseDate": "2022-01-12"
+  },
+  {
+    "name": "The Black Phone",
+    "genres": [
+      "horror",
+      "thriller"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/lr11mCT85T1JanlgjMuhs9nMht4.jpg",
+    "rating": 7.8,
+    "numberOfVotes": 3487,
+    "popularity": 243.725,
+    "releaseDate": "2022-06-22"
+  },
+  {
+    "name": "Paradise Highway",
+    "genres": [
+      "thriller",
+      "crime",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/2ahZgaFAbWoKMfJHhmhZDrdStgD.jpg",
+    "rating": 5.9,
+    "numberOfVotes": 48,
+    "popularity": 242.453,
+    "releaseDate": "2022-07-29"
+  },
+  {
+    "name": "The Hip Hop Nutcracker",
+    "genres": [
+      "music"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/iqOGxcKViTtU7pwC24xUb1bDslw.jpg",
+    "rating": 5.7,
+    "numberOfVotes": 15,
+    "popularity": 240.641,
+    "releaseDate": "2022-11-25"
+  },
+  {
+    "name": "Enola Holmes 2",
+    "genres": [
+      "mystery",
+      "adventure",
+      "comedy",
+      "crime"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/tegBpjM5ODoYoM1NjaiHVLEA0QM.jpg",
+    "rating": 7.7,
+    "numberOfVotes": 1749,
+    "popularity": 239.209,
+    "releaseDate": "2022-11-04"
+  },
+  {
+    "name": "Corrective Measures",
+    "genres": [
+      "science fiction",
+      "action"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/aHFq9NMhavOL0jtQvmHQ1c5e0ya.jpg",
+    "rating": 5.3,
+    "numberOfVotes": 45,
+    "popularity": 238.456,
+    "releaseDate": "2022-04-29"
+  },
+  {
+    "name": "Black Panther",
+    "genres": [
+      "action",
+      "adventure",
+      "science fiction"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
+    "rating": 7.4,
+    "numberOfVotes": 20268,
+    "popularity": 237.919,
+    "releaseDate": "2018-02-13"
+  },
+  {
+    "name": "The Soccer Football Movie",
+    "genres": [
+      "animation",
+      "comedy",
+      "family"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/sWoYDNPNZs5MtzPbirXV73tIHrA.jpg",
+    "rating": 6.2,
+    "numberOfVotes": 78,
+    "popularity": 234.05,
+    "releaseDate": "2022-11-09"
+  },
+  {
+    "name": "Emancipation",
+    "genres": [
+      "action",
+      "drama",
+      "thriller"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/s9sUK1vAaOcxJfKzNTszrNkPhkH.jpg",
+    "rating": 8.1,
+    "numberOfVotes": 740,
+    "popularity": 232.788,
+    "releaseDate": "2022-12-02"
+  },
+  {
+    "name": "Hotel Transylvania: Transformania",
+    "genres": [
+      "animation",
+      "comedy",
+      "family",
+      "fantasy",
+      "adventure"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/teCy1egGQa0y8ULJvlrDHQKnxBL.jpg",
+    "rating": 7.1,
+    "numberOfVotes": 1393,
+    "popularity": 232.088,
+    "releaseDate": "2022-02-25"
+  },
+  {
+    "name": "Tom and Jerry Snowman's Land",
+    "genres": [
+      "family",
+      "comedy",
+      "animation",
+      "adventure"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/memqWrs4zmLgMBfzTfebrOXbytG.jpg",
+    "rating": 7.2,
+    "numberOfVotes": 25,
+    "popularity": 231.464,
+    "releaseDate": "2022-09-06"
   },
   {
     "name": "Everything Everywhere All at Once",
     "genres": [
-      "Action",
-      "Adventure",
-      "Science Fiction"
+      "action",
+      "adventure",
+      "science fiction"
     ],
     "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/w3LxiVYdWWRvEVdn5RYq6jIqkb1.jpg",
     "rating": 8,
-    "numberOfVotes": 2771,
-    "popularity": 193.941,
+    "numberOfVotes": 3001,
+    "popularity": 231.355,
     "releaseDate": "2022-03-24"
   },
   {
-    "name": "The Northman",
+    "name": "The Ledge",
     "genres": [
-      "Action",
-      "Adventure",
-      "Fantasy"
+      "thriller",
+      "adventure"
     ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/aSSJMnHknzKjlZ6zybwD7eyJ4Po.jpg",
-    "rating": 7.1,
-    "numberOfVotes": 3037,
-    "popularity": 191.089,
-    "releaseDate": "2022-04-07"
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/S99eCSnRFfeZJmDaIGIZF58H7w.jpg",
+    "rating": 6.1,
+    "numberOfVotes": 150,
+    "popularity": 229.668,
+    "releaseDate": "2022-02-18"
+  },
+  {
+    "name": "Whisper",
+    "genres": [
+      "horror",
+      "thriller"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/3zunvPLgM9qGFr8ob2BpaKSuAJI.jpg",
+    "rating": 6.5,
+    "numberOfVotes": 52,
+    "popularity": 227.393,
+    "releaseDate": "2022-01-23"
+  },
+  {
+    "name": "After Ever Happy",
+    "genres": [
+      "romance",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6b7swg6DLqXCO3XUsMnv6RwDMW2.jpg",
+    "rating": 6.9,
+    "numberOfVotes": 779,
+    "popularity": 225.945,
+    "releaseDate": "2022-08-24"
+  },
+  {
+    "name": "The Banshees of Inisherin",
+    "genres": [
+      "drama",
+      "comedy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/4yFG6cSPaCaPhyJ1vtGOtMD1lgh.jpg",
+    "rating": 7.5,
+    "numberOfVotes": 838,
+    "popularity": 224.375,
+    "releaseDate": "2022-10-21"
+  },
+  {
+    "name": "Evil Dead Rise",
+    "genres": [
+      "horror",
+      "thriller"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/5ik4ATKmNtmJU6AYD0bLm56BCVM.jpg",
+    "rating": 0,
+    "numberOfVotes": 0,
+    "popularity": 222.604,
+    "releaseDate": "2023-04-19"
+  },
+  {
+    "name": "Secret Headquarters",
+    "genres": [
+      "science fiction",
+      "family",
+      "action",
+      "adventure"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/8PsHogUfvjWPGdWAI5uslDhHDx7.jpg",
+    "rating": 6.8,
+    "numberOfVotes": 217,
+    "popularity": 221.745,
+    "releaseDate": "2022-08-12"
+  },
+  {
+    "name": "X",
+    "genres": [
+      "horror",
+      "mystery",
+      "thriller"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/A7YPhQKdcr6XB1kCUdS4tHifYWd.jpg",
+    "rating": 6.8,
+    "numberOfVotes": 1653,
+    "popularity": 221.505,
+    "releaseDate": "2022-03-18"
+  },
+  {
+    "name": "Dangerous Game: The Legacy Murders",
+    "genres": [
+      "thriller",
+      "horror"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/1Dlj0TbLNtGHq42HE0fLnawtyyD.jpg",
+    "rating": 7.7,
+    "numberOfVotes": 42,
+    "popularity": 218.729,
+    "releaseDate": "2022-10-21"
+  },
+  {
+    "name": "Samaritan",
+    "genres": [
+      "action",
+      "crime",
+      "science fiction"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/zgH8Ej50n2cvJCMJrxd4twEwSqz.jpg",
+    "rating": 6.8,
+    "numberOfVotes": 1540,
+    "popularity": 217.85,
+    "releaseDate": "2022-08-25"
+  },
+  {
+    "name": "Blowback",
+    "genres": [
+      "action",
+      "thriller",
+      "crime"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fHQHC32dhom8u0OxC2hs2gYQh0M.jpg",
+    "rating": 6.2,
+    "numberOfVotes": 38,
+    "popularity": 217.281,
+    "releaseDate": "2022-06-17"
+  },
+  {
+    "name": "The Jack in the Box: Awakening",
+    "genres": [
+      "horror"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/3Ib8vlWTrAKRrTWUrTrZPOMW4jp.jpg",
+    "rating": 6.4,
+    "numberOfVotes": 225,
+    "popularity": 216.142,
+    "releaseDate": "2022-02-24"
+  },
+  {
+    "name": "Venom: Let There Be Carnage",
+    "genres": [
+      "science fiction",
+      "action",
+      "adventure"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/rjkmN1dniUHVYAtwuV3Tji7FsDO.jpg",
+    "rating": 6.9,
+    "numberOfVotes": 8476,
+    "popularity": 214.857,
+    "releaseDate": "2021-09-30"
+  },
+  {
+    "name": "Ant-Man and the Wasp: Quantumania",
+    "genres": [
+      "adventure",
+      "science fiction",
+      "comedy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ngl2FKBlU4fhbdsrtdom9LVLBXw.jpg",
+    "rating": 0,
+    "numberOfVotes": 0,
+    "popularity": 214.447,
+    "releaseDate": "2023-02-15"
+  },
+  {
+    "name": "Hocus Pocus 2",
+    "genres": [
+      "fantasy",
+      "comedy",
+      "family"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/7ze7YNmUaX81ufctGqt0AgHxRtL.jpg",
+    "rating": 7.5,
+    "numberOfVotes": 1307,
+    "popularity": 213.124,
+    "releaseDate": "2022-09-27"
+  },
+  {
+    "name": "The Action Pack Saves Christmas",
+    "genres": [
+      "animation",
+      "family"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/a6MUJa8xIBQnx0a5Us5pEe38l9P.jpg",
+    "rating": 4,
+    "numberOfVotes": 5,
+    "popularity": 212.566,
+    "releaseDate": "2022-11-28"
+  },
+  {
+    "name": "In the Forest",
+    "genres": [
+      "horror",
+      "thriller"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/pWKTaGN9WMcKHKAir9POsKm4vEo.jpg",
+    "rating": 6.1,
+    "numberOfVotes": 17,
+    "popularity": 211.92,
+    "releaseDate": "2022-01-28"
+  },
+  {
+    "name": "Interstellar",
+    "genres": [
+      "adventure",
+      "drama",
+      "science fiction"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
+    "rating": 8.4,
+    "numberOfVotes": 30450,
+    "popularity": 210.498,
+    "releaseDate": "2014-11-05"
+  },
+  {
+    "name": "Harry Potter and the Chamber of Secrets",
+    "genres": [
+      "adventure",
+      "fantasy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/sdEOH0992YZ0QSxgXNIGLq1ToUi.jpg",
+    "rating": 7.7,
+    "numberOfVotes": 19332,
+    "popularity": 208.648,
+    "releaseDate": "2002-11-13"
+  },
+  {
+    "name": "The Guardians of the Galaxy Holiday Special",
+    "genres": [
+      "comedy",
+      "science fiction",
+      "adventure"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/8dqXyslZ2hv49Oiob9UjlGSHSTR.jpg",
+    "rating": 7.4,
+    "numberOfVotes": 1112,
+    "popularity": 208.417,
+    "releaseDate": "2022-11-25"
+  },
+  {
+    "name": "Slumberland",
+    "genres": [
+      "family",
+      "fantasy",
+      "adventure",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/eCgBLNAFC4XDZ4DiyQ80PIJdSHU.jpg",
+    "rating": 7.6,
+    "numberOfVotes": 570,
+    "popularity": 208.372,
+    "releaseDate": "2022-11-18"
+  },
+  {
+    "name": "Harry Potter and the Half-Blood Prince",
+    "genres": [
+      "adventure",
+      "fantasy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/z7uo9zmQdQwU5ZJHFpv2Upl30i1.jpg",
+    "rating": 7.7,
+    "numberOfVotes": 17143,
+    "popularity": 208.084,
+    "releaseDate": "2009-07-07"
+  },
+  {
+    "name": "Fantastic Beasts: The Secrets of Dumbledore",
+    "genres": [
+      "fantasy",
+      "adventure",
+      "action"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/jrgifaYeUtTnaH7NF5Drkgjg2MB.jpg",
+    "rating": 6.8,
+    "numberOfVotes": 3288,
+    "popularity": 207.015,
+    "releaseDate": "2022-04-06"
+  },
+  {
+    "name": "Mindcage",
+    "genres": [
+      "mystery",
+      "thriller",
+      "crime",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/JvqaHXdKBtEAmm4EDVTGkoAGIj.jpg",
+    "rating": 7.3,
+    "numberOfVotes": 78,
+    "popularity": 205.938,
+    "releaseDate": "2022-12-16"
+  },
+  {
+    "name": "The School for Good and Evil",
+    "genres": [
+      "fantasy",
+      "action",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6oZeEu1GDILdwezmZ5e2xWISf1C.jpg",
+    "rating": 7.2,
+    "numberOfVotes": 851,
+    "popularity": 203.88,
+    "releaseDate": "2022-10-19"
+  },
+  {
+    "name": "The Exorcism of God",
+    "genres": [
+      "horror"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/9X9wKbF0ED1AQpgIkvq0MG4Y4wi.jpg",
+    "rating": 7.2,
+    "numberOfVotes": 796,
+    "popularity": 203.803,
+    "releaseDate": "2022-03-11"
+  },
+  {
+    "name": "Harry Potter and the Goblet of Fire",
+    "genres": [
+      "adventure",
+      "fantasy",
+      "family"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fECBtHlr0RB3foNHDiCBXeg9Bv9.jpg",
+    "rating": 7.8,
+    "numberOfVotes": 18287,
+    "popularity": 199.166,
+    "releaseDate": "2005-11-16"
+  },
+  {
+    "name": "Frank and Penelope",
+    "genres": [
+      "thriller",
+      "horror",
+      "crime"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/5NpXoAi3nEQkEgLO09nmotPfyNa.jpg",
+    "rating": 7.8,
+    "numberOfVotes": 68,
+    "popularity": 197.157,
+    "releaseDate": "2022-06-03"
+  },
+  {
+    "name": "Shrek 2",
+    "genres": [
+      "animation",
+      "family",
+      "comedy",
+      "fantasy",
+      "adventure",
+      "romance"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/wr5OLKkNS6Ztb7xZRKgWpVr9AkA.jpg",
+    "rating": 7.2,
+    "numberOfVotes": 10672,
+    "popularity": 196.883,
+    "releaseDate": "2004-05-19"
+  },
+  {
+    "name": "Terrifier",
+    "genres": [
+      "horror",
+      "thriller"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6PQqC4SbY910VvyVad6mvsboILU.jpg",
+    "rating": 6.6,
+    "numberOfVotes": 1378,
+    "popularity": 196.488,
+    "releaseDate": "2016-03-15"
+  },
+  {
+    "name": "Pinocchio",
+    "genres": [
+      "fantasy",
+      "adventure",
+      "family"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/g8sclIV4gj1TZqUpnL82hKOTK3B.jpg",
+    "rating": 6.6,
+    "numberOfVotes": 1285,
+    "popularity": 196.389,
+    "releaseDate": "2022-09-07"
+  },
+  {
+    "name": "Alien Sniperess",
+    "genres": [
+      "action",
+      "science fiction",
+      "fantasy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/bI1ZDRkerXrcaFa5kWjEMw80aqE.jpg",
+    "rating": 3.9,
+    "numberOfVotes": 13,
+    "popularity": 193.478,
+    "releaseDate": "2022-04-08"
   },
   {
     "name": "Crawlspace",
     "genres": [
-      "Thriller"
+      "thriller"
     ],
     "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/yZVByCjWvKdSWcYLacoFmnOoSpm.jpg",
-    "rating": 6.8,
-    "numberOfVotes": 77,
-    "popularity": 190.264,
+    "rating": 6.6,
+    "numberOfVotes": 81,
+    "popularity": 192.623,
     "releaseDate": "2022-03-31"
+  },
+  {
+    "name": "Secret of the Wings",
+    "genres": [
+      "animation",
+      "family",
+      "fantasy",
+      "adventure"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/bnbzEKX9LgDuJ0VBGm5d60mKDaR.jpg",
+    "rating": 7.2,
+    "numberOfVotes": 1020,
+    "popularity": 191.593,
+    "releaseDate": "2012-08-17"
   },
   {
     "name": "The Lost City",
     "genres": [
-      "Action",
-      "Adventure",
-      "Comedy"
+      "action",
+      "adventure",
+      "comedy"
     ],
     "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/neMZH82Stu91d3iqvLdNQfqPPyl.jpg",
     "rating": 6.7,
-    "numberOfVotes": 2497,
-    "popularity": 189.318,
+    "numberOfVotes": 2526,
+    "popularity": 191.484,
     "releaseDate": "2022-03-24"
   },
   {
     "name": "Last Seen Alive",
     "genres": [
-      "Action",
-      "Thriller"
+      "action",
+      "thriller"
     ],
     "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/qvqyDj34Uivokf4qIvK4bH0m0qF.jpg",
     "rating": 6.6,
-    "numberOfVotes": 585,
-    "popularity": 187.054,
+    "numberOfVotes": 615,
+    "popularity": 189.83,
     "releaseDate": "2022-05-19"
   },
   {
-    "name": "Harry Potter and the Chamber of Secrets",
+    "name": "Fast X",
     "genres": [
-      "Adventure",
-      "Fantasy"
+      "action",
+      "crime",
+      "thriller"
     ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/sdEOH0992YZ0QSxgXNIGLq1ToUi.jpg",
-    "rating": 7.7,
-    "numberOfVotes": 19249,
-    "popularity": 186.191,
-    "releaseDate": "2002-11-13"
-  },
-  {
-    "name": "The Super Mario Bros. Movie",
-    "genres": [
-      "Adventure",
-      "Animation",
-      "Comedy",
-      "Family",
-      "Fantasy"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/hGFjtg1p473Lo8F2LVIQydBHZ1X.jpg",
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/rHfkMVq4BF5AQlqIqwR1XjcWvDl.jpg",
     "rating": 0,
     "numberOfVotes": 0,
-    "popularity": 184.335,
-    "releaseDate": "2023-03-23"
+    "popularity": 186.997,
+    "releaseDate": "2023-05-17"
   },
   {
-    "name": "Harry Potter and the Philosopher's Stone",
+    "name": "Watcher",
     "genres": [
-      "Adventure",
-      "Fantasy"
+      "mystery",
+      "thriller",
+      "horror"
     ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/wuMc08IPKEatf9rnMNXvIDxqP4W.jpg",
-    "rating": 7.9,
-    "numberOfVotes": 23918,
-    "popularity": 183.09,
-    "releaseDate": "2001-11-16"
-  },
-  {
-    "name": "Terrifier",
-    "genres": [
-      "Horror"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/gb6rq2nD0jRrN0dCzigg2MxXNsB.jpg",
-    "rating": 6.5,
-    "numberOfVotes": 71,
-    "popularity": 182.402,
-    "releaseDate": "2011-08-09"
-  },
-  {
-    "name": "Lightyear",
-    "genres": [
-      "Animation",
-      "Action",
-      "Adventure",
-      "Family",
-      "Science Fiction"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ox4goZd956BxqJH6iLwhWPL9ct4.jpg",
-    "rating": 7.2,
-    "numberOfVotes": 2560,
-    "popularity": 178.095,
-    "releaseDate": "2022-06-15"
-  },
-  {
-    "name": "Venom: Let There Be Carnage",
-    "genres": [
-      "Science Fiction",
-      "Action",
-      "Adventure"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/rjkmN1dniUHVYAtwuV3Tji7FsDO.jpg",
-    "rating": 6.9,
-    "numberOfVotes": 8434,
-    "popularity": 177.85,
-    "releaseDate": "2021-09-30"
-  },
-  {
-    "name": "Black Panther",
-    "genres": [
-      "Action",
-      "Adventure",
-      "Science Fiction"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
-    "rating": 7.4,
-    "numberOfVotes": 20184,
-    "popularity": 172.018,
-    "releaseDate": "2018-02-13"
-  },
-  {
-    "name": "Free Guy",
-    "genres": [
-      "Comedy",
-      "Adventure",
-      "Science Fiction"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/xmbU4JTUm8rsdtn7Y3Fcm30GpeT.jpg",
-    "rating": 7.6,
-    "numberOfVotes": 6772,
-    "popularity": 171.7,
-    "releaseDate": "2021-08-13"
-  },
-  {
-    "name": "The Lucky One",
-    "genres": [
-      "Drama",
-      "Romance"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/viu6W4xw2DeWKEQ5XBMHmayoqyG.jpg",
-    "rating": 7.1,
-    "numberOfVotes": 3268,
-    "popularity": 171.119,
-    "releaseDate": "2012-04-19"
-  },
-  {
-    "name": "Harry Potter and the Goblet of Fire",
-    "genres": [
-      "Adventure",
-      "Fantasy",
-      "Family"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fECBtHlr0RB3foNHDiCBXeg9Bv9.jpg",
-    "rating": 7.8,
-    "numberOfVotes": 18203,
-    "popularity": 170.143,
-    "releaseDate": "2005-11-16"
-  },
-  {
-    "name": "Harry Potter and the Half-Blood Prince",
-    "genres": [
-      "Adventure",
-      "Fantasy"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/z7uo9zmQdQwU5ZJHFpv2Upl30i1.jpg",
-    "rating": 7.7,
-    "numberOfVotes": 17052,
-    "popularity": 169.113,
-    "releaseDate": "2009-07-07"
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/dXCjoI3jdtBrwPHgVsyNLkl8Rvs.jpg",
+    "rating": 6.6,
+    "numberOfVotes": 467,
+    "popularity": 186.547,
+    "releaseDate": "2022-06-03"
   },
   {
     "name": "Hacksaw Ridge",
     "genres": [
-      "Drama",
-      "History",
-      "War"
+      "drama",
+      "history",
+      "war"
     ],
     "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/jhWbYeUNOA5zAb6ufK6pXQFXqTX.jpg",
     "rating": 8.2,
-    "numberOfVotes": 11816,
-    "popularity": 168.835,
+    "numberOfVotes": 11879,
+    "popularity": 185.98,
     "releaseDate": "2016-10-07"
-  },
-  {
-    "name": "Memory",
-    "genres": [
-      "Action",
-      "Thriller",
-      "Crime"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/4Q1n3TwieoULnuaztu9aFjqHDTI.jpg",
-    "rating": 7,
-    "numberOfVotes": 1069,
-    "popularity": 167.576,
-    "releaseDate": "2022-04-28"
-  },
-  {
-    "name": "Dracula: The Original Living Vampire",
-    "genres": [
-      "Horror",
-      "Fantasy",
-      "Thriller"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/9nbw6eAYOhYEjI1wODekAG6svZF.jpg",
-    "rating": 5.6,
-    "numberOfVotes": 66,
-    "popularity": 167.386,
-    "releaseDate": "2022-01-28"
-  },
-  {
-    "name": "The Bad Guys",
-    "genres": [
-      "Animation",
-      "Action",
-      "Adventure",
-      "Crime",
-      "Comedy"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/7qop80YfuO0BwJa1uXk1DXUUEwv.jpg",
-    "rating": 7.7,
-    "numberOfVotes": 1333,
-    "popularity": 166.273,
-    "releaseDate": "2022-03-17"
-  },
-  {
-    "name": "Harry Potter and the Prisoner of Azkaban",
-    "genres": [
-      "Adventure",
-      "Fantasy"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/aWxwnYoe8p2d2fcxOqtvAtJ72Rw.jpg",
-    "rating": 8,
-    "numberOfVotes": 18903,
-    "popularity": 166.196,
-    "releaseDate": "2004-05-31"
-  },
-  {
-    "name": "Grimcutty",
-    "genres": [
-      "Horror"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/qvg75YJMfbHeDNirUrrgBMQImRn.jpg",
-    "rating": 5.5,
-    "numberOfVotes": 246,
-    "popularity": 165.729,
-    "releaseDate": "2022-10-10"
-  },
-  {
-    "name": "Mortal Kombat",
-    "genres": [
-      "Action",
-      "Fantasy",
-      "Adventure"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6Wdl9N6dL0Hi0T1qJLWSz6gMLbd.jpg",
-    "rating": 7.1,
-    "numberOfVotes": 5098,
-    "popularity": 164.745,
-    "releaseDate": "2021-04-07"
-  },
-  {
-    "name": "Morbius",
-    "genres": [
-      "Action",
-      "Science Fiction",
-      "Fantasy"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6JjfSchsU6daXk2AKX8EEBjO3Fm.jpg",
-    "rating": 6.2,
-    "numberOfVotes": 3148,
-    "popularity": 163.077,
-    "releaseDate": "2022-03-30"
-  },
-  {
-    "name": "Transformers: Rise of the Beasts",
-    "genres": [
-      "Action",
-      "Adventure",
-      "Science Fiction"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/qBcIUgJmDGrcAKbhRwCd6AmO0ZW.jpg",
-    "rating": 0,
-    "numberOfVotes": 0,
-    "popularity": 161.299,
-    "releaseDate": "2023-06-07"
   },
   {
     "name": "Lou",
     "genres": [
-      "Action",
-      "Thriller",
-      "Drama"
+      "action",
+      "thriller",
+      "drama"
     ],
     "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/djM2s4wSaATn4jVB33cV05PEbV7.jpg",
     "rating": 6.7,
-    "numberOfVotes": 442,
-    "popularity": 161.149,
+    "numberOfVotes": 460,
+    "popularity": 185.683,
     "releaseDate": "2022-09-23"
   },
   {
-    "name": "The Banshees of Inisherin",
+    "name": "Jethica",
     "genres": [
-      "Drama",
-      "Comedy"
+      "comedy",
+      "drama",
+      "fantasy",
+      "horror"
     ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/4yFG6cSPaCaPhyJ1vtGOtMD1lgh.jpg",
-    "rating": 7.5,
-    "numberOfVotes": 554,
-    "popularity": 160.585,
-    "releaseDate": "2022-10-21"
-  },
-  {
-    "name": "Halloween Ends",
-    "genres": [
-      "Horror",
-      "Thriller"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/yoAKHpveZ4Z1wwwXoD31dXj3H8s.jpg",
-    "rating": 6.4,
-    "numberOfVotes": 1121,
-    "popularity": 158.792,
-    "releaseDate": "2022-10-12"
-  },
-  {
-    "name": "The Exorcism of God",
-    "genres": [
-      "Horror"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/9X9wKbF0ED1AQpgIkvq0MG4Y4wi.jpg",
-    "rating": 7.2,
-    "numberOfVotes": 779,
-    "popularity": 158.145,
-    "releaseDate": "2022-03-11"
-  },
-  {
-    "name": "Harry Potter and the Order of the Phoenix",
-    "genres": [
-      "Adventure",
-      "Fantasy",
-      "Mystery"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/5aOyriWkPec0zUDxmHFP9qMmBaj.jpg",
-    "rating": 7.7,
-    "numberOfVotes": 17219,
-    "popularity": 156.911,
-    "releaseDate": "2007-06-28"
-  },
-  {
-    "name": "Harry Potter and the Deathly Hallows: Part 2",
-    "genres": [
-      "Fantasy",
-      "Adventure"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/c54HpQmuwXjHq2C9wmoACjxoom3.jpg",
-    "rating": 8.1,
-    "numberOfVotes": 18196,
-    "popularity": 156.76,
-    "releaseDate": "2011-07-07"
-  },
-  {
-    "name": "Zack Snyder's Justice League",
-    "genres": [
-      "Action",
-      "Adventure",
-      "Fantasy",
-      "Science Fiction"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/tnAuB8q5vv7Ax9UAEje5Xi4BXik.jpg",
-    "rating": 8.2,
-    "numberOfVotes": 8520,
-    "popularity": 156.226,
-    "releaseDate": "2021-03-18"
-  },
-  {
-    "name": "The Addams Family 2",
-    "genres": [
-      "Animation",
-      "Adventure",
-      "Comedy",
-      "Family",
-      "Fantasy",
-      "Horror"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ld7YB9vBRp1GM1DT3KmFWSmtBPB.jpg",
-    "rating": 7.1,
-    "numberOfVotes": 1046,
-    "popularity": 156.145,
-    "releaseDate": "2021-10-01"
-  },
-  {
-    "name": "Shang-Chi and the Legend of the Ten Rings",
-    "genres": [
-      "Action",
-      "Adventure",
-      "Fantasy"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/1BIoJGKbXjdFDAqUEiA2VHqkK1Z.jpg",
-    "rating": 7.6,
-    "numberOfVotes": 7646,
-    "popularity": 155.884,
-    "releaseDate": "2021-09-01"
-  },
-  {
-    "name": "Shrek the Third",
-    "genres": [
-      "Fantasy",
-      "Adventure",
-      "Animation",
-      "Comedy",
-      "Family"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/1V5pspgnFCXXWd9DddHBVIF2275.jpg",
-    "rating": 6.3,
-    "numberOfVotes": 7816,
-    "popularity": 155.815,
-    "releaseDate": "2007-05-17"
-  },
-  {
-    "name": "Moonfall",
-    "genres": [
-      "Science Fiction"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/odVv1sqVs0KxBXiA8bhIBlPgalx.jpg",
-    "rating": 6.4,
-    "numberOfVotes": 2204,
-    "popularity": 155.46,
-    "releaseDate": "2022-02-03"
-  },
-  {
-    "name": "Operation Fortune: Ruse de Guerre",
-    "genres": [
-      "Action",
-      "Thriller",
-      "Comedy"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/bQrNm5WIWUpCOwMbyz2PwbM8Lxp.jpg",
-    "rating": 6.8,
-    "numberOfVotes": 53,
-    "popularity": 155.394,
-    "releaseDate": "2023-01-04"
-  },
-  {
-    "name": "Summit Fever",
-    "genres": [
-      "Drama",
-      "Thriller"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/rX9k5v7JYmnaBO5E89PZ4yMfuvo.jpg",
-    "rating": 5.9,
-    "numberOfVotes": 18,
-    "popularity": 155.182,
-    "releaseDate": "2022-10-13"
-  },
-  {
-    "name": "The Fallout",
-    "genres": [
-      "Drama"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/y94auaBWq1E7sun3ZpvBmQfGUW.jpg",
-    "rating": 7.7,
-    "numberOfVotes": 593,
-    "popularity": 154.086,
-    "releaseDate": "2021-03-17"
-  },
-  {
-    "name": "The Ice Age Adventures of Buck Wild",
-    "genres": [
-      "Animation",
-      "Comedy",
-      "Adventure",
-      "Family"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/zzXFM4FKDG7l1ufrAkwQYv2xvnh.jpg",
-    "rating": 6.7,
-    "numberOfVotes": 1434,
-    "popularity": 153.444,
-    "releaseDate": "2022-01-28"
-  },
-  {
-    "name": "Cruella",
-    "genres": [
-      "Comedy",
-      "Crime"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/wToO8opxkGwKgSfJ1JK8tGvkG6U.jpg",
-    "rating": 8.1,
-    "numberOfVotes": 7850,
-    "popularity": 150.565,
-    "releaseDate": "2021-05-26"
-  },
-  {
-    "name": "Avengers: Endgame",
-    "genres": [
-      "Adventure",
-      "Science Fiction",
-      "Action"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/or06FN3Dka5tukK1e9sl16pB3iy.jpg",
-    "rating": 8.3,
-    "numberOfVotes": 22490,
-    "popularity": 149.814,
-    "releaseDate": "2019-04-24"
-  },
-  {
-    "name": "The Last of Us - No Escape",
-    "genres": [
-      "Action",
-      "Horror"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/7cfbTwXFriY8vjH6zQg0O8ZgkFR.jpg",
-    "rating": 3.5,
-    "numberOfVotes": 2,
-    "popularity": 148.777,
-    "releaseDate": "2017-01-12"
-  },
-  {
-    "name": "The Action Pack Saves Christmas",
-    "genres": [
-      "Animation",
-      "Family"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/a6MUJa8xIBQnx0a5Us5pEe38l9P.jpg",
-    "rating": 4,
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/qJgsvHJZvfuAJOf3GjcQqK8o1Va.jpg",
+    "rating": 4.8,
     "numberOfVotes": 5,
-    "popularity": 148.197,
-    "releaseDate": "2022-11-28"
-  },
-  {
-    "name": "Grounded: Making The Last of Us",
-    "genres": [
-      "Documentary"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/dhfM8t16UlDwljSkKlYVGkL92Mf.jpg",
-    "rating": 7.3,
-    "numberOfVotes": 26,
-    "popularity": 148.091,
-    "releaseDate": "2013-06-14"
-  },
-  {
-    "name": "Iron Man 2",
-    "genres": [
-      "Adventure",
-      "Action",
-      "Science Fiction"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6WBeq4fCfn7AN0o21W9qNcRF2l9.jpg",
-    "rating": 6.8,
-    "numberOfVotes": 18852,
-    "popularity": 147.607,
-    "releaseDate": "2010-05-07"
-  },
-  {
-    "name": "Monsters, Inc.",
-    "genres": [
-      "Animation",
-      "Comedy",
-      "Family"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/sgheSKxZkttIe8ONsf2sWXPgip3.jpg",
-    "rating": 7.8,
-    "numberOfVotes": 16350,
-    "popularity": 147.442,
-    "releaseDate": "2001-11-01"
-  },
-  {
-    "name": "The Boss Baby: Family Business",
-    "genres": [
-      "Animation",
-      "Comedy",
-      "Adventure",
-      "Family"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/kv2Qk9MKFFQo4WQPaYta599HkJP.jpg",
-    "rating": 7.5,
-    "numberOfVotes": 2154,
-    "popularity": 147.334,
-    "releaseDate": "2021-07-01"
-  },
-  {
-    "name": "The Long Dark Trail",
-    "genres": [
-      "Horror"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ebdDGnqQXDGfiggHSazaWCLF6Lf.jpg",
-    "rating": 4.7,
-    "numberOfVotes": 9,
-    "popularity": 146.462,
-    "releaseDate": "2021-06-19"
-  },
-  {
-    "name": "Mindcage",
-    "genres": [
-      "Mystery",
-      "Thriller",
-      "Crime",
-      "Drama"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/JvqaHXdKBtEAmm4EDVTGkoAGIj.jpg",
-    "rating": 7.4,
-    "numberOfVotes": 69,
-    "popularity": 146.315,
-    "releaseDate": "2022-12-16"
+    "popularity": 184.416,
+    "releaseDate": "2023-01-13"
   },
   {
     "name": "Titanic",
     "genres": [
-      "Drama",
-      "Romance"
+      "drama",
+      "romance"
     ],
     "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg",
     "rating": 7.9,
-    "numberOfVotes": 22131,
-    "popularity": 146.274,
+    "numberOfVotes": 22217,
+    "popularity": 183.962,
     "releaseDate": "1997-11-18"
   },
   {
-    "name": "Wolf Hound",
+    "name": "Harry Potter and the Prisoner of Azkaban",
     "genres": [
-      "War",
-      "Action"
+      "adventure",
+      "fantasy"
     ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6sMnY4fEVAfdadhANhGnNckxsmx.jpg",
-    "rating": 5.7,
-    "numberOfVotes": 15,
-    "popularity": 145.816,
-    "releaseDate": "2022-06-03"
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/aWxwnYoe8p2d2fcxOqtvAtJ72Rw.jpg",
+    "rating": 8,
+    "numberOfVotes": 18985,
+    "popularity": 182.736,
+    "releaseDate": "2004-05-31"
   },
   {
-    "name": "Code Name Banshee",
+    "name": "Transformers: Rise of the Beasts",
     "genres": [
-      "Thriller",
-      "Action"
+      "action",
+      "adventure",
+      "science fiction"
     ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/g29dShv0wHJUvif2KPq039imds5.jpg",
-    "rating": 5.3,
-    "numberOfVotes": 54,
-    "popularity": 145.145,
-    "releaseDate": "2022-07-01"
-  },
-  {
-    "name": "Evil Dead Rise",
-    "genres": [
-      "Horror",
-      "Fantasy",
-      "Thriller"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/5ik4ATKmNtmJU6AYD0bLm56BCVM.jpg",
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/qBcIUgJmDGrcAKbhRwCd6AmO0ZW.jpg",
     "rating": 0,
     "numberOfVotes": 0,
-    "popularity": 144.204,
-    "releaseDate": "2023-04-19"
+    "popularity": 178.595,
+    "releaseDate": "2023-06-07"
   },
   {
-    "name": "Shrek Forever After",
+    "name": "All My Friends Hate Me",
     "genres": [
-      "Comedy",
-      "Adventure",
-      "Fantasy",
-      "Animation",
-      "Family"
+      "comedy",
+      "thriller",
+      "horror"
     ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/pZS5WuDBh2eQmkjdtx40DQ2gvfC.jpg",
-    "rating": 6.3,
-    "numberOfVotes": 6315,
-    "popularity": 142.822,
-    "releaseDate": "2010-05-16"
-  },
-  {
-    "name": "Godzilla vs. Kong",
-    "genres": [
-      "Action",
-      "Fantasy",
-      "Science Fiction"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/pgqgaUx1cJb5oZQQ5v0tNARCeBp.jpg",
-    "rating": 7.7,
-    "numberOfVotes": 8510,
-    "popularity": 142.064,
-    "releaseDate": "2021-03-24"
-  },
-  {
-    "name": "Infelices para Siempre",
-    "genres": [],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/bKSKbwbg6jTdJDYgAVJSzqpknpo.jpg",
-    "rating": 4,
-    "numberOfVotes": 3,
-    "popularity": 141.873,
-    "releaseDate": "2020-01-01"
-  },
-  {
-    "name": "Harry Potter and the Deathly Hallows: Part 1",
-    "genres": [
-      "Adventure",
-      "Fantasy"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/iGoXIpQb7Pot00EEdwpwPajheZ5.jpg",
-    "rating": 7.8,
-    "numberOfVotes": 16859,
-    "popularity": 140.545,
-    "releaseDate": "2010-10-06"
-  },
-  {
-    "name": "Coco",
-    "genres": [
-      "Family",
-      "Animation",
-      "Fantasy",
-      "Music",
-      "Comedy",
-      "Adventure"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/gGEsBPAijhVUFoiNpgZXqRVWJt2.jpg",
-    "rating": 8.2,
-    "numberOfVotes": 16762,
-    "popularity": 140.502,
-    "releaseDate": "2017-10-27"
-  },
-  {
-    "name": "Bromates",
-    "genres": [
-      "Comedy"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/hAaJ1XFp5FELxwJ98IWI598zaMy.jpg",
-    "rating": 5.5,
-    "numberOfVotes": 11,
-    "popularity": 140.324,
-    "releaseDate": "2022-10-07"
-  },
-  {
-    "name": "Plane",
-    "genres": [
-      "Action",
-      "Thriller"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/2g9ZBjUfF1X53EinykJqiBieUaO.jpg",
-    "rating": 6.4,
-    "numberOfVotes": 16,
-    "popularity": 139.852,
-    "releaseDate": "2023-01-13"
-  },
-  {
-    "name": "Luca",
-    "genres": [
-      "Animation",
-      "Comedy",
-      "Family",
-      "Fantasy"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/jTswp6KyDYKtvC52GbHagrZbGvD.jpg",
-    "rating": 7.9,
-    "numberOfVotes": 7016,
-    "popularity": 139.311,
-    "releaseDate": "2021-06-17"
-  },
-  {
-    "name": "The Darker the Lake",
-    "genres": [
-      "Crime",
-      "Thriller",
-      "Mystery"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6SPC2wUdNuhY0uJpidefCKo0AVD.jpg",
-    "rating": 3.9,
-    "numberOfVotes": 7,
-    "popularity": 139.2,
-    "releaseDate": "2022-03-10"
-  },
-  {
-    "name": "Dog",
-    "genres": [
-      "Drama",
-      "Comedy"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/zHQy4h36WwuCetKS7C3wcT1hkgA.jpg",
-    "rating": 7.4,
-    "numberOfVotes": 1099,
-    "popularity": 138.726,
-    "releaseDate": "2022-02-17"
-  },
-  {
-    "name": "The Twin",
-    "genres": [
-      "Horror",
-      "Mystery"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/uUUSkKQEptTHjYejxzaT5TVkiAG.jpg",
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/7j5ZLDGWQ4U3iAD2wLNhs0CjpuQ.jpg",
     "rating": 6.1,
-    "numberOfVotes": 126,
-    "popularity": 138.679,
-    "releaseDate": "2022-04-06"
+    "numberOfVotes": 60,
+    "popularity": 178.426,
+    "releaseDate": "2022-03-11"
   },
   {
-    "name": "Barbarian",
+    "name": "Moonfall",
     "genres": [
-      "Horror",
-      "Thriller"
+      "science fiction"
     ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/idT5mnqPcJgSkvpDX7pJffBzdVH.jpg",
-    "rating": 6.9,
-    "numberOfVotes": 1142,
-    "popularity": 136.083,
-    "releaseDate": "2022-09-08"
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/odVv1sqVs0KxBXiA8bhIBlPgalx.jpg",
+    "rating": 6.4,
+    "numberOfVotes": 2231,
+    "popularity": 175.835,
+    "releaseDate": "2022-02-03"
   },
   {
-    "name": "Tangled",
+    "name": "Boso Dos",
     "genres": [
-      "Animation",
-      "Family"
+      "comedy",
+      "thriller"
     ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ym7Kst6a4uodryxqbGOxmewF235.jpg",
-    "rating": 7.6,
-    "numberOfVotes": 9943,
-    "popularity": 135.615,
-    "releaseDate": "2010-11-24"
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/9h7vKuOy6dnxKzYTl92Yl2bxwry.jpg",
+    "rating": 2,
+    "numberOfVotes": 1,
+    "popularity": 174.105,
+    "releaseDate": "2023-02-03"
   },
   {
-    "name": "Inside Out",
+    "name": "The Northman",
     "genres": [
-      "Animation",
-      "Family",
-      "Adventure",
-      "Drama",
-      "Comedy"
+      "action",
+      "adventure",
+      "fantasy"
     ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/2H1TmgdfNtsKlU9jKdeNyYL5y8T.jpg",
-    "rating": 7.9,
-    "numberOfVotes": 18620,
-    "popularity": 135.612,
-    "releaseDate": "2015-06-09"
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/aSSJMnHknzKjlZ6zybwD7eyJ4Po.jpg",
+    "rating": 7.1,
+    "numberOfVotes": 3092,
+    "popularity": 171.409,
+    "releaseDate": "2022-04-07"
   },
   {
-    "name": "The Maze Runner",
+    "name": "Margaux",
     "genres": [
-      "Action",
-      "Mystery",
-      "Science Fiction",
-      "Thriller"
+      "horror",
+      "science fiction"
     ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ode14q7WtDugFDp78fo9lCsmay9.jpg",
-    "rating": 7.2,
-    "numberOfVotes": 15266,
-    "popularity": 135.526,
-    "releaseDate": "2014-09-10"
-  },
-  {
-    "name": "Madagascar: A Little Wild Holiday Goose Chase",
-    "genres": [
-      "Animation",
-      "Comedy"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/9gMz2HwzpASeD8b5Wpxt7zeYmwx.jpg",
-    "rating": 5.9,
-    "numberOfVotes": 10,
-    "popularity": 135.295,
-    "releaseDate": "2021-11-26"
-  },
-  {
-    "name": "The Suicide Squad",
-    "genres": [
-      "Action",
-      "Comedy",
-      "Adventure"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/kb4s0ML0iVZlG6wAKbbs9NAm6X.jpg",
-    "rating": 7.6,
-    "numberOfVotes": 6927,
-    "popularity": 134.728,
-    "releaseDate": "2021-07-28"
-  },
-  {
-    "name": "Eternals",
-    "genres": [
-      "Science Fiction",
-      "Action",
-      "Adventure"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/lFByFSLV5WDJEv3KabbdAF959F2.jpg",
-    "rating": 7,
-    "numberOfVotes": 6762,
-    "popularity": 134.58,
-    "releaseDate": "2021-11-03"
-  },
-  {
-    "name": "Bones and All",
-    "genres": [
-      "Drama",
-      "Romance",
-      "Horror"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/qxpUTpl8Udu5ZOF6InkjdOzSvyw.jpg",
-    "rating": 7.5,
-    "numberOfVotes": 553,
-    "popularity": 133.291,
-    "releaseDate": "2022-11-18"
-  },
-  {
-    "name": "Teen Wolf: The Movie",
-    "genres": [
-      "Fantasy",
-      "Mystery",
-      "Drama"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/vhbLJUXf73uHkvyiN2rcEonqT87.jpg",
-    "rating": 10,
-    "numberOfVotes": 2,
-    "popularity": 133.118,
-    "releaseDate": "2023-01-18"
-  },
-  {
-    "name": "In from the Side",
-    "genres": [
-      "Drama",
-      "Romance"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/aGsDeDtT4HJ2v3wDHy5ZDEXlRiA.jpg",
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/uNzgeMetu9l4q9NDw7gtiUFwPOJ.jpg",
     "rating": 6.7,
-    "numberOfVotes": 18,
-    "popularity": 132.391,
-    "releaseDate": "2022-09-16"
+    "numberOfVotes": 67,
+    "popularity": 171.106,
+    "releaseDate": "2022-09-09"
   },
   {
-    "name": "Nope",
+    "name": "Lightyear",
     "genres": [
-      "Horror",
-      "Mystery",
-      "Science Fiction",
-      "Thriller"
+      "animation",
+      "action",
+      "adventure",
+      "family",
+      "science fiction"
     ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/AcKVlWaNVVVFQwro3nLXqPljcYA.jpg",
-    "rating": 6.9,
-    "numberOfVotes": 2400,
-    "popularity": 132.369,
-    "releaseDate": "2022-07-20"
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ox4goZd956BxqJH6iLwhWPL9ct4.jpg",
+    "rating": 7.2,
+    "numberOfVotes": 2627,
+    "popularity": 169.97,
+    "releaseDate": "2022-06-15"
   },
   {
-    "name": "Wild Is the Wind",
+    "name": "Dracula: The Original Living Vampire",
     "genres": [
-      "Crime",
-      "Drama"
+      "horror",
+      "fantasy",
+      "thriller"
     ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/rITxQBtnMpneZf8QzH1dqONQocx.jpg",
-    "rating": 5.8,
-    "numberOfVotes": 48,
-    "popularity": 131.014,
-    "releaseDate": "2022-10-28"
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/9nbw6eAYOhYEjI1wODekAG6svZF.jpg",
+    "rating": 5.5,
+    "numberOfVotes": 69,
+    "popularity": 169.947,
+    "releaseDate": "2022-01-28"
+  },
+  {
+    "name": "Harry Potter and the Order of the Phoenix",
+    "genres": [
+      "adventure",
+      "fantasy",
+      "mystery"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/5aOyriWkPec0zUDxmHFP9qMmBaj.jpg",
+    "rating": 7.7,
+    "numberOfVotes": 17301,
+    "popularity": 169.764,
+    "releaseDate": "2007-06-28"
+  },
+  {
+    "name": "Morbius",
+    "genres": [
+      "action",
+      "science fiction",
+      "fantasy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6JjfSchsU6daXk2AKX8EEBjO3Fm.jpg",
+    "rating": 6.2,
+    "numberOfVotes": 3195,
+    "popularity": 169.617,
+    "releaseDate": "2022-03-30"
+  },
+  {
+    "name": "Memory",
+    "genres": [
+      "action",
+      "thriller",
+      "crime"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/4Q1n3TwieoULnuaztu9aFjqHDTI.jpg",
+    "rating": 7,
+    "numberOfVotes": 1097,
+    "popularity": 169.362,
+    "releaseDate": "2022-04-28"
+  },
+  {
+    "name": "The Time Capsule",
+    "genres": [
+      "drama",
+      "romance",
+      "science fiction"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/c12EChMNDP11dJzoruUBIHwsYRa.jpg",
+    "rating": 6.7,
+    "numberOfVotes": 8,
+    "popularity": 167.679,
+    "releaseDate": "2022-11-23"
+  },
+  {
+    "name": "Harry Potter and the Deathly Hallows: Part 2",
+    "genres": [
+      "fantasy",
+      "adventure"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/c54HpQmuwXjHq2C9wmoACjxoom3.jpg",
+    "rating": 8.1,
+    "numberOfVotes": 18277,
+    "popularity": 166.907,
+    "releaseDate": "2011-07-07"
   },
   {
     "name": "Dragon Knight",
     "genres": [
-      "Fantasy",
-      "Adventure",
-      "Action"
+      "fantasy",
+      "adventure",
+      "action"
     ],
     "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/zkGFADykBtfPfTv7YJooxTH52ph.jpg",
-    "rating": 7,
-    "numberOfVotes": 34,
-    "popularity": 130.634,
+    "rating": 6.8,
+    "numberOfVotes": 35,
+    "popularity": 162.388,
     "releaseDate": "2022-03-21"
+  },
+  {
+    "name": "The Conjuring: The Devil Made Me Do It",
+    "genres": [
+      "horror",
+      "mystery",
+      "thriller"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/xbSuFiJbbBWCkyCCKIMfuDCA4yV.jpg",
+    "rating": 7.6,
+    "numberOfVotes": 4918,
+    "popularity": 162.245,
+    "releaseDate": "2021-05-25"
+  },
+  {
+    "name": "The Gray Man",
+    "genres": [
+      "action",
+      "thriller"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/5Eom3JsXgQlCj6QIsGCwXkX7wyH.jpg",
+    "rating": 7,
+    "numberOfVotes": 2643,
+    "popularity": 162.103,
+    "releaseDate": "2022-07-13"
+  },
+  {
+    "name": "Tinker Bell and the Pirate Fairy",
+    "genres": [
+      "animation",
+      "family"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/qZLBe9Z8Y6WSDVqbqTQJUf8V1mp.jpg",
+    "rating": 6.9,
+    "numberOfVotes": 839,
+    "popularity": 161.641,
+    "releaseDate": "2014-02-13"
+  },
+  {
+    "name": "Grimcutty",
+    "genres": [
+      "horror"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/qvg75YJMfbHeDNirUrrgBMQImRn.jpg",
+    "rating": 5.5,
+    "numberOfVotes": 251,
+    "popularity": 160.521,
+    "releaseDate": "2022-10-10"
+  },
+  {
+    "name": "The Boss Baby: Family Business",
+    "genres": [
+      "animation",
+      "comedy",
+      "adventure",
+      "family"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/kv2Qk9MKFFQo4WQPaYta599HkJP.jpg",
+    "rating": 7.5,
+    "numberOfVotes": 2159,
+    "popularity": 158.916,
+    "releaseDate": "2021-07-01"
+  },
+  {
+    "name": "Megan",
+    "genres": [
+      "thriller"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/xFsqpz9wn7yREHWGQvviiJE9RVO.jpg",
+    "rating": 6.2,
+    "numberOfVotes": 8,
+    "popularity": 158.187,
+    "releaseDate": "2020-03-14"
+  },
+  {
+    "name": "Shrek Forever After",
+    "genres": [
+      "comedy",
+      "adventure",
+      "fantasy",
+      "animation",
+      "family"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/pZS5WuDBh2eQmkjdtx40DQ2gvfC.jpg",
+    "rating": 6.3,
+    "numberOfVotes": 6356,
+    "popularity": 155.902,
+    "releaseDate": "2010-05-16"
+  },
+  {
+    "name": "Shang-Chi and the Legend of the Ten Rings",
+    "genres": [
+      "action",
+      "adventure",
+      "fantasy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/1BIoJGKbXjdFDAqUEiA2VHqkK1Z.jpg",
+    "rating": 7.6,
+    "numberOfVotes": 7711,
+    "popularity": 154.691,
+    "releaseDate": "2021-09-01"
+  },
+  {
+    "name": "The Bad Guys",
+    "genres": [
+      "animation",
+      "action",
+      "adventure",
+      "crime",
+      "comedy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/7qop80YfuO0BwJa1uXk1DXUUEwv.jpg",
+    "rating": 7.7,
+    "numberOfVotes": 1364,
+    "popularity": 154.518,
+    "releaseDate": "2022-03-17"
+  },
+  {
+    "name": "Infinite",
+    "genres": [
+      "science fiction",
+      "action",
+      "thriller"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/niw2AKHz6XmwiRMLWaoyAOAti0G.jpg",
+    "rating": 6.7,
+    "numberOfVotes": 1311,
+    "popularity": 154.324,
+    "releaseDate": "2021-09-09"
+  },
+  {
+    "name": "Harry Potter and the Deathly Hallows: Part 1",
+    "genres": [
+      "adventure",
+      "fantasy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/iGoXIpQb7Pot00EEdwpwPajheZ5.jpg",
+    "rating": 7.8,
+    "numberOfVotes": 16938,
+    "popularity": 153.178,
+    "releaseDate": "2010-10-06"
+  },
+  {
+    "name": "Cruella",
+    "genres": [
+      "comedy",
+      "crime"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/wToO8opxkGwKgSfJ1JK8tGvkG6U.jpg",
+    "rating": 8.1,
+    "numberOfVotes": 7904,
+    "popularity": 153.048,
+    "releaseDate": "2021-05-26"
+  },
+  {
+    "name": "The Ice Age Adventures of Buck Wild",
+    "genres": [
+      "animation",
+      "comedy",
+      "adventure",
+      "family"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/zzXFM4FKDG7l1ufrAkwQYv2xvnh.jpg",
+    "rating": 6.7,
+    "numberOfVotes": 1453,
+    "popularity": 152.772,
+    "releaseDate": "2022-01-28"
+  },
+  {
+    "name": "Shrek the Third",
+    "genres": [
+      "fantasy",
+      "adventure",
+      "animation",
+      "comedy",
+      "family"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/1V5pspgnFCXXWd9DddHBVIF2275.jpg",
+    "rating": 6.3,
+    "numberOfVotes": 7872,
+    "popularity": 151.43,
+    "releaseDate": "2007-05-17"
+  },
+  {
+    "name": "The Sea Beast",
+    "genres": [
+      "animation",
+      "adventure",
+      "family",
+      "fantasy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/9Zfv4Ap1e8eKOYnZPtYaWhLkk0d.jpg",
+    "rating": 7.6,
+    "numberOfVotes": 994,
+    "popularity": 150.224,
+    "releaseDate": "2022-06-24"
+  },
+  {
+    "name": "Mortal Kombat",
+    "genres": [
+      "action",
+      "fantasy",
+      "adventure"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6Wdl9N6dL0Hi0T1qJLWSz6gMLbd.jpg",
+    "rating": 7.1,
+    "numberOfVotes": 5110,
+    "popularity": 149.937,
+    "releaseDate": "2021-04-07"
+  },
+  {
+    "name": "The Friendship Game",
+    "genres": [
+      "science fiction",
+      "horror"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/qXaJkaVTNMhrOylFi6xrWnBQGE8.jpg",
+    "rating": 5.7,
+    "numberOfVotes": 27,
+    "popularity": 149.364,
+    "releaseDate": "2022-11-11"
+  },
+  {
+    "name": "Halloween Ends",
+    "genres": [
+      "horror",
+      "thriller"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/q06saepaXeBdkMibuN4R2fXmgIw.jpg",
+    "rating": 6.4,
+    "numberOfVotes": 1145,
+    "popularity": 149.023,
+    "releaseDate": "2022-10-12"
+  },
+  {
+    "name": "Black Widow",
+    "genres": [
+      "action",
+      "adventure",
+      "science fiction"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/kwB7d51AIcyzPOBOHLCEZJkmPhQ.jpg",
+    "rating": 7.4,
+    "numberOfVotes": 8607,
+    "popularity": 148.52,
+    "releaseDate": "2021-07-07"
+  },
+  {
+    "name": "Eternals",
+    "genres": [
+      "science fiction",
+      "action",
+      "adventure"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/lFByFSLV5WDJEv3KabbdAF959F2.jpg",
+    "rating": 7,
+    "numberOfVotes": 6822,
+    "popularity": 148.186,
+    "releaseDate": "2021-11-03"
+  },
+  {
+    "name": "Code Name Banshee",
+    "genres": [
+      "thriller",
+      "action"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/lxkvlIrvExeHGiPk7bdji2xm3vs.jpg",
+    "rating": 5.3,
+    "numberOfVotes": 54,
+    "popularity": 147.329,
+    "releaseDate": "2022-07-01"
+  },
+  {
+    "name": "The Maze Runner",
+    "genres": [
+      "action",
+      "mystery",
+      "science fiction",
+      "thriller"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ode14q7WtDugFDp78fo9lCsmay9.jpg",
+    "rating": 7.2,
+    "numberOfVotes": 15307,
+    "popularity": 146.906,
+    "releaseDate": "2014-09-10"
+  },
+  {
+    "name": "Luca",
+    "genres": [
+      "animation",
+      "comedy",
+      "family",
+      "fantasy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/jTswp6KyDYKtvC52GbHagrZbGvD.jpg",
+    "rating": 7.9,
+    "numberOfVotes": 7055,
+    "popularity": 146.666,
+    "releaseDate": "2021-06-17"
+  },
+  {
+    "name": "Tangled",
+    "genres": [
+      "animation",
+      "family"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ym7Kst6a4uodryxqbGOxmewF235.jpg",
+    "rating": 7.6,
+    "numberOfVotes": 9972,
+    "popularity": 146.628,
+    "releaseDate": "2010-11-24"
+  },
+  {
+    "name": "Coco",
+    "genres": [
+      "family",
+      "animation",
+      "fantasy",
+      "music",
+      "comedy",
+      "adventure"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/gGEsBPAijhVUFoiNpgZXqRVWJt2.jpg",
+    "rating": 8.2,
+    "numberOfVotes": 16821,
+    "popularity": 145.665,
+    "releaseDate": "2017-10-27"
+  },
+  {
+    "name": "Ratatouille",
+    "genres": [
+      "animation",
+      "comedy",
+      "family",
+      "fantasy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/t3vaWRPSf6WjDSamIkKDs1iQWna.jpg",
+    "rating": 7.8,
+    "numberOfVotes": 14892,
+    "popularity": 145.406,
+    "releaseDate": "2007-06-28"
+  },
+  {
+    "name": "The Twin",
+    "genres": [
+      "horror",
+      "mystery"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/uUUSkKQEptTHjYejxzaT5TVkiAG.jpg",
+    "rating": 6,
+    "numberOfVotes": 134,
+    "popularity": 145.141,
+    "releaseDate": "2022-04-06"
+  },
+  {
+    "name": "Tinker Bell",
+    "genres": [
+      "animation",
+      "family",
+      "adventure",
+      "fantasy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/3Ma0r1n8kfH7UaQMS7bJ9KsYUjT.jpg",
+    "rating": 6.8,
+    "numberOfVotes": 1198,
+    "popularity": 144.462,
+    "releaseDate": "2008-09-11"
+  },
+  {
+    "name": "Zack Snyder's Justice League",
+    "genres": [
+      "action",
+      "adventure",
+      "fantasy",
+      "science fiction"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/tnAuB8q5vv7Ax9UAEje5Xi4BXik.jpg",
+    "rating": 8.2,
+    "numberOfVotes": 8560,
+    "popularity": 143.497,
+    "releaseDate": "2021-03-18"
+  },
+  {
+    "name": "Wild Is the Wind",
+    "genres": [
+      "crime",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/rITxQBtnMpneZf8QzH1dqONQocx.jpg",
+    "rating": 5.7,
+    "numberOfVotes": 49,
+    "popularity": 143.252,
+    "releaseDate": "2022-10-28"
+  },
+  {
+    "name": "The Call of the Wild",
+    "genres": [
+      "adventure",
+      "family",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/33VdppGbeNxICrFUtW2WpGHvfYc.jpg",
+    "rating": 7.6,
+    "numberOfVotes": 3140,
+    "popularity": 142.876,
+    "releaseDate": "2020-02-19"
+  },
+  {
+    "name": "Puss in Boots: The Three Diablos",
+    "genres": [
+      "adventure",
+      "animation",
+      "comedy",
+      "family"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ptvbHUWpU8Nh6vrmSvjx4ESDgfC.jpg",
+    "rating": 6.6,
+    "numberOfVotes": 386,
+    "popularity": 142.403,
+    "releaseDate": "2012-02-07"
   },
   {
     "name": "Welcome to the Club",
     "genres": [
-      "Animation",
-      "Comedy"
+      "animation",
+      "comedy"
     ],
     "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/kxB9E6fo0ycHzd13oOTHmGa5Njd.jpg",
     "rating": 6.6,
-    "numberOfVotes": 132,
-    "popularity": 130.24,
+    "numberOfVotes": 133,
+    "popularity": 141.74,
     "releaseDate": "2022-09-08"
-  },
-  {
-    "name": "The Avengers",
-    "genres": [
-      "Science Fiction",
-      "Action",
-      "Adventure"
-    ],
-    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/tYqp6vEOo8YlVWrYQvt9nyOhsA2.jpg",
-    "rating": 7.7,
-    "numberOfVotes": 28080,
-    "popularity": 129.851,
-    "releaseDate": "2012-04-25"
   }
 ]
