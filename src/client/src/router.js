@@ -5,12 +5,12 @@ import ErrorPage from './pages/ErrorPage';
 import HomePage from './pages/HomePage';
 import JoinGroup from './pages/JoinGroup';
 import LoginPage from './pages/LoginPage';
+import Preferences from './pages/Preferences';
 import SignUpPage from './pages/SignUpPage';
 import Social from './pages/Social';
-import Preferences from './pages/Preferences';
+import VotingPage from './pages/VotingPage';
 
 const router = createBrowserRouter([
-
   {
     path: '/',
     element: <App />,
@@ -45,9 +45,13 @@ const router = createBrowserRouter([
     element: <Preferences />,
   },
   {
-      path: '/error',
-      element: <ErrorPage />,
-  }
+    path: '/group/vote',
+    element: <VotingPage />,
+  },
+  {
+    path: '/error',
+    element: <ErrorPage />,
+  },
 ]);
 
 export default router;

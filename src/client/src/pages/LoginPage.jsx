@@ -15,25 +15,22 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import auth from '..';
 import { init } from '../features/token/tokenSlice';
-import axios from 'axios';
 
 const LoginPage = () => {
-
-const BACKEND_URI = process.env.REACT_APP_FRONTEND_URI || 'http://localhost:8080';
   // Page Specific State
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
   const [showPassword, setShowPassword] = React.useState(false);
-  const [user, setUser] = React.useState({})
+
   // Redux Global State
   const dispatch = useDispatch();
-
 
   // Cookie Management
   const [cookies, setCookie] = useCookies([
     'access_token',
-    'refresh_token',
-    'expiration_time',
+    'uid',
+    // 'refresh_token',
+    // 'expiration_time',
   ]);
 
   // React-Router Navigation
@@ -74,37 +71,30 @@ const BACKEND_URI = process.env.REACT_APP_FRONTEND_URI || 'http://localhost:8080
           uid: userCredential.user.uid,
           email: userCredential.user.email,
           accessToken: userCredential.user.stsTokenManager.accessToken,
-          refreshToken: userCredential.user.stsTokenManager.refreshToken,
-          expirationTime: userCredential.user.stsTokenManager.expirationTime,
+          // refreshToken: userCredential.user.stsTokenManager.refreshToken,
+          // expirationTime: userCredential.user.stsTokenManager.expirationTime,
         };
         dispatch(init(obj));
+
         const expires = new Date();
         expires.setTime(obj.expirationTime);
         setCookie('access_token', obj.accessToken, {
           path: '/',
           expires,
         });
-        setCookie('refresh_token', obj.refreshToken, {
+        setCookie('uid', obj.uid, {
           path: '/',
           expires,
         });
-        setCookie('expiration_time', obj.expirationTime, {
-          path: '/',
-          expires,
-        });
+        // setCookie('refresh_token', obj.refreshToken, {
+        //   path: '/',
+        //   expires,
+        // });
+        // setCookie('expiration_time', obj.expirationTime, {
+        //   path: '/',
+        //   expires,
+        // });
         navigate('/home');
-      })
-      .then ((userCredential) => {
-        console.log(userCredential);
-        const user = userCredential.user;
-        const params = {
-          uid: user.uid,
-        };
-        return axios.get(BACKEND_URI + '/api/user/get/', {params});
-      })
-      .then(req => {
-        console.log(req.data);
-        setUser(req.data);
       })
       .catch((error) => {
         console.log(error);

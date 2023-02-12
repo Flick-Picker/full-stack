@@ -1,12 +1,21 @@
 import { Box, Button } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
-import React, { useEffect } from 'react';
 import axios from 'axios';
+import React, { useEffect } from 'react';
+import { useCookies } from 'react-cookie';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { init } from './features/token/tokenSlice';
 
 function App() {
+  const AppURI = process.env.REACT_APP_FRONTEND_URI || 'http://localhost:8080';
+
+  // Redux Global State
+  const dispatch = useDispatch();
+
   // React-Router Navigation
   const navigate = useNavigate();
-  const BACKEND_URI = process.env.REACT_APP_FRONTEND_URI || 'http://localhost:8080';
+
+  const [cookies] = useCookies(['access_token', 'uid']);
 
   const handleGoLogin = (e) => {
     e.preventDefault();
@@ -18,15 +27,31 @@ function App() {
     navigate('/signup');
   };
 
-  // error check to see if backend is running
+  // Error check to see if backend is running
   useEffect(() => {
-    axios.get(BACKEND_URI)
-      .then((res) => { })
-      .catch((err) => {
-        console.log(err);
-        navigate('/error');
-      });
-  }, [BACKEND_URI, navigate]);
+    axios.get(AppURI).catch((error) => {
+      navigate('/error', { state: { error: error } });
+    });
+  }, [AppURI, navigate]);
+
+  useEffect(() => {
+    if (cookies.access_token && cookies.uid) {
+      axios
+        .get(`${AppURI}/api/user/get?uid=${cookies.uid}`)
+        .then((res) => {
+          const obj = {
+            uid: cookies.uid,
+            email: res.data.email,
+            accessToken: cookies.access_token,
+            // refreshToken: cookies.refresh_token,
+            // expirationTime: cookies.expiration_time,
+          };
+          dispatch(init(obj));
+          navigate('/home');
+        })
+        .catch((e) => console.log(e));
+    }
+  }, [AppURI, cookies.access_token, cookies.uid, dispatch, navigate]);
 
   return (
     <Box
