@@ -13,6 +13,6 @@ router.post('/friends/send', controller.sendFriendInvite);
 router.post('/friends/accept', controller.acceptFriendInvite);
 router.post('/groups/send', controller.sendGroupInvite);
 router.post('/groups/accept', controller.acceptGroupInvite);
-router.post('/groups/get/all', controller.getGroupInvites);
+router.post('/groups/get', controller.getGroupInvites);
 
 module.exports = router;

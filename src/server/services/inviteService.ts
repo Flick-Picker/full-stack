@@ -62,15 +62,10 @@ export const sendFriendInvite = async (senderUid: string, requestUid: string) =>
   const docRef = doc(db, fCol, inviteId);
   let docSnap = await getDoc(docRef);
 
-  const sendUserRef = doc(db, 'user', senderUid);
-  const reqUserRef = doc(db, 'user', requestUid);
-
   if (!docSnap.exists()) {
     await setDoc(docRef, {
       senderUser: senderUid,
       requestedUser: requestUid,
-      senderUserRef: sendUserRef,
-      requestedUserRef: reqUserRef,
       isAccepted: false,
     });
   }
@@ -104,15 +99,10 @@ export const sendGroupInvite = async (
   const docRef = doc(db, gCol, inviteId);
   let docSnap = await getDoc(docRef);
 
-  const sendUserRef = doc(db, 'user', senderUid);
-  const reqUserRef = doc(db, 'user', requestUid);
-
   if (!docSnap.exists()) {
     await setDoc(docRef, {
       senderUser: senderUid,
       requestedUser: requestUid,
-      senderUserRef: sendUserRef,
-      requestedUserRef: reqUserRef,
       isAccepted: false,
     });
   }
