@@ -4,6 +4,7 @@ import {
 import { Preference } from '../models/prefModel';
 import * as userService from './userService';
 import * as groupService from './groupService';
+import PreferenceObject from '../classes/preferenceObject';
 
 const firebase = require('./firebase');
 
@@ -15,9 +16,9 @@ export const getPref = async (uid: string) => {
   const docSnap = await getDoc(docRef);
 
   if (docSnap.exists()) {
-    return docSnap.data();
+    return docSnap.data() as PreferenceObject;
   }
-  return {};
+  return {} as PreferenceObject;
 };
 
 export const getPrefRef = async (groupId: string) => {
@@ -40,7 +41,7 @@ export const getGroupPrefs = async (groupId: string) => {
     const pref = await getPref(user);
     groupPrefs.push(pref);
   }
-  return groupPrefs;
+  return groupPrefs as Preference[];
 };
 
 export const addPref = async (uid: string) => {

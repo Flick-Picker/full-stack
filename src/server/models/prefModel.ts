@@ -1,7 +1,9 @@
 export interface Preference {
   email: string;
-  likedGenres: any[];
-  dislikedGenres: any[];
-  lengthRange: any[];
-  preferredRatings: any[];
+  likedGenres: string[];
+  dislikedGenres: string[];
+  preferredRatings: number;
+  moviePreference: number;
+  tvShowPreference: number;
+  animePreference: number;
 }
