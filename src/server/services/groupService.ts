@@ -36,15 +36,13 @@ export const addGroup = async (groupName: string, ownerUid: string) => {
   const docRef = doc(db, col, id);
   let docSnap = await getDoc(docRef);
 
-  const userRef = doc(db, 'user', ownerUid);
-
   if (!docSnap.exists()) {
     await setDoc(docRef, {
       ownerUid,
       groupName,
       users: [ownerUid],
-      usersRef: [userRef],
-      votingSessions: [],
+      completedVotingSessions: [],
+      currentVotingSession: '',
     });
     await userService.addToGroup(ownerUid, id, true);
   }
@@ -67,14 +65,48 @@ export const addUserToGroup = async (groupId: string, userUid: string) => {
   const docRef = doc(db, col, groupId);
   let docSnap = await getDoc(docRef);
 
-  const userRef = doc(db, 'user', userUid);
-
   if (docSnap.exists()) {
     await updateDoc(docRef, {
       users: arrayUnion(userUid),
-      usersRef: arrayUnion(userRef),
     });
     await userService.addToGroup(userUid, groupId, false);
+  }
+  docSnap = await getDoc(docRef);
+  return docSnap.data();
+};
+
+export const addNewSessionToGroup = async (groupId: string, sessionId: string) => {
+  const docRef = doc(db, col, groupId);
+  let docSnap = await getDoc(docRef);
+
+  // allows for clearing of old vote session with new one
+  const currSession = docSnap.get('currentVotingSession');
+  if (docSnap.exists()) {
+    // move old voting session to completed
+    if (currSession) {
+      await updateDoc(docRef, {
+        currentVotingSession: sessionId,
+        completedVotingSessions: arrayUnion(currSession),
+      });
+    } else {
+      await updateDoc(docRef, {
+        currentVotingSession: sessionId,
+      });
+    }
+  }
+  docSnap = await getDoc(docRef);
+  return docSnap.data();
+};
+
+export const addFinishedSessionToGroup = async (groupId: string, sessionId: string) => {
+  const docRef = doc(db, col, groupId);
+  let docSnap = await getDoc(docRef);
+
+  if (docSnap.exists()) {
+    await updateDoc(docRef, {
+      currentVotingSession: '',
+      completedVotingSessions: arrayUnion(sessionId),
+    });
   }
   docSnap = await getDoc(docRef);
   return docSnap.data();

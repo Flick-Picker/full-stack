@@ -93,5 +93,5 @@ export const getRecommendation = async (id: string, group: boolean) => {
   }
   // sort the algorithm ratings in desc order
   batch.sort((a, b) => a.algorithmRating - b.algorithmRating);
-  return batch.slice(0, 50);
+  return batch.slice(0, 20);
 };
