@@ -52,6 +52,14 @@ const Social = () => {
           display="flex"
           justifyContent="center"
           alignItems="center"
+          flexDirection="column"
+          sx={{ p: 2 }}
+        >
+
+        <Box
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
           flexDirection="row"
           gap="0%"
         >
@@ -102,11 +110,56 @@ const Social = () => {
               <GroupsList />
             </Box>
           </Box>
+
+
+          <Box
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            flexDirection="column"
+          >
+            <Typography variant="h6" component="h6">
+              Friend Requests
+            </Typography>
+
+            <List
+          sx={{
+            width: '100%',
+            maxWidth: 200,
+            bgcolor: 'background.paper',
+            border: 'solid',
+            borderRadius: '10px',
+          }}>
+          {[0, 1, 2, 3].map((value) => {
+            const labelId = `invite-list-label-${value}`;
+
+            return (
+              <ListItem key={value} role={undefined} dense>
+                <ListItemSecondaryAction>
+                  <IconButton edge="end" aria-label="accept">
+                    <Check />
+                  </IconButton>
+                  <IconButton edge="end" aria-label="decline">
+                    <Clear />
+                  </IconButton>
+                </ListItemSecondaryAction>
+                <ListItemText id={labelId} primary={`Invite ${value + 1}`} />
+              </ListItem>
+            );
+          })}
+        </List>
+          </Box>
+
+
         </Box>
 
-        <Button variant="outlined" size="large">
-          Invite
+        <Button variant="outlined" size="large" sx={{ m: 2 }}>
+          Invite to Group
         </Button>
+
+        </Box>
+
+
 
         <Box
           display="flex"
@@ -130,6 +183,7 @@ const Social = () => {
             Send Friend Request
           </Button>
         </Box>
+
       </Box>
     </Box>
   );

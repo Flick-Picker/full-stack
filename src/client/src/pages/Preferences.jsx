@@ -212,17 +212,10 @@ const Preferences = () => {
             flexDirection="column"
           >
             <Typography variant="h6" component="h6">
-              Rating
+              
+              Minimum Rating
             </Typography>
 
-            <Typography variant="h7" component="h7">
-              Maximum
-            </Typography>
-            <Rating name="half-rating" defaultValue={2.5} precision={0.5} />
-
-            <Typography variant="h7" component="h7">
-              Minimum
-            </Typography>
             <Rating name="half-rating" defaultValue={2.5} precision={0.5} />
 
 
