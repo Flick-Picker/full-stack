@@ -131,7 +131,7 @@ export const collectFriends = async (uid: string) => {
     const friends = docSnap.get('friends');
     const friendsData = [];
     for (let i = 0; i < friends.length; i += 1) {
-      const friendRef = doc(db, col, uid);
+      const friendRef = doc(db, col, friends[i]);
       // eslint-disable-next-line no-await-in-loop
       const friendSnap = await getDoc(friendRef);
       friendsData.push(friendSnap.data());
