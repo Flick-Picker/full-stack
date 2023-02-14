@@ -15,7 +15,7 @@ import {
   Checkbox,
   Select,
   MenuItem,
-  Rating
+  Rating,
 } from "@mui/material";
 
 import React from "react";
@@ -73,58 +73,50 @@ const Preferences = () => {
             </Typography>
 
             <Box
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-            flexDirection="column"
-          >
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+              flexDirection="column"
+            >
+              <FormControl sx={{ m: 1, width: 120 }}>
+                <InputLabel id="demo-multiple-checkbox-label">Liked</InputLabel>
+                <Select>
+                  <MenuItem>
+                    <Checkbox />
+                    <ListItemText primary="Genre 1" />
+                  </MenuItem>
+                  <MenuItem>
+                    <Checkbox />
+                    <ListItemText primary="Genre 2" />
+                  </MenuItem>
+                  <MenuItem>
+                    <Checkbox />
+                    <ListItemText primary="Genre 3" />
+                  </MenuItem>
+                </Select>
+              </FormControl>
 
-
-            <FormControl sx={{ m: 1, width: 120 }}>
-        <InputLabel id="demo-multiple-checkbox-label">Liked</InputLabel>
-        <Select>
-            <MenuItem>
-              <Checkbox/>
-              <ListItemText primary = "Genre 1"/>
-            </MenuItem>
-            <MenuItem>
-              <Checkbox/>
-              <ListItemText primary = "Genre 2"/>
-            </MenuItem>
-            <MenuItem>
-              <Checkbox/>
-              <ListItemText primary = "Genre 3"/>
-            </MenuItem>
-        </Select>
-      </FormControl>
-
-      <FormControl sx={{ m: 1, width: 120 }}>
-        <InputLabel id="demo-multiple-checkbox-label">Disliked</InputLabel>
-        <Select>
-            <MenuItem>
-              <Checkbox/>
-              <ListItemText primary = "Genre 1"/>
-            </MenuItem>
-            <MenuItem>
-              <Checkbox/>
-              <ListItemText primary = "Genre 2"/>
-            </MenuItem>
-            <MenuItem>
-              <Checkbox/>
-              <ListItemText primary = "Genre 3"/>
-            </MenuItem>
-        </Select>
-      </FormControl>
-
-
+              <FormControl sx={{ m: 1, width: 120 }}>
+                <InputLabel id="demo-multiple-checkbox-label">
+                  Disliked
+                </InputLabel>
+                <Select>
+                  <MenuItem>
+                    <Checkbox />
+                    <ListItemText primary="Genre 1" />
+                  </MenuItem>
+                  <MenuItem>
+                    <Checkbox />
+                    <ListItemText primary="Genre 2" />
+                  </MenuItem>
+                  <MenuItem>
+                    <Checkbox />
+                    <ListItemText primary="Genre 3" />
+                  </MenuItem>
+                </Select>
+              </FormControl>
+            </Box>
           </Box>
-
-          </Box>
-
-
-
-
-
 
           <Box
             display="flex"
@@ -137,73 +129,70 @@ const Preferences = () => {
             </Typography>
 
             <Box
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-            flexDirection="column"
-          >
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+              flexDirection="column"
+            >
+              <FormControl sx={{ m: 1, width: 120 }}>
+                <InputLabel id="demo-multiple-checkbox-label">Anime</InputLabel>
+                <Select>
+                  <MenuItem>
+                    <Checkbox />
+                    <ListItemText primary="Like" />
+                  </MenuItem>
+                  <MenuItem>
+                    <Checkbox />
+                    <ListItemText primary="Neutral" />
+                  </MenuItem>
+                  <MenuItem>
+                    <Checkbox />
+                    <ListItemText primary="Dislike" />
+                  </MenuItem>
+                </Select>
+              </FormControl>
 
+              <FormControl sx={{ m: 1, width: 120 }}>
+                <InputLabel id="demo-multiple-checkbox-label">
+                  Movies
+                </InputLabel>
+                <Select>
+                  <MenuItem>
+                    <Checkbox />
+                    <ListItemText primary="Like" />
+                  </MenuItem>
+                  <MenuItem>
+                    <Checkbox />
+                    <ListItemText primary="Neutral" />
+                  </MenuItem>
+                  <MenuItem>
+                    <Checkbox />
+                    <ListItemText primary="Dislike" />
+                  </MenuItem>
+                </Select>
+              </FormControl>
 
-            <FormControl sx={{ m: 1, width: 120 }}>
-        <InputLabel id="demo-multiple-checkbox-label">Anime</InputLabel>
-        <Select>
-            <MenuItem>
-              <Checkbox/>
-              <ListItemText primary = "Like"/>
-            </MenuItem>
-            <MenuItem>
-              <Checkbox/>
-              <ListItemText primary = "Neutral"/>
-            </MenuItem>
-            <MenuItem>
-              <Checkbox/>
-              <ListItemText primary = "Dislike"/>
-            </MenuItem>
-        </Select>
-      </FormControl>
-
-      <FormControl sx={{ m: 1, width: 120 }}>
-        <InputLabel id="demo-multiple-checkbox-label">Movies</InputLabel>
-        <Select>
-            <MenuItem>
-              <Checkbox/>
-              <ListItemText primary = "Like"/>
-            </MenuItem>
-            <MenuItem>
-              <Checkbox/>
-              <ListItemText primary = "Neutral"/>
-            </MenuItem>
-            <MenuItem>
-              <Checkbox/>
-              <ListItemText primary = "Dislike"/>
-            </MenuItem>
-        </Select>
-      </FormControl>
-
-      <FormControl sx={{ m: 1, width: 120 }}>
-        <InputLabel id="demo-multiple-checkbox-label">TV Series</InputLabel>
-        <Select>
-            <MenuItem>
-              <Checkbox/>
-              <ListItemText primary = "Like"/>
-            </MenuItem>
-            <MenuItem>
-              <Checkbox/>
-              <ListItemText primary = "Neutral"/>
-            </MenuItem>
-            <MenuItem>
-              <Checkbox/>
-              <ListItemText primary = "Dislike"/>
-            </MenuItem>
-        </Select>
-      </FormControl>
-
-
-
+              <FormControl sx={{ m: 1, width: 120 }}>
+                <InputLabel id="demo-multiple-checkbox-label">
+                  TV Series
+                </InputLabel>
+                <Select>
+                  <MenuItem>
+                    <Checkbox />
+                    <ListItemText primary="Like" />
+                  </MenuItem>
+                  <MenuItem>
+                    <Checkbox />
+                    <ListItemText primary="Neutral" />
+                  </MenuItem>
+                  <MenuItem>
+                    <Checkbox />
+                    <ListItemText primary="Dislike" />
+                  </MenuItem>
+                </Select>
+              </FormControl>
+            </Box>
           </Box>
-
-          </Box>
-
 
           <Box
             display="flex"
@@ -212,15 +201,11 @@ const Preferences = () => {
             flexDirection="column"
           >
             <Typography variant="h6" component="h6">
-              
               Minimum Rating
             </Typography>
 
             <Rating name="half-rating" defaultValue={2.5} precision={0.5} />
-
-
           </Box>
-          
         </Box>
 
         <Box
@@ -230,7 +215,6 @@ const Preferences = () => {
           flexDirection="row"
           gap="2%"
         >
-
           <Button variant="outlined" size="large">
             Save
           </Button>
