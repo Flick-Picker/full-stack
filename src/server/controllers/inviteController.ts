@@ -1,9 +1,28 @@
 import { Request, Response } from 'express';
 import * as service from '../services/inviteService';
 
+export async function getInvite(req: Request, res: Response) {
+  try {
+    const { inviteId } = req.query;
+    if (!inviteId) {
+      res.status(404).json({ error: 'Params not found' });
+      return;
+    }
+    if (typeof inviteId !== 'string') {
+      res.status(500).json({ error: 'Invalid params' });
+      return;
+    }
+    const invite = await service.getInvite(inviteId);
+    res.send(invite);
+  } catch (err) {
+    console.log(err);
+    res.status(500).send(err);
+  }
+}
+
 export async function sendFriendInvite(req: Request, res: Response) {
   try {
-    const { senderUid, requestUid } = req.query;
+    const { senderUid, requestUid } = req.body;
     if (!senderUid || !requestUid) {
       res.status(404).json({ error: 'Params not found' });
       return;
