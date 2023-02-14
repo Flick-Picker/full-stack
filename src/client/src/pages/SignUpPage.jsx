@@ -18,6 +18,9 @@ const SignUpPage = () => {
   const signUpURI = `${
     process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'
   }/api/user`;
+  const prefURI = `${
+    process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'
+  }/api/user/pref`;
 
   // Page Specific State
   const [email, setEmail] = React.useState('');
@@ -80,6 +83,12 @@ const SignUpPage = () => {
 
           // use this way to make a user login after sign up
           // otherwise redirect directly to logged in
+          const body = {
+            uid: user.uid,
+          };
+          return axios.post(`${prefURI}/new`, body);
+        })
+        .then((res) => {
           navigate('/login');
         })
         .catch((error) => {
