@@ -71,9 +71,116 @@ const Preferences = () => {
               Genres
             </Typography>
 
+            <Box
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            flexDirection="column"
+          >
 
-            <FormControl sx={{ m: 1, width: 300 }}>
-        <InputLabel id="demo-multiple-checkbox-label"></InputLabel>
+
+            <FormControl sx={{ m: 1, width: 120 }}>
+        <InputLabel id="demo-multiple-checkbox-label">Liked</InputLabel>
+        <Select>
+            <MenuItem>
+              <Checkbox/>
+              <ListItemText primary = "Genre 1"/>
+            </MenuItem>
+            <MenuItem>
+              <Checkbox/>
+              <ListItemText primary = "Genre 2"/>
+            </MenuItem>
+            <MenuItem>
+              <Checkbox/>
+              <ListItemText primary = "Genre 3"/>
+            </MenuItem>
+        </Select>
+      </FormControl>
+
+      <FormControl sx={{ m: 1, width: 120 }}>
+        <InputLabel id="demo-multiple-checkbox-label">Disliked</InputLabel>
+        <Select>
+            <MenuItem>
+              <Checkbox/>
+              <ListItemText primary = "Genre 1"/>
+            </MenuItem>
+            <MenuItem>
+              <Checkbox/>
+              <ListItemText primary = "Genre 2"/>
+            </MenuItem>
+            <MenuItem>
+              <Checkbox/>
+              <ListItemText primary = "Genre 3"/>
+            </MenuItem>
+        </Select>
+      </FormControl>
+
+
+          </Box>
+
+          </Box>
+
+
+
+
+
+
+          <Box
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            flexDirection="column"
+          >
+            <Typography variant="h6" component="h6">
+              Type
+            </Typography>
+
+            <Box
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            flexDirection="column"
+          >
+
+
+            <FormControl sx={{ m: 1, width: 120 }}>
+        <InputLabel id="demo-multiple-checkbox-label">Anime</InputLabel>
+        <Select>
+            <MenuItem>
+              <Checkbox/>
+              <ListItemText primary = "Genre 1"/>
+            </MenuItem>
+            <MenuItem>
+              <Checkbox/>
+              <ListItemText primary = "Genre 2"/>
+            </MenuItem>
+            <MenuItem>
+              <Checkbox/>
+              <ListItemText primary = "Genre 3"/>
+            </MenuItem>
+        </Select>
+      </FormControl>
+
+      <FormControl sx={{ m: 1, width: 120 }}>
+        <InputLabel id="demo-multiple-checkbox-label">Movies</InputLabel>
+        <Select>
+            <MenuItem>
+              <Checkbox/>
+              <ListItemText primary = "Genre 1"/>
+            </MenuItem>
+            <MenuItem>
+              <Checkbox/>
+              <ListItemText primary = "Genre 2"/>
+            </MenuItem>
+            <MenuItem>
+              <Checkbox/>
+              <ListItemText primary = "Genre 3"/>
+            </MenuItem>
+        </Select>
+      </FormControl>
+
+      <FormControl sx={{ m: 1, width: 120 }}>
+        <InputLabel id="demo-multiple-checkbox-label">TV Series</InputLabel>
         <Select>
             <MenuItem>
               <Checkbox/>
@@ -92,12 +199,9 @@ const Preferences = () => {
 
 
 
-
           </Box>
 
-
-
-
+          </Box>
 
 
           <Box
@@ -107,21 +211,44 @@ const Preferences = () => {
             flexDirection="column"
           >
             <Typography variant="h6" component="h6">
-              Groups
+              Rating
             </Typography>
 
             <Box
-              display="flex"
-              gap="1vh"
-              justifyContent="center"
-              alignItems="center"
-              flexDirection="column"
-              padding="20px"
-              borderRadius="10px"
-            >
-              <GroupsList />
-            </Box>
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            flexDirection="column"
+          >
+
+
+            <FormControl sx={{ m: 1, width: 120 }}>
+        <InputLabel id="demo-multiple-checkbox-label"></InputLabel>
+        <Select>
+            <MenuItem>
+              <Checkbox/>
+              <ListItemText primary = "Range 1"/>
+            </MenuItem>
+            <MenuItem>
+              <Checkbox/>
+              <ListItemText primary = "Range 2"/>
+            </MenuItem>
+            <MenuItem>
+              <Checkbox/>
+              <ListItemText primary = "Range 3"/>
+            </MenuItem>
+        </Select>
+      </FormControl>
+
+
+
+
+
+
           </Box>
+
+          </Box>
+          
         </Box>
 
         <Box
@@ -131,9 +258,6 @@ const Preferences = () => {
           flexDirection="row"
           gap="2%"
         >
-          <Button variant="outlined" size="large">
-            Cancel
-          </Button>
 
           <Button variant="outlined" size="large">
             Save
