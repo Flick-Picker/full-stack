@@ -9,6 +9,9 @@ import Preferences from './pages/Preferences';
 import SignUpPage from './pages/SignUpPage';
 import Social from './pages/Social';
 import VotingPage from './pages/VotingPage';
+import ProfilePage from './pages/ProfilePage';
+import EmailChange from './pages/EmailChange';
+import PasswordChange from './pages/PasswordChange';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +30,18 @@ const router = createBrowserRouter([
   {
     path: '/home',
     element: <HomePage />,
+  },
+  {
+    path: '/profile',
+    element: <ProfilePage />,
+  },
+  {
+    path: '/profile/emailchange',
+    element: <EmailChange />
+  },
+  {
+    path: '/profile/passwordchange',
+    element: <PasswordChange />
   },
   {
     path: '/group/create',
