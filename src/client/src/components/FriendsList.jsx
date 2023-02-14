@@ -25,12 +25,11 @@ const FriendsList = () => {
   };
 
   return (
-    <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+    <List disablePadding sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper'}}>
       {[0, 1, 2, 3].map((value) => {
         const labelId = `checkbox-list-label-${value}`;
-
         return (
-          <ListItem key={value} disablePadding>
+          <ListItem key={value}>
             <ListItemButton role={undefined} onClick={handleToggle(value)}>
               <ListItemIcon>
                 <Checkbox
