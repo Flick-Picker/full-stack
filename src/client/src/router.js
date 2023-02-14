@@ -2,6 +2,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import App from './App';
 import CreateGroup from './pages/CreateGroup';
 import ErrorPage from './pages/ErrorPage';
+import GroupDetails from './pages/GroupDetails';
 import HomePage from './pages/HomePage';
 import JoinGroup from './pages/JoinGroup';
 import LoginPage from './pages/LoginPage';
@@ -58,6 +59,10 @@ const router = createBrowserRouter([
   {
     path: '/preferences',
     element: <Preferences />,
+  },
+  {
+    path: '/group',
+    element: <GroupDetails />,
   },
   {
     path: '/group/vote',

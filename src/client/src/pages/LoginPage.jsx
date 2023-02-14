@@ -15,8 +15,14 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import auth from '..';
 import { init } from '../features/token/tokenSlice';
+import axios from 'axios';
 
 const LoginPage = () => {
+
+  const prefURI = `${
+    process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'
+  }/api/user/pref`;
+
   // Page Specific State
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
@@ -94,6 +100,13 @@ const LoginPage = () => {
         //   path: '/',
         //   expires,
         // });
+        navigate('/home');
+        const body = {
+          uid: userCredential.user.uid,
+        };
+        return axios.post(`${prefURI}/new`, body);
+      })
+      .then((res) => {
         navigate('/home');
       })
       .catch((error) => {

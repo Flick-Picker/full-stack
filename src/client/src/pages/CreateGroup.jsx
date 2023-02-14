@@ -16,7 +16,7 @@ import { selectUid } from '../features/token/tokenSlice';
 
 const CreateGroup = () => {
   const createGroupURI = `${
-    process.env.REACT_APP_FRONTEND_URI || 'http://localhost:8080'
+    process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'
   }/api/group`;
 
   const [groupName, setGroupName] = React.useState('');

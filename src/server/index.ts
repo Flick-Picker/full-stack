@@ -6,6 +6,8 @@ const genre = require('./routes/genre');
 const user = require('./routes/user');
 const pref = require('./routes/pref');
 const group = require('./routes/group');
+const invite = require('./routes/invite');
+const voteSession = require('./routes/voteSession');
 
 const app: Express = express();
 
@@ -20,5 +22,7 @@ app.use('/api/genres', genre);
 app.use('/api/user', user);
 app.use('/api/user/pref', pref);
 app.use('/api/group', group);
+app.use('/api/invites', invite);
+app.use('/api/voting', voteSession);
 
 module.exports = app;

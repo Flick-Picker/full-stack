@@ -40,11 +40,8 @@ export const addUser = async (uid: string, email: string) => {
       username: '',
       name: '',
       friends: [],
-      friendsRef: [],
       groupsOwned: [],
       groupsJoined: [],
-      groupsOwnedRef: [],
-      groupsJoinedRef: [],
     });
   }
   docSnap = await getDoc(docRef);
@@ -73,14 +70,12 @@ export const addFriend = async (userUid: string, friendUid: string) => {
   if (docSnap.exists()) {
     await updateDoc(docRef, {
       friends: arrayUnion(friendUid),
-      friendsRef: arrayUnion(frDocRef),
     });
   }
 
   if (frDocSnap.exists()) {
     await updateDoc(frDocRef, {
       friends: arrayUnion(userUid),
-      friendsRef: arrayUnion(docRef),
     });
   }
   docSnap = await getDoc(docRef);
@@ -93,18 +88,15 @@ export const addToGroup = async (userUid: string, groupId: string, isOwned: bool
   const docRef = doc(db, col, userUid);
   let docSnap = await getDoc(docRef);
 
-  const groupRef = doc(db, 'group', groupId);
-
   if (docSnap.exists()) {
     if (isOwned) {
       await updateDoc(docRef, {
         groupsOwned: arrayUnion(groupId),
-        groupsOwnedRef: arrayUnion(groupRef),
+        groupsJoined: arrayUnion(groupId),
       });
     } else {
       await updateDoc(docRef, {
         groupsJoined: arrayUnion(groupId),
-        groupsJoinedRef: arrayUnion(groupRef),
       });
     }
   }
