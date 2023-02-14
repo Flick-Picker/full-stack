@@ -8,7 +8,7 @@ import {
   MenuItem,
   Rating,
 } from '@mui/material';
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from '../components/Header';
 import axios from 'axios';
 import { useSelector } from 'react-redux';
@@ -66,6 +66,22 @@ const Preferences = () => {
 
   const uid = useSelector(selectUid);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    axios
+      .get(`${API}/api/user/pref/get?uid=${uid}`)
+      .then((res) => {
+        setLikedGenres(res.data.likedGenres);
+        setDislikedGenres(res.data.dislikedGenres);
+        setAnimePref(res.data.animePreference);
+        setMoviePref(res.data.moviePreference);
+        setTVPref(res.data.tvShowPreference);
+        setRating(res.data.preferredRatings / 2);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  }, [API, uid]);
 
   const handleLikedGenresChange = (e) => {
     const {
@@ -134,7 +150,7 @@ const Preferences = () => {
               justifyContent="center"
               alignItems="center"
               flexDirection="column">
-              <FormControl sx={{ m: 1, width: 120 }}>
+              <FormControl sx={{ m: 1, width: 300 }}>
                 <InputLabel id="liked-genres-label">Liked</InputLabel>
                 <Select
                   labelId="liked-genres-label"
@@ -154,7 +170,7 @@ const Preferences = () => {
                 </Select>
               </FormControl>
 
-              <FormControl sx={{ m: 1, width: 120 }}>
+              <FormControl sx={{ m: 1, width: 300 }}>
                 <InputLabel id="disliked-genres-label">Disliked</InputLabel>
                 <Select
                   labelId="disliked-genres-label"
