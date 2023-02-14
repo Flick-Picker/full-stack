@@ -15,6 +15,7 @@ import {
   Checkbox,
   Select,
   MenuItem,
+  Rating
 } from "@mui/material";
 
 import React from "react";
@@ -148,15 +149,15 @@ const Preferences = () => {
         <Select>
             <MenuItem>
               <Checkbox/>
-              <ListItemText primary = "Genre 1"/>
+              <ListItemText primary = "Like"/>
             </MenuItem>
             <MenuItem>
               <Checkbox/>
-              <ListItemText primary = "Genre 2"/>
+              <ListItemText primary = "Neutral"/>
             </MenuItem>
             <MenuItem>
               <Checkbox/>
-              <ListItemText primary = "Genre 3"/>
+              <ListItemText primary = "Dislike"/>
             </MenuItem>
         </Select>
       </FormControl>
@@ -166,15 +167,15 @@ const Preferences = () => {
         <Select>
             <MenuItem>
               <Checkbox/>
-              <ListItemText primary = "Genre 1"/>
+              <ListItemText primary = "Like"/>
             </MenuItem>
             <MenuItem>
               <Checkbox/>
-              <ListItemText primary = "Genre 2"/>
+              <ListItemText primary = "Neutral"/>
             </MenuItem>
             <MenuItem>
               <Checkbox/>
-              <ListItemText primary = "Genre 3"/>
+              <ListItemText primary = "Dislike"/>
             </MenuItem>
         </Select>
       </FormControl>
@@ -184,15 +185,15 @@ const Preferences = () => {
         <Select>
             <MenuItem>
               <Checkbox/>
-              <ListItemText primary = "Genre 1"/>
+              <ListItemText primary = "Like"/>
             </MenuItem>
             <MenuItem>
               <Checkbox/>
-              <ListItemText primary = "Genre 2"/>
+              <ListItemText primary = "Neutral"/>
             </MenuItem>
             <MenuItem>
               <Checkbox/>
-              <ListItemText primary = "Genre 3"/>
+              <ListItemText primary = "Dislike"/>
             </MenuItem>
         </Select>
       </FormControl>
@@ -214,38 +215,16 @@ const Preferences = () => {
               Rating
             </Typography>
 
-            <Box
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-            flexDirection="column"
-          >
+            <Typography variant="h7" component="h7">
+              Maximum
+            </Typography>
+            <Rating name="half-rating" defaultValue={2.5} precision={0.5} />
 
+            <Typography variant="h7" component="h7">
+              Minimum
+            </Typography>
+            <Rating name="half-rating" defaultValue={2.5} precision={0.5} />
 
-            <FormControl sx={{ m: 1, width: 120 }}>
-        <InputLabel id="demo-multiple-checkbox-label"></InputLabel>
-        <Select>
-            <MenuItem>
-              <Checkbox/>
-              <ListItemText primary = "Range 1"/>
-            </MenuItem>
-            <MenuItem>
-              <Checkbox/>
-              <ListItemText primary = "Range 2"/>
-            </MenuItem>
-            <MenuItem>
-              <Checkbox/>
-              <ListItemText primary = "Range 3"/>
-            </MenuItem>
-        </Select>
-      </FormControl>
-
-
-
-
-
-
-          </Box>
 
           </Box>
           
