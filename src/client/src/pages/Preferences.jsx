@@ -1,24 +1,24 @@
 import {
   Box,
   Button,
-  Typography,
-  InputLabel,
   FormControl,
-  Select,
+  InputLabel,
   MenuItem,
   Rating,
+  Select,
+  Typography,
 } from '@mui/material';
-import React, { useEffect } from 'react';
-import Header from '../components/Header';
 import axios from 'axios';
+import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import { selectUid } from '../features/token/tokenSlice';
 import { useNavigate } from 'react-router-dom';
+import Header from '../components/Header';
+import { selectUid } from '../features/token/tokenSlice';
 
 const Preferences = () => {
   const API = `${process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'}`;
 
-  // This is gonna be an API call
+  // This is going to be an API call
   const genres = [
     'drama',
     'action',
@@ -98,7 +98,6 @@ const Preferences = () => {
   };
 
   const handleSave = (e) => {
-    // Call API Here
     const body = {
       uid: uid,
       likedGenres: likedGenres,

@@ -1,28 +1,27 @@
+import { Check, Clear } from '@mui/icons-material';
 import {
   Box,
   Button,
+  FormControl,
   IconButton,
+  InputLabel,
   List,
   ListItem,
   ListItemSecondaryAction,
   ListItemText,
-  Typography,
-  InputLabel,
   OutlinedInput,
-  FormControl,
+  Typography,
 } from '@mui/material';
-import React, { useEffect, useState } from 'react';
-import Header from '../components/Header';
+import axios from 'axios';
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import FriendsList from '../components/FriendsList';
 import GroupsList from '../components/GroupsList';
-import { Check, Clear } from '@mui/icons-material';
-import { useNavigate } from 'react-router-dom';
-import { useSelector } from 'react-redux';
-import axios from 'axios';
+import Header from '../components/Header';
 import { selectUid } from '../features/token/tokenSlice';
 
 const Social = () => {
-
   const [friendId, setFriendId] = React.useState('');
   const [friendIdForGroup, setFriendIdForGroup] = React.useState('');
   const [groupId, setgroupId] = React.useState('');
@@ -50,15 +49,13 @@ const Social = () => {
     setFriendId(e.target.value);
   };
 
-
   const sendFriendRequest = () => {
-    console.log(uid + " " +friendId);
     axios
       .post(`${homePageURI}/invites/friends/send`, {
         senderUid: uid,
         requestUid: friendId,
       })
-      .then((res) => {}) 
+      // .then((res) => {})
       .catch((e) => console.log(e));
   };
 
@@ -69,7 +66,7 @@ const Social = () => {
         requestUid: friendIdForGroup,
         groupId: groupId,
       })
-      .then((res) => {}) 
+      // .then((res) => {})
       .catch((e) => console.log(e));
   };
 
@@ -82,9 +79,7 @@ const Social = () => {
         alignItems="center"
         flexDirection="column"
         gap="5vh"
-        minHeight="75vh"
-      >
-        {/* TODO: Every button needs a handler */}
+        minHeight="75vh">
         <Typography variant="h4" component="h4">
           Social
         </Typography>
@@ -94,21 +89,18 @@ const Social = () => {
           justifyContent="center"
           alignItems="center"
           flexDirection="column"
-          sx={{ p: 2 }}
-        >
+          sx={{ p: 2 }}>
           <Box
             display="flex"
             justifyContent="center"
             alignItems="center"
             flexDirection="row"
-            gap="0%"
-          >
+            gap="0%">
             <Box
               display="flex"
               justifyContent="center"
               alignItems="center"
-              flexDirection="column"
-            >
+              flexDirection="column">
               <Typography variant="h6" component="h6">
                 Groups
               </Typography>
@@ -121,8 +113,7 @@ const Social = () => {
                 flexDirection="column"
                 padding="20px"
                 border="solid"
-                borderRadius="10px"
-              >
+                borderRadius="10px">
                 <GroupsList />
               </Box>
             </Box>
@@ -131,8 +122,7 @@ const Social = () => {
               display="flex"
               justifyContent="center"
               alignItems="center"
-              flexDirection="column"
-            >
+              flexDirection="column">
               <Typography variant="h6" component="h6">
                 Friends
               </Typography>
@@ -145,8 +135,7 @@ const Social = () => {
                 flexDirection="column"
                 padding="20px"
                 border="solid"
-                borderRadius="10px"
-              >
+                borderRadius="10px">
                 <FriendsList />
               </Box>
             </Box>
@@ -155,21 +144,19 @@ const Social = () => {
               display="flex"
               justifyContent="center"
               alignItems="center"
-              flexDirection="column"
-            >
+              flexDirection="column">
               <Typography variant="h6" component="h6">
                 Friend Requests
               </Typography>
 
               <List
                 sx={{
-                  width: "100%",
+                  width: '100%',
                   maxWidth: 200,
-                  bgcolor: "background.paper",
-                  border: "solid",
-                  borderRadius: "10px",
-                }}
-              >
+                  bgcolor: 'background.paper',
+                  border: 'solid',
+                  borderRadius: '10px',
+                }}>
                 {[0, 1, 2, 3].map((value) => {
                   const labelId = `invite-list-label-${value}`;
 
@@ -194,22 +181,17 @@ const Social = () => {
             </Box>
           </Box>
 
-          <Button variant="outlined" size="large" sx={{ m: 2 }}>
+          <Button variant="outlined" size="large" onClick={sendGroupRequest}>
             Invite to Group
           </Button>
         </Box>
-
-        <Button variant="outlined" size="large" onClick={sendGroupRequest}>
-          Invite to Group
-        </Button>
 
         <Box
           display="flex"
           justifyContent="center"
           alignItems="center"
           flexDirection="row"
-          gap="0%"
-        >
+          gap="0%">
           <FormControl variant="standard">
             <InputLabel htmlFor="outlined-adornment-group-name">
               Enter Username or Email...

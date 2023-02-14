@@ -39,6 +39,7 @@ export const addGroup = async (groupName: string, ownerUid: string) => {
   if (!docSnap.exists()) {
     await setDoc(docRef, {
       ownerUid,
+      groupId: id,
       groupName,
       users: [ownerUid],
       completedVotingSessions: [],

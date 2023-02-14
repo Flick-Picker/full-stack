@@ -7,9 +7,7 @@ import Header from '../components/Header';
 import { selectUid } from '../features/token/tokenSlice';
 
 const HomePage = () => {
-  const homePageURI = `${
-    process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'
-  }/api`;
+  const API = `${process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'}`;
 
   const [userGroups, setUserGroups] = React.useState();
   const uid = useSelector(selectUid);
@@ -18,11 +16,11 @@ const HomePage = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios
-      .get(`${homePageURI}/user/get?uid=${uid}`)
-      .then((res) => setUserGroups(res.data.groupsOwned)) // Change this to groupsJoined when fixed
+      axios
+      .get(`${API}/api/user/get?uid=${uid}`)
+      .then((res) => setUserGroups(res.data.groupsJoined))
       .catch((e) => console.log(e));
-  }, [homePageURI, uid]);
+  }, [API, uid]);
 
   const handleJoinGroupClick = (e) => {
     e.preventDefault();

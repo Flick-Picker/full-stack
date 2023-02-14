@@ -15,9 +15,7 @@ import Header from '../components/Header';
 import { selectUid } from '../features/token/tokenSlice';
 
 const CreateGroup = () => {
-  const createGroupURI = `${
-    process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'
-  }/api/group`;
+  const API = `${process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'}`;
 
   const [groupName, setGroupName] = React.useState('');
   const uid = useSelector(selectUid);
@@ -32,14 +30,18 @@ const CreateGroup = () => {
   const handleCreateGroup = (e) => {
     e.preventDefault();
     // Send invites to friends here too
-    const body = {
-      ownerUid: uid,
-      groupName,
-    };
-    axios
-      .post(`${createGroupURI}/new`, body)
-      .then(() => navigate('/home'))
-      .catch((e) => console.log(e));
+    if (uid) {
+      const body = {
+        ownerUid: uid,
+        groupName,
+      };
+      axios
+        .post(`${API}/api/group/new`, body)
+        .then(() => navigate('/home'))
+        .catch((e) => console.log(e));
+    } else {
+      console.log("uid isn't available in CreateGroup");
+    }
   };
 
   return (
