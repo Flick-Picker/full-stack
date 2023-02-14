@@ -92,6 +92,7 @@ export const addToGroup = async (userUid: string, groupId: string, isOwned: bool
     if (isOwned) {
       await updateDoc(docRef, {
         groupsOwned: arrayUnion(groupId),
+        groupsJoined: arrayUnion(groupId),
       });
     } else {
       await updateDoc(docRef, {
