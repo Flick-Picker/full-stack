@@ -20,6 +20,44 @@ export async function getUser(req: Request, res: Response) {
   }
 }
 
+export async function collectGroups(req: Request, res: Response) {
+  try {
+    const { uid } = req.query;
+    if (!uid) {
+      res.status(404).json({ error: 'Params not found' });
+      return;
+    }
+    if (typeof uid !== 'string') {
+      res.status(500).json({ error: 'Invalid params' });
+      return;
+    }
+    const user = await service.collectGroups(uid);
+    res.send(user);
+  } catch (err) {
+    console.log(err);
+    res.status(500).send(err);
+  }
+}
+
+export async function collectFriends(req: Request, res: Response) {
+  try {
+    const { uid } = req.query;
+    if (!uid) {
+      res.status(404).json({ error: 'Params not found' });
+      return;
+    }
+    if (typeof uid !== 'string') {
+      res.status(500).json({ error: 'Invalid params' });
+      return;
+    }
+    const user = await service.collectFriends(uid);
+    res.send(user);
+  } catch (err) {
+    console.log(err);
+    res.status(500).send(err);
+  }
+}
+
 export async function newUser(req: Request, res: Response) {
   try {
     const { uid, email } = req.body;

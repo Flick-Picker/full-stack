@@ -25,7 +25,6 @@ export async function addSessionForGroup(req: Request, res: Response) {
   try {
     const { groupId } = req.body;
     const recsnap = await service.addSessionForGroup(groupId);
-    console.log(recsnap);
     res.send(recsnap);
   } catch (err) {
     res.status(500).send(err);

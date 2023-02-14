@@ -103,3 +103,40 @@ export const addToGroup = async (userUid: string, groupId: string, isOwned: bool
   docSnap = await getDoc(docRef);
   return docSnap.data();
 };
+
+export const collectGroups = async (uid: string) => {
+  const docRef = doc(db, col, uid);
+  const docSnap = await getDoc(docRef);
+
+  if (docSnap.exists()) {
+    const groupsJoined = docSnap.get('groupsJoined');
+    const groupsJoinedData = [];
+
+    for (let i = 0; i < groupsJoined.length; i += 1) {
+      const groupRef = doc(db, 'group', groupsJoined[i]);
+      // eslint-disable-next-line no-await-in-loop
+      const groupSnap = await getDoc(groupRef);
+      groupsJoinedData.push(groupSnap.data());
+    }
+    return groupsJoinedData;
+  }
+  return {};
+};
+
+export const collectFriends = async (uid: string) => {
+  const docRef = doc(db, col, uid);
+  const docSnap = await getDoc(docRef);
+
+  if (docSnap.exists()) {
+    const friends = docSnap.get('friends');
+    const friendsData = [];
+    for (let i = 0; i < friends.length; i += 1) {
+      const friendRef = doc(db, col, friends[i]);
+      // eslint-disable-next-line no-await-in-loop
+      const friendSnap = await getDoc(friendRef);
+      friendsData.push(friendSnap.data());
+    }
+    return friendsData;
+  }
+  return {};
+};

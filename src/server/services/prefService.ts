@@ -48,17 +48,14 @@ export const addPref = async (uid: string) => {
   const docRef = doc(db, col, uid);
   let docSnap = await getDoc(docRef);
 
-  const userRef = await userService.getUserRef(uid);
-
   if (!docSnap.exists()) {
     await setDoc(docRef, {
-      uid,
-      userRef,
       likedGenres: [],
       dislikedGenres: [],
-      lengthRange: [],
-      preferredRatings: [],
-      dislikedMedia: [], // anime, movie, tv
+      preferredRatings: 1,
+      moviePreference: 1,
+      tvShowPreference: 1,
+      animePreference: 1,
     });
   }
   docSnap = await getDoc(docRef);

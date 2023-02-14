@@ -32,7 +32,7 @@ const GroupDetails = () => {
         groupId: state.groupId,
       })
       .then((res) => {
-        navigate('/group/vote');
+        navigate('/group/vote', { state: state });
       }) 
       .catch((e) => console.log(e));
   };

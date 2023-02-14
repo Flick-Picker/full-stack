@@ -80,9 +80,14 @@ export const getRecommendation = async (id: string, group: boolean) => {
   } else {
     preferences = await getPref(id);
   }
+  console.log(preferences);
   const batch: RecommendationObject[] = [];
   if (preferences.moviePreference >= 1) {
-    batch.concat(await algorithm(movieType, preferences));
+    try {
+      batch.concat(await algorithm(movieType, preferences));
+    } catch (err) {
+      console.log(err);
+    }
   }
   if (preferences.tvShowPreference >= 1) {
     batch.concat(await algorithm(tvShowType, preferences));
