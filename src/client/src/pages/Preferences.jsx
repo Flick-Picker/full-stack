@@ -10,7 +10,13 @@ import {
   InputLabel,
   OutlinedInput,
   FormControl,
+  FormGroup,
+  FormControlLabel,
+  Checkbox,
+  Select,
+  MenuItem,
 } from "@mui/material";
+
 import React from "react";
 import Header from "../components/Header";
 import FriendsList from "../components/FriendsList";
@@ -62,21 +68,37 @@ const Preferences = () => {
             flexDirection="column"
           >
             <Typography variant="h6" component="h6">
-              Friends
+              Genres
             </Typography>
 
-            <Box
-              display="flex"
-              gap="1vh"
-              justifyContent="center"
-              alignItems="center"
-              flexDirection="column"
-              padding="20px"
-              borderRadius="10px"
-            >
-              <FriendsList />
-            </Box>
+
+            <FormControl sx={{ m: 1, width: 300 }}>
+        <InputLabel id="demo-multiple-checkbox-label"></InputLabel>
+        <Select>
+            <MenuItem>
+              <Checkbox/>
+              <ListItemText primary = "Genre 1"/>
+            </MenuItem>
+            <MenuItem>
+              <Checkbox/>
+              <ListItemText primary = "Genre 2"/>
+            </MenuItem>
+            <MenuItem>
+              <Checkbox/>
+              <ListItemText primary = "Genre 3"/>
+            </MenuItem>
+        </Select>
+      </FormControl>
+
+
+
+
           </Box>
+
+
+
+
+
 
           <Box
             display="flex"
