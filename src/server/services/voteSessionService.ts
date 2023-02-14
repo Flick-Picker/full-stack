@@ -22,10 +22,40 @@ export const getSession = async (uid: string) => {
   return {};
 };
 
+const formatRecommendations = async (id: string, isGroup: boolean) => {
+  const recs = await getRecommendation(id, isGroup);
+
+  const formatrecs : VoteMediaRec[] = [];
+  recs.forEach((rec) => {
+    const r : any = rec;
+    r.hasVoteStarted = false;
+    r.hasVoteFinished = false;
+    r.userVotes = [] as UserVote[];
+    r.voteRanking = 0;
+    r.userVoteSet = [];
+    formatrecs.push(r as VoteMediaRec);
+  });
+  return formatrecs;
+};
+
+export const loadRecommendations = async (sessionId: string, id: string, isGroup: boolean) => {
+  const docRef = doc(db, col, sessionId);
+  let docSnap = await getDoc(docRef);
+  const recs = await formatRecommendations(id, isGroup);
+
+  if (docSnap.exists()) {
+    await updateDoc(docRef, {
+      recommendations: recs,
+    });
+  }
+  docSnap = await getDoc(docRef);
+  return docSnap.data();
+};
+
 export const addSessionForGroup = async (groupId: string) => {
   const id = uuidv4();
   const docRef = doc(db, col, id);
-  let docSnap = await getDoc(docRef);
+  const docSnap = await getDoc(docRef);
 
   const initialSession : VotingSession = {
     sessionId: id,
@@ -41,8 +71,9 @@ export const addSessionForGroup = async (groupId: string) => {
     await setDoc(docRef, initialSession);
     await groupService.addNewSessionToGroup(groupId, id);
   }
-  docSnap = await getDoc(docRef);
-  return docSnap.data();
+
+  const recsnap = loadRecommendations(id, groupId, true);
+  return recsnap;
 };
 
 export const addSessionForUser = async (userUid: string) => {
@@ -64,7 +95,8 @@ export const addSessionForUser = async (userUid: string) => {
     await setDoc(docRef, initialSession);
   }
   docSnap = await getDoc(docRef);
-  return docSnap.data();
+  const recsnap = loadRecommendations(id, userUid, false);
+  return recsnap;
 };
 
 export const finishSession = async (sessionId: string) => {
@@ -145,31 +177,6 @@ export const addMediaToHistory = async (sessionId: string, mediaName: string) =>
   return docSnap.data();
 };
 
-export const loadRecommendations = async (sessionId: string, id: string, isGroup: boolean) => {
-  const docRef = doc(db, col, sessionId);
-  let docSnap = await getDoc(docRef);
-  const recs = await getRecommendation(id, isGroup);
-
-  const formatrecs : VoteMediaRec[] = [];
-  recs.forEach((rec) => {
-    const r : any = rec;
-    r.hasVoteStarted = false;
-    r.hasVoteFinished = false;
-    r.userVotes = [] as UserVote[];
-    r.voteRanking = 0;
-    r.userVoteSet = [];
-    formatrecs.push(r as VoteMediaRec);
-  });
-
-  if (docSnap.exists()) {
-    await updateDoc(docRef, {
-      recommendations: formatrecs,
-    });
-  }
-  docSnap = await getDoc(docRef);
-  return docSnap.data();
-};
-
 export const computeMatch = async (sessionId: string) => {
   const docRef = doc(db, col, sessionId);
   const docSnap = await getDoc(docRef);
@@ -187,3 +194,5 @@ export const computeMatch = async (sessionId: string) => {
 
   return maxRec;
 };
+
+

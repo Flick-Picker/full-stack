@@ -39,6 +39,16 @@ export async function getFriendInvitesForUser(req: Request, res: Response) {
   }
 }
 
+export async function acceptFriendInvite(req: Request, res: Response) {
+  try {
+    const { inviteId, senderUid, requestUid } = req.body;
+    const invite = await service.acceptFriendInvite(inviteId, senderUid, requestUid);
+    res.send(invite);
+  } catch (err) {
+    res.status(500).send(err);
+  }
+}
+
 export async function getGroupInvitesForUser(req: Request, res: Response) {
   try {
     const { uid } = req.query;
@@ -58,7 +68,7 @@ export async function getGroupInvitesForUser(req: Request, res: Response) {
   }
 }
 
-export async function getGroupInvites(req: Request, res: Response) {
+export async function getGroupInvitesForGroup(req: Request, res: Response) {
   try {
     const { groupId } = req.query;
     if (!groupId) {
@@ -77,16 +87,6 @@ export async function getGroupInvites(req: Request, res: Response) {
   }
 }
 
-export async function acceptFriendInvite(req: Request, res: Response) {
-  try {
-    const { senderUid, requestUid } = req.body;
-    const invite = await service.acceptFriendInvite(senderUid, requestUid);
-    res.send(invite);
-  } catch (err) {
-    res.status(500).send(err);
-  }
-}
-
 export async function sendGroupInvite(req: Request, res: Response) {
   try {
     const { groupId, senderUid, requestUid } = req.body;
@@ -100,8 +100,8 @@ export async function sendGroupInvite(req: Request, res: Response) {
 
 export async function acceptGroupInvite(req: Request, res: Response) {
   try {
-    const { groupId, senderUid, requestUid } = req.body;
-    const invite = await service.acceptGroupInvite(groupId, senderUid, requestUid);
+    const { inviteId, groupId, senderUid, requestUid } = req.body;
+    const invite = await service.acceptGroupInvite(inviteId, groupId, senderUid, requestUid);
     res.send(invite);
   } catch (err) {
     res.status(500).send(err);
