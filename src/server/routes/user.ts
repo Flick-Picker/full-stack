@@ -10,5 +10,6 @@ router.get('/get', controller.getUser);
 router.post('/new', controller.newUser);
 router.post('/update', controller.postUser);
 router.post('/addfriend', controller.addFriend);
+router.post('/collectgroups', controller.collectGroups);
 
 module.exports = router;

@@ -27,6 +27,7 @@ const formatRecommendations = async (id: string, isGroup: boolean) => {
   let recs = [] as RecommendationObject[];
   try {
     recs = await getRecommendation(id, isGroup);
+    console.log(recs);
   } catch (err) {
     console.log(err);
   }

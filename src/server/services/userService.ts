@@ -103,3 +103,21 @@ export const addToGroup = async (userUid: string, groupId: string, isOwned: bool
   docSnap = await getDoc(docRef);
   return docSnap.data();
 };
+
+export const collectGroups = async (uid: string) => {
+  const docRef = doc(db, col, uid);
+  const docSnap = await getDoc(docRef);
+
+  if (docSnap.exists()) {
+    const groupsJoined = docSnap.get('groupsJoined');
+    const groupsJoinedData = [];
+    for (let i = 0; i < groupsJoined.length; i += 1) {
+      const groupRef = doc(db, col, uid);
+      // eslint-disable-next-line no-await-in-loop
+      const groupSnap = await getDoc(groupRef);
+      groupsJoinedData.push(groupSnap.data());
+    }
+    return groupsJoinedData;
+  }
+  return {};
+};
