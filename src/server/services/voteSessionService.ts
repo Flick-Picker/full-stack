@@ -6,6 +6,7 @@ import * as groupService from './groupService';
 import { VotingSession } from '../models/votingSessionModel';
 import { HistoryMedia, UserVote, VoteMediaRec } from '../models/voteMediaModel';
 import { getRecommendation } from './recommendationService';
+import RecommendationObject from '../classes/recommendationObject';
 
 const firebase = require('./firebase');
 
@@ -23,8 +24,13 @@ export const getSession = async (uid: string) => {
 };
 
 const formatRecommendations = async (id: string, isGroup: boolean) => {
-  const recs = await getRecommendation(id, isGroup);
-
+  let recs = [] as RecommendationObject[];
+  try {
+    recs = await getRecommendation(id, isGroup);
+  } catch (err) {
+    console.log(err);
+  }
+  console.log(recs);
   const formatrecs : VoteMediaRec[] = [];
   recs.forEach((rec) => {
     const r : any = rec;
@@ -42,6 +48,7 @@ export const loadRecommendations = async (sessionId: string, id: string, isGroup
   const docRef = doc(db, col, sessionId);
   let docSnap = await getDoc(docRef);
   const recs = await formatRecommendations(id, isGroup);
+  console.log(recs);
 
   if (docSnap.exists()) {
     await updateDoc(docRef, {

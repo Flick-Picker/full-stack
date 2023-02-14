@@ -11,7 +11,7 @@ router.get('/get', controller.getSession);
 router.post('/finish', controller.finishSession);
 router.post('/recommendations/group', controller.loadRecommendationsForGroup);
 router.post('/recommendations/user', controller.loadRecommendationsForUser);
-router.post('/new/group', controller.addSessionForGroup);
+router.post('/new/group', controller.addSessionForGroup); // also loads recs
 router.post('/new/user', controller.addSessionForUser);
 router.post('/submitvote', controller.submitUserVote);
 router.post('/match', controller.computeMatch);
