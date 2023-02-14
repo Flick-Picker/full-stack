@@ -1,5 +1,5 @@
 export interface Preference {
-  email: string;
+  uid: string;
   likedGenres: string[];
   dislikedGenres: string[];
   preferredRatings: number;

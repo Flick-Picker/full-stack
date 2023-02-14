@@ -50,12 +50,14 @@ export const addPref = async (uid: string) => {
 
   if (!docSnap.exists()) {
     await setDoc(docRef, {
+      uid,
       likedGenres: [],
       dislikedGenres: [],
-      preferredRatings: 1,
-      moviePreference: 1,
-      tvShowPreference: 1,
+      lengthRange: [],
+      preferredRatings: [],
       animePreference: 1,
+      tvShowPreference: 1,
+      moviePreference: 1,
     });
   }
   docSnap = await getDoc(docRef);
@@ -63,7 +65,7 @@ export const addPref = async (uid: string) => {
 };
 
 export const updatePref = async (prefData: Preference) => {
-  const docRef = doc(db, col, prefData.email);
+  const docRef = doc(db, col, prefData.uid);
   let docSnap = await getDoc(docRef);
 
   if (docSnap.exists()) {

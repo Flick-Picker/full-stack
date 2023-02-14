@@ -1,6 +1,6 @@
 import { Box, Button, Typography } from '@mui/material';
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
@@ -11,7 +11,7 @@ const HomePage = () => {
     process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'
   }/api`;
 
-  const [userGroups, setUserGroups] = useState();
+  const [userGroups, setUserGroups] = React.useState();
   const uid = useSelector(selectUid);
 
   // React-Router Navigation
