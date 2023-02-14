@@ -10,26 +10,67 @@ import {
   InputLabel,
   OutlinedInput,
   FormControl,
-} from "@mui/material";
-import React from "react";
-import Header from "../components/Header";
-import FriendsList from "../components/FriendsList";
-import GroupsList from "../components/GroupsList";
-import { Check, Clear } from "@mui/icons-material";
-import { useNavigate } from "react-router-dom";
+} from '@mui/material';
+import React, { useEffect, useState } from 'react';
+import Header from '../components/Header';
+import FriendsList from '../components/FriendsList';
+import GroupsList from '../components/GroupsList';
+import { Check, Clear } from '@mui/icons-material';
+import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import axios from 'axios';
+import { selectUid } from '../features/token/tokenSlice';
 
 const Social = () => {
+
+  const [friendId, setFriendId] = React.useState('');
+  const [friendIdForGroup, setFriendIdForGroup] = React.useState('');
+  const [groupId, setgroupId] = React.useState('');
+  const uid = useSelector(selectUid);
+
+  const homePageURI = `${
+    process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'
+  }/api`;
+
   // React-Router Navigation
   const navigate = useNavigate();
 
   const handleJoinGroupClick = (e) => {
     e.preventDefault();
-    navigate("/group/join");
+    navigate('/group/join');
   };
 
   const handleCreateGroupClick = (e) => {
     e.preventDefault();
-    navigate("/group/create");
+    navigate('/group/create');
+  };
+
+  const handleEmailChange = (e) => {
+    e.preventDefault();
+    setFriendId(e.target.value);
+  };
+
+
+  const sendFriendRequest = () => {
+    console.log(uid + " " +friendId);
+    axios
+      .post(`${homePageURI}/invites/friends/send`, {
+        senderUid: uid,
+        requestUid: friendId,
+      })
+      .then((res) => {}) 
+      .catch((e) => console.log(e));
+  };
+
+  const sendGroupRequest = () => {
+    axios
+      .post(`${homePageURI}/invites/group/send`, {
+        senderUid: uid,
+        requestUid: friendIdForGroup,
+        groupId: groupId,
+      })
+      .then((res) => {}) 
+      .catch((e) => console.log(e));
   };
 
   return (
@@ -158,6 +199,10 @@ const Social = () => {
           </Button>
         </Box>
 
+        <Button variant="outlined" size="large" onClick={sendGroupRequest}>
+          Invite to Group
+        </Button>
+
         <Box
           display="flex"
           justifyContent="center"
@@ -167,16 +212,18 @@ const Social = () => {
         >
           <FormControl variant="standard">
             <InputLabel htmlFor="outlined-adornment-group-name">
-              Enter user
+              Enter Username or Email...
             </InputLabel>
             <OutlinedInput
               id="outlined-adornment-group-name"
-              sx={{ width: "25ch" }}
+              sx={{ width: '25ch' }}
+              onChange={(e) => handleEmailChange(e)}
               label="Email"
+              value={friendId}
             />
           </FormControl>
 
-          <Button variant="outlined" size="large">
+          <Button variant="outlined" size="large" onClick={sendFriendRequest}>
             Send Friend Request
           </Button>
         </Box>

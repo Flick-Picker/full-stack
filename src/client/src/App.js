@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import { init } from './features/token/tokenSlice';
 
 function App() {
-  const AppURI = process.env.REACT_APP_FRONTEND_URI || 'http://localhost:8080';
+  const AppURI = process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080';
 
   // Redux Global State
   const dispatch = useDispatch();

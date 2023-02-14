@@ -8,7 +8,7 @@ import { selectUid } from '../features/token/tokenSlice';
 
 const HomePage = () => {
   const homePageURI = `${
-    process.env.REACT_APP_FRONTEND_URI || 'http://localhost:8080'
+    process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'
   }/api`;
 
   const [userGroups, setUserGroups] = useState();
@@ -35,7 +35,7 @@ const HomePage = () => {
   };
 
   const handleGoToGroupClick = (groupId) => {
-    navigate('/group/vote', { state: { groupId } });
+    navigate('/group', { state: { groupId } });
   };
 
   return (

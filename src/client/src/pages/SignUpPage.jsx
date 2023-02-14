@@ -16,7 +16,7 @@ import auth from '..';
 
 const SignUpPage = () => {
   const signUpURI = `${
-    process.env.REACT_APP_FRONTEND_URI || 'http://localhost:8080'
+    process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'
   }/api/user`;
 
   // Page Specific State
