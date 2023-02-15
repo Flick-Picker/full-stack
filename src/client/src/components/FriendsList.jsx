@@ -12,26 +12,26 @@ import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { selectUid } from '../features/token/tokenSlice';
 
-const FriendsList = () => {
+const FriendsList = ({ setFriendIdsForGroup }) => {
   const API = `${process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'}`;
 
-  const [friendsList, setFriendsList] = React.useState([]);
   const [checked, setChecked] = React.useState([]);
+  const [friendsList, setFriendsList] = React.useState([]);
 
   const uid = useSelector(selectUid);
 
   useEffect(() => {
     if (uid) {
       axios
-        .get(`${API}/api/user/get?uid=${uid}`)
+        .get(`${API}/api/user/collectfriends?uid=${uid}`)
         .then((res) => {
-          setFriendsList(res.data.friends);
+          setFriendsList(res.data);
         })
         .catch((e) => console.log(e));
     } else {
-      console.log("uid isn't available in GroupsList");
+      console.log("uid isn't available in FriendsList");
     }
-  });
+  }, [API, uid]);
 
   const handleToggle = (value) => () => {
     const currentIndex = checked.indexOf(value);
@@ -44,6 +44,7 @@ const FriendsList = () => {
     }
 
     setChecked(newChecked);
+    setFriendIdsForGroup(newChecked);
   };
 
   return (
@@ -51,22 +52,21 @@ const FriendsList = () => {
       disablePadding
       sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
       {friendsList.length !== 0 ? (
-        friendsList.map((value) => {
-          const labelId = `checkbox-list-label-${value}`;
-          
+        friendsList.map((friend, i) => {
+          const labelId = `friend-checkbox-label-${i}`;
+
           return (
-            <ListItem key={value}>
-              <ListItemButton role={undefined} onClick={handleToggle(value)}>
+            <ListItem key={friend}>
+              <ListItemButton onClick={handleToggle(friend)}>
                 <ListItemIcon>
                   <Checkbox
                     edge="start"
-                    checked={checked.indexOf(value) !== -1}
+                    checked={checked.indexOf(friend) !== -1}
                     tabIndex={-1}
-                    disableRipple
                     inputProps={{ 'aria-labelledby': labelId }}
                   />
                 </ListItemIcon>
-                <ListItemText id={labelId} primary={`Friend ${value + 1}`} />
+                <ListItemText id={labelId} primary={friend.email} />
               </ListItemButton>
             </ListItem>
           );

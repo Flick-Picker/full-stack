@@ -13,61 +13,89 @@ import {
   Typography,
 } from '@mui/material';
 import axios from 'axios';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import FriendsList from '../components/FriendsList';
 import GroupsList from '../components/GroupsList';
 import Header from '../components/Header';
-import { selectUid } from '../features/token/tokenSlice';
+import { selectEmail, selectUid } from '../features/token/tokenSlice';
 
 const Social = () => {
-  const [friendId, setFriendId] = React.useState('');
-  const [friendIdForGroup, setFriendIdForGroup] = React.useState('');
-  const [groupId, setgroupId] = React.useState('');
+  const API = `${process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'}`;
+
+  const [selectedGroup, setSelectedGroup] = React.useState('');
+  const [friendField, setFriendField] = React.useState('');
+  const [friendInvites, setFriendInvites] = React.useState();
+  const [friendIdsForGroup, setFriendIdsForGroup] = React.useState([]);
+
   const uid = useSelector(selectUid);
+  const email = useSelector(selectEmail);
 
-  const homePageURI = `${
-    process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'
-  }/api`;
-
-  // React-Router Navigation
   const navigate = useNavigate();
 
-  const handleJoinGroupClick = (e) => {
+  useEffect(() => {
+    axios
+      .get(`${API}/api/invites/friends/getforuser?uid=${uid}`)
+      .then((res) => setFriendInvites(res.data))
+      .catch((e) => console.log(e));
+  }, [API, uid]);
+
+  const handleFriendInputChange = (e) => {
     e.preventDefault();
-    navigate('/group/join');
+    setFriendField(e.target.value);
   };
 
-  const handleCreateGroupClick = (e) => {
-    e.preventDefault();
-    navigate('/group/create');
+  const handleAcceptFriend = (inv, i) => {
+    const body = {
+      inviteId: inv.inviteId,
+      senderUid: inv.senderUser,
+      requestUid: inv.requestedUser,
+    };
+    axios
+      .post(`${API}/api/invites/friends/accept`, body)
+      .then(() => {
+        const newArray = friendInvites.splice(i, 1);
+        setFriendInvites(newArray);
+      })
+      .catch((e) => console.log(e));
   };
 
-  const handleEmailChange = (e) => {
-    e.preventDefault();
-    setFriendId(e.target.value);
-  };
+  const handleDeclineFriend = (inv) => {};
 
   const sendFriendRequest = () => {
     axios
-      .post(`${homePageURI}/invites/friends/send`, {
+      .post(`${API}/api/invites/friends/send`, {
         senderUid: uid,
-        requestUid: friendId,
+        senderEmail: email,
+        requestUid: friendField,
       })
-      // .then((res) => {})
+      .then(() => setFriendField(''))
       .catch((e) => console.log(e));
   };
 
   const sendGroupRequest = () => {
-    axios
-      .post(`${homePageURI}/invites/group/send`, {
-        senderUid: uid,
-        requestUid: friendIdForGroup,
-        groupId: groupId,
-      })
-      // .then((res) => {})
-      .catch((e) => console.log(e));
+    // Create better error handling
+    if (!selectedGroup) {
+      alert('need to select a group');
+      return;
+    }
+    if (!friendIdsForGroup && friendIdsForGroup.length === 0) {
+      alert('need to select atleast 1 friend');
+      return;
+    }
+
+    friendIdsForGroup.forEach((friendToInvite) => {
+      axios
+        .post(`${API}/api/invites/groups/send`, {
+          senderUid: uid,
+          requestUid: friendToInvite.uid,
+          groupId: selectedGroup.groupId,
+          groupName: selectedGroup.groupName,
+        })
+        .catch((e) => console.log(e));
+    });
+    navigate('/home');
   };
 
   return (
@@ -83,130 +111,105 @@ const Social = () => {
         <Typography variant="h4" component="h4">
           Social
         </Typography>
-
-        <Box
-          display="flex"
-          justifyContent="center"
-          alignItems="center"
-          flexDirection="column"
-          sx={{ p: 2 }}>
+        <GroupsList
+          selectedGroup={selectedGroup}
+          setSelectedGroup={setSelectedGroup}
+        />
+        <Box display="flex" alignItems="flex-start" flexDirection="row">
           <Box
             display="flex"
             justifyContent="center"
             alignItems="center"
-            flexDirection="row"
-            gap="0%">
+            flexDirection="column">
+            <Typography variant="h5" component="h5">
+              Friends
+            </Typography>
             <Box
               display="flex"
+              gap="1vh"
               justifyContent="center"
               alignItems="center"
-              flexDirection="column">
-              <Typography variant="h6" component="h6">
-                Groups
-              </Typography>
-
-              <Box
-                display="flex"
-                gap="1vh"
-                justifyContent="center"
-                alignItems="center"
-                flexDirection="column"
-                padding="20px"
-                border="solid"
-                borderRadius="10px">
-                <GroupsList />
-              </Box>
+              flexDirection="column"
+              padding="20px"
+              border="solid"
+              borderRadius="10px">
+              <FriendsList setFriendIdsForGroup={setFriendIdsForGroup} />
             </Box>
+          </Box>
 
+          {friendInvites && friendInvites.length !== 0 ? (
             <Box
               display="flex"
               justifyContent="center"
               alignItems="center"
               flexDirection="column">
-              <Typography variant="h6" component="h6">
-                Friends
-              </Typography>
-
-              <Box
-                display="flex"
-                gap="1vh"
-                justifyContent="center"
-                alignItems="center"
-                flexDirection="column"
-                padding="20px"
-                border="solid"
-                borderRadius="10px">
-                <FriendsList />
-              </Box>
-            </Box>
-
-            <Box
-              display="flex"
-              justifyContent="center"
-              alignItems="center"
-              flexDirection="column">
-              <Typography variant="h6" component="h6">
+              <Typography variant="h5" component="h5">
                 Friend Requests
               </Typography>
-
               <List
                 sx={{
-                  width: '100%',
-                  maxWidth: 200,
-                  bgcolor: 'background.paper',
+                  width: '225px',
                   border: 'solid',
                   borderRadius: '10px',
                 }}>
-                {[0, 1, 2, 3].map((value) => {
-                  const labelId = `invite-list-label-${value}`;
-
+                {friendInvites.map((friendInvite, i) => {
                   return (
-                    <ListItem key={value} role={undefined} dense>
+                    <ListItem key={i} dense>
                       <ListItemSecondaryAction>
-                        <IconButton edge="end" aria-label="accept">
+                        <IconButton
+                          edge="end"
+                          aria-label="accept"
+                          onClick={() => {
+                            handleAcceptFriend(friendInvite, i);
+                          }}>
                           <Check />
                         </IconButton>
-                        <IconButton edge="end" aria-label="decline">
+                        <IconButton
+                          edge="end"
+                          aria-label="decline"
+                          onClick={() => {
+                            handleDeclineFriend(friendInvite, i);
+                          }}>
                           <Clear />
                         </IconButton>
                       </ListItemSecondaryAction>
                       <ListItemText
-                        id={labelId}
-                        primary={`Invite ${value + 1}`}
+                        id={`friend-invite-${i}`}
+                        primary={friendInvite.senderEmail}
                       />
                     </ListItem>
                   );
                 })}
               </List>
             </Box>
-          </Box>
-
-          <Button variant="outlined" size="large" onClick={sendGroupRequest}>
-            Invite to Group
-          </Button>
+          ) : (
+            <></>
+          )}
         </Box>
+        <Button
+          variant="outlined"
+          size="large"
+          onClick={sendGroupRequest}
+          // disabled={!selectedGroup && !(friendIdsForGroup && friendIdsForGroup.length === 0)}
+        >
+          Invite to Group
+        </Button>
 
-        <Box
-          display="flex"
-          justifyContent="center"
-          alignItems="center"
-          flexDirection="row"
-          gap="0%">
+        <Box display="flex">
           <FormControl variant="standard">
-            <InputLabel htmlFor="outlined-adornment-group-name">
+            <InputLabel id="send-friend-request-input-label">
               Enter Username or Email...
             </InputLabel>
             <OutlinedInput
-              id="outlined-adornment-group-name"
+              labelId="send-friend-request-input-label"
+              id="end-friend-request-input"
               sx={{ width: '25ch' }}
-              onChange={(e) => handleEmailChange(e)}
-              label="Email"
-              value={friendId}
+              onChange={(e) => handleFriendInputChange(e)}
+              value={friendField}
             />
           </FormControl>
-
           <Button variant="outlined" size="large" onClick={sendFriendRequest}>
-            Send Friend Request
+            Send
           </Button>
         </Box>
       </Box>

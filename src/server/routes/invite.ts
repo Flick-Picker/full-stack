@@ -6,7 +6,6 @@ const router = express.Router();
 router.get('/', (req, res) => {
   res.send('Invite endpoint');
 });
-
 router.get('/get', controller.getInvite);
 router.get('/friends/getforuser', controller.getFriendInvitesForUser);
 router.get('/group/getforuser', controller.getGroupInvitesForUser);

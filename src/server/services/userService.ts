@@ -1,5 +1,11 @@
 import {
-  getFirestore, getDoc, setDoc, doc, updateDoc, arrayUnion, DocumentReference,
+  getFirestore,
+  getDoc,
+  setDoc,
+  doc,
+  updateDoc,
+  arrayUnion,
+  DocumentReference,
 } from 'firebase/firestore/lite';
 import { User } from '../models/userModel';
 
@@ -20,7 +26,7 @@ export const getUser = async (uid: string) => {
 };
 
 export const getUserRef = async (uid: string) => {
-  const docRef : DocumentReference = doc(db, col, uid);
+  const docRef: DocumentReference = doc(db, col, uid);
   const docSnap = await getDoc(docRef);
 
   if (docSnap.exists()) {
@@ -84,7 +90,11 @@ export const addFriend = async (userUid: string, friendUid: string) => {
 };
 
 // adding to group
-export const addToGroup = async (userUid: string, groupId: string, isOwned: boolean) => {
+export const addToGroup = async (
+  userUid: string,
+  groupId: string,
+  isOwned: boolean,
+) => {
   const docRef = doc(db, col, userUid);
   let docSnap = await getDoc(docRef);
 

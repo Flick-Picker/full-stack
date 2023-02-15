@@ -10,15 +10,16 @@ const HomePage = () => {
   const API = `${process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'}`;
 
   const [userGroups, setUserGroups] = React.useState();
-  const uid = useSelector(selectUid);
 
-  // React-Router Navigation
   const navigate = useNavigate();
+  const uid = useSelector(selectUid);
 
   useEffect(() => {
       axios
-      .get(`${API}/api/user/get?uid=${uid}`)
-      .then((res) => setUserGroups(res.data.groupsJoined))
+      .get(`${API}/api/user/collectgroups?uid=${uid}`)
+      .then((res) => {
+        setUserGroups(res.data)
+      })
       .catch((e) => console.log(e));
   }, [API, uid]);
 
@@ -55,13 +56,13 @@ const HomePage = () => {
         </Button>
         <Box>
           {userGroups ? (
-            userGroups.map((groupId, i) => {
+            userGroups.map((group, i) => {
               return (
                 <Button
                   key={i}
                   variant="outlined"
-                  onClick={() => handleGoToGroupClick(groupId)}>
-                  {groupId}
+                  onClick={() => handleGoToGroupClick(group.groupId)}>
+                  {group.groupName}
                 </Button>
               );
             })
