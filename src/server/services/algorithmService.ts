@@ -37,8 +37,10 @@ const movieAlgorithm = async (preferences: PreferenceObject) => {
       isRatingHighEnough = -1;
     }
 
-    const rating = genreRating + isRatingHighEnough;
-    batch.push(new RecommendationObject(movie.name, movie.imageURL, rating));
+    const rating = (genreRating + isRatingHighEnough) * Math.sqrt(preferences.moviePreference);
+    if (rating > 0) {
+      batch.push(new RecommendationObject(movie.name, movie.imageURL, rating));
+    }
   });
   return batch;
 };
@@ -70,8 +72,10 @@ const tvShowAlgorithm = async (preferences: PreferenceObject) => {
       isRatingHighEnough = -1;
     }
 
-    const rating = genreRating + isRatingHighEnough;
-    batch.push(new RecommendationObject(tvShow.name, tvShow.imageURL, rating));
+    const rating = (genreRating + isRatingHighEnough) * Math.sqrt(preferences.tvShowPreference);
+    if (rating > 0) {
+      batch.push(new RecommendationObject(tvShow.name, tvShow.imageURL, rating));
+    }
   });
   return batch;
 };
@@ -82,17 +86,13 @@ const animeTVAlgorithm = async (preferences: PreferenceObject) => {
     let genreRating = 0;
     animeTVShow.genres.forEach((curAnimeTVGenre) => {
       let isGenreLiked = 0;
-      preferences.likedGenres.forEach((likedGenre) => {
-        if (likedGenre === curAnimeTVGenre) {
-          isGenreLiked = 1;
-        }
-      });
+      if (preferences.likedGenres.includes(curAnimeTVGenre.toLowerCase())) {
+        isGenreLiked = 1;
+      }
       if (isGenreLiked !== 1) {
-        preferences.dislikedGenres.forEach((dislikedGenre) => {
-          if (dislikedGenre === curAnimeTVGenre) {
-            isGenreLiked = -1;
-          }
-        });
+        if (preferences.dislikedGenres.includes(curAnimeTVGenre.toLowerCase())) {
+          isGenreLiked = -1;
+        }
       }
       genreRating += isGenreLiked;
     });
@@ -103,8 +103,10 @@ const animeTVAlgorithm = async (preferences: PreferenceObject) => {
       isRatingHighEnough = -1;
     }
 
-    const rating = genreRating + isRatingHighEnough;
-    batch.push(new RecommendationObject(animeTVShow.name, animeTVShow.imageURL, rating));
+    const rating = (genreRating + isRatingHighEnough) * Math.sqrt(preferences.animePreference);
+    if (rating > 0) {
+      batch.push(new RecommendationObject(animeTVShow.name, animeTVShow.imageURL, rating));
+    }
   });
   return batch;
 };
@@ -136,8 +138,10 @@ const animeMovieAlgorithm = async (preferences: PreferenceObject) => {
       isRatingHighEnough = -1;
     }
 
-    const rating = genreRating + isRatingHighEnough;
-    batch.push(new RecommendationObject(animeMovie.name, animeMovie.imageURL, rating));
+    const rating = (genreRating + isRatingHighEnough) * Math.sqrt(preferences.animePreference);
+    if (rating > 0) {
+      batch.push(new RecommendationObject(animeMovie.name, animeMovie.imageURL, rating));
+    }
   });
   return batch;
 };
@@ -159,5 +163,6 @@ export const algorithm = async (type: number, preferences: PreferenceObject) => 
     // call anime movie algo
     return animeMovieAlgorithm(preferences);
   }
+  console.log(`algorithm called with unknown type: ${type}`);
   return [];
 };
