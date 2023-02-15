@@ -74,7 +74,6 @@ const SignUpPage = () => {
           return axios.post(`${signUpURI}/new`, body);
         })
         .then((res) => {
-          console.log(res.data);
           const user = res.data;
           setUid(user.uid);
           // Signed in

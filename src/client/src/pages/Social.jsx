@@ -65,10 +65,14 @@ const Social = () => {
 
   const sendFriendRequest = () => {
     axios
-      .post(`${API}/api/invites/friends/send`, {
-        senderUid: uid,
-        senderEmail: email,
-        requestUid: friendField,
+      .get(`${API}/api/user/query?identifier=${friendField}`)
+      .then((res) => {
+        const requestUser = res.data;
+        return axios.post(`${API}/api/invites/friends/send`, {
+          senderUid: uid,
+          senderEmail: email,
+          requestUid: requestUser.uid,
+        });
       })
       .then(() => setFriendField(''))
       .catch((e) => console.log(e));
@@ -107,7 +111,8 @@ const Social = () => {
         alignItems="center"
         flexDirection="column"
         gap="5vh"
-        minHeight="75vh">
+        minHeight="75vh"
+      >
         <Typography variant="h4" component="h4">
           Social
         </Typography>
@@ -120,7 +125,8 @@ const Social = () => {
             display="flex"
             justifyContent="center"
             alignItems="center"
-            flexDirection="column">
+            flexDirection="column"
+          >
             <Typography variant="h5" component="h5">
               Friends
             </Typography>
@@ -132,7 +138,8 @@ const Social = () => {
               flexDirection="column"
               padding="20px"
               border="solid"
-              borderRadius="10px">
+              borderRadius="10px"
+            >
               <FriendsList setFriendIdsForGroup={setFriendIdsForGroup} />
             </Box>
           </Box>
@@ -142,7 +149,8 @@ const Social = () => {
               display="flex"
               justifyContent="center"
               alignItems="center"
-              flexDirection="column">
+              flexDirection="column"
+            >
               <Typography variant="h5" component="h5">
                 Friend Requests
               </Typography>
@@ -151,7 +159,8 @@ const Social = () => {
                   width: '225px',
                   border: 'solid',
                   borderRadius: '10px',
-                }}>
+                }}
+              >
                 {friendInvites.map((friendInvite, i) => {
                   return (
                     <ListItem key={i} dense>
@@ -161,7 +170,8 @@ const Social = () => {
                           aria-label="accept"
                           onClick={() => {
                             handleAcceptFriend(friendInvite, i);
-                          }}>
+                          }}
+                        >
                           <Check />
                         </IconButton>
                         <IconButton
@@ -169,7 +179,8 @@ const Social = () => {
                           aria-label="decline"
                           onClick={() => {
                             handleDeclineFriend(friendInvite, i);
-                          }}>
+                          }}
+                        >
                           <Clear />
                         </IconButton>
                       </ListItemSecondaryAction>
