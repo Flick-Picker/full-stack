@@ -1,55 +1,52 @@
-import {
-    Checkbox,
-    Radio,
-    RadioGroup,
-    List,
-    ListItem,
-    ListItemButton,
-    ListItemIcon,
-    ListItemText,
-  } from '@mui/material';
-  import React from 'react';
-  
-  const GroupsList = () => {
-    const [checked, setChecked] = React.useState([]);
-  
-    const handleToggle = (value) => () => {
-      const currentIndex = checked.indexOf(value);
-      const newChecked = [...checked];
-  
-      if (currentIndex === -1) {
-        newChecked.push(value);
-      } else {
-        newChecked.splice(currentIndex, 1);
-      }
-  
-      setChecked(newChecked);
-    };
-  
-    return (
-      <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
-        {[0, 1, 2, 3].map((value) => {
-          const labelId = `checkbox-list-label-${value}`;
-  
-          return (
-            <ListItem key={value} disablePadding>
-              <ListItemButton role={undefined} onClick={handleToggle(value)}>
-                <ListItemIcon>
-                  <Radio
-                    edge="start"
-                    checked={checked.indexOf(value) !== -1}
-                    tabIndex={-1}
-                    disableRipple
-                    inputProps={{ 'aria-labelledby': labelId }}
-                  />
-                </ListItemIcon>
-                <ListItemText id={labelId} primary={`Group ${value + 1}`} />
-              </ListItemButton>
-            </ListItem>
-          );
-        })}
-      </List>
-    );
+import { FormControl, InputLabel, MenuItem, Select, Typography } from '@mui/material';
+import axios from 'axios';
+import React, { useEffect } from 'react';
+import { useSelector } from 'react-redux';
+import { selectUid } from '../features/token/tokenSlice';
+
+const GroupsList = ({ setSelectedGroup }) => {
+  const API = `${process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'}`;
+
+  const [userGroups, setUserGroups] = React.useState();
+
+  const uid = useSelector(selectUid);
+
+  useEffect(() => {
+    axios
+      .get(`${API}/api/user/collectgroups?uid=${uid}`)
+      .then((res) => {
+        setUserGroups(res.data);
+      })
+      .catch((e) => console.log(e));
+  }, [API, uid]);
+
+  const handleChange = (e) => {
+    setSelectedGroup(userGroups[e.target.value]);
   };
-  
-  export default GroupsList;
+
+  return userGroups ? (
+    <FormControl>
+      <InputLabel id='group-select-label'>Group</InputLabel>
+      <Select
+        labelId='group-select-label'
+        id="group-select"
+        defaultValue={''}
+        onChange={handleChange}
+        sx={{width: '175px'}}
+        label="Group">
+          <MenuItem value=''><em>None Selected</em></MenuItem>
+          {userGroups.map((group, i) => {
+            return (
+              <MenuItem value={i}>{group.groupName}</MenuItem>
+            )
+          })}
+      </Select>
+    </FormControl>
+  ) : (
+    <Typography variant="h6" component="h6">
+      You currently have no groups. Create or join a group to get started.
+    </Typography>
+  );
+};
+
+export default GroupsList;

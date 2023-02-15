@@ -22,16 +22,16 @@ export async function getInvite(req: Request, res: Response) {
 
 export async function sendFriendInvite(req: Request, res: Response) {
   try {
-    const { senderUid, requestUid } = req.body;
-    if (!senderUid || !requestUid) {
+    const { senderUid, senderEmail, requestUid } = req.body;
+    if (!senderUid || !senderEmail || !requestUid) {
       res.status(404).json({ error: 'Params not found' });
       return;
     }
-    if (typeof senderUid !== 'string' || typeof requestUid !== 'string') {
+    if (typeof senderUid !== 'string' || typeof senderEmail !== 'string' || typeof requestUid !== 'string') {
       res.status(500).json({ error: 'Invalid params' });
       return;
     }
-    const invite = await service.sendFriendInvite(senderUid, requestUid);
+    const invite = await service.sendFriendInvite(senderUid, senderEmail, requestUid);
     res.send(invite);
   } catch (err) {
     console.log(err);
@@ -108,8 +108,10 @@ export async function getGroupInvitesForGroup(req: Request, res: Response) {
 
 export async function sendGroupInvite(req: Request, res: Response) {
   try {
-    const { groupId, senderUid, requestUid } = req.body;
-    const invite = await service.sendGroupInvite(groupId, senderUid, requestUid);
+    const {
+      groupId, groupName, senderUid, requestUid,
+    } = req.body;
+    const invite = await service.sendGroupInvite(groupId, groupName, senderUid, requestUid);
     res.send(invite);
   } catch (err) {
     console.log(err);
@@ -119,7 +121,9 @@ export async function sendGroupInvite(req: Request, res: Response) {
 
 export async function acceptGroupInvite(req: Request, res: Response) {
   try {
-    const { inviteId, groupId, senderUid, requestUid } = req.body;
+    const {
+      inviteId, groupId, senderUid, requestUid,
+    } = req.body;
     const invite = await service.acceptGroupInvite(inviteId, groupId, senderUid, requestUid);
     res.send(invite);
   } catch (err) {

@@ -7,11 +7,45 @@ import {
   ListItemText,
   Typography,
 } from '@mui/material';
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from '../components/Header';
 import { Check, Clear } from '@mui/icons-material';
+import axios from 'axios';
+import { useSelector } from 'react-redux';
+import { selectUid } from '../features/token/tokenSlice';
 
 const JoinGroup = () => {
+  const API = `${process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'}`;
+
+  const [groupInvites, setGroupInvites] = React.useState();
+
+  const uid = useSelector(selectUid);
+
+  useEffect(() => {
+    axios
+      .get(`${API}/api/invites/group/getforuser?uid=${uid}`)
+      .then((res) => setGroupInvites(res.data))
+      .catch((e) => console.log(e));
+  }, [API, uid]);
+
+  const handleAcceptGroup = (inv, i) => {
+    const body = {
+      inviteId: inv.inviteId,
+      groupId: inv.groupId,
+      senderUid: inv.senderUser,
+      requestUid: inv.requestedUser,
+    };
+    axios
+      .post(`${API}/api/invites/groups/accept`, body)
+      .then(() => {
+        const newArray = groupInvites.splice(i, 1);
+        setGroupInvites(newArray);
+      })
+      .catch((e) => console.log(e));
+  }
+
+  const handleDeclineGroup = (inv, i) => {};
+
   return (
     <Box>
       <Header />
@@ -27,32 +61,43 @@ const JoinGroup = () => {
         <Typography variant="h4" component="h4">
           Join Group
         </Typography>
-        <List
-          sx={{
-            width: '100%',
-            maxWidth: 200,
-            bgcolor: 'background.paper',
-            border: 'solid',
-            borderRadius: '10px',
-          }}>
-          {[0, 1, 2, 3].map((value) => {
-            const labelId = `invite-list-label-${value}`;
-
-            return (
-              <ListItem key={value} role={undefined} dense>
-                <ListItemSecondaryAction>
-                  <IconButton edge="end" aria-label="accept">
-                    <Check />
-                  </IconButton>
-                  <IconButton edge="end" aria-label="decline">
-                    <Clear />
-                  </IconButton>
-                </ListItemSecondaryAction>
-                <ListItemText id={labelId} primary={`Invite ${value + 1}`} />
-              </ListItem>
-            );
-          })}
-        </List>
+        {groupInvites && groupInvites.length !== 0 ? (
+          <List
+            sx={{
+              width: '100%',
+              maxWidth: 200,
+              bgcolor: 'background.paper',
+              border: 'solid',
+              borderRadius: '10px',
+            }}>
+            {groupInvites.map((groupInvite, i) => {
+              return (
+                <ListItem key={i} dense>
+                  <ListItemSecondaryAction>
+                    <IconButton
+                      edge="end"
+                      aria-label="accept"
+                      onClick={() => handleAcceptGroup(groupInvite, i)}>
+                      <Check />
+                    </IconButton>
+                    <IconButton
+                      edge="end"
+                      aria-label="decline"
+                      onClick={() => handleDeclineGroup(groupInvite, i)}>
+                      <Clear />
+                    </IconButton>
+                  </ListItemSecondaryAction>
+                  <ListItemText
+                    id={`group-invite-${i}`}
+                    primary={groupInvite.groupName}
+                  />
+                </ListItem>
+              );
+            })}
+          </List>
+        ) : (
+          <Typography>You have no invites!</Typography>
+        )}
       </Box>
     </Box>
   );

@@ -5,11 +5,33 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
+  Typography,
 } from '@mui/material';
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect } from 'react';
+import { useSelector } from 'react-redux';
+import { selectUid } from '../features/token/tokenSlice';
 
-const FriendsList = () => {
+const FriendsList = ({ setFriendIdsForGroup }) => {
+  const API = `${process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'}`;
+
   const [checked, setChecked] = React.useState([]);
+  const [friendsList, setFriendsList] = React.useState([]);
+
+  const uid = useSelector(selectUid);
+
+  useEffect(() => {
+    if (uid) {
+      axios
+        .get(`${API}/api/user/collectfriends?uid=${uid}`)
+        .then((res) => {
+          setFriendsList(res.data);
+        })
+        .catch((e) => console.log(e));
+    } else {
+      console.log("uid isn't available in FriendsList");
+    }
+  }, [API, uid]);
 
   const handleToggle = (value) => () => {
     const currentIndex = checked.indexOf(value);
@@ -22,29 +44,36 @@ const FriendsList = () => {
     }
 
     setChecked(newChecked);
+    setFriendIdsForGroup(newChecked);
   };
 
   return (
-    <List disablePadding sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper'}}>
-      {[0, 1, 2, 3].map((value) => {
-        const labelId = `checkbox-list-label-${value}`;
-        return (
-          <ListItem key={value}>
-            <ListItemButton role={undefined} onClick={handleToggle(value)}>
-              <ListItemIcon>
-                <Checkbox
-                  edge="start"
-                  checked={checked.indexOf(value) !== -1}
-                  tabIndex={-1}
-                  disableRipple
-                  inputProps={{ 'aria-labelledby': labelId }}
-                />
-              </ListItemIcon>
-              <ListItemText id={labelId} primary={`Friend ${value + 1}`} />
-            </ListItemButton>
-          </ListItem>
-        );
-      })}
+    <List
+      disablePadding
+      sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+      {friendsList.length !== 0 ? (
+        friendsList.map((friend, i) => {
+          const labelId = `friend-checkbox-label-${i}`;
+
+          return (
+            <ListItem key={friend}>
+              <ListItemButton onClick={handleToggle(friend)}>
+                <ListItemIcon>
+                  <Checkbox
+                    edge="start"
+                    checked={checked.indexOf(friend) !== -1}
+                    tabIndex={-1}
+                    inputProps={{ 'aria-labelledby': labelId }}
+                  />
+                </ListItemIcon>
+                <ListItemText id={labelId} primary={friend.email} />
+              </ListItemButton>
+            </ListItem>
+          );
+        })
+      ) : (
+        <Typography>Add Some Friends</Typography>
+      )}
     </List>
   );
 };

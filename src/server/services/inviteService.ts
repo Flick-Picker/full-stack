@@ -1,11 +1,19 @@
 import {
-  getFirestore, getDoc, setDoc, doc, updateDoc, collection, query, where, getDocs,
+  getFirestore,
+  getDoc,
+  setDoc,
+  doc,
+  updateDoc,
+  collection,
+  query,
+  where,
+  getDocs,
 } from 'firebase/firestore/lite';
+import { v4 as uuidv4 } from 'uuid';
 import * as userService from './userService';
 import * as groupService from './groupService';
 import { FriendInvite } from '../models/friendInviteModel';
 import { GroupInvite } from '../models/groupInviteModel';
-import { v4 as uuidv4 } from 'uuid';
 
 const firebase = require('./firebase');
 
@@ -25,7 +33,11 @@ export const getInvite = async (inviteId: string) => {
 };
 
 export const getFriendInvitesForUser = async (uid: string) => {
-  const q = query(collection(db, fCol), where('requestedId', '==', uid), where('isAccepted', '==', false));
+  const q = query(
+    collection(db, fCol),
+    where('requestedUser', '==', uid),
+    where('isAccepted', '==', false),
+  );
 
   const invites: FriendInvite[] = [];
   const querySnapshot = await getDocs(q);
@@ -36,7 +48,11 @@ export const getFriendInvitesForUser = async (uid: string) => {
 };
 
 export const getGroupInvitesForUser = async (uid: string) => {
-  const q = query(collection(db, gCol), where('requestedId', '==', uid), where('isAccepted', '==', false));
+  const q = query(
+    collection(db, gCol),
+    where('requestedUser', '==', uid),
+    where('isAccepted', '==', false),
+  );
 
   const invites: GroupInvite[] = [];
   const querySnapshot = await getDocs(q);
@@ -47,7 +63,11 @@ export const getGroupInvitesForUser = async (uid: string) => {
 };
 
 export const getAllInvitesForGroup = async (groupId: string) => {
-  const q = query(collection(db, gCol), where('groupId', '==', groupId), where('isAccepted', '==', false));
+  const q = query(
+    collection(db, gCol),
+    where('groupId', '==', groupId),
+    where('isAccepted', '==', false),
+  );
 
   const invites: GroupInvite[] = [];
   const querySnapshot = await getDocs(q);
@@ -57,7 +77,11 @@ export const getAllInvitesForGroup = async (groupId: string) => {
   return invites as GroupInvite[];
 };
 
-export const sendFriendInvite = async (senderUid: string, requestUid: string) => {
+export const sendFriendInvite = async (
+  senderUid: string,
+  senderEmail: string,
+  requestUid: string,
+) => {
   const inviteId = uuidv4();
   const docRef = doc(db, fCol, inviteId);
   let docSnap = await getDoc(docRef);
@@ -66,6 +90,7 @@ export const sendFriendInvite = async (senderUid: string, requestUid: string) =>
     await setDoc(docRef, {
       inviteId,
       senderUser: senderUid,
+      senderEmail,
       requestedUser: requestUid,
       isAccepted: false,
     });
@@ -96,6 +121,7 @@ export const acceptFriendInvite = async (
 
 export const sendGroupInvite = async (
   groupId: string,
+  groupName: string,
   senderUid: string,
   requestUid: string,
 ) => {
@@ -106,6 +132,8 @@ export const sendGroupInvite = async (
   if (!docSnap.exists()) {
     await setDoc(docRef, {
       inviteId,
+      groupId,
+      groupName,
       senderUser: senderUid,
       requestedUser: requestUid,
       isAccepted: false,
@@ -129,7 +157,7 @@ export const acceptGroupInvite = async (
     await updateDoc(docRef, {
       isAccepted: true,
     });
-    await groupService.addUserToGroup(senderUid, requestUid);
+    await groupService.addUserToGroup(groupId, requestUid);
   }
   docSnap = await getDoc(docRef);
   return docSnap.data();

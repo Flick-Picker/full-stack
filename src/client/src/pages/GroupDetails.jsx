@@ -1,39 +1,34 @@
 import { Box, Button, Typography } from '@mui/material';
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
-import { useNavigate, useLocation } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
-import { selectUid } from '../features/token/tokenSlice';
 
 const GroupDetails = () => {
-  const homePageURI = `${
-    process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'
-  }/api`;
+  const API = `${process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'}`;
 
-  const [group, setGroup] = useState();
-  const uid = useSelector(selectUid);
+  const [group, setGroup] = React.useState();
+
   const { state } = useLocation();
 
-  // React-Router Navigation
   const navigate = useNavigate();
 
   useEffect(() => {
     axios
-      .get(`${homePageURI}/group/get?groupId=${state.groupId}`)
-      .then((res) => setGroup(res.data)) // Change this to groupsJoined when fixed
+      .get(`${API}/api/group/get?groupId=${state.groupId}`)
+      .then((res) => setGroup(res.data))
       .catch((e) => console.log(e));
-  }, [homePageURI, state]);
+  }, [API, state]);
 
   const handleCreateSessionClick = (e) => {
     e.preventDefault();
     axios
-      .post(`${homePageURI}/voting/new/group`, {
+      .post(`${API}/api/voting/new/group`, {
         groupId: state.groupId,
       })
       .then((res) => {
         navigate('/group/vote', { state: state });
-      }) 
+      })
       .catch((e) => console.log(e));
   };
 
@@ -55,10 +50,9 @@ const GroupDetails = () => {
         alignItems="center"
         flexDirection="column"
         gap="5vh"
-        minHeight="75vh"
-      >
+        minHeight="75vh">
         <Typography variant="h3" component="h3">
-          {group && group.groupName ? group.groupName: ''}
+          {group && group.groupName ? group.groupName : ''}
         </Typography>
         <Typography variant="h4" component="h4">
           Voting Session
@@ -67,27 +61,23 @@ const GroupDetails = () => {
           display="flex"
           justifyContent="center"
           alignItems="center"
-          gap="5%"
-        >
+          gap="5%">
           <Button
             variant="outlined"
             size="large"
-            onClick={handleCreateSessionClick}
-          >
+            onClick={handleCreateSessionClick}>
             Start Session
           </Button>
           <Button
             variant="outlined"
             size="large"
-            onClick={handleCurrentSessionClick}
-          >
+            onClick={handleCurrentSessionClick}>
             Current Session
           </Button>
           <Button
             variant="outlined"
             size="large"
-            onClick={handleEndSessionClick}
-          >
+            onClick={handleEndSessionClick}>
             End Session
           </Button>
           <Button variant="outlined" size="large">

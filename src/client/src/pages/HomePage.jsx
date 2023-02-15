@@ -1,28 +1,27 @@
 import { Box, Button, Typography } from '@mui/material';
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import { selectUid } from '../features/token/tokenSlice';
 
 const HomePage = () => {
-  const homePageURI = `${
-    process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'
-  }/api`;
+  const API = `${process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'}`;
 
-  const [userGroups, setUserGroups] = useState();
+  const [userGroups, setUserGroups] = React.useState();
+
+  const navigate = useNavigate();
   const uid = useSelector(selectUid);
 
-  // React-Router Navigation
-  const navigate = useNavigate();
-
   useEffect(() => {
-    axios
-      .get(`${homePageURI}/user/get?uid=${uid}`)
-      .then((res) => setUserGroups(res.data.groupsOwned)) // Change this to groupsJoined when fixed
+      axios
+      .get(`${API}/api/user/collectgroups?uid=${uid}`)
+      .then((res) => {
+        setUserGroups(res.data)
+      })
       .catch((e) => console.log(e));
-  }, [homePageURI, uid]);
+  }, [API, uid]);
 
   const handleJoinGroupClick = (e) => {
     e.preventDefault();
@@ -57,13 +56,13 @@ const HomePage = () => {
         </Button>
         <Box>
           {userGroups ? (
-            userGroups.map((groupId, i) => {
+            userGroups.map((group, i) => {
               return (
                 <Button
                   key={i}
                   variant="outlined"
-                  onClick={() => handleGoToGroupClick(groupId)}>
-                  {groupId}
+                  onClick={() => handleGoToGroupClick(group.groupId)}>
+                  {group.groupName}
                 </Button>
               );
             })
