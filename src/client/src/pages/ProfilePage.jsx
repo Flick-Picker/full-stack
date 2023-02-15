@@ -3,7 +3,7 @@ import {
     Button,
     Typography,
   } from '@mui/material';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { getAuth } from "firebase/auth";
 import { useLocation, useRouteError } from 'react-router';
 import { useSelector } from 'react-redux';
@@ -14,18 +14,25 @@ import { selectEmail } from '../features/token/tokenSlice';
 const ProfilePage = () => {
   //const email = useSelector(selectEmail);
 
+  // const auth = getAuth();
+  // const user = auth.currentUser;
+  // let username = user.displayName ? user.displayName: "No username. Please add one!";
+  // let email = "";
   const auth = getAuth();
   const user = auth.currentUser;
-  const username = user.displayName;
-  let email = "";
+  let username = '';
+  let email = ''
 
   if (user !== null) {
     email = user.email;
+    username = user.displayName;
     console.log(email); // Log the current user's email
   } else {
     email = "no email";
+    
     console.log("No user is currently signed in");
   }
+
   //console.log(email);
   const navigate = useNavigate();
 
