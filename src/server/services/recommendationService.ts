@@ -81,22 +81,19 @@ export const getRecommendation = async (id: string, group: boolean) => {
     preferences = await getPref(id);
   }
   console.log(preferences);
-  const batch: RecommendationObject[] = [];
+  let batch: RecommendationObject[] = [];
   if (preferences.moviePreference >= 1) {
-    try {
-      batch.concat(await algorithm(movieType, preferences));
-    } catch (err) {
-      console.log(err);
-    }
+    batch = batch.concat(await algorithm(movieType, preferences));
   }
   if (preferences.tvShowPreference >= 1) {
-    batch.concat(await algorithm(tvShowType, preferences));
+    batch = batch.concat(await algorithm(tvShowType, preferences));
   }
   if (preferences.animePreference >= 1) {
-    batch.concat(await algorithm(animeTVType, preferences));
-    batch.concat(await algorithm(animeMovieType, preferences));
+    batch = batch.concat(await algorithm(animeTVType, preferences));
+    batch = batch.concat(await algorithm(animeMovieType, preferences));
   }
   // sort the algorithm ratings in desc order
-  batch.sort((a, b) => a.algorithmRating - b.algorithmRating);
+  batch.sort((a, b) => b.algorithmRating - a.algorithmRating);
+  console.log(batch.splice(0, 10));
   return batch.slice(0, 20);
 };
