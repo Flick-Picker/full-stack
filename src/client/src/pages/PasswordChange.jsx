@@ -6,27 +6,18 @@ import {
     InputLabel,
     OutlinedInput,
     IconButton,
-    List,
-    ListItem,
-    ListItemSecondaryAction,
-    ListItemText,
-    Typography,
   } from '@mui/material';
-import { AccountCircle, Visibility, VisibilityOff } from '@mui/icons-material';
+import { Visibility, VisibilityOff } from '@mui/icons-material';
 import React from 'react';
-import { getAuth, updatePassword, signInWithEmailAndPassword } from 'firebase/auth';
+import { getAuth, updatePassword } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { useLocation, useRouteError } from 'react-router';
 import { useSelector } from 'react-redux';
 import Header from '../components/Header';
-import { Check, Clear } from '@mui/icons-material';
 import { selectEmail, selectPassword } from '../features/token/tokenSlice';
 
 const PasswordChange = () => {
-  //const oldemail = useSelector(selectEmail);
-  //const userpassword = useSelector(selectPassword);
-
   const auth = getAuth();
   const user = auth.currentUser;
 
@@ -64,8 +55,8 @@ const PasswordChange = () => {
   };
 
   const changePassword = () => {
-    if(setPassword === setPassAgain) {
-      updatePassword(user, "newpassword")
+    if(password === passAgain) {
+      updatePassword(user, password)
       .then(() => {
         // Password updated successfully
       })
@@ -73,7 +64,7 @@ const PasswordChange = () => {
       });
     }
     else {
-      alert('The emails provided are different');
+      alert('The passwords provided are different');
       setPassword('');
       setPassAgain('');
     }
@@ -93,7 +84,7 @@ const PasswordChange = () => {
         <FormControl variant="standard" required={true}>
           <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
           <OutlinedInput
-            id="outlined-adornment-email"
+            id="outlined-adornment-password"
             sx={{ width: '25ch' }}
             type={showPassword ? 'text' : 'password'}
             endAdornment={
@@ -113,11 +104,11 @@ const PasswordChange = () => {
           />
         </FormControl>
         <FormControl variant="standard" required={true}>
-          <InputLabel htmlFor="outlined-adornment-email-again">
+          <InputLabel htmlFor="outlined-adornment-pass-again">
             Re-Enter Password
           </InputLabel>
           <OutlinedInput
-            id="outlined-adornment-email=again"
+            id="outlined-adornment-pass=again"
             sx={{ width: '25ch' }}
             type={showPassword ? 'text' : 'password'}
             endAdornment={

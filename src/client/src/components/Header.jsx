@@ -23,6 +23,11 @@ const Header = () => {
     navigate('/preferences');
   };
 
+  const handleAccountClick = (e) => {
+    e.preventDefault();
+    navigate('/profile');
+  };
+
   return (
     <AppBar position="static">
       <Toolbar>
@@ -75,7 +80,8 @@ const Header = () => {
           edge="start"
           color="inherit"
           aria-label="menu"
-          sx={{ mr: 2 }}>
+          sx={{ mr: 2 }}
+          onClick={handleAccountClick}>
           <Box display="flex" alignItems="center" flexWrap="wrap">
             <Typography variant="body1" sx={{ mr: 0.5 }}>
               Account

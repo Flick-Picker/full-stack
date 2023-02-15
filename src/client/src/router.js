@@ -13,6 +13,7 @@ import VotingPage from './pages/VotingPage';
 import ProfilePage from './pages/ProfilePage';
 import EmailChange from './pages/EmailChange';
 import PasswordChange from './pages/PasswordChange';
+import UsernameChange from './pages/UsernameChange';
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
   {
     path: '/profile/passwordchange',
     element: <PasswordChange />
+  },
+  {
+    path: '/profile/username',
+    element: <UsernameChange />
   },
   {
     path: '/group/create',
