@@ -10,6 +10,7 @@ router.get('/get', controller.getUser);
 router.get('/query', controller.queryUser);
 router.post('/new', controller.newUser);
 router.post('/update', controller.postUser);
+router.post('/username', controller.updateUsername);
 router.post('/addfriend', controller.addFriend);
 router.get('/collectgroups', controller.collectGroups);
 router.get('/collectfriends', controller.collectFriends);

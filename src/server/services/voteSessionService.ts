@@ -1,5 +1,12 @@
 import {
-  getFirestore, getDoc, setDoc, doc, updateDoc, where, query, collection,
+  getFirestore,
+  getDoc,
+  setDoc,
+  doc,
+  updateDoc,
+  where,
+  query,
+  collection,
 } from 'firebase/firestore/lite';
 import { v4 as uuidv4 } from 'uuid';
 import * as groupService from './groupService';
@@ -27,37 +34,49 @@ const formatRecommendations = async (id: string, isGroup: boolean) => {
   let recs = [] as RecommendationObject[];
   try {
     recs = await getRecommendation(id, isGroup);
-    console.log(recs);
   } catch (err) {
     console.log(err);
   }
-  console.log(recs);
-  const formatrecs : VoteMediaRec[] = [];
-  recs.forEach((rec) => {
-    const r : any = rec;
-    r.hasVoteStarted = false;
-    r.hasVoteFinished = false;
-    r.userVotes = [] as UserVote[];
-    r.voteRanking = 0;
-    r.userVoteSet = [];
+  const formatrecs: VoteMediaRec[] = [];
+  recs.forEach((rec: RecommendationObject) => {
+    const r : VoteMediaRec = {
+      name: rec.name,
+      algorithmRating: rec.algorithmRating,
+      imageURL: rec.imageURL,
+      hasVoteStarted: false,
+      hasVoteFinished: false,
+      userVotes: [] as UserVote[],
+      voteRating: 0,
+      userVoteSet: [],
+    };
+
     formatrecs.push(r as VoteMediaRec);
   });
+
+  console.log('finished formatting recs');
   return formatrecs;
 };
 
-export const loadRecommendations = async (sessionId: string, id: string, isGroup: boolean) => {
+export const loadRecommendations = async (
+  sessionId: string,
+  id: string,
+  isGroup: boolean,
+) => {
   const docRef = doc(db, col, sessionId);
   let docSnap = await getDoc(docRef);
-  const recs = await formatRecommendations(id, isGroup);
-  console.log(recs);
-
+  const recs: VoteMediaRec[] = await formatRecommendations(id, isGroup);
   if (docSnap.exists()) {
-    await updateDoc(docRef, {
-      recommendations: recs,
-    });
+    try {
+      await updateDoc(docRef, {
+        recommendations: recs,
+      });
+    } catch (err) {
+      console.log(err);
+    }
   }
+  console.log('finished updating recs');
   docSnap = await getDoc(docRef);
-  return docSnap.data();
+  return docSnap.data() as VotingSession;
 };
 
 export const addSessionForGroup = async (groupId: string) => {
@@ -65,7 +84,7 @@ export const addSessionForGroup = async (groupId: string) => {
   const docRef = doc(db, col, id);
   const docSnap = await getDoc(docRef);
 
-  const initialSession : VotingSession = {
+  const initialSession: VotingSession = {
     sessionId: id,
     isGroup: true,
     groupId,
@@ -80,7 +99,7 @@ export const addSessionForGroup = async (groupId: string) => {
     await groupService.addNewSessionToGroup(groupId, id);
   }
 
-  const recsnap = loadRecommendations(id, groupId, true);
+  const recsnap: VotingSession = await loadRecommendations(id, groupId, true);
   return recsnap;
 };
 
@@ -89,7 +108,7 @@ export const addSessionForUser = async (userUid: string) => {
   const docRef = doc(db, col, id);
   let docSnap = await getDoc(docRef);
 
-  const initialSession : VotingSession = {
+  const initialSession: VotingSession = {
     sessionId: id,
     isGroup: false,
     groupId: '',
@@ -103,7 +122,7 @@ export const addSessionForUser = async (userUid: string) => {
     await setDoc(docRef, initialSession);
   }
   docSnap = await getDoc(docRef);
-  const recsnap = loadRecommendations(id, userUid, false);
+  const recsnap: VotingSession = await loadRecommendations(id, userUid, false);
   return recsnap;
 };
 
@@ -124,33 +143,31 @@ export const submitUserVote = async (
   sessionId: string,
   userUid: string,
   mediaName: string,
-  vote: number,
+  vote: number
 ) => {
   const docRef = doc(db, col, sessionId);
   let docSnap = await getDoc(docRef);
 
-  const recs : VoteMediaRec[] = docSnap.get('recommendations');
+  const recs: VoteMediaRec[] = docSnap.get('recommendations');
   const date = new Date();
 
-  const userVote : UserVote = {
+  const userVote: UserVote = {
     uid: userUid,
     vote,
     timeVoted: date.toUTCString(),
   };
 
   for (let i = 0; i < recs.length; i += 1) {
-    const media : VoteMediaRec = recs[i];
+    const media: VoteMediaRec = recs[i];
     if (media.name === mediaName) {
       if (!media.hasVoteStarted) recs[i].hasVoteStarted = true;
       recs[i].userVoteSet.push(userUid);
       recs[i].userVotes.push(userVote);
       recs[i].voteRating += vote;
       // if (media.userVoteSet.length === group)
-      console.log(recs[i]);
     }
   }
 
-  console.log(recs);
   if (docSnap.exists()) {
     await updateDoc(docRef, {
       recommendations: recs,
@@ -160,14 +177,17 @@ export const submitUserVote = async (
   return docSnap.data();
 };
 
-export const addMediaToHistory = async (sessionId: string, mediaName: string) => {
+export const addMediaToHistory = async (
+  sessionId: string,
+  mediaName: string
+) => {
   const docRef = doc(db, col, sessionId);
   let docSnap = await getDoc(docRef);
 
   const history = docSnap.get('history');
   const date = new Date();
 
-  const voteMedia : HistoryMedia = {
+  const voteMedia: HistoryMedia = {
     mediaName,
     hasVoteFinished: false,
     timeCreated: date.toUTCString(),
@@ -192,8 +212,8 @@ export const computeMatch = async (sessionId: string) => {
   const recs = docSnap.get('recommendations');
 
   let max = 0;
-  let maxRec : VoteMediaRec = {} as VoteMediaRec;
-  recs.forEach((rec : VoteMediaRec) => {
+  let maxRec: VoteMediaRec = {} as VoteMediaRec;
+  recs.forEach((rec: VoteMediaRec) => {
     if (rec.hasVoteStarted && rec.voteRating > max) {
       max = rec.voteRating;
       maxRec = rec;
@@ -202,5 +222,3 @@ export const computeMatch = async (sessionId: string) => {
 
   return maxRec;
 };
-
-

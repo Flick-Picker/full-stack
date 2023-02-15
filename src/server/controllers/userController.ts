@@ -98,6 +98,16 @@ export async function postUser(req: Request, res: Response) {
   }
 }
 
+export async function updateUsername(req: Request, res: Response) {
+  try {
+    const { uid, username } = req.body;
+    const user = await service.updateUsername(uid, username);
+    res.send(user);
+  } catch (err) {
+    res.status(500).send(err);
+  }
+}
+
 export async function addFriend(req: Request, res: Response) {
   try {
     const { uid, friendUid } = req.body;
