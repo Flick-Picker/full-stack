@@ -1,11 +1,15 @@
 import {
   getFirestore,
   getDoc,
+  getDocs,
   setDoc,
   doc,
   updateDoc,
   arrayUnion,
   DocumentReference,
+  query,
+  where,
+  collection,
 } from 'firebase/firestore/lite';
 import { User } from '../models/userModel';
 
@@ -23,6 +27,33 @@ export const getUser = async (uid: string) => {
     return docSnap.data();
   }
   return {};
+};
+
+const validateEmail = (email: string) => String(email)
+  .toLowerCase()
+  .match(
+    /^\S+@\S+\.\S+$/,
+  );
+
+export const queryUser = async (identifier: string) => {
+  let q;
+  if (validateEmail(identifier)) {
+    q = query(
+      collection(db, col),
+      where('email', '==', identifier),
+    );
+  } else {
+    q = query(
+      collection(db, col),
+      where('username', '==', identifier),
+    );
+  }
+
+  const querySnapshot = await getDocs(q);
+  if (querySnapshot.size === 0) {
+    return {};
+  }
+  return querySnapshot.docs[0].data();
 };
 
 export const getUserRef = async (uid: string) => {

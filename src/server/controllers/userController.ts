@@ -20,6 +20,26 @@ export async function getUser(req: Request, res: Response) {
   }
 }
 
+// query for username or email
+export async function queryUser(req: Request, res: Response) {
+  try {
+    const { identifier } = req.query;
+    if (!identifier) {
+      res.status(404).json({ error: 'Params not found' });
+      return;
+    }
+    if (typeof identifier !== 'string') {
+      res.status(500).json({ error: 'Invalid params' });
+      return;
+    }
+    const user = await service.queryUser(identifier);
+    res.send(user);
+  } catch (err) {
+    console.log(err);
+    res.status(500).send(err);
+  }
+}
+
 export async function collectGroups(req: Request, res: Response) {
   try {
     const { uid } = req.query;
