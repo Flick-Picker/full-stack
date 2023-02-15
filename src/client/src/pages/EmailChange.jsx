@@ -57,7 +57,7 @@ const EmailChange = () => {
   };
 
   const changeEmail = () => {
-    if(setEmail === setEmailAgain) {
+    if(email === emailAgain) {
       updateEmail(user, email)
       .then(() => {
         // Email updated successfully
@@ -84,7 +84,7 @@ const EmailChange = () => {
         minHeight="100vh">
         <Button onClick={handleBack}>Back</Button>
         <FormControl variant="standard" required={true}>
-          <InputLabel htmlFor="outlined-adornment-password">Email</InputLabel>
+          <InputLabel htmlFor="outlined-adornment-email">Email</InputLabel>
           <OutlinedInput
             id="outlined-adornment-email"
             sx={{ width: '25ch' }}

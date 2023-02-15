@@ -1,26 +1,38 @@
 import {
     Box,
     Button,
-    IconButton,
-    List,
-    ListItem,
-    ListItemSecondaryAction,
-    ListItemText,
     Typography,
   } from '@mui/material';
 import React from 'react';
-import axios from 'axios';
+import { getAuth } from "firebase/auth";
 import { useLocation, useRouteError } from 'react-router';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
-import { Check, Clear } from '@mui/icons-material';
 import { selectEmail } from '../features/token/tokenSlice';
 
 const ProfilePage = () => {
-  const email = useSelector(selectEmail);
+  //const email = useSelector(selectEmail);
 
+  const auth = getAuth();
+  const user = auth.currentUser;
+  const username = user.displayName;
+  let email = "";
+
+  if (user !== null) {
+    email = user.email;
+    console.log(email); // Log the current user's email
+  } else {
+    email = "no email";
+    console.log("No user is currently signed in");
+  }
+  //console.log(email);
   const navigate = useNavigate();
+
+  const handleChangeUsernameClick = (e) => {
+    e.preventDefault();
+    navigate('/profile/username');
+  };
 
   const handleChangeEmailClick = (e) => {
     e.preventDefault();
@@ -48,7 +60,7 @@ const ProfilePage = () => {
         Account Details
         </Typography>
         <Typography variant="h6" component="h6" align="left">
-        Username: 
+        Username: {username}
         </Typography>
         <Typography variant="h6" component="h6" align="left">
         Email: {email}
@@ -59,6 +71,12 @@ const ProfilePage = () => {
         justifyContent="center"
         alignItems="center"
         gap="5%">
+        <Button
+          variant="outlined"
+          size="large"
+          onClick={handleChangeUsernameClick}>
+          Change Username
+        </Button>
         <Button
           variant="outlined"
           size="large"
