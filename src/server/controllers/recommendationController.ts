@@ -8,12 +8,14 @@ export async function getRecommendations(req: Request, res: Response) {
       res.status(404).json({ error: 'Params not found' });
       return;
     }
-    if (typeof id !== 'string' || typeof isGroup !== 'boolean') {
+    if (typeof id !== 'string' || typeof isGroup !== 'string') {
       res.status(500).json({ error: 'Invalid params' });
       return;
     }
-    const group = await service.getRecommendation(id, isGroup);
-    res.send(group);
+    let isGroupbool = false;
+    if (isGroup === 'true') isGroupbool = true;
+    const recs = await service.getRecommendation(id, isGroupbool);
+    res.send(recs);
   } catch (err) {
     console.log(err);
     res.status(500).send(err);

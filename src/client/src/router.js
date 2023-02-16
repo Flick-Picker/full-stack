@@ -14,6 +14,7 @@ import ProfilePage from './pages/ProfilePage';
 import EmailChange from './pages/EmailChange';
 import PasswordChange from './pages/PasswordChange';
 import UsernameChange from './pages/UsernameChange';
+import BestMatch from './pages/BestMatch';
 
 const router = createBrowserRouter([
   {
@@ -72,6 +73,10 @@ const router = createBrowserRouter([
   {
     path: '/group/vote',
     element: <VotingPage />,
+  },
+  {
+    path: '/group/match',
+    element: <BestMatch />,
   },
   {
     path: '/error',

@@ -1,9 +1,9 @@
-import express from 'express';
+import express, { Request, Response } from 'express';
 import * as controller from '../controllers/prefController';
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
+router.get('/', (req : Request, res: Response) => {
   res.send('User endpoint');
 });
 router.get('/get', controller.getUserPref);

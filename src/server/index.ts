@@ -8,6 +8,7 @@ const pref = require('./routes/pref');
 const group = require('./routes/group');
 const invite = require('./routes/invite');
 const voteSession = require('./routes/voteSession');
+const recommendations = require('./routes/recommendation');
 
 const app: Express = express();
 
@@ -24,5 +25,6 @@ app.use('/api/user/pref', pref);
 app.use('/api/group', group);
 app.use('/api/invites', invite);
 app.use('/api/voting', voteSession);
+app.use('/api/rec', recommendations);
 
 module.exports = app;

@@ -49,6 +49,7 @@ const EmailChange = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     changeEmail();
+    navigate('/profile');
   };
 
   const handleBack = (e) => {
@@ -60,7 +61,7 @@ const EmailChange = () => {
     if(email === emailAgain) {
       updateEmail(user, email)
       .then(() => {
-        // Email updated successfully
+        // Need to add change email endpoint...
       })
       .catch((error) => {
       });

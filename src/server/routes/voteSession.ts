@@ -14,6 +14,6 @@ router.post('/recommendations/user', controller.loadRecommendationsForUser);
 router.post('/new/group', controller.addSessionForGroup); // also loads recs
 router.post('/new/user', controller.addSessionForUser);
 router.post('/submitvote', controller.submitUserVote);
-router.post('/match', controller.computeMatch);
+router.get('/match', controller.computeMatch);
 
 module.exports = router;

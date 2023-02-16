@@ -41,6 +41,7 @@ const PasswordChange = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     changePassword();
+    navigate('/profile');
   };
 
   const handleClickShowPassword = () => setShowPassword(!showPassword);

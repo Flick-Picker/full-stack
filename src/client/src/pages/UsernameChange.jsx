@@ -21,14 +21,15 @@ import { useLocation, useRouteError } from 'react-router';
 import { useSelector } from 'react-redux';
 import Header from '../components/Header';
 import { Check, Clear } from '@mui/icons-material';
-import { selectEmail, selectPassword } from '../features/token/tokenSlice';
+import { selectEmail, selectPassword, selectUid } from '../features/token/tokenSlice';
 
 const UsernameChange = () => {
+  const API = `${process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'}`;
   const auth = getAuth();
   const user = auth.currentUser;
 
   const navigate = useNavigate();
-
+  const uid = useSelector(selectUid);
   // Page Specific State
   const [username, setUsername] = React.useState('');
 
@@ -40,6 +41,7 @@ const UsernameChange = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     changeUsername();
+    navigate('/profile');
   };
 
   const handleBack = (e) => {
@@ -52,7 +54,10 @@ const UsernameChange = () => {
         displayName: username,
       })
         .then(() => {
-          // Profile updated successfully
+          axios.post(`${API}/api/user/username`, {
+            uid,
+            username,
+          })
         })
         .catch((error) => {
           // Handle errors
