@@ -13,6 +13,7 @@ const compileGroupPreferences = async (id: string) => {
   let sumMoviePref = 0;
   let sumTVPref = 0;
   let sumAnimePref = 0;
+
   groupPreferences.forEach((preference) => {
     // Entertainment type preferences
     sumMoviePref += preference.moviePreference;
@@ -40,24 +41,19 @@ const compileGroupPreferences = async (id: string) => {
   });
   const finalLikedGenres: string[] = [];
   const finalDislikedGenres: string[] = [];
-  likedGenreCount.forEach((likedGenre: string, LGCount: number) => {
-    dislikedGenreCount.forEach((dislikedGenre, DGCount) => {
-      if (likedGenre === dislikedGenre) {
-        if (LGCount > DGCount) {
-          finalLikedGenres.push(likedGenre);
-        } else if (LGCount < DGCount) {
-          finalDislikedGenres.push(dislikedGenre);
-        }
+  likedGenreCount.forEach((LGCount, likedGenre) => {
+    if (dislikedGenreCount.has(likedGenre)) {
+      const DGCount = dislikedGenreCount.get(likedGenre);
+      if (LGCount > DGCount) {
+        finalLikedGenres.push(likedGenre);
+      } else if (LGCount < DGCount) {
+        finalDislikedGenres.push(likedGenre);
       }
-    });
-  });
-
-  likedGenreCount.forEach((likedGenre) => {
-    if (!dislikedGenreCount.has(likedGenre)) {
+    } else {
       finalLikedGenres.push(likedGenre);
     }
   });
-  dislikedGenreCount.forEach((dislikedGenre) => {
+  dislikedGenreCount.forEach((filler, dislikedGenre) => {
     if (!likedGenreCount.has(dislikedGenre)) {
       finalDislikedGenres.push(dislikedGenre);
     }
@@ -80,7 +76,6 @@ export const getRecommendation = async (id: string, group: boolean) => {
   } else {
     preferences = await getPref(id);
   }
-  console.log(preferences);
   let batch: RecommendationObject[] = [];
   if (preferences.moviePreference >= 1) {
     batch = batch.concat(await algorithm(movieType, preferences));
@@ -94,6 +89,5 @@ export const getRecommendation = async (id: string, group: boolean) => {
   }
   // sort the algorithm ratings in desc order
   batch.sort((a, b) => b.algorithmRating - a.algorithmRating);
-  console.log(batch.splice(0, 10));
   return batch.slice(0, 20);
 };
