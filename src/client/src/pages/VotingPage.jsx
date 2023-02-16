@@ -48,12 +48,12 @@ const VotingPage = () => {
         console.log("submitted");
         console.log(res.data);
         state.session = res.data;
-        setCurrFlick(currIndex + 1);
-        setUpdateFlick(updateFlick+1);
       })
       .then(() => {
         const recs = state.session.recommendations;
-        setCurrIndex(recs[currFlick + 1]);
+        setCurrFlick(recs[currIndex + 1]);
+        setCurrIndex(currIndex + 1);
+        setUpdateFlick(updateFlick+1);
       })
       .catch((e) => console.log(e));
   };

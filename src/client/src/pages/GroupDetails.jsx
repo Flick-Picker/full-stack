@@ -31,11 +31,16 @@ const GroupDetails = () => {
         groupId: state.groupId,
       })
       .then((res) => {
-        console.log(res);
         state.session = res.data;
+        console.log(state.session);
         setSession(res.data)
+        return axios.get(`${API}/api/group/get?groupId=${state.groupId}`)
       })
-      .then(() => navigate('/group/vote',  { state: state }))
+      .then((res) => {
+        setGroup(res.data);
+        state.group = res.data;
+      })
+      .then(() => navigate('/group/vote', { state: state }))
       .catch((e) => console.log(e));
   };
 
@@ -43,7 +48,6 @@ const GroupDetails = () => {
     e.preventDefault();
     axios.get(`${API}/api/voting/get?uuid=${state.group.currentVotingSession}`)
     .then((res) => {
-      console.log(res.data);
       setSession(res.data);
       state.session = res.data;
     })
