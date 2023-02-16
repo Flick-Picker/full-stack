@@ -32,9 +32,10 @@ const GroupDetails = () => {
       })
       .then((res) => {
         console.log(res);
+        state.session = res.data;
         setSession(res.data)
       })
-      .then(() => navigate('/group/vote', { state: {group, session} }))
+      .then(() => navigate('/group/vote',  { state: state }))
       .catch((e) => console.log(e));
   };
 
@@ -57,7 +58,7 @@ const GroupDetails = () => {
 
   const handleBestMatchClick = (e) => {
     e.preventDefault();
-    //navigate('/group/vote', { state: state });
+    navigate('/group/match', { state: state });
   };
 
   return (

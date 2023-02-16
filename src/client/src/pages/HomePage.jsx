@@ -55,7 +55,7 @@ const HomePage = () => {
           Just me
         </Button>
         <Box>
-          {userGroups ? (
+          {userGroups && userGroups.length !== 0 ? (
             userGroups.map((group, i) => {
               return (
                 <Button

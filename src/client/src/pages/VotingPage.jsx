@@ -85,7 +85,7 @@ const VotingPage = () => {
               maxHeight: { xs: 300, md: 400 },
               //maxWidth: { xs: 350, md: 250 },
             }}
-            alt="The house from the offer."
+            alt={state.group.groupName}
             src={currFlick.imageURL}
           />
           <Typography variant="h6" component="h6">
