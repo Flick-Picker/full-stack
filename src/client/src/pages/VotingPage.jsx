@@ -6,30 +6,54 @@ import {
   FormGroup,
   Typography,
 } from '@mui/material';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import axios from 'axios';
+import { useSelector } from 'react-redux';
+import { selectUid } from '../features/token/tokenSlice';
 
 const VotingPage = () => {
   const API = `${process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'}`;
   const { state } = useLocation();
 
-  const [currIndex, setIndex] = React.useState();
-  const [currFlick, setFlick] = React.useState();
+  const uid = useSelector(selectUid);
+  const [currIndex, setCurrIndex] = React.useState(0);
+  const [currFlick, setCurrFlick] = React.useState({});
+  const [updateFlick, setUpdateFlick] = React.useState(0); 
 
-  console.log(state);
+  useEffect(() => {
+    const recs = state.session.recommendations;
+    for (let i = 0; i < recs.length; i += 1) {
+      const rec = recs[i];
+      if (!rec.userVoteSet.includes(uid)) {
+        setCurrIndex(i);
+        setCurrFlick(rec);
+        break;
+      }
+    }
+  }, [uid, state, updateFlick]);
 
   const navigate = useNavigate();
 
-  const handleRatingClick = (e) => {
-    e.preventDefault();
+  const handleRatingClick = (value) => {
     axios
-      .get(`${API}/api/voting/get?uuid=${state.group.currentVotingSession}`)
+      .post(`${API}/api/voting/submitvote`, {
+        sessionId: state.group.currentVotingSession,
+        uid,
+        mediaName: currFlick.name,
+        vote: value,
+      })
       .then((res) => {
         console.log(res.data);
+        state.session = res.data;
+        setCurrFlick(currIndex + 1);
+        setUpdateFlick(updateFlick+1);
       })
-      .then(() => navigate('/group/vote', { state: state }))
+      .then(() => {
+        const recs = state.session.recommendations;
+        setCurrIndex(recs[currFlick + 1]);
+      })
       .catch((e) => console.log(e));
   };
 
@@ -53,28 +77,38 @@ const VotingPage = () => {
           Recommended Flicks For: {state.group.groupName}
         </Typography>
         <Box>
+          <Box
+            component="img"
+            sx={{
+              height: 500,
+              //width: 350,
+              maxHeight: { xs: 300, md: 400 },
+              //maxWidth: { xs: 350, md: 250 },
+            }}
+            alt="The house from the offer."
+            src={currFlick.imageURL}
+          />
           <Typography variant="h6" component="h6">
-            Movie Name: 
+            {currFlick.name}
           </Typography>
-          <Typography>Image Here</Typography>
-          <Typography>Description</Typography>
-          <Typography>User Review Score</Typography>
-          <Typography>Audience Rating</Typography>
-          <Typography>Run Time</Typography>
+
+
           <FormGroup>
             <FormControlLabel control={<Checkbox />} label="Seen it before" />
           </FormGroup>
-          <Button variant="outlined" onClick={handleRatingClick}>
+          <Button variant="outlined" onClick={() => handleRatingClick(1)}>
             Like
           </Button>
-          <Button variant="outlined" onClick={handleRatingClick}>
+          <Button variant="outlined" onClick={() => handleRatingClick(0)}>
             Neutral
           </Button>
-          <Button variant="outlined" onClick={handleRatingClick}>
+          <Button variant="outlined" onClick={() => handleRatingClick(-1)}>
             Dislike
           </Button>
         </Box>
-        <Button variant="outlined" onClick={handleLeaveClick}>Leave Session</Button>
+        <Button variant="outlined" onClick={handleLeaveClick}>
+          Leave Session
+        </Button>
       </Box>
     </Box>
   );

@@ -143,17 +143,18 @@ export const submitUserVote = async (
   sessionId: string,
   userUid: string,
   mediaName: string,
-  vote: number,
+  vote: string,
 ) => {
   const docRef = doc(db, col, sessionId);
   let docSnap = await getDoc(docRef);
 
   const recs: VoteMediaRec[] = docSnap.get('recommendations');
   const date = new Date();
+  const votenum = parseInt(vote, 10);
 
   const userVote: UserVote = {
     uid: userUid,
-    vote,
+    vote: votenum,
     timeVoted: date.toUTCString(),
   };
 
@@ -163,7 +164,7 @@ export const submitUserVote = async (
       if (!media.hasVoteStarted) recs[i].hasVoteStarted = true;
       recs[i].userVoteSet.push(userUid);
       recs[i].userVotes.push(userVote);
-      recs[i].voteRating += vote;
+      recs[i].voteRating += votenum;
       // if (media.userVoteSet.length === group)
     }
   }
