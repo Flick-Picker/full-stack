@@ -8,6 +8,7 @@ const GroupDetails = () => {
   const API = `${process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'}`;
 
   const [group, setGroup] = React.useState();
+  const [session, setSession] = React.useState();
 
   const { state } = useLocation();
 
@@ -16,7 +17,10 @@ const GroupDetails = () => {
   useEffect(() => {
     axios
       .get(`${API}/api/group/get?groupId=${state.groupId}`)
-      .then((res) => setGroup(res.data))
+      .then((res) => {
+        setGroup(res.data);
+        state.group = res.data;
+      })
       .catch((e) => console.log(e));
   }, [API, state]);
 
@@ -27,18 +31,33 @@ const GroupDetails = () => {
         groupId: state.groupId,
       })
       .then((res) => {
-        navigate('/group/vote', { state: state });
+        console.log(res);
+        setSession(res.data)
       })
+      .then(() => navigate('/group/vote', { state: {group, session} }))
       .catch((e) => console.log(e));
   };
 
   const handleCurrentSessionClick = (e) => {
     e.preventDefault();
-    navigate('/group/create');
+    axios.get(`${API}/api/voting/get?uuid=${state.group.currentVotingSession}`)
+    .then((res) => {
+      console.log(res.data);
+      setSession(res.data);
+      state.session = res.data;
+    })
+    .then(() => navigate('/group/vote', { state: state }))
+    .catch((e) => console.log(e));
   };
 
-  const handleEndSessionClick = (groupId) => {
-    navigate('/group/vote', { state: { groupId } });
+  const handleEndSessionClick = (e) => {
+    e.preventDefault();
+    //navigate('/group/vote', { state: state });
+  };
+
+  const handleBestMatchClick = (e) => {
+    e.preventDefault();
+    //navigate('/group/vote', { state: state });
   };
 
   return (
@@ -80,7 +99,7 @@ const GroupDetails = () => {
             onClick={handleEndSessionClick}>
             End Session
           </Button>
-          <Button variant="outlined" size="large">
+          <Button variant="outlined" size="large" onClick={handleBestMatchClick}>
             View Best Match
           </Button>
         </Box>

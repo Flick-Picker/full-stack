@@ -13,8 +13,8 @@ export async function getSession(req: Request, res: Response) {
       res.status(500).json({ error: 'Invalid params' });
       return;
     }
-    const group = await service.getSession(uuid);
-    res.send(group);
+    const ses = await service.getSession(uuid);
+    res.send(ses);
   } catch (err) {
     console.log(err);
     res.status(500).send(err);

@@ -143,7 +143,7 @@ export const submitUserVote = async (
   sessionId: string,
   userUid: string,
   mediaName: string,
-  vote: number
+  vote: number,
 ) => {
   const docRef = doc(db, col, sessionId);
   let docSnap = await getDoc(docRef);
@@ -179,7 +179,7 @@ export const submitUserVote = async (
 
 export const addMediaToHistory = async (
   sessionId: string,
-  mediaName: string
+  mediaName: string,
 ) => {
   const docRef = doc(db, col, sessionId);
   let docSnap = await getDoc(docRef);
