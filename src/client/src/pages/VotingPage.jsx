@@ -42,9 +42,10 @@ const VotingPage = () => {
         sessionId: state.group.currentVotingSession,
         uid,
         mediaName: currFlick.name,
-        vote: value,
+        vote: value.toString(),
       })
       .then((res) => {
+        console.log("submitted");
         console.log(res.data);
         state.session = res.data;
         setCurrFlick(currIndex + 1);

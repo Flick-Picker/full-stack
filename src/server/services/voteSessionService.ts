@@ -170,9 +170,11 @@ export const submitUserVote = async (
   }
 
   if (docSnap.exists()) {
-    await updateDoc(docRef, {
-      recommendations: recs,
-    });
+    try {
+      await updateDoc(docRef, {
+        recommendations: recs,
+      });
+    } catch (err) { console.log(err); }
   }
   docSnap = await getDoc(docRef);
   return docSnap.data();
@@ -215,7 +217,6 @@ export const computeMatch = async (sessionId: string) => {
   let max = -1;
   let maxRec: VoteMediaRec = {} as VoteMediaRec;
   recs.forEach((rec: VoteMediaRec) => {
-    console.log(rec);
     if (rec.hasVoteStarted && rec.voteRating > max) {
       max = rec.voteRating;
       maxRec = rec;
