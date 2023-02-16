@@ -13,7 +13,7 @@ import axios from 'axios';
 import { useSelector } from 'react-redux';
 import { selectUid } from '../features/token/tokenSlice';
 
-const VotingPage = () => {
+const BestMatch = () => {
   const API = `${process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'}`;
   const { state } = useLocation();
 
@@ -24,6 +24,7 @@ const VotingPage = () => {
   useEffect(() => {
     axios.get(`${API}/api/voting/match?uuid=${state.group.currentVotingSession}`)
     .then((res) => {
+      console.log(state.group.currentVotingSession);
       console.log(res.data);
       setFlick(res.data);
     })
@@ -76,4 +77,4 @@ const VotingPage = () => {
   );
 };
 
-export default VotingPage;
+export default BestMatch;

@@ -76,7 +76,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/group/match',
-    element: < BestMatch />,
+    element: <BestMatch />,
   },
   {
     path: '/error',

@@ -215,9 +215,11 @@ export const computeMatch = async (sessionId: string) => {
   let max = -1;
   let maxRec: VoteMediaRec = {} as VoteMediaRec;
   recs.forEach((rec: VoteMediaRec) => {
+    console.log(rec);
     if (rec.hasVoteStarted && rec.voteRating > max) {
       max = rec.voteRating;
       maxRec = rec;
+      console.log('max');
     }
   });
 
