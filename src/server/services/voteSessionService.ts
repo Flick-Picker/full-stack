@@ -212,7 +212,7 @@ export const computeMatch = async (sessionId: string) => {
 
   const recs = docSnap.get('recommendations');
 
-  let max = 0;
+  let max = -1;
   let maxRec: VoteMediaRec = {} as VoteMediaRec;
   recs.forEach((rec: VoteMediaRec) => {
     if (rec.hasVoteStarted && rec.voteRating > max) {
