@@ -3,6 +3,7 @@
 \usepackage{booktabs}
 \usepackage{tabularx}
 \usepackage{hyperref}
+\usepackage{float}
 \hypersetup{
     colorlinks,
     citecolor=black,
@@ -13,11 +14,12 @@
 \usepackage[round]{natbib}
 
 \input{../Comments}
+\input{../Common}
 
 \begin{document}
 
-\title{Test Report: Project Title} 
-\author{Author Name}
+\title{Test Report: \progname} 
+\author{\authname}
 \date{\today}
 	
 \maketitle
@@ -29,8 +31,7 @@
 \begin{tabularx}{\textwidth}{p{3cm}p{2cm}X}
 \toprule {\bf Date} & {\bf Version} & {\bf Notes}\\
 \midrule
-Date 1 & 1.0 & Notes\\
-Date 2 & 1.1 & Notes\\
+March 7 & 1.0 & Added FR Tests - Talha\\
 \bottomrule
 \end{tabularx}
 
@@ -44,10 +45,9 @@ Date 2 & 1.1 & Notes\\
   \textbf{symbol} & \textbf{description}\\
   \midrule 
   T & Test\\
+  FR & Functional Requirement\\
   \bottomrule
 \end{tabular}\\
-
-\wss{symbols, abbreviations or acronyms -- you can reference the SRS tables if needed}
 
 \newpage
 
@@ -61,21 +61,106 @@ Date 2 & 1.1 & Notes\\
 
 \pagenumbering{arabic}
 
-This document ...
+This document contains the report for \progname , where the details were documented in the VnV Plan. It covers the evaluations for Functional and Nonfunctional requirements, as well as the testing results for each test outlined in the VnV Plan.
 
 \section{Functional Requirements Evaluation}
+Every developer conducted an ad-hoc review of the functional requirements to ensure every single one of them had been met. Failing to fulfil any of the functional requirements will be implemented by the final demonstration. The ordering for these functional requirements is the same as the order in the SRS and used in the VnV Plan's traceability matrix.
+
+\subsection{Authentication Requirements}
+\subsubsection{FR 1}
+Users are presented with a sign-up/login screen on launch if they have not previously signed into the application before. From there they can sign-up or login with the respective button and by entering their credentials. If a user has previously logged into the application, not signed out, but instead just closed the website, their authentication is stored in the browser's cookie so it immediately redirects into the user's home page. This functional requirement is fully met.
+
+\subsubsection{FR 2}
+From the sign-up/login page, it does not have the functionality to sign-up/login through Google or Facebook. This functional requirement is not met and needs to be implemented.
+
+\subsubsection{FR 3}
+The user can click ``Log Out" from anywhere in the application in the header to successfully log out. This functional requirement is fully met.
+
+\subsection{Profile/Group Requirements}
+\subsubsection{FR 4}
+The user can navigate to the Account page by clicking the respective button in the header, from which they can change their username, email, or password. This functional requirement has fully been met, however might need to be revisited as the application allowed emails to be changed but it is not detailed in the functional requirement itself.
+
+\subsubsection{FR 5}
+The user can navigate to the Preference page by clicking the respective button in the header, from which they can change their preferences. This functional requirement is fully met.
+
+\subsubsection{FR 6}
+The user can navigate to the Create Group page by clicking the respective button on the home page, from where they can create a group with a name for the group. This functional requirement is fully met.
+
+\subsubsection{FR 7}
+The user can invite friends into a group by navigating to it's Group page, and a user can accept invites into a group by navigating to the Social page in the header. This functional requirement is fully met.
+
+\subsubsection{FR 8}
+The user can navigate to the Social page by clicking the respective button in the header, from which they can send friend invitations to other users by email or username. This functional requirement is fully met.
+
+\subsection{Recommendation Requirements}
+\subsubsection{FR 9}
+The user can see an ongoing list of shows by navigating to a Group or the Just Me Page. This functional requirement is fully met.
+
+\subsubsection{FR 10}
+The user is given a list of shows in a group, where they can vote with ``Like", ``Neutral", or ``Dislike" to voice their preference in the group. This functional requirement is fully met, however the wording might need to be revisited as the same phrasing has not been used.
+
+\subsubsection{FR 11}
+The user and group can see the current recommendation based on the votes by clicking the view result button in the Group Page. This functional requirement is fully met.
 
 \section{Nonfunctional Requirements Evaluation}
+Every developer also conducted an ad-hoc review of the nonfunctional requirements to ensure every single one of them had been met. Failing to fulfil any of the nonfunctional requirements will be implemented by the final demonstration, or otherwise rectified. The ordering for these nonfunctional requirements is the same as the order in the SRS and used in the VnV Plan's traceability matrix.
 
-\subsection{Usability}
-		
-\subsection{Performance}
+\subsection{Look and Feel Requirements}
+\subsubsection{Appearance Requirements (10.1.1)}
+The application starts on a login or sign-up screen, which is better than what is currently described in this nonfunctional requirement. It will need to be updated to reflect such. The rest of the details are entirely met.
 
-\subsection{etc.}
-	
+\subsubsection{Style Requirements (10.1.2)}
+There is a colour scheme and formatting for the front-end which has been adhered too and this this nonfunctional requirement is met. However, the layout has to be revisited and further refined.
+
+\subsection{Usability and Humanity Requirements}
+\subsubsection{Ease of Use Requirements (10.2.1)}
+This nonfunctional requirement is met, but can be revisited from feedback by users as ``simple" is not universally defined for individuals.
+
+\subsubsection{Learning Requirements (10.2.3)}
+This nonfunctional requirement is met, but can be revisited from feedback by users.
+
+\subsection{Performance Requirements}
+\subsubsection{Speed and Latency Requirements (10.3.1)}
+This nonfunctional requirement is met. However, further development has to be aware of this requirement and not cause immense slowdown.
+
+\subsubsection{Safety-Critical Requirements (10.3.2)}
+User's private data is safely stored with Firebase and thus this nonfunctional requirement is met.
+
+\subsubsection{Precision or Accuracy Requirements (10.3.3)}
+The recommendation provided is based on user votes in the group, thus this nonfunctional requirement is met.
+
+\subsubsection{Reliability and Availability Requirements (10.3.4)}
+The application is not deployed and thus is not currently available to users, and this nonfunctional requirement is not met. However, once it is deployed it will meet the requirement.
+
+\subsubsection{Robustness or Fault-Tolerance Requirements (10.3.5)}
+User's in a Group are constantly fed show recommendations, this nonfunctional requirement is met.
+
+\subsubsection{Capacity Requirements (10.3.6)}
+Every user session is different and thus this nonfunctional requirement is met.
+
+\subsubsection{Scalability or Extensibility Requirements (10.3.7)}
+Firebase allows easy scalability and thus this nonfunctional requirement is met.
+
+\subsection{Operational and Environmental Requirements}
+\subsubsection{Requirements for Interfacing with Adjacent Systems (10.4.3)}
+This nonfunctional requirement is met as \progname is adhering to standard web development principals.
+
+\subsection{Maintainability and Support Requirements}
+\subsubsection{Adaptability Requirements (10.5.3)}
+This nonfunctional requirement is met as \progname is adhering to standard web development principals.
+
+\subsection{Security Requirements}
+\subsubsection{Access Requirements (10.6.1)}
+The user can only access their own data from the database thus this nonfunctional requirement is met.
+
+\subsubsection{Integrity Requirements (10.6.2)}
+User data is safely and properly stored in the cloud thus this nonfunctional requirement is met.
+
+\subsubsection{Privacy Requirements (10.6.3)}
+This nonfunctional requirement is met.
+
 \section{Comparison to Existing Implementation}	
-
-This section will not be appropriate for every project.
+Not Applicable for \progname .
 
 \section{Unit Testing}
 
@@ -84,10 +169,87 @@ This section will not be appropriate for every project.
 \section{Automated Testing}
 		
 \section{Trace to Requirements}
+Refer to the Appendix.
 		
 \section{Trace to Modules}		
 
 \section{Code Coverage Metrics}
+
+\newpage
+\section*{Appendix}
+\subsection*{Traceability Matrices}
+\begin{table}[H]
+	\caption{Nonfunctional Requirements Traceability Matrix} \label{TraceMatrix2}
+	\begin{tabular}{ll}
+		\toprule
+		\textbf{Test Number} & \textbf{Requirement} \\
+		\midrule
+		Look and Feel T 1 & 10.1.1\\
+		Look and Feel T 2 & 10.1.2\\
+		\midrule
+		Usability and Humanity T 1 & 10.2.1\\
+		Usability and Humanity T 2 & 10.2.3\\
+		\midrule
+		Performance T 1 & 10.3.1\\
+		Performance T 2 & 10.3.2\\
+		Performance T 3 & 10.3.3\\
+		Performance T 4 & 10.3.4\\
+		Performance T 5 & 10.3.5\\
+		Performance T 6 & 10.3.6\\
+		\midrule
+		Operational and Environmental T 1 & 10.4.3\\
+		\midrule
+		Maintainability and Support T 1 & 10.5.3\\
+		\midrule
+		Security T 1 & 10.6.1\\
+		Security T 2 & 10.6.2\\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\begin{table}[H]
+	\caption{Functional Requirements Traceability Matrix} \label{TraceMatrix1}
+	\begin{tabular}{ll}
+		\toprule
+		\textbf{Test Number} & \textbf{Requirement} \\
+		\midrule
+		UI Auth T 1 & FR 1\\
+		API Auth T 1 & FR 1\\
+		UI Auth T 2 & FR 1\\
+		API Auth T 2 & FR 1\\
+		UI Auth T 3 & FR 1\\
+		API Auth T 3 & FR 1\\
+		UI Auth T 4 & FR 1\\
+		API Auth T 4 & FR 1\\
+		UI Auth T 5 & FR 3\\
+		API Auth T 5 & FR 3\\
+		UI Auth T 6 & FR 2\\
+		\midrule
+		UI PG T 1 & FR 4\\
+		API PG T 1 & FR 4\\
+		UI PG T 2 & FR 5\\
+		API PG T 2 & FR 5\\
+		UI PG T 3 & FR 6\\
+		API PG T 3 & FR 6\\
+		UI PG T 4 & FR 7\\
+		API PG T 4 & FR 7\\
+		UI PG T 5 & FR 8\\
+		API PG T 5 & FR 8\\
+		\midrule
+		UI R T 1 & FR 9\\
+		API R T 1 & FR 9\\
+		UI R T 2 & FR 10\\
+		API R T 2 & FR 10\\
+		UI R T 3 & FR 11\\
+		API R T 3 & FR 11\\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\subsection*{Reflection}
+Completing the VnV Plan and Report highlighted the effectiveness of the VnV Process. By first completing verification on the system, we got to clearly document the requirements that were thoroughly implemented, the requirements that were missed, and the requirements which were not defined properly and needed to be revisited. Doing so, the SRS and other documents stay fully updated and all the developers stay on the same page regarding the goals of \progname . 
+
+\noindent The other aspect of the VnV Plan were the tests planned for the system, which the report implements. However, a handful of them were misclassified and do not belong in automation testing or duplicates of other tests that could just be a single integration test. While it is important to test each component individually, which unit tests do, having multiple integration tests which do the same thing is a waste of time and resources. By going through the Plan to fill out the Report we found cases which the latter applied, and were subsequently changed to ensure full coverage in our system with developer time allocated appropriately. What's left for verification is to get the CI/CD Pipeline running after the tests have all been merged.
 
 \bibliographystyle{plainnat}
 
