@@ -53,7 +53,6 @@ const formatRecommendations = async (id: string, isGroup: boolean) => {
     formatrecs.push(r as VoteMediaRec);
   });
 
-  console.log('finished formatting recs');
   return formatrecs;
 };
 
@@ -74,7 +73,6 @@ export const loadRecommendations = async (
       console.log(err);
     }
   }
-  console.log('finished updating recs');
   docSnap = await getDoc(docRef);
   return docSnap.data() as VotingSession;
 };
@@ -220,7 +218,6 @@ export const computeMatch = async (sessionId: string) => {
     if (rec.hasVoteStarted && rec.voteRating > max) {
       max = rec.voteRating;
       maxRec = rec;
-      console.log('max');
     }
   });
 
