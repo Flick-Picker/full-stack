@@ -2,6 +2,7 @@
 
 \usepackage{booktabs}
 \usepackage{tabularx}
+\usepackage{changepage}
 \usepackage{hyperref}
 \usepackage{float}
 \hypersetup{
@@ -165,45 +166,71 @@ This nonfunctional requirement is met.
 Not Applicable for \progname .
 
 \section{Unit Testing}
-
+\noindent
 \newcolumntype{K}{>{\centering\arraybackslash}X}
-\begin{tabularx}{\textwidth}{|K|K|K|K|K|K|}
+
+\begin{table}[!h]
+\caption{Unit Tests Pt. 1}
+\begin{adjustwidth}{-2cm}{-2cm}
+\begin{tabularx}{500pt}{|K|K|K|K|K|K|}
 	\hline 
-	Test Number & Referenced Requirement & User Action & Expected Output & Actual Output & Result \\
+	\textbf{Test Number} & \textbf{Referenced Requirement} & \textbf{Input Given} & \textbf{Expected Output} & \textbf{Actual Output} & \textbf{Result} \\
 	\hline 
-	Look and Feel T1 &  &  &  &  &  \\
+	Look and Feel T1 & 10.1.1 &  &  &  &  \\
 	\hline 
-	Look and Feel T 2 &  &  &  &  &  \\
+	Look and Feel T 2 & 10.1.2 &  &  &  &  \\
 	\hline 
-	Usability and Humanity T 1 &  &  &  &  &  \\
+	Usability and Humanity T 1 & 10.2.1 &  &  &  &  \\
 	\hline 
-	Usability and Humanity T 2 &  &  &  &  &  \\
+	Usability and Humanity T 2 & 10.2.3 &  &  &  &  \\
 	\hline 
-	Performance T 1 &  &  &  &  &  \\
+	Performance T 1 & 10.3.1 &  &  &  &  \\
 	\hline 
-	Performance T 2 &  &  &  &  &  \\
+	Performance T 2 & 10.3.2 &  &  &  &  \\
 	\hline 
-	Performance T 3 &  &  &  &  &  \\
+	Performance T 3 & 10.3.3 &  &  &  &  \\
 	\hline 
-	Performance T 4 &  &  &  &  &  \\
+	Performance T 4 & 10.3.4 &  &  &  &  \\
+	\hline
+\end{tabularx}
+\end{adjustwidth}	
+\end{table}
+	
+\begin{table}[!h]
+\caption{Unit Tests Pt. 2}
+\begin{adjustwidth}{-2cm}{-2cm}
+\begin{tabularx}{500pt}{|K|K|K|K|K|K|}
 	\hline 
-	Performance T 5 &  &  &  &  &  \\
+	\textbf{Test Number} & \textbf{Referenced Requirement} & \textbf{Input Given} & \textbf{Expected Output} & \textbf{Actual Output} & \textbf{Result} \\
 	\hline 
-	Performance T 6 &  &  &  &  &  \\
+	Performance T 5 & 10.3.5 &  &  &  &  \\
 	\hline 
-	Operational And Environmental T 1 &  &  &  &  &  \\
+	Performance T 6 & 10.3.6 &  &  &  &  \\
 	\hline 
-	Maintainability and Support T 1 &  &  &  &  &  \\
+	Operational And Environmental T 1 & 10.4.3 &  &  &  &  \\
 	\hline 
-	Security T 1 &  &  &  &  &  \\
+	Maintainability and Support T 1 & 10.5.3 &  &  &  &  \\
 	\hline 
-	Security T 2 &  &  &  &  &  \\
+	Security T 1 & 10.6.1 &  &  &  &  \\
+	\hline 
+	Security T 2 & 10.6.2 &  &  &  &  \\
 	\hline
 	 UI Auth T 1 & FR 1 & Typing in a registered username and password and clicking the log in button & Home screen is pulled up on main menu, giving user access to program features & Expected output & Pass \\
 	\hline 
 	API Auth T 1 & FR 1 &  &  &  &  \\
 	\hline 
 	UI Auth T 2 & FR 1 & Typing in an incorrect username and password and clicking the Log In button & Message displaying failure to log in & Nothing happens & Fail \\
+	\hline
+\end{tabularx}
+\end{adjustwidth}	
+\end{table}
+
+\begin{table}[!h]
+\caption{Unit Tests Pt. 3}
+\begin{adjustwidth}{-2cm}{-2cm}
+\begin{tabularx}{500pt}{|K|K|K|K|K|K|}
+	\hline 
+	\textbf{Test Number} & \textbf{Referenced Requirement} & \textbf{Input Given} & \textbf{Expected Output} & \textbf{Actual Output} & \textbf{Result} \\
 	\hline 
 	API Auth T 2 & FR 1 &  &  &  &  \\
 	\hline 
@@ -220,41 +247,66 @@ Not Applicable for \progname .
 	API Auth T 5 & FR 1 &  &  &  &  \\
 	\hline 
 	UI Auth T 6 & FR 1 & Clicking OAuth button on login page & Login screen with OAuth providers & N/A & Fail -Yet to be implemented \\
+	\hline
+\end{tabularx}
+\end{adjustwidth}	
+\end{table}
+
+\begin{table}[!h]
+\caption{Unit Tests Pt. 4}
+\begin{adjustwidth}{-2cm}{-2cm}
+\begin{tabularx}{500pt}{|K|K|K|K|K|K|}
+	\hline 	
+	\textbf{Test Number} & \textbf{Referenced Requirement} & \textbf{Input Given} & \textbf{Expected Output} & \textbf{Actual Output} & \textbf{Result} \\	
 	\hline 
 	UI PG T 1 & FR 4 & Clicking Account button and modifying account credentials & Profile page loads, account credentials can be succesfully altered & Expected output & Pass \\
 	\hline 
-	API PG T 1 &  &  &  &  &  \\
+	API PG T 1 &  FR 4 &  &  &  &  \\
 	\hline 
 	UI PG T 2 & FR 5 & Clicking Preferences button and modifying preferences & Preferences page loads, prefences of Genres, Type, and Minimum Rating can be successfully altered & Expected output & Pass \\
 	\hline 
-	API PG T 2 &  &  &  &  &  \\
+	API PG T 2 & FR 5 &  &  &  &  \\
 	\hline 
 	UI PG T 3 & FR 6 & Creating a group with the Create Group button & Group appears in Home screen beside other groups with its given name & Expected output & Pass \\
 	\hline 
-	API PG T 3 &  &  &  &  &  \\
+	API PG T 3 & FR 6 & Group creation is sent to backend with group name and owner ID &  &  &  \\
 	\hline 
 	UI PG T 4 & FR 7 & Joining a group with the Join Group button & Upon clicking on the Join Group button, a list of invites appears that the user \ clicks to join a given inviter & Expected output & Pass \\
-	\hline 
-	API PG T 4 &  &  &  &  &  \\
-	\hline 
-	UI PG T 5 &  &  &  &  &  \\
-	\hline 
-	API PG T 5 &  &  &  &  &  \\
-	\hline 
-	UI R T 1 &  &  &  &  &  \\
-	\hline 
-	API R T 1 &  &  &  &  &  \\
-	\hline 
-	UI R T 2 &  &  &  &  &  \\
-	\hline 
-	API R T 2 &  &  &  &  &  \\
-	\hline 
-	UI R T 3 &  &  &  &  &  \\
-	\hline 
-	API R T 3 &  &  &  &  &  \\
 	\hline
 \end{tabularx}
+\end{adjustwidth}	
+\end{table}
 
+\begin{table}[!h]
+\caption{Unit Tests Pt. 5}
+\begin{adjustwidth}{-2cm}{-2cm}
+\begin{tabularx}{500pt}{|K|K|K|K|K|K|}
+	\hline 
+	\textbf{Test Number} & \textbf{Referenced Requirement} & \textbf{Input Given} & \textbf{Expected Output} & \textbf{Actual Output} & \textbf{Result} \\	
+	\hline 
+	API PG T 4 & FR 7 &  &  &  &  \\
+	\hline 
+	UI PG T 5 & FR 8 &  &  &  &  \\
+	\hline 
+	API PG T 5 & FR 8 &  &  &  &  \\
+	\hline 
+	UI R T 1 & FR 9 &  &  &  &  \\
+	\hline 
+	API R T 1 &  FR 9 &  &  &  &  \\
+	\hline 
+	UI R T 2 & FR 10 &  &  &  &  \\
+	\hline 
+	API R T 2 &  FR 10 &  &  &  &  \\
+	\hline 
+	UI R T 3 & FR 11 &  &  &  &  \\
+	\hline 
+	API R T 3 & FR 11 &  &  &  &  \\
+	\hline
+\end{tabularx}
+\end{adjustwidth}	
+\end{table}
+
+\newpage
 
 \section{Changes Due to Testing}
 
