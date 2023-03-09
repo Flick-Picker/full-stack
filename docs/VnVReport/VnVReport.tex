@@ -33,6 +33,7 @@
 \midrule
 March 7 & 1.0 & Added FR requirements - Talha\\
 March 8 & 1.1 & Added unit test table - Ali\\
+March 8 & 1.2 & Added some unit tests - Ali\\
 \bottomrule
 \end{tabularx}
 
@@ -197,42 +198,42 @@ Not Applicable for \progname .
 	Security T 1 &  &  &  &  &  \\
 	\hline 
 	Security T 2 &  &  &  &  &  \\
+	\hline
+	 UI Auth T 1 & FR 1 & Typing in a registered username and password and clicking the log in button & Home screen is pulled up on main menu, giving user access to program features & Expected output & Pass \\
 	\hline 
-	UI Auth T 1 &  &  &  &  &  \\
+	API Auth T 1 & FR 1 &  &  &  &  \\
 	\hline 
-	API Auth T 1 &  &  &  &  &  \\
+	UI Auth T 2 & FR 1 & Typing in an incorrect username and password and clicking the Log In button & Message displaying failure to log in & Nothing happens & Fail \\
 	\hline 
-	UI Auth T 2 &  &  &  &  &  \\
+	API Auth T 2 & FR 1 &  &  &  &  \\
 	\hline 
-	API Auth T 2 &  &  &  &  &  \\
+	UI Auth T 3 & FR 1 & Clicking button to register after entering an email and password & Message displaying confirmation of successful registration & Nothing happens & Fail \\
 	\hline 
-	UI Auth T 3 &  &  &  &  &  \\
+	API Auth T 3 & FR 1 &  &  &  &  \\
 	\hline 
-	API Auth T 3 &  &  &  &  &  \\
+	UI Auth T 4 & FR 1 & Clicking button to register after entering an invalid email and /or password & Message displaying a failure of registration & Nothing happens & Fail \\
 	\hline 
-	UI Auth T 4 &  &  &  &  &  \\
+	API Auth T 4 & FR 1 &  &  &  &  \\
 	\hline 
-	API Auth T 4 &  &  &  &  &  \\
+	UI Auth T 5 & FR 3 & Clicking Log Out button & Taken back to login page & Expected output & Pass \\
 	\hline 
-	UI Auth T 5 &  &  &  &  &  \\
+	API Auth T 5 & FR 1 &  &  &  &  \\
 	\hline 
-	API Auth T 5 &  &  &  &  &  \\
+	UI Auth T 6 & FR 1 & Clicking OAuth button on login page & Login screen with OAuth providers & N/A & Fail -Yet to be implemented \\
 	\hline 
-	UI Auth T 6 &  &  &  &  &  \\
-	\hline 
-	UI PG T 1 &  &  &  &  &  \\
+	UI PG T 1 & FR 4 & Clicking Account button and modifying account credentials & Profile page loads, account credentials can be succesfully altered & Expected output & Pass \\
 	\hline 
 	API PG T 1 &  &  &  &  &  \\
 	\hline 
-	UI PG T 2 &  &  &  &  &  \\
+	UI PG T 2 & FR 5 & Clicking Preferences button and modifying preferences & Preferences page loads, prefences of Genres, Type, and Minimum Rating can be successfully altered & Expected output & Pass \\
 	\hline 
 	API PG T 2 &  &  &  &  &  \\
 	\hline 
-	UI PG T 3 &  &  &  &  &  \\
+	UI PG T 3 & FR 6 & Creating a group with the Create Group button & Group appears in Home screen beside other groups with its given name & Expected output & Pass \\
 	\hline 
 	API PG T 3 &  &  &  &  &  \\
 	\hline 
-	UI PG T 4 &  &  &  &  &  \\
+	UI PG T 4 & FR 7 & Joining a group with the Join Group button & Upon clicking on the Join Group button, a list of invites appears that the user \ clicks to join a given inviter & Expected output & Pass \\
 	\hline 
 	API PG T 4 &  &  &  &  &  \\
 	\hline 
