@@ -13,6 +13,7 @@ describe('Group Test Cases', () => {
       res = {} as DocumentData;
     }
     console.log(res.groupId);
+    expect(res.groupName).toBe('Jest Group');
     expect(res.groupId).toBeDefined();
     expect(res.ownerUid).toBe('test-id-1');
     groupId = res.groupId;
