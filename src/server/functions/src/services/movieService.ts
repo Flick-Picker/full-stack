@@ -1,6 +1,6 @@
-import * as dotenv from 'dotenv';
+import dotenv from 'dotenv';
 import axios from 'axios';
-import * as path from 'path';
+import path from 'path';
 
 dotenv.config({ path: path.resolve(__dirname, '../.env') });
 const TMDB_KEY = process.env.TMDB_KEY || '';

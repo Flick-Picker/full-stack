@@ -4,9 +4,6 @@ import {
   setDoc,
   doc,
   updateDoc,
-  where,
-  query,
-  collection,
 } from 'firebase/firestore/lite';
 import { v4 as uuidv4 } from 'uuid';
 import * as groupService from './groupService';

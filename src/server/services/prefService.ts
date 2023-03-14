@@ -2,7 +2,6 @@ import {
   getFirestore, getDoc, setDoc, doc,
 } from 'firebase/firestore/lite';
 import { Preference } from '../models/prefModel';
-import * as userService from './userService';
 import * as groupService from './groupService';
 import PreferenceObject from '../classes/preferenceObject';
 

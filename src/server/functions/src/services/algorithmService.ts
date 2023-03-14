@@ -5,7 +5,6 @@ import tvShows from '../static/tvShows.json';
 import RecommendationObject from '../classes/recommendationObject';
 import PreferenceObject from '../classes/preferenceObject';
 
-
 export const movieType = 1;
 export const tvShowType = 2;
 export const animeTVType = 3;
@@ -13,9 +12,9 @@ export const animeMovieType = 4;
 
 const movieAlgorithm = async (preferences: PreferenceObject) => {
   const batch: RecommendationObject[] = [];
-  movies.forEach((movie: any) => {
+  movies.forEach((movie) => {
     let genreRating = 0;
-    movie.genres.forEach((currMovieGenre: any) => {
+    movie.genres.forEach((currMovieGenre) => {
       let isGenreLiked = 0;
       preferences.likedGenres.forEach((likedGenre) => {
         if (likedGenre === currMovieGenre) {
@@ -48,9 +47,9 @@ const movieAlgorithm = async (preferences: PreferenceObject) => {
 
 const tvShowAlgorithm = async (preferences: PreferenceObject) => {
   const batch: RecommendationObject[] = [];
-  tvShows.forEach((tvShow: any) => {
+  tvShows.forEach((tvShow) => {
     let genreRating = 0;
-    tvShow.genres.forEach((curTVGenre: any) => {
+    tvShow.genres.forEach((curTVGenre) => {
       let isGenreLiked = 0;
       preferences.likedGenres.forEach((likedGenre) => {
         if (likedGenre === curTVGenre) {
@@ -114,9 +113,9 @@ const animeTVAlgorithm = async (preferences: PreferenceObject) => {
 
 const animeMovieAlgorithm = async (preferences: PreferenceObject) => {
   const batch: RecommendationObject[] = [];
-  animeMovies.forEach((animeMovie: any) => {
+  animeMovies.forEach((animeMovie) => {
     let genreRating = 0;
-    animeMovie.genres.forEach((curAnimeMovieGenre: any) => {
+    animeMovie.genres.forEach((curAnimeMovieGenre) => {
       let isGenreLiked = 0;
       preferences.likedGenres.forEach((likedGenre) => {
         if (likedGenre === curAnimeMovieGenre) {
