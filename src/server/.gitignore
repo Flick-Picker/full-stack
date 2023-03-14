@@ -11,6 +11,7 @@
 # production
 /build
 /.vscode
+/.firebase
 /dist
 # misc
 .DS_Store
