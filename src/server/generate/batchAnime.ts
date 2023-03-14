@@ -1,5 +1,5 @@
 /* eslint-disable no-await-in-loop */
-import fs from 'fs';
+import * as fs from 'fs';
 import * as animeapi from '../services/animeService';
 
 const sleep = (ms: number) => (
@@ -10,7 +10,7 @@ export const retrieveBatch = async (mediatype: string) => {
   for (let i = 1; i <= 10; i += 1) {
     const currpage = await animeapi.topAnimes(mediatype, i);
     batch = batch.concat(currpage.data);
-    await sleep(2000); // to avoid rate limiting
+    await sleep(2000); // to avoid rate limiting 
     console.log(`finished page ${i} for ${mediatype}`);
   }
   fs.writeFile(`../api-json/anime_${mediatype}_batch.json`, JSON.stringify(batch), (err) => {

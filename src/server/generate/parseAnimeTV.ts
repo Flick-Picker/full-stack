@@ -1,4 +1,4 @@
-import fs from 'fs';
+import * as fs from 'fs';
 import animeTV from '../api-json/anime_tv_batch.json';
 import AnimeTvObject from '../classes/animeTvObject';
 
@@ -29,7 +29,7 @@ export const getAnimeTv = async () => {
     );
   });
 
-  fs.writeFile('../static/anime_tv.json', JSON.stringify(anime), (err) => {
+  fs.writeFile('../static/anime_tv.json', JSON.stringify(anime), (err: any) => {
     if (err) console.log(err);
   });
 };

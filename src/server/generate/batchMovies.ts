@@ -1,4 +1,4 @@
-import fs from 'fs';
+import * as fs from 'fs';
 import * as movieapi from '../services/movieService';
 
 export const retrieveBatch = async (mediatype: string) => {
@@ -8,7 +8,7 @@ export const retrieveBatch = async (mediatype: string) => {
     const currpage = await movieapi.discoverMedia(mediatype, i);
     batch = batch.concat(currpage.results);
   }
-  fs.writeFile(`../api-json/${mediatype}_batch.json`, JSON.stringify(batch), (err) => {
+  fs.writeFile(`../api-json/${mediatype}_batch.json`, JSON.stringify(batch), (err: any) => {
     if (err) console.log(err);
   });
 };

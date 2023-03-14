@@ -7,7 +7,7 @@ function parseMovieGenres(genreIDs: number[]) {
   const genres = new Set<string>();
   genreIDs.forEach((genreID) => {
     let foundGenre = false;
-    movieGenres.genres.forEach((genre) => {
+    movieGenres.genres.forEach((genre: any) => {
       if (genre.id === genreID) {
         genres.add(genre.name.toLowerCase());
         foundGenre = true;
