@@ -8,7 +8,8 @@
     "start": "nodemon server.ts",
     "build": "tsc",
     "lint": "eslint './**/*.{ts,tsx}'",
-    "fix": "eslint './**/*.{ts,tsx}' --fix"
+    "fix": "eslint './**/*.{ts,tsx}' --fix",
+    "deploy": "./cpyfunctions.sh && firebase deploy --only functions"
   },
   "author": "",
   "license": "ISC",
