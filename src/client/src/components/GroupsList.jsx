@@ -12,8 +12,11 @@ const GroupsList = ({ setSelectedGroup }) => {
   const uid = useSelector(selectUid);
 
   useEffect(() => {
+    const headers = {
+      'x-api-key': process.env.REACT_APP_BACKEND_KEY,
+    };   
     axios
-      .get(`${API}/api/user/collectgroups?uid=${uid}`)
+      .get(`${API}/api/user/collectgroups?uid=${uid}`, { headers })
       .then((res) => {
         setUserGroups(res.data);
       })

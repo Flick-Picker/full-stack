@@ -22,27 +22,35 @@ const JoinGroup = () => {
   const uid = useSelector(selectUid);
 
   useEffect(() => {
+    const headers = {
+      'x-api-key': process.env.REACT_APP_BACKEND_KEY,
+    };
+
     axios
-      .get(`${API}/api/invites/group/getforuser?uid=${uid}`)
+      .get(`${API}/api/invites/group/getforuser?uid=${uid}`, { headers })
       .then((res) => setGroupInvites(res.data))
       .catch((e) => console.log(e));
   }, [API, uid]);
 
   const handleAcceptGroup = (inv, i) => {
+    const headers = {
+      'x-api-key': process.env.REACT_APP_BACKEND_KEY,
+    };
     const body = {
       inviteId: inv.inviteId,
       groupId: inv.groupId,
       senderUid: inv.senderUser,
       requestUid: inv.requestedUser,
     };
+
     axios
-      .post(`${API}/api/invites/groups/accept`, body)
+      .post(`${API}/api/invites/groups/accept`, body, { headers })
       .then(() => {
         const newArray = groupInvites.splice(i, 1);
         setGroupInvites(newArray);
       })
       .catch((e) => console.log(e));
-  }
+  };
 
   const handleDeclineGroup = (inv, i) => {};
 
@@ -57,7 +65,8 @@ const JoinGroup = () => {
         gap="5vh"
         marginTop="5%"
         marginBottom="5%"
-        minHeight="75vh">
+        minHeight="75vh"
+      >
         <Typography variant="h4" component="h4">
           Join Group
         </Typography>
@@ -69,7 +78,8 @@ const JoinGroup = () => {
               bgcolor: 'background.paper',
               border: 'solid',
               borderRadius: '10px',
-            }}>
+            }}
+          >
             {groupInvites.map((groupInvite, i) => {
               return (
                 <ListItem key={i} dense>
@@ -77,13 +87,15 @@ const JoinGroup = () => {
                     <IconButton
                       edge="end"
                       aria-label="accept"
-                      onClick={() => handleAcceptGroup(groupInvite, i)}>
+                      onClick={() => handleAcceptGroup(groupInvite, i)}
+                    >
                       <Check />
                     </IconButton>
                     <IconButton
                       edge="end"
                       aria-label="decline"
-                      onClick={() => handleDeclineGroup(groupInvite, i)}>
+                      onClick={() => handleDeclineGroup(groupInvite, i)}
+                    >
                       <Clear />
                     </IconButton>
                   </ListItemSecondaryAction>

@@ -15,10 +15,14 @@ const HomePage = () => {
   const uid = useSelector(selectUid);
 
   useEffect(() => {
-      axios
-      .get(`${API}/api/user/collectgroups?uid=${uid}`)
+    const headers = {
+      'x-api-key': process.env.REACT_APP_BACKEND_KEY,
+    };
+    console.log(headers);
+    axios
+      .get(`${API}/api/user/collectgroups?uid=${uid}`, { headers: headers })
       .then((res) => {
-        setUserGroups(res.data)
+        setUserGroups(res.data);
       })
       .catch((e) => console.log(e));
   }, [API, uid]);
@@ -46,7 +50,8 @@ const HomePage = () => {
         alignItems="center"
         flexDirection="column"
         gap="5vh"
-        minHeight="75vh">
+        minHeight="75vh"
+      >
         {/* TODO: Every button needs a handler */}
         <Typography variant="h3" component="h3">
           Who's joining you?
@@ -61,7 +66,8 @@ const HomePage = () => {
                 <Button
                   key={i}
                   variant="outlined"
-                  onClick={() => handleGoToGroupClick(group.groupId)}>
+                  onClick={() => handleGoToGroupClick(group.groupId)}
+                >
                   {group.groupName}
                 </Button>
               );
@@ -77,17 +83,20 @@ const HomePage = () => {
           display="flex"
           justifyContent="center"
           alignItems="center"
-          gap="5%">
+          gap="5%"
+        >
           <Button
             variant="outlined"
             size="large"
-            onClick={handleCreateGroupClick}>
+            onClick={handleCreateGroupClick}
+          >
             Create Group
           </Button>
           <Button
             variant="outlined"
             size="large"
-            onClick={handleJoinGroupClick}>
+            onClick={handleJoinGroupClick}
+          >
             Join Group
           </Button>
         </Box>

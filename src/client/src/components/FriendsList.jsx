@@ -22,8 +22,12 @@ const FriendsList = ({ setFriendIdsForGroup }) => {
 
   useEffect(() => {
     if (uid) {
+      const headers = {
+        'x-api-key': process.env.REACT_APP_BACKEND_KEY,
+      };    
+
       axios
-        .get(`${API}/api/user/collectfriends?uid=${uid}`)
+        .get(`${API}/api/user/collectfriends?uid=${uid}`, { headers })
         .then((res) => {
           setFriendsList(res.data);
         })

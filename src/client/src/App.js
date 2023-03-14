@@ -17,6 +17,7 @@ function App() {
 
   const [cookies] = useCookies(['access_token', 'uid']);
 
+
   const handleGoLogin = (e) => {
     e.preventDefault();
     navigate('/login');
@@ -36,8 +37,12 @@ function App() {
 
   useEffect(() => {
     if (cookies.access_token && cookies.uid) {
+      const headers = {
+        'x-api-key': process.env.REACT_APP_BACKEND_KEY,
+      };    
+
       axios
-        .get(`${AppURI}/api/user/get?uid=${cookies.uid}`)
+        .get(`${AppURI}/api/user/get?uid=${cookies.uid}`, { headers })
         .then((res) => {
           const obj = {
             uid: cookies.uid,
@@ -52,6 +57,7 @@ function App() {
         .catch((e) => console.log(e));
     }
   }, [AppURI, cookies.access_token, cookies.uid, dispatch, navigate]);
+
 
   return (
     <Box

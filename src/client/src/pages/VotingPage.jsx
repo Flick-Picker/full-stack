@@ -20,7 +20,11 @@ const VotingPage = () => {
   const uid = useSelector(selectUid);
   const [currIndex, setCurrIndex] = React.useState(0);
   const [currFlick, setCurrFlick] = React.useState({});
-  const [updateFlick, setUpdateFlick] = React.useState(0); 
+  const [updateFlick, setUpdateFlick] = React.useState(0);
+
+  const headers = {
+    'x-api-key': process.env.REACT_APP_BACKEND_KEY,
+  };
 
   useEffect(() => {
     const recs = state.session.recommendations;
@@ -38,14 +42,18 @@ const VotingPage = () => {
 
   const handleRatingClick = (value) => {
     axios
-      .post(`${API}/api/voting/submitvote`, {
-        sessionId: state.group.currentVotingSession,
-        uid,
-        mediaName: currFlick.name,
-        vote: value.toString(),
-      })
+      .post(
+        `${API}/api/voting/submitvote`,
+        {
+          sessionId: state.group.currentVotingSession,
+          uid,
+          mediaName: currFlick.name,
+          vote: value.toString(),
+        },
+        { headers }
+      )
       .then((res) => {
-        console.log("submitted");
+        console.log('submitted');
         console.log(res.data);
         state.session = res.data;
       })
@@ -53,7 +61,7 @@ const VotingPage = () => {
         const recs = state.session.recommendations;
         setCurrFlick(recs[currIndex + 1]);
         setCurrIndex(currIndex + 1);
-        setUpdateFlick(updateFlick+1);
+        setUpdateFlick(updateFlick + 1);
       })
       .catch((e) => console.log(e));
   };
@@ -92,7 +100,6 @@ const VotingPage = () => {
           <Typography variant="h6" component="h6">
             {currFlick.name}
           </Typography>
-
 
           <FormGroup>
             <FormControlLabel control={<Checkbox />} label="Seen it before" />

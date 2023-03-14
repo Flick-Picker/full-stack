@@ -68,8 +68,12 @@ const Preferences = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    const headers = {
+      'x-api-key': process.env.REACT_APP_BACKEND_KEY,
+    };
+
     axios
-      .get(`${API}/api/user/pref/get?uid=${uid}`)
+      .get(`${API}/api/user/pref/get?uid=${uid}`, { headers })
       .then((res) => {
         setLikedGenres(res.data.likedGenres);
         setDislikedGenres(res.data.dislikedGenres);
@@ -98,6 +102,10 @@ const Preferences = () => {
   };
 
   const handleSave = (e) => {
+    const headers = {
+      'x-api-key': process.env.REACT_APP_BACKEND_KEY,
+    };
+
     const body = {
       uid: uid,
       likedGenres: likedGenres,
@@ -108,7 +116,7 @@ const Preferences = () => {
       preferredRatings: 2 * rating,
     };
     axios
-      .post(`${API}/api/user/pref/update`, body)
+      .post(`${API}/api/user/pref/update`, body, { headers })
       .then(navigate('/home'))
       .catch((e) => {
         console.log(e);

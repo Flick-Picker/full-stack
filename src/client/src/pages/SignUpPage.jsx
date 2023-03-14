@@ -62,6 +62,10 @@ const SignUpPage = () => {
     navigate('/');
   };
 
+  const headers = {
+    'x-api-key': process.env.REACT_APP_BACKEND_KEY,
+  };
+
   const callSignup = () => {
     if (password === passAgain) {
       createUserWithEmailAndPassword(auth, email, password)
@@ -71,21 +75,16 @@ const SignUpPage = () => {
             uid: user.uid,
             email: user.email,
           };
-          return axios.post(`${signUpURI}/new`, body);
+          return axios.post(`${signUpURI}/new`, body, { headers });
         })
         .then((res) => {
           const user = res.data;
           setUid(user.uid);
-          // Signed in
-          // dispatch(init(userCredential.user));
-          // navigate('/home')
 
-          // use this way to make a user login after sign up
-          // otherwise redirect directly to logged in
           const body = {
             uid: user.uid,
           };
-          return axios.post(`${prefURI}/new`, body);
+          return axios.post(`${prefURI}/new`, body, { headers });
         })
         .then((res) => {
           navigate('/login');

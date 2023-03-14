@@ -22,6 +22,10 @@ const CreateGroup = () => {
 
   const navigate = useNavigate();
 
+  const headers = {
+    'x-api-key': process.env.REACT_APP_BACKEND_KEY,
+  };
+
   const handleGroupNameChange = (e) => {
     e.preventDefault();
     setGroupName(e.target.value);
@@ -36,7 +40,7 @@ const CreateGroup = () => {
         groupName,
       };
       axios
-        .post(`${API}/api/group/new`, body)
+        .post(`${API}/api/group/new`, body, { headers })
         .then(() => navigate('/home'))
         .catch((e) => console.log(e));
     } else {
