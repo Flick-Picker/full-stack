@@ -1,8 +1,13 @@
 import { Request, Response } from 'express';
 import * as service from '../services/inviteService';
+import { verifyKey } from '../helpers/keyHelper';
 
 export async function getInvite(req: Request, res: Response) {
   try {
+    if (!verifyKey(req)) {
+      res.status(500).json({ error: 'Invalid Flick Picker API Key' });
+      return;
+    }
     const { inviteId } = req.query;
     if (!inviteId) {
       res.status(404).json({ error: 'Params not found' });
@@ -22,6 +27,10 @@ export async function getInvite(req: Request, res: Response) {
 
 export async function sendFriendInvite(req: Request, res: Response) {
   try {
+    if (!verifyKey(req)) {
+      res.status(500).json({ error: 'Invalid Flick Picker API Key' });
+      return;
+    }
     const { senderUid, senderEmail, requestUid } = req.body;
     if (!senderUid || !senderEmail || !requestUid) {
       res.status(404).json({ error: 'Params not found' });
@@ -41,6 +50,10 @@ export async function sendFriendInvite(req: Request, res: Response) {
 
 export async function getFriendInvitesForUser(req: Request, res: Response) {
   try {
+    if (!verifyKey(req)) {
+      res.status(500).json({ error: 'Invalid Flick Picker API Key' });
+      return;
+    }
     const { uid } = req.query;
     if (!uid) {
       res.status(404).json({ error: 'Params not found' });
@@ -60,6 +73,10 @@ export async function getFriendInvitesForUser(req: Request, res: Response) {
 
 export async function acceptFriendInvite(req: Request, res: Response) {
   try {
+    if (!verifyKey(req)) {
+      res.status(500).json({ error: 'Invalid Flick Picker API Key' });
+      return;
+    }
     const { inviteId, senderUid, requestUid } = req.body;
     const invite = await service.acceptFriendInvite(inviteId, senderUid, requestUid);
     res.send(invite);
@@ -70,6 +87,10 @@ export async function acceptFriendInvite(req: Request, res: Response) {
 
 export async function getGroupInvitesForUser(req: Request, res: Response) {
   try {
+    if (!verifyKey(req)) {
+      res.status(500).json({ error: 'Invalid Flick Picker API Key' });
+      return;
+    }
     const { uid } = req.query;
     if (!uid) {
       res.status(404).json({ error: 'Params not found' });
@@ -89,6 +110,10 @@ export async function getGroupInvitesForUser(req: Request, res: Response) {
 
 export async function getGroupInvitesForGroup(req: Request, res: Response) {
   try {
+    if (!verifyKey(req)) {
+      res.status(500).json({ error: 'Invalid Flick Picker API Key' });
+      return;
+    }
     const { groupId } = req.query;
     if (!groupId) {
       res.status(404).json({ error: 'Params not found' });
@@ -108,6 +133,10 @@ export async function getGroupInvitesForGroup(req: Request, res: Response) {
 
 export async function sendGroupInvite(req: Request, res: Response) {
   try {
+    if (!verifyKey(req)) {
+      res.status(500).json({ error: 'Invalid Flick Picker API Key' });
+      return;
+    }
     const {
       groupId, groupName, senderUid, requestUid,
     } = req.body;
@@ -121,6 +150,10 @@ export async function sendGroupInvite(req: Request, res: Response) {
 
 export async function acceptGroupInvite(req: Request, res: Response) {
   try {
+    if (!verifyKey(req)) {
+      res.status(500).json({ error: 'Invalid Flick Picker API Key' });
+      return;
+    }
     const {
       inviteId, groupId, senderUid, requestUid,
     } = req.body;

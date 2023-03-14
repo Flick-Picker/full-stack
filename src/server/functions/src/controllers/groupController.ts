@@ -1,8 +1,13 @@
 import { Request, Response } from 'express';
 import * as service from '../services/groupService';
+import { verifyKey } from '../helpers/keyHelper';
 
 export async function getGroup(req: Request, res: Response) {
   try {
+    if (!verifyKey(req)) {
+      res.status(500).json({ error: 'Invalid Flick Picker API Key' });
+      return;
+    }
     const { groupId } = req.query;
     if (!groupId) {
       res.status(404).json({ error: 'Params not found' });

@@ -1,8 +1,13 @@
 import { Request, Response } from 'express';
 import * as service from '../services/prefService';
+import { verifyKey } from '../helpers/keyHelper';
 
 export async function getUserPref(req: Request, res: Response) {
   try {
+    if (!verifyKey(req)) {
+      res.status(500).json({ error: 'Invalid Flick Picker API Key' });
+      return;
+    }
     const { uid } = req.query;
     if (!uid) {
       res.status(404).json({ error: 'Params not found' });
@@ -22,6 +27,10 @@ export async function getUserPref(req: Request, res: Response) {
 
 export async function newUserPref(req: Request, res: Response) {
   try {
+    if (!verifyKey(req)) {
+      res.status(500).json({ error: 'Invalid Flick Picker API Key' });
+      return;
+    }
     const { uid } = req.body;
     const pref = await service.addPref(uid);
     res.send(pref);
@@ -32,6 +41,10 @@ export async function newUserPref(req: Request, res: Response) {
 
 export async function postUserPref(req: Request, res: Response) {
   try {
+    if (!verifyKey(req)) {
+      res.status(500).json({ error: 'Invalid Flick Picker API Key' });
+      return;
+    }
     const prefData = req.body;
     const pref = await service.updatePref(prefData);
     res.send(pref);
@@ -42,6 +55,10 @@ export async function postUserPref(req: Request, res: Response) {
 
 export async function getGroupPrefs(req: Request, res: Response) {
   try {
+    if (!verifyKey(req)) {
+      res.status(500).json({ error: 'Invalid Flick Picker API Key' });
+      return;
+    }
     const { groupId } = req.query;
     if (!groupId) {
       res.status(404).json({ error: 'Params not found' });

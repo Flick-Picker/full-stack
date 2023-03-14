@@ -1,8 +1,13 @@
 import { Request, Response } from 'express';
 import * as service from '../services/userService';
+import { verifyKey } from '../helpers/keyHelper';
 
 export async function getUser(req: Request, res: Response) {
   try {
+    if (!verifyKey(req)) {
+      res.status(500).json({ error: 'Invalid Flick Picker API Key' });
+      return;
+    }
     const { uid } = req.query;
     if (!uid) {
       res.status(404).json({ error: 'Params not found' });
@@ -23,6 +28,10 @@ export async function getUser(req: Request, res: Response) {
 // query for username or email
 export async function queryUser(req: Request, res: Response) {
   try {
+    if (!verifyKey(req)) {
+      res.status(500).json({ error: 'Invalid Flick Picker API Key' });
+      return;
+    }
     const { identifier } = req.query;
     if (!identifier) {
       res.status(404).json({ error: 'Params not found' });
@@ -42,6 +51,10 @@ export async function queryUser(req: Request, res: Response) {
 
 export async function collectGroups(req: Request, res: Response) {
   try {
+    if (!verifyKey(req)) {
+      res.status(500).json({ error: 'Invalid Flick Picker API Key' });
+      return;
+    }
     const { uid } = req.query;
     if (!uid) {
       res.status(404).json({ error: 'Params not found' });
@@ -61,6 +74,10 @@ export async function collectGroups(req: Request, res: Response) {
 
 export async function collectFriends(req: Request, res: Response) {
   try {
+    if (!verifyKey(req)) {
+      res.status(500).json({ error: 'Invalid Flick Picker API Key' });
+      return;
+    }
     const { uid } = req.query;
     if (!uid) {
       res.status(404).json({ error: 'Params not found' });
@@ -80,6 +97,10 @@ export async function collectFriends(req: Request, res: Response) {
 
 export async function newUser(req: Request, res: Response) {
   try {
+    if (!verifyKey(req)) {
+      res.status(500).json({ error: 'Invalid Flick Picker API Key' });
+      return;
+    }
     const { uid, email } = req.body;
     const user = await service.addUser(uid, email);
     res.send(user);
@@ -90,6 +111,10 @@ export async function newUser(req: Request, res: Response) {
 
 export async function postUser(req: Request, res: Response) {
   try {
+    if (!verifyKey(req)) {
+      res.status(500).json({ error: 'Invalid Flick Picker API Key' });
+      return;
+    }
     const userData = req.body;
     const user = await service.updateUser(userData);
     res.send(user);
@@ -100,6 +125,10 @@ export async function postUser(req: Request, res: Response) {
 
 export async function updateUsername(req: Request, res: Response) {
   try {
+    if (!verifyKey(req)) {
+      res.status(500).json({ error: 'Invalid Flick Picker API Key' });
+      return;
+    }
     const { uid, username } = req.body;
     const user = await service.updateUsername(uid, username);
     res.send(user);
@@ -110,6 +139,10 @@ export async function updateUsername(req: Request, res: Response) {
 
 export async function addFriend(req: Request, res: Response) {
   try {
+    if (!verifyKey(req)) {
+      res.status(500).json({ error: 'Invalid Flick Picker API Key' });
+      return;
+    }
     const { uid, friendUid } = req.body;
     const user = await service.addFriend(uid, friendUid);
     res.send(user);

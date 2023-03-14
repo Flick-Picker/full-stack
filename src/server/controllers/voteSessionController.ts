@@ -1,9 +1,14 @@
 import { Request, Response } from 'express';
+import { verifyKey } from '../helpers/keyHelper';
 
 import * as service from '../services/voteSessionService';
 
 export async function getSession(req: Request, res: Response) {
   try {
+    if (!verifyKey(req)) {
+      res.status(500).json({ error: 'Invalid Flick Picker API Key' });
+      return;
+    }
     const { uuid } = req.query;
     if (!uuid) {
       res.status(404).json({ error: 'Params not found' });
@@ -23,6 +28,10 @@ export async function getSession(req: Request, res: Response) {
 
 export async function addSessionForGroup(req: Request, res: Response) {
   try {
+    if (!verifyKey(req)) {
+      res.status(500).json({ error: 'Invalid Flick Picker API Key' });
+      return;
+    }
     const { groupId } = req.body;
     const session = await service.addSessionForGroup(groupId);
     res.send(session);
@@ -33,6 +42,10 @@ export async function addSessionForGroup(req: Request, res: Response) {
 
 export async function addSessionForUser(req: Request, res: Response) {
   try {
+    if (!verifyKey(req)) {
+      res.status(500).json({ error: 'Invalid Flick Picker API Key' });
+      return;
+    }
     const { uid } = req.body;
     const session = await service.addSessionForUser(uid);
     res.send(session);
@@ -43,6 +56,10 @@ export async function addSessionForUser(req: Request, res: Response) {
 
 export async function finishSession(req: Request, res: Response) {
   try {
+    if (!verifyKey(req)) {
+      res.status(500).json({ error: 'Invalid Flick Picker API Key' });
+      return;
+    }
     const { sessionId } = req.body;
     const session = await service.finishSession(sessionId);
     res.send(session);
@@ -53,6 +70,10 @@ export async function finishSession(req: Request, res: Response) {
 
 export async function loadRecommendationsForGroup(req: Request, res: Response) {
   try {
+    if (!verifyKey(req)) {
+      res.status(500).json({ error: 'Invalid Flick Picker API Key' });
+      return;
+    }
     const { sessionId, groupId } = req.body;
     const session = await service.loadRecommendations(sessionId, groupId, true);
     res.send(session);
@@ -63,6 +84,10 @@ export async function loadRecommendationsForGroup(req: Request, res: Response) {
 
 export async function loadRecommendationsForUser(req: Request, res: Response) {
   try {
+    if (!verifyKey(req)) {
+      res.status(500).json({ error: 'Invalid Flick Picker API Key' });
+      return;
+    }
     const { sessionId, uid } = req.body;
     const session = await service.loadRecommendations(sessionId, uid, false);
     res.send(session);
@@ -73,6 +98,10 @@ export async function loadRecommendationsForUser(req: Request, res: Response) {
 
 export async function submitUserVote(req: Request, res: Response) {
   try {
+    if (!verifyKey(req)) {
+      res.status(500).json({ error: 'Invalid Flick Picker API Key' });
+      return;
+    }
     const {
       sessionId,
       uid,
@@ -88,6 +117,10 @@ export async function submitUserVote(req: Request, res: Response) {
 
 export async function computeMatch(req: Request, res: Response) {
   try {
+    if (!verifyKey(req)) {
+      res.status(500).json({ error: 'Invalid Flick Picker API Key' });
+      return;
+    }
     const { uuid } = req.query;
     if (!uuid) {
       res.status(404).json({ error: 'Params not found' });
