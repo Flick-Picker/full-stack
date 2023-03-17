@@ -15,7 +15,6 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import auth from '..';
 import { init } from '../features/token/tokenSlice';
-import axios from 'axios';
 
 const LoginPage = () => {
 
@@ -92,21 +91,7 @@ const LoginPage = () => {
           path: '/',
           expires,
         });
-        // setCookie('refresh_token', obj.refreshToken, {
-        //   path: '/',
-        //   expires,
-        // });
-        // setCookie('expiration_time', obj.expirationTime, {
-        //   path: '/',
-        //   expires,
-        // });
-        navigate('/home');
-        const body = {
-          uid: userCredential.user.uid,
-        };
-        return axios.post(`${prefURI}/new`, body);
-      })
-      .then((res) => {
+
         navigate('/home');
       })
       .catch((error) => {

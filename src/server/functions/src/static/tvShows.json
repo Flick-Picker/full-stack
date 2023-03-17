@@ -1,0 +1,2586 @@
+[
+  {
+    "name": "The Last of Us",
+    "genres": [
+      "drama",
+      "action",
+      "adventure"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/uKvVjHNqB5VmOrdxqAt2F7J78ED.jpg",
+    "rating": 8.8,
+    "numberOfVotes": 1444,
+    "popularity": 7004.27,
+    "releaseDate": "2023-01-15"
+  },
+  {
+    "name": "Wednesday",
+    "genres": [
+      "sci-fi",
+      "fantasy",
+      "mystery",
+      "comedy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/9PFonBhy4cQy7Jz20NpMygczOkv.jpg",
+    "rating": 8.7,
+    "numberOfVotes": 6236,
+    "popularity": 1432.118,
+    "releaseDate": "2022-11-23"
+  },
+  {
+    "name": "Tulsa King",
+    "genres": [
+      "crime",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fwTv3RPRAIy0maOMns5eYRRwnDk.jpg",
+    "rating": 8.5,
+    "numberOfVotes": 759,
+    "popularity": 1135.022,
+    "releaseDate": "2022-11-13"
+  },
+  {
+    "name": "Grey's Anatomy",
+    "genres": [
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/daSFbrt8QCXV2hSwB0hqYjbj681.jpg",
+    "rating": 8.3,
+    "numberOfVotes": 8908,
+    "popularity": 931.309,
+    "releaseDate": "2005-03-27"
+  },
+  {
+    "name": "Yellowstone",
+    "genres": [
+      "western",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/peNC0eyc3TQJa6x4TdKcBPNP4t0.jpg",
+    "rating": 8.1,
+    "numberOfVotes": 1451,
+    "popularity": 790.672,
+    "releaseDate": "2018-06-20"
+  },
+  {
+    "name": "Anne Rice's Mayfair Witches",
+    "genres": [
+      "drama",
+      "sci-fi",
+      "fantasy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/zKRBfuRWGbs9R2nxhlNP8CfArUh.jpg",
+    "rating": 7.5,
+    "numberOfVotes": 48,
+    "popularity": 639.463,
+    "releaseDate": "2023-01-08"
+  },
+  {
+    "name": "The Good Doctor",
+    "genres": [
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/luhKkdD80qe62fwop6sdrXK9jUT.jpg",
+    "rating": 8.5,
+    "numberOfVotes": 11111,
+    "popularity": 482.912,
+    "releaseDate": "2017-09-25"
+  },
+  {
+    "name": "The Walking Dead",
+    "genres": [
+      "action",
+      "adventure",
+      "drama",
+      "sci-fi",
+      "fantasy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/xf9wuDcqlUPWABZNeDKPbZUjWx0.jpg",
+    "rating": 8.1,
+    "numberOfVotes": 14565,
+    "popularity": 643.157,
+    "releaseDate": "2010-10-31"
+  },
+  {
+    "name": "The Price Is Right",
+    "genres": [],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/eK03CwhkRSZG6U7E9Y8jccl6BRZ.jpg",
+    "rating": 6.3,
+    "numberOfVotes": 60,
+    "popularity": 837.872,
+    "releaseDate": "1972-09-04"
+  },
+  {
+    "name": "Rick and Morty",
+    "genres": [
+      "animation",
+      "comedy",
+      "sci-fi",
+      "fantasy",
+      "action",
+      "adventure"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/cvhNj9eoRBe5SxjCbQTkh05UP5K.jpg",
+    "rating": 8.7,
+    "numberOfVotes": 7841,
+    "popularity": 551.984,
+    "releaseDate": "2013-12-02"
+  },
+  {
+    "name": "Law & Order: Special Victims Unit",
+    "genres": [
+      "crime",
+      "drama",
+      "mystery"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ywBt4WKADdMVgxTR1rS2uFwMYTH.jpg",
+    "rating": 8,
+    "numberOfVotes": 3192,
+    "popularity": 574.323,
+    "releaseDate": "1999-09-20"
+  },
+  {
+    "name": "Lucifer",
+    "genres": [
+      "crime",
+      "sci-fi",
+      "fantasy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ekZobS8isE6mA53RAiGDG93hBxL.jpg",
+    "rating": 8.5,
+    "numberOfVotes": 13152,
+    "popularity": 552.895,
+    "releaseDate": "2016-01-25"
+  },
+  {
+    "name": "Game of Thrones",
+    "genres": [
+      "sci-fi",
+      "fantasy",
+      "drama",
+      "action",
+      "adventure"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/7WUHnWGx5OO145IRxPDUkQSh4C7.jpg",
+    "rating": 8.4,
+    "numberOfVotes": 20519,
+    "popularity": 538.3,
+    "releaseDate": "2011-04-17"
+  },
+  {
+    "name": "Peaky Blinders",
+    "genres": [
+      "drama",
+      "crime"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/vUUqzWa2LnHIVqkaKVlVGkVcZIW.jpg",
+    "rating": 8.5,
+    "numberOfVotes": 8151,
+    "popularity": 520.925,
+    "releaseDate": "2013-09-12"
+  },
+  {
+    "name": "NCIS",
+    "genres": [
+      "crime",
+      "drama",
+      "action",
+      "adventure"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/2exOHePjOTquUsbThPGhuEjYTyA.jpg",
+    "rating": 7.6,
+    "numberOfVotes": 1943,
+    "popularity": 403.052,
+    "releaseDate": "2003-09-23"
+  },
+  {
+    "name": "The Simpsons",
+    "genres": [
+      "family",
+      "animation",
+      "comedy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/zI3E2a3WYma5w8emI35mgq5Iurx.jpg",
+    "rating": 8,
+    "numberOfVotes": 8609,
+    "popularity": 528.549,
+    "releaseDate": "1989-12-17"
+  },
+  {
+    "name": "Supernatural",
+    "genres": [
+      "drama",
+      "mystery",
+      "sci-fi",
+      "fantasy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/KoYWXbnYuS3b0GyQPkbuexlVK9.jpg",
+    "rating": 8.3,
+    "numberOfVotes": 6466,
+    "popularity": 470.315,
+    "releaseDate": "2005-09-13"
+  },
+  {
+    "name": "Vikings",
+    "genres": [
+      "action",
+      "adventure",
+      "drama",
+      "war",
+      "politics"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/bQLrHIRNEkE3PdIWQrZHynQZazu.jpg",
+    "rating": 8.1,
+    "numberOfVotes": 5995,
+    "popularity": 440.869,
+    "releaseDate": "2013-03-03"
+  },
+  {
+    "name": "The Blacklist",
+    "genres": [
+      "drama",
+      "crime",
+      "mystery"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/htJzeRcYI2ewMm4PTrg98UMXShe.jpg",
+    "rating": 7.6,
+    "numberOfVotes": 2591,
+    "popularity": 434.591,
+    "releaseDate": "2013-09-23"
+  },
+  {
+    "name": "Breaking Bad",
+    "genres": [
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ggFHVNu6YYI5L9pCfOacjizRGt.jpg",
+    "rating": 8.9,
+    "numberOfVotes": 11060,
+    "popularity": 408.171,
+    "releaseDate": "2008-01-20"
+  },
+  {
+    "name": "The Witcher: Blood Origin",
+    "genres": [
+      "action",
+      "adventure",
+      "sci-fi",
+      "fantasy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/vpfJK9F0UJNcAIIeC42oJyKMnZQ.jpg",
+    "rating": 7,
+    "numberOfVotes": 424,
+    "popularity": 424.924,
+    "releaseDate": "2022-12-25"
+  },
+  {
+    "name": "Criminal Minds",
+    "genres": [
+      "crime",
+      "drama",
+      "mystery"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/7TCwgX7oQKxcWYEhSPRmaHe6ULN.jpg",
+    "rating": 8.3,
+    "numberOfVotes": 3187,
+    "popularity": 461.15,
+    "releaseDate": "2005-09-22"
+  },
+  {
+    "name": "Let's Make a Deal",
+    "genres": [
+      "reality"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/8lQkzJCwPpB0P6GieQeojUOW6PU.jpg",
+    "rating": 6.1,
+    "numberOfVotes": 7,
+    "popularity": 570.174,
+    "releaseDate": "2009-10-05"
+  },
+  {
+    "name": "Suits",
+    "genres": [
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/vQiryp6LioFxQThywxbC6TuoDjy.jpg",
+    "rating": 8.2,
+    "numberOfVotes": 4070,
+    "popularity": 424.279,
+    "releaseDate": "2011-06-23"
+  },
+  {
+    "name": "1923",
+    "genres": [
+      "drama",
+      "western"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/zgZRJZvZn5cpsWAB0zMUdad3iZd.jpg",
+    "rating": 8.6,
+    "numberOfVotes": 37,
+    "popularity": 445.669,
+    "releaseDate": "2022-12-18"
+  },
+  {
+    "name": "House of the Dragon",
+    "genres": [
+      "sci-fi",
+      "fantasy",
+      "drama",
+      "action",
+      "adventure"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/1X4h40fcB4WWUmIBK0auT4zRBAV.jpg",
+    "rating": 8.5,
+    "numberOfVotes": 2899,
+    "popularity": 392.802,
+    "releaseDate": "2022-08-21"
+  },
+  {
+    "name": "The Flash",
+    "genres": [
+      "drama",
+      "sci-fi",
+      "fantasy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/AqFS7VPOhUUZ0DiPvNPv0GfTAlj.jpg",
+    "rating": 7.8,
+    "numberOfVotes": 10202,
+    "popularity": 434.486,
+    "releaseDate": "2014-10-07"
+  },
+  {
+    "name": "Love Island",
+    "genres": [
+      "reality"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/xcvfGvsEyKm01dIHLh2gxnhM14A.jpg",
+    "rating": 6,
+    "numberOfVotes": 98,
+    "popularity": 360.387,
+    "releaseDate": "2015-06-07"
+  },
+  {
+    "name": "Columbo",
+    "genres": [
+      "crime",
+      "drama",
+      "mystery"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/9JU9AYr18FUf0dbZWz48t3wuWnk.jpg",
+    "rating": 8.1,
+    "numberOfVotes": 499,
+    "popularity": 331.576,
+    "releaseDate": "1971-09-15"
+  },
+  {
+    "name": "1883",
+    "genres": [
+      "western",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/waLbm384SQDwLTCn6ttPqQS5kfV.jpg",
+    "rating": 8.4,
+    "numberOfVotes": 278,
+    "popularity": 353.195,
+    "releaseDate": "2021-12-19"
+  },
+  {
+    "name": "The Lord of the Rings: The Rings of Power",
+    "genres": [
+      "action",
+      "adventure",
+      "sci-fi",
+      "fantasy",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/mYLOqiStMxDK3fYZFirgrMt8z5d.jpg",
+    "rating": 7.5,
+    "numberOfVotes": 1866,
+    "popularity": 317.535,
+    "releaseDate": "2022-09-01"
+  },
+  {
+    "name": "The Vampire Diaries",
+    "genres": [
+      "drama",
+      "sci-fi",
+      "fantasy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/4RHhqEdI2VV5wHp0rLmKAg9t9h6.jpg",
+    "rating": 8.3,
+    "numberOfVotes": 7899,
+    "popularity": 342.992,
+    "releaseDate": "2009-09-10"
+  },
+  {
+    "name": "Stranger Things",
+    "genres": [
+      "drama",
+      "sci-fi",
+      "fantasy",
+      "mystery"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/49WJfeN0moxb9IPfGn8AIqMGskD.jpg",
+    "rating": 8.6,
+    "numberOfVotes": 15054,
+    "popularity": 310.936,
+    "releaseDate": "2016-07-15"
+  },
+  {
+    "name": "That '90s Show",
+    "genres": [
+      "comedy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/nZcufEuqZqNYMx6mNjlh2rmjDqx.jpg",
+    "rating": 7.2,
+    "numberOfVotes": 56,
+    "popularity": 296.089,
+    "releaseDate": "2023-01-19"
+  },
+  {
+    "name": "The Mentalist",
+    "genres": [
+      "crime",
+      "drama",
+      "mystery"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/acYXu4KaDj1NIkMgObnhe4C4a0T.jpg",
+    "rating": 8.4,
+    "numberOfVotes": 3125,
+    "popularity": 330.545,
+    "releaseDate": "2008-09-23"
+  },
+  {
+    "name": "Halo",
+    "genres": [
+      "action",
+      "adventure",
+      "sci-fi",
+      "fantasy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/nJUHX3XL1jMkk8honUZnUmudFb9.jpg",
+    "rating": 8.4,
+    "numberOfVotes": 1664,
+    "popularity": 289.488,
+    "releaseDate": "2022-03-24"
+  },
+  {
+    "name": "Young Sheldon",
+    "genres": [
+      "comedy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/5Gf83qYgLY8Qivn7jpv5nxxZPu6.jpg",
+    "rating": 8.1,
+    "numberOfVotes": 1923,
+    "popularity": 297.338,
+    "releaseDate": "2017-09-25"
+  },
+  {
+    "name": "Willow",
+    "genres": [
+      "sci-fi",
+      "fantasy",
+      "action",
+      "adventure",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/jhdSPDlhswjN1r6O0pGP3ZvQgU8.jpg",
+    "rating": 7.2,
+    "numberOfVotes": 224,
+    "popularity": 274.703,
+    "releaseDate": "2022-11-30"
+  },
+  {
+    "name": "Euphoria",
+    "genres": [
+      "drama",
+      "crime"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/jtnfNzqZwN4E32FGGxx1YZaBWWf.jpg",
+    "rating": 8.4,
+    "numberOfVotes": 8493,
+    "popularity": 278.312,
+    "releaseDate": "2019-06-16"
+  },
+  {
+    "name": "South Park",
+    "genres": [
+      "animation",
+      "comedy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/iiCY2QIGSnmtVkIdjkKAfwDs0KF.jpg",
+    "rating": 8.3,
+    "numberOfVotes": 3353,
+    "popularity": 333.876,
+    "releaseDate": "1997-08-13"
+  },
+  {
+    "name": "The Last Kingdom",
+    "genres": [
+      "action",
+      "adventure",
+      "drama",
+      "war",
+      "politics"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/8eJf0hxgIhE6QSxbtuNCekTddy1.jpg",
+    "rating": 8.3,
+    "numberOfVotes": 1350,
+    "popularity": 305.224,
+    "releaseDate": "2015-10-10"
+  },
+  {
+    "name": "PBS NewsHour",
+    "genres": [
+      "news"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/5nfFB1wHQmNxkjaMNNMendPIRzb.jpg",
+    "rating": 5.3,
+    "numberOfVotes": 37,
+    "popularity": 406.034,
+    "releaseDate": "1975-10-20"
+  },
+  {
+    "name": "Velma",
+    "genres": [
+      "animation",
+      "comedy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/zxkNhuPSHeDv3yA7sFu2RuEOGgR.jpg",
+    "rating": 2.7,
+    "numberOfVotes": 76,
+    "popularity": 277.722,
+    "releaseDate": "2023-01-12"
+  },
+  {
+    "name": "The Daily Show with Trevor Noah",
+    "genres": [
+      "news",
+      "comedy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/nz5fAg1OomLZ7fxiM4RnLbJxppc.jpg",
+    "rating": 6.4,
+    "numberOfVotes": 428,
+    "popularity": 396.081,
+    "releaseDate": "1996-07-22"
+  },
+  {
+    "name": "Teen Wolf",
+    "genres": [
+      "sci-fi",
+      "fantasy",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/vY2vfAskJTiWsQSv6bdbNCQhPLm.jpg",
+    "rating": 8.6,
+    "numberOfVotes": 3601,
+    "popularity": 268.385,
+    "releaseDate": "2011-06-05"
+  },
+  {
+    "name": "Ginny & Georgia",
+    "genres": [
+      "comedy",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/j1yqOSVVskSYpYreNT0VeD1S3Dq.jpg",
+    "rating": 8.1,
+    "numberOfVotes": 1181,
+    "popularity": 206.833,
+    "releaseDate": "2021-02-24"
+  },
+  {
+    "name": "Bones",
+    "genres": [
+      "crime",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/eyTu5c8LniVciRZIOSHTvvkkgJa.jpg",
+    "rating": 8.3,
+    "numberOfVotes": 2696,
+    "popularity": 283.076,
+    "releaseDate": "2005-09-13"
+  },
+  {
+    "name": "Family Guy",
+    "genres": [
+      "animation",
+      "comedy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/aLB7psB9N81n5GecHNOudXWW3AI.jpg",
+    "rating": 7.3,
+    "numberOfVotes": 3652,
+    "popularity": 300.648,
+    "releaseDate": "1999-01-31"
+  },
+  {
+    "name": "House",
+    "genres": [
+      "drama",
+      "mystery"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/lkvhReTBZ2Ksl0Dl5Oplsf6UYkF.jpg",
+    "rating": 8.6,
+    "numberOfVotes": 5283,
+    "popularity": 271.307,
+    "releaseDate": "2004-11-16"
+  },
+  {
+    "name": "Friends",
+    "genres": [
+      "comedy",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/f496cm9enuEsZkSPzCwnTESEK5s.jpg",
+    "rating": 8.5,
+    "numberOfVotes": 6597,
+    "popularity": 297.992,
+    "releaseDate": "1994-09-22"
+  },
+  {
+    "name": "The Old Man",
+    "genres": [
+      "action",
+      "adventure",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/euYz4adiSHH0GE3YnTeh3uLfBvL.jpg",
+    "rating": 7.4,
+    "numberOfVotes": 162,
+    "popularity": 272.91,
+    "releaseDate": "2022-06-16"
+  },
+  {
+    "name": "S.W.A.T.",
+    "genres": [
+      "crime",
+      "action",
+      "adventure",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/7Bttz4hEspKlpU0Me57dkHNR3nf.jpg",
+    "rating": 8.1,
+    "numberOfVotes": 1102,
+    "popularity": 264.828,
+    "releaseDate": "2017-11-02"
+  },
+  {
+    "name": "X-Men: Evolution",
+    "genres": [
+      "kids",
+      "animation",
+      "sci-fi",
+      "fantasy",
+      "action",
+      "adventure"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/At5aZIKkN8zHTAXOnQR9D3b7usW.jpg",
+    "rating": 8,
+    "numberOfVotes": 390,
+    "popularity": 269.409,
+    "releaseDate": "2000-11-04"
+  },
+  {
+    "name": "Hollyoaks",
+    "genres": [
+      "soap"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/5sbMgcbpzZn8aKETeanrKDANzdM.jpg",
+    "rating": 5.3,
+    "numberOfVotes": 51,
+    "popularity": 357.931,
+    "releaseDate": "1995-10-23"
+  },
+  {
+    "name": "PAW Patrol",
+    "genres": [
+      "animation",
+      "kids"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/8HXkgUBO5OF8ZK9XbY69RM4S5rv.jpg",
+    "rating": 7,
+    "numberOfVotes": 596,
+    "popularity": 255.521,
+    "releaseDate": "2013-08-12"
+  },
+  {
+    "name": "Law & Order",
+    "genres": [
+      "crime",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/77OPlbsvX3pzoFbyfpcE3GXMCod.jpg",
+    "rating": 7.6,
+    "numberOfVotes": 399,
+    "popularity": 298.59,
+    "releaseDate": "1990-09-13"
+  },
+  {
+    "name": "La Brea",
+    "genres": [
+      "drama",
+      "sci-fi",
+      "fantasy",
+      "action",
+      "adventure"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/wEo5pzSZ3MF4EzNvY2R1OZNX266.jpg",
+    "rating": 7.4,
+    "numberOfVotes": 959,
+    "popularity": 236.75,
+    "releaseDate": "2021-09-28"
+  },
+  {
+    "name": "Chucky",
+    "genres": [
+      "crime",
+      "sci-fi",
+      "fantasy",
+      "drama",
+      "mystery"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/kY0BogCM8SkNJ0MNiHB3VTM86Tz.jpg",
+    "rating": 7.9,
+    "numberOfVotes": 3605,
+    "popularity": 236.677,
+    "releaseDate": "2021-10-12"
+  },
+  {
+    "name": "Vikings: Valhalla",
+    "genres": [
+      "action",
+      "adventure",
+      "drama",
+      "war",
+      "politics"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/rDFy1fUU6OC3Mm0CLFB7u0fGwVN.jpg",
+    "rating": 7.9,
+    "numberOfVotes": 554,
+    "popularity": 224.757,
+    "releaseDate": "2022-02-25"
+  },
+  {
+    "name": "Birds of a Feather",
+    "genres": [
+      "comedy",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/c5dylz4QUaIP15NEfhZuJhyvIQX.jpg",
+    "rating": 6.2,
+    "numberOfVotes": 13,
+    "popularity": 232.576,
+    "releaseDate": "1989-10-16"
+  },
+  {
+    "name": "In Treatment",
+    "genres": [
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/jT5aE1ghJL9OKrxmAr2GUiWCcYw.jpg",
+    "rating": 7.8,
+    "numberOfVotes": 120,
+    "popularity": 260.651,
+    "releaseDate": "2008-01-28"
+  },
+  {
+    "name": "The Boys",
+    "genres": [
+      "sci-fi",
+      "fantasy",
+      "action",
+      "adventure"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/stTEycfG9928HYGEISBFaG1ngjM.jpg",
+    "rating": 8.5,
+    "numberOfVotes": 8023,
+    "popularity": 234.895,
+    "releaseDate": "2019-07-25"
+  },
+  {
+    "name": "Your Honor",
+    "genres": [
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/5NDs12paqvz4Jug3f13fC9XmSVN.jpg",
+    "rating": 8.2,
+    "numberOfVotes": 1255,
+    "popularity": 279.268,
+    "releaseDate": "2020-12-06"
+  },
+  {
+    "name": "Cobra Kai",
+    "genres": [
+      "action",
+      "adventure",
+      "drama",
+      "comedy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/m7tG5E1EbywuwTsl6hq990So0Bx.jpg",
+    "rating": 8.2,
+    "numberOfVotes": 5473,
+    "popularity": 232.354,
+    "releaseDate": "2018-05-02"
+  },
+  {
+    "name": "Two and a Half Men",
+    "genres": [
+      "comedy",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/A9QDK4OWpv41W27kCv0LXe30k9S.jpg",
+    "rating": 7.4,
+    "numberOfVotes": 2576,
+    "popularity": 264.487,
+    "releaseDate": "2003-09-22"
+  },
+  {
+    "name": "The Rookie",
+    "genres": [
+      "crime",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/gSGj4zhuFllpZEkHGdsBMV2BGsq.jpg",
+    "rating": 8.2,
+    "numberOfVotes": 1119,
+    "popularity": 244.749,
+    "releaseDate": "2018-10-16"
+  },
+  {
+    "name": "Dahmer – Monster: The Jeffrey Dahmer Story",
+    "genres": [
+      "crime",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/f2PVrphK0u81ES256lw3oAZuF3x.jpg",
+    "rating": 8.1,
+    "numberOfVotes": 1940,
+    "popularity": 212.892,
+    "releaseDate": "2022-09-21"
+  },
+  {
+    "name": "The Sinner",
+    "genres": [
+      "crime",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/rmibFGdqOe0kKKhPls0jVOdZCWw.jpg",
+    "rating": 7.5,
+    "numberOfVotes": 832,
+    "popularity": 193.471,
+    "releaseDate": "2017-08-02"
+  },
+  {
+    "name": "Chicago P.D.",
+    "genres": [
+      "crime",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/7gtp4lusk685hdmuEXMbYrmSQoY.jpg",
+    "rating": 8.4,
+    "numberOfVotes": 2044,
+    "popularity": 226.909,
+    "releaseDate": "2014-01-08"
+  },
+  {
+    "name": "Bering Sea Gold",
+    "genres": [
+      "documentary"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/A8mKQA5EfAz78govyLuBnrxkhWD.jpg",
+    "rating": 6.2,
+    "numberOfVotes": 20,
+    "popularity": 309.148,
+    "releaseDate": "2012-01-27"
+  },
+  {
+    "name": "Naked News",
+    "genres": [
+      "comedy",
+      "news"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/kZZl47H5zlM8z1Rqe39h46NC17K.jpg",
+    "rating": 6.1,
+    "numberOfVotes": 80,
+    "popularity": 257.336,
+    "releaseDate": "2005-11-20"
+  },
+  {
+    "name": "Drawn Together",
+    "genres": [
+      "animation",
+      "comedy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/xhshQ2WgAa5zyXqwRcxKMDwRBGd.jpg",
+    "rating": 8.2,
+    "numberOfVotes": 1097,
+    "popularity": 215.395,
+    "releaseDate": "2004-10-27"
+  },
+  {
+    "name": "The Legend of Vox Machina",
+    "genres": [
+      "animation",
+      "sci-fi",
+      "fantasy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/4fqfhmVNOHe2nLcligiVMtMnfeM.jpg",
+    "rating": 8.1,
+    "numberOfVotes": 240,
+    "popularity": 197.806,
+    "releaseDate": "2022-01-27"
+  },
+  {
+    "name": "Shameless",
+    "genres": [
+      "drama",
+      "comedy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/9akij7PqZ1g6zl42DQQTtL9CTSb.jpg",
+    "rating": 8.1,
+    "numberOfVotes": 2025,
+    "popularity": 233.108,
+    "releaseDate": "2011-01-09"
+  },
+  {
+    "name": "Kaleidoscope",
+    "genres": [
+      "crime",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/2nXJoSB5Y6R9ne7pjqL7Cs3zqY1.jpg",
+    "rating": 7.3,
+    "numberOfVotes": 178,
+    "popularity": 197.31,
+    "releaseDate": "2023-01-01"
+  },
+  {
+    "name": "The Amazing World of Gumball",
+    "genres": [
+      "animation",
+      "family",
+      "sci-fi",
+      "fantasy",
+      "comedy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/VYnnyA2hyxi3VUPgCA71mMtt69.jpg",
+    "rating": 0,
+    "numberOfVotes": 0,
+    "popularity": 228.259,
+    "releaseDate": "2011-05-02"
+  },
+  {
+    "name": "The 100",
+    "genres": [
+      "sci-fi",
+      "fantasy",
+      "drama",
+      "action",
+      "adventure"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/wcaDIAG1QdXQLRaj4vC1EFdBT2.jpg",
+    "rating": 7.9,
+    "numberOfVotes": 7392,
+    "popularity": 222.146,
+    "releaseDate": "2014-03-19"
+  },
+  {
+    "name": "Doctor Who",
+    "genres": [
+      "action",
+      "adventure",
+      "drama",
+      "sci-fi",
+      "fantasy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/sz4zF5z9zyFh8Z6g5IQPNq91cI7.jpg",
+    "rating": 7.4,
+    "numberOfVotes": 2512,
+    "popularity": 255.574,
+    "releaseDate": "2005-03-26"
+  },
+  {
+    "name": "Chicago Fire",
+    "genres": [
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/iiI1YU8akLYWdWuX1qHuMYPvSHC.jpg",
+    "rating": 8.4,
+    "numberOfVotes": 1878,
+    "popularity": 246.262,
+    "releaseDate": "2012-10-10"
+  },
+  {
+    "name": "Castle",
+    "genres": [
+      "drama",
+      "crime"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/diXBeMzvfJb2iJg3G0kCUaMCzEc.jpg",
+    "rating": 8,
+    "numberOfVotes": 1515,
+    "popularity": 229.146,
+    "releaseDate": "2009-03-09"
+  },
+  {
+    "name": "The Peripheral",
+    "genres": [
+      "sci-fi",
+      "fantasy",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ccBe5BVeibdBEQU7l6P6BubajWV.jpg",
+    "rating": 8,
+    "numberOfVotes": 577,
+    "popularity": 228.217,
+    "releaseDate": "2022-10-20"
+  },
+  {
+    "name": "Prison Break",
+    "genres": [
+      "action",
+      "adventure",
+      "crime",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/4AyYGYGbHXDcsJaXK9rrSUpCYPe.jpg",
+    "rating": 8.1,
+    "numberOfVotes": 4200,
+    "popularity": 192.024,
+    "releaseDate": "2005-08-29"
+  },
+  {
+    "name": "Naked and Afraid",
+    "genres": [
+      "reality"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/nDXJn6wEIQ6AfaWbt1APNQmyswU.jpg",
+    "rating": 7.1,
+    "numberOfVotes": 57,
+    "popularity": 257.04,
+    "releaseDate": "2013-06-23"
+  },
+  {
+    "name": "Grimm",
+    "genres": [
+      "drama",
+      "mystery",
+      "sci-fi",
+      "fantasy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/iOptnt1QHi6bIHmOq6adnZTV0bU.jpg",
+    "rating": 8.3,
+    "numberOfVotes": 2718,
+    "popularity": 205.844,
+    "releaseDate": "2011-10-28"
+  },
+  {
+    "name": "Smallville",
+    "genres": [
+      "sci-fi",
+      "fantasy",
+      "action",
+      "adventure",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/pUhJGETy2sec4vEkiqJ9eGeIywc.jpg",
+    "rating": 8.2,
+    "numberOfVotes": 3489,
+    "popularity": 221.51,
+    "releaseDate": "2001-10-16"
+  },
+  {
+    "name": "Wolf Pack",
+    "genres": [
+      "sci-fi",
+      "fantasy",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/rbCANmS1ogweUkIBghP03EHtdHB.jpg",
+    "rating": 8.3,
+    "numberOfVotes": 44,
+    "popularity": 181.278,
+    "releaseDate": "2023-01-26"
+  },
+  {
+    "name": "Chesapeake Shores",
+    "genres": [
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/wAWnKnDwrhfUZZ3hKlwr23yBOwM.jpg",
+    "rating": 8.1,
+    "numberOfVotes": 98,
+    "popularity": 234.333,
+    "releaseDate": "2016-08-14"
+  },
+  {
+    "name": "The Winchesters",
+    "genres": [
+      "action",
+      "adventure",
+      "sci-fi",
+      "fantasy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/oyleYabGfn6c50bIo4M3c7ogrfL.jpg",
+    "rating": 8.1,
+    "numberOfVotes": 139,
+    "popularity": 274.595,
+    "releaseDate": "2022-10-11"
+  },
+  {
+    "name": "Dog love",
+    "genres": [
+      "comedy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/AmTjLtjQbl7RyNRf6E1yvvpGXCz.jpg",
+    "rating": 6,
+    "numberOfVotes": 1,
+    "popularity": 192.198,
+    "releaseDate": "2010-01-11"
+  },
+  {
+    "name": "The Inspector Lynley Mysteries",
+    "genres": [
+      "crime",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/d68bISjO6e6cOtgeygJO471FUIh.jpg",
+    "rating": 7.5,
+    "numberOfVotes": 16,
+    "popularity": 190.139,
+    "releaseDate": "2002-04-08"
+  },
+  {
+    "name": "Arrow",
+    "genres": [
+      "crime",
+      "drama",
+      "mystery",
+      "action",
+      "adventure"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/gKG5QGz5Ngf8fgWpBsWtlg5L2SF.jpg",
+    "rating": 6.8,
+    "numberOfVotes": 5345,
+    "popularity": 199.464,
+    "releaseDate": "2012-10-10"
+  },
+  {
+    "name": "Malcolm in the Middle",
+    "genres": [
+      "family",
+      "comedy",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ckLLIsNy3Z0Go1PYHA2PHzVymUA.jpg",
+    "rating": 8.5,
+    "numberOfVotes": 3594,
+    "popularity": 191.119,
+    "releaseDate": "2000-01-09"
+  },
+  {
+    "name": "Midsomer Murders",
+    "genres": [
+      "crime",
+      "drama",
+      "mystery"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/pz7tsWxe0TTdfJnWPjZAEnrSl5M.jpg",
+    "rating": 7.6,
+    "numberOfVotes": 217,
+    "popularity": 195.626,
+    "releaseDate": "1997-03-23"
+  },
+  {
+    "name": "Star Wars: Andor",
+    "genres": [
+      "sci-fi",
+      "fantasy",
+      "action",
+      "adventure",
+      "war",
+      "politics"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/59SVNwLfoMnZPPB6ukW6dlPxAdI.jpg",
+    "rating": 8.2,
+    "numberOfVotes": 561,
+    "popularity": 158.839,
+    "releaseDate": "2022-09-21"
+  },
+  {
+    "name": "American Dad!",
+    "genres": [
+      "animation",
+      "comedy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/b2XLAyJKLnZWClMmzNieoa33Sf6.jpg",
+    "rating": 6.9,
+    "numberOfVotes": 1725,
+    "popularity": 216.813,
+    "releaseDate": "2005-02-06"
+  },
+  {
+    "name": "She-Hulk: Attorney at Law",
+    "genres": [
+      "comedy",
+      "sci-fi",
+      "fantasy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/hJfI6AGrmr4uSHRccfJuSsapvOb.jpg",
+    "rating": 6.6,
+    "numberOfVotes": 1507,
+    "popularity": 190.232,
+    "releaseDate": "2022-08-18"
+  },
+  {
+    "name": "Regular Show",
+    "genres": [
+      "animation",
+      "comedy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/mS5SLxMYcKfUxA0utBSR5MOAWWr.jpg",
+    "rating": 8.7,
+    "numberOfVotes": 1656,
+    "popularity": 196.759,
+    "releaseDate": "2010-09-06"
+  },
+  {
+    "name": "Matt Hatter Chronicles",
+    "genres": [
+      "animation",
+      "kids",
+      "action",
+      "adventure",
+      "sci-fi",
+      "fantasy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/s3s7cCeVEYWSZgHGdQL5v9yPcHe.jpg",
+    "rating": 8,
+    "numberOfVotes": 4,
+    "popularity": 176.06,
+    "releaseDate": "2011-10-31"
+  },
+  {
+    "name": "CSI: Crime Scene Investigation",
+    "genres": [
+      "crime",
+      "drama",
+      "mystery"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/9XecVOLLkbGBNnpF2PvP8vQBmww.jpg",
+    "rating": 7.6,
+    "numberOfVotes": 955,
+    "popularity": 184.558,
+    "releaseDate": "2000-10-06"
+  },
+  {
+    "name": "Psych",
+    "genres": [
+      "comedy",
+      "drama",
+      "mystery"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fDI15gTVbtW5Sbv5QenqecRxWKJ.jpg",
+    "rating": 7.9,
+    "numberOfVotes": 631,
+    "popularity": 168.012,
+    "releaseDate": "2006-07-07"
+  },
+  {
+    "name": "Modern Family",
+    "genres": [
+      "comedy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fu5vEUHgxkAPmX26ISQXqHmlPMq.jpg",
+    "rating": 7.8,
+    "numberOfVotes": 2094,
+    "popularity": 194.489,
+    "releaseDate": "2009-09-23"
+  },
+  {
+    "name": "Fear the Walking Dead",
+    "genres": [
+      "action",
+      "adventure",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/zyshFjmlDXSzfns2Qk81cfIFfPP.jpg",
+    "rating": 7.7,
+    "numberOfVotes": 4374,
+    "popularity": 184.794,
+    "releaseDate": "2015-08-23"
+  },
+  {
+    "name": "War of the Worlds",
+    "genres": [
+      "sci-fi",
+      "fantasy",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/yThmbQkxSzW4HHdAaoj8RYHFH3i.jpg",
+    "rating": 7.4,
+    "numberOfVotes": 755,
+    "popularity": 170.784,
+    "releaseDate": "2019-10-28"
+  },
+  {
+    "name": "Dr. Death",
+    "genres": [
+      "drama",
+      "crime"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/4xPIBtOWHzigSNTqbxftzAZS5uT.jpg",
+    "rating": 7.4,
+    "numberOfVotes": 107,
+    "popularity": 246.219,
+    "releaseDate": "2021-07-15"
+  },
+  {
+    "name": "The Office",
+    "genres": [
+      "comedy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/qWnJzyZhyy74gjpSjIXWmuk0ifX.jpg",
+    "rating": 8.6,
+    "numberOfVotes": 2960,
+    "popularity": 185.464,
+    "releaseDate": "2005-03-24"
+  },
+  {
+    "name": "Peppa Pig",
+    "genres": [
+      "animation",
+      "kids"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ycf1ZqisXs8ZCGmw0reD1pI2Zlp.jpg",
+    "rating": 6.6,
+    "numberOfVotes": 656,
+    "popularity": 188.439,
+    "releaseDate": "2004-05-31"
+  },
+  {
+    "name": "Seinfeld",
+    "genres": [
+      "comedy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/aCw8ONfyz3AhngVQa1E2Ss4KSUQ.jpg",
+    "rating": 8.3,
+    "numberOfVotes": 1506,
+    "popularity": 189.712,
+    "releaseDate": "1989-07-05"
+  },
+  {
+    "name": "Blue Bloods",
+    "genres": [
+      "drama",
+      "crime"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/nWYB1Pn3bNKQnTp4sWqyUxPTLI1.jpg",
+    "rating": 7.7,
+    "numberOfVotes": 640,
+    "popularity": 179.839,
+    "releaseDate": "2010-09-24"
+  },
+  {
+    "name": "American Horror Story",
+    "genres": [
+      "drama",
+      "mystery",
+      "sci-fi",
+      "fantasy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/tiuzjuzalHj377XER1sfq7XQEIT.jpg",
+    "rating": 8.1,
+    "numberOfVotes": 4950,
+    "popularity": 177.765,
+    "releaseDate": "2011-10-05"
+  },
+  {
+    "name": "The Owl House",
+    "genres": [
+      "animation",
+      "sci-fi",
+      "fantasy",
+      "family",
+      "action",
+      "adventure",
+      "comedy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/zqjSex7DZn7p4dU7mMktdJ8zQV5.jpg",
+    "rating": 8.7,
+    "numberOfVotes": 1260,
+    "popularity": 180.345,
+    "releaseDate": "2020-01-10"
+  },
+  {
+    "name": "Riverdale",
+    "genres": [
+      "crime",
+      "drama",
+      "mystery"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/kzZUa05wZOEiC2UVuJA2T8VrETU.jpg",
+    "rating": 8.5,
+    "numberOfVotes": 12968,
+    "popularity": 165.042,
+    "releaseDate": "2017-01-26"
+  },
+  {
+    "name": "Happy Tree Friends",
+    "genres": [
+      "animation",
+      "comedy",
+      "sci-fi",
+      "fantasy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/2rYqJg1OzaDlc5kiBK4IdgrELMf.jpg",
+    "rating": 7.9,
+    "numberOfVotes": 490,
+    "popularity": 231.484,
+    "releaseDate": "1999-12-24"
+  },
+  {
+    "name": "His Dark Materials",
+    "genres": [
+      "sci-fi",
+      "fantasy",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/g6tIKGc3f1H5QMz1dcgCwADKpZ7.jpg",
+    "rating": 8,
+    "numberOfVotes": 1324,
+    "popularity": 165.248,
+    "releaseDate": "2019-11-03"
+  },
+  {
+    "name": "The Sandman",
+    "genres": [
+      "sci-fi",
+      "fantasy",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/q54qEgagGOYCq5D1903eBVMNkbo.jpg",
+    "rating": 8.1,
+    "numberOfVotes": 1473,
+    "popularity": 158.778,
+    "releaseDate": "2022-08-05"
+  },
+  {
+    "name": "The Sopranos",
+    "genres": [
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/57okJJUBK0AaijxLh3RjNUaMvFI.jpg",
+    "rating": 8.6,
+    "numberOfVotes": 2058,
+    "popularity": 163.618,
+    "releaseDate": "1999-01-10"
+  },
+  {
+    "name": "Reacher",
+    "genres": [
+      "action",
+      "adventure",
+      "crime",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/bQnnKBe3VsvXKMoNCaYmRzs1Dup.jpg",
+    "rating": 8.1,
+    "numberOfVotes": 582,
+    "popularity": 154.9,
+    "releaseDate": "2022-02-03"
+  },
+  {
+    "name": "Quantum Leap",
+    "genres": [
+      "sci-fi",
+      "fantasy",
+      "action",
+      "adventure",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ujIGP3e3V6kDQHRhjNYtUE3fHJi.jpg",
+    "rating": 8,
+    "numberOfVotes": 552,
+    "popularity": 225.655,
+    "releaseDate": "1989-03-26"
+  },
+  {
+    "name": "Agatha Christie's Poirot",
+    "genres": [
+      "crime",
+      "drama",
+      "mystery"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/owEg4UjJCo60tPFckAZ4CPmR0Ra.jpg",
+    "rating": 8.2,
+    "numberOfVotes": 358,
+    "popularity": 150.632,
+    "releaseDate": "1989-01-08"
+  },
+  {
+    "name": "The Best Sex Ever",
+    "genres": [
+      "drama",
+      "sci-fi",
+      "fantasy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/o1t2ZuJeZnyowW1OKX3G9NSNZmR.jpg",
+    "rating": 3.8,
+    "numberOfVotes": 56,
+    "popularity": 152.004,
+    "releaseDate": "2002-05-03"
+  },
+  {
+    "name": "Teacher's Pet",
+    "genres": [
+      "animation",
+      "comedy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/8IOx9VFLgSkrAmHInca6LZ1dCeR.jpg",
+    "rating": 7.6,
+    "numberOfVotes": 5,
+    "popularity": 149.039,
+    "releaseDate": "2000-09-09"
+  },
+  {
+    "name": "Hawaii Five-0",
+    "genres": [
+      "crime",
+      "drama",
+      "action",
+      "adventure"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/sIdCKlmM2nU4akIvFQaAIiU8YES.jpg",
+    "rating": 7.7,
+    "numberOfVotes": 1453,
+    "popularity": 174.143,
+    "releaseDate": "2010-09-20"
+  },
+  {
+    "name": "General Hospital",
+    "genres": [
+      "soap"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/tYaWB1H4Isq4BoAjxFWMjhaEP9W.jpg",
+    "rating": 5.6,
+    "numberOfVotes": 188,
+    "popularity": 220.221,
+    "releaseDate": "1963-04-01"
+  },
+  {
+    "name": "Echo 3",
+    "genres": [
+      "drama",
+      "action",
+      "adventure"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/xG94Dc7LJ0NEYZ0hGTNnHuMKugl.jpg",
+    "rating": 7.5,
+    "numberOfVotes": 51,
+    "popularity": 171.851,
+    "releaseDate": "2022-11-22"
+  },
+  {
+    "name": "Lost",
+    "genres": [
+      "action",
+      "adventure",
+      "mystery"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/og6S0aTZU6YUJAbqxeKjCa3kY1E.jpg",
+    "rating": 8,
+    "numberOfVotes": 3331,
+    "popularity": 161.056,
+    "releaseDate": "2004-09-22"
+  },
+  {
+    "name": "Poker Face",
+    "genres": [
+      "mystery",
+      "crime"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/nsOtuGh2psp0aRnUBQgePlLCfM6.jpg",
+    "rating": 8,
+    "numberOfVotes": 27,
+    "popularity": 144.775,
+    "releaseDate": "2023-01-26"
+  },
+  {
+    "name": "Bewitched",
+    "genres": [
+      "sci-fi",
+      "fantasy",
+      "comedy",
+      "family",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/7UZVO1SclbgVWM2ELrwWGaS7i94.jpg",
+    "rating": 7.9,
+    "numberOfVotes": 583,
+    "popularity": 92.134,
+    "releaseDate": "1964-09-17"
+  },
+  {
+    "name": "Jersey Shore",
+    "genres": [
+      "reality"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/9ropZHoebQlYX8VziojRplv4smu.jpg",
+    "rating": 4.2,
+    "numberOfVotes": 83,
+    "popularity": 181.856,
+    "releaseDate": "2009-12-03"
+  },
+  {
+    "name": "Manifest",
+    "genres": [
+      "drama",
+      "mystery",
+      "sci-fi",
+      "fantasy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/1xeiUxShzNn8TNdMqy3Hvo9o2R.jpg",
+    "rating": 7.7,
+    "numberOfVotes": 1089,
+    "popularity": 151.247,
+    "releaseDate": "2018-09-24"
+  },
+  {
+    "name": "Moon Knight",
+    "genres": [
+      "action",
+      "adventure",
+      "sci-fi",
+      "fantasy",
+      "mystery"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/vKDUmKO6F9bSKKyHhg7YGbgcEeF.jpg",
+    "rating": 7.9,
+    "numberOfVotes": 1999,
+    "popularity": 162.317,
+    "releaseDate": "2022-03-30"
+  },
+  {
+    "name": "Better Call Saul",
+    "genres": [
+      "crime",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/iB6x0bA9XdP4MH3i1zXjMzvTNSY.jpg",
+    "rating": 8.6,
+    "numberOfVotes": 3789,
+    "popularity": 157.25,
+    "releaseDate": "2015-02-08"
+  },
+  {
+    "name": "New Amsterdam",
+    "genres": [
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/jsH4AeGZn5Q6h314A3OTUHKxHhR.jpg",
+    "rating": 8.5,
+    "numberOfVotes": 819,
+    "popularity": 156.911,
+    "releaseDate": "2018-09-25"
+  },
+  {
+    "name": "How I Met Your Mother",
+    "genres": [
+      "comedy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/b34jPzmB0wZy7EjUZoleXOl2RRI.jpg",
+    "rating": 8.2,
+    "numberOfVotes": 4017,
+    "popularity": 155.134,
+    "releaseDate": "2005-09-19"
+  },
+  {
+    "name": "CSI: Miami",
+    "genres": [
+      "drama",
+      "mystery",
+      "crime"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/m4xM1n2aO98y8GEu9CS3w2SvGKH.jpg",
+    "rating": 7.8,
+    "numberOfVotes": 1382,
+    "popularity": 154.722,
+    "releaseDate": "2002-09-23"
+  },
+  {
+    "name": "Late Night with Seth Meyers",
+    "genres": [
+      "talk"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/x5asOuPOjW21e0Ykkvkuzu1TGEl.jpg",
+    "rating": 5.5,
+    "numberOfVotes": 48,
+    "popularity": 206.678,
+    "releaseDate": "2014-02-24"
+  },
+  {
+    "name": "Conan",
+    "genres": [
+      "talk",
+      "comedy",
+      "news"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/oQxrvUhP3ycwnlxIrIMQ9Z3kleq.jpg",
+    "rating": 7.1,
+    "numberOfVotes": 186,
+    "popularity": 142.006,
+    "releaseDate": "2010-11-08"
+  },
+  {
+    "name": "Days of Our Lives",
+    "genres": [
+      "soap",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/7Zm7epVFEovMEVLpM6FvrjhaNXn.jpg",
+    "rating": 6,
+    "numberOfVotes": 109,
+    "popularity": 204.606,
+    "releaseDate": "1965-11-08"
+  },
+  {
+    "name": "Legacies",
+    "genres": [
+      "sci-fi",
+      "fantasy",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/mwJ3OxbliRwCvceSJvAzPiFu4WZ.jpg",
+    "rating": 8.5,
+    "numberOfVotes": 2678,
+    "popularity": 151.981,
+    "releaseDate": "2018-10-25"
+  },
+  {
+    "name": "Sex Education",
+    "genres": [
+      "comedy",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/8j12tohv1NBZNmpU93f47sAKBbw.jpg",
+    "rating": 8.3,
+    "numberOfVotes": 6295,
+    "popularity": 155.933,
+    "releaseDate": "2019-01-11"
+  },
+  {
+    "name": "Murdoch Mysteries",
+    "genres": [
+      "mystery",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/oDeViEDiqQtIaqIaxIQZgmxMgBz.jpg",
+    "rating": 7.7,
+    "numberOfVotes": 202,
+    "popularity": 115.433,
+    "releaseDate": "2008-01-24"
+  },
+  {
+    "name": "Spartacus",
+    "genres": [
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/kAUI0oOWZbGAQMmv7WM6scvoE34.jpg",
+    "rating": 8,
+    "numberOfVotes": 1977,
+    "popularity": 165.935,
+    "releaseDate": "2010-01-22"
+  },
+  {
+    "name": "9-1-1",
+    "genres": [
+      "drama",
+      "crime",
+      "action",
+      "adventure"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/CQBwNO8uGcOmt0phH7KoGUwpSL.jpg",
+    "rating": 8.2,
+    "numberOfVotes": 1940,
+    "popularity": 167.081,
+    "releaseDate": "2018-01-03"
+  },
+  {
+    "name": "Charmed",
+    "genres": [
+      "comedy",
+      "drama",
+      "mystery",
+      "sci-fi",
+      "fantasy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/z4bPJ1BWU2EtV69NII2GVvsugQ2.jpg",
+    "rating": 8.2,
+    "numberOfVotes": 1917,
+    "popularity": 129.701,
+    "releaseDate": "1998-10-07"
+  },
+  {
+    "name": "You",
+    "genres": [
+      "mystery",
+      "crime",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/7bEYwjUvlJW7GerM8GYmqwl4oS3.jpg",
+    "rating": 8.1,
+    "numberOfVotes": 2382,
+    "popularity": 154.455,
+    "releaseDate": "2018-09-09"
+  },
+  {
+    "name": "Fargo",
+    "genres": [
+      "crime",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/9ZIhl17uFlXCNUputSEDHwZYIEJ.jpg",
+    "rating": 8.3,
+    "numberOfVotes": 2094,
+    "popularity": 175.243,
+    "releaseDate": "2014-04-15"
+  },
+  {
+    "name": "Sonic Prime",
+    "genres": [
+      "animation",
+      "family"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/lMqruIEov5PSA7eu8mF0I4IiKda.jpg",
+    "rating": 8.2,
+    "numberOfVotes": 149,
+    "popularity": 126.159,
+    "releaseDate": "2022-12-15"
+  },
+  {
+    "name": "The Mandalorian",
+    "genres": [
+      "sci-fi",
+      "fantasy",
+      "action",
+      "adventure",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/sWgBv7LV2PRoQgkxwlibdGXKz1S.jpg",
+    "rating": 8.5,
+    "numberOfVotes": 8314,
+    "popularity": 144.066,
+    "releaseDate": "2019-11-12"
+  },
+  {
+    "name": "The Big Bang Theory",
+    "genres": [
+      "comedy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ooBGRQBdbGzBxAVfExiO8r7kloA.jpg",
+    "rating": 7.9,
+    "numberOfVotes": 9646,
+    "popularity": 166.446,
+    "releaseDate": "2007-09-24"
+  },
+  {
+    "name": "Inside Job",
+    "genres": [
+      "comedy",
+      "animation"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/qwJUDMJ4i3KBYjeUFK9Js87iJEa.jpg",
+    "rating": 8.2,
+    "numberOfVotes": 559,
+    "popularity": 140.148,
+    "releaseDate": "2021-10-22"
+  },
+  {
+    "name": "Sons of Anarchy",
+    "genres": [
+      "crime",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/1aiPRnDkSjRXepxG20xzrzU28F1.jpg",
+    "rating": 8.4,
+    "numberOfVotes": 2379,
+    "popularity": 138.397,
+    "releaseDate": "2008-09-03"
+  },
+  {
+    "name": "See",
+    "genres": [
+      "drama",
+      "sci-fi",
+      "fantasy",
+      "action",
+      "adventure"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/1kZdBrH1C07Zf2131QUpmju3kO6.jpg",
+    "rating": 8.2,
+    "numberOfVotes": 1979,
+    "popularity": 127.573,
+    "releaseDate": "2019-11-01"
+  },
+  {
+    "name": "The Recruit",
+    "genres": [
+      "drama",
+      "crime"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/mLbFg0u2DPYuB5CILzwWk3kdI8b.jpg",
+    "rating": 7.7,
+    "numberOfVotes": 128,
+    "popularity": 127.094,
+    "releaseDate": "2022-12-16"
+  },
+  {
+    "name": "seaQuest DSV",
+    "genres": [
+      "action",
+      "adventure",
+      "sci-fi",
+      "fantasy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/kOMhrTlSUkhv8EGn4LBioAQuAwM.jpg",
+    "rating": 7.1,
+    "numberOfVotes": 105,
+    "popularity": 184.356,
+    "releaseDate": "1993-09-12"
+  },
+  {
+    "name": "Bluey",
+    "genres": [
+      "animation",
+      "kids"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/b9mY0X5T20ZM073hoa5n0dgmbfN.jpg",
+    "rating": 7.9,
+    "numberOfVotes": 146,
+    "popularity": 128.84,
+    "releaseDate": "2018-10-01"
+  },
+  {
+    "name": "FBI",
+    "genres": [
+      "crime",
+      "drama",
+      "action",
+      "adventure"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/cGLQRv3MLWGrHMhRGn1zsSa9n2i.jpg",
+    "rating": 8,
+    "numberOfVotes": 663,
+    "popularity": 130.618,
+    "releaseDate": "2018-09-25"
+  },
+  {
+    "name": "The Champions",
+    "genres": [
+      "sci-fi",
+      "fantasy",
+      "action",
+      "adventure"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/93fLFB8HfKAhVKF968Dl03ITwOX.jpg",
+    "rating": 5.7,
+    "numberOfVotes": 11,
+    "popularity": 163.089,
+    "releaseDate": "1968-09-25"
+  },
+  {
+    "name": "Heartland",
+    "genres": [
+      "family",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/uc2gtWczT58BiAUJWFz9P5aZmNF.jpg",
+    "rating": 8.3,
+    "numberOfVotes": 515,
+    "popularity": 139.711,
+    "releaseDate": "2007-10-14"
+  },
+  {
+    "name": "That '70s Show",
+    "genres": [
+      "comedy",
+      "family",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/laEZvTqM80UaplUaDSCCbWhlyEV.jpg",
+    "rating": 8,
+    "numberOfVotes": 1136,
+    "popularity": 152.04,
+    "releaseDate": "1998-08-23"
+  },
+  {
+    "name": "SEAL Team",
+    "genres": [
+      "action",
+      "adventure",
+      "drama",
+      "war",
+      "politics"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6iSnec83UEMgLOXAtGYwaVNHLjR.jpg",
+    "rating": 8,
+    "numberOfVotes": 1288,
+    "popularity": 136.011,
+    "releaseDate": "2017-09-27"
+  },
+  {
+    "name": "Titans",
+    "genres": [
+      "action",
+      "adventure",
+      "sci-fi",
+      "fantasy",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/oE23sq7mAiiDzmCIkPdFQAEuqsd.jpg",
+    "rating": 8,
+    "numberOfVotes": 2302,
+    "popularity": 130.924,
+    "releaseDate": "2018-10-12"
+  },
+  {
+    "name": "Adventure Time",
+    "genres": [
+      "animation",
+      "comedy",
+      "sci-fi",
+      "fantasy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/qk3eQ8jW4opJ48gFWYUXWaMT4l.jpg",
+    "rating": 8.5,
+    "numberOfVotes": 2242,
+    "popularity": 143.239,
+    "releaseDate": "2010-04-05"
+  },
+  {
+    "name": "Gravity Falls",
+    "genres": [
+      "animation",
+      "comedy",
+      "mystery",
+      "sci-fi",
+      "fantasy",
+      "kids"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/t9inzSLIttATX6RdnmDjL7T4WN7.jpg",
+    "rating": 8.5,
+    "numberOfVotes": 2268,
+    "popularity": 118.693,
+    "releaseDate": "2012-06-15"
+  },
+  {
+    "name": "Doctor Who",
+    "genres": [
+      "action",
+      "adventure",
+      "drama",
+      "sci-fi",
+      "fantasy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/l1ep8AqyzKYtEtC72HciaHy2HmB.jpg",
+    "rating": 7.9,
+    "numberOfVotes": 477,
+    "popularity": 121.655,
+    "releaseDate": "1963-11-23"
+  },
+  {
+    "name": "Mayor of Kingstown",
+    "genres": [
+      "drama",
+      "crime"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/86OUOPulMiM8rjrQSt4KMev7UAa.jpg",
+    "rating": 8.2,
+    "numberOfVotes": 111,
+    "popularity": 118.939,
+    "releaseDate": "2021-11-14"
+  },
+  {
+    "name": "The Originals",
+    "genres": [
+      "sci-fi",
+      "fantasy",
+      "drama",
+      "mystery"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/2llbXc2BOkLkBGgcNJCRbrWedUO.jpg",
+    "rating": 8.6,
+    "numberOfVotes": 2960,
+    "popularity": 133.62,
+    "releaseDate": "2013-10-03"
+  },
+  {
+    "name": "NCIS: Los Angeles",
+    "genres": [
+      "action",
+      "adventure",
+      "drama",
+      "crime",
+      "mystery"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/TIIgcznwNfNr3KOZvxn26eKV99.jpg",
+    "rating": 7.5,
+    "numberOfVotes": 981,
+    "popularity": 152.396,
+    "releaseDate": "2009-09-22"
+  },
+  {
+    "name": "Star Trek: Voyager",
+    "genres": [
+      "sci-fi",
+      "fantasy",
+      "drama",
+      "action",
+      "adventure"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/gNS5tRSG3UlXodCxznKKOKweqxh.jpg",
+    "rating": 7.9,
+    "numberOfVotes": 720,
+    "popularity": 166.667,
+    "releaseDate": "1995-01-16"
+  },
+  {
+    "name": "Gilmore Girls",
+    "genres": [
+      "comedy",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/dSS7XoqmNxMebyVbEGBY0HWrReA.jpg",
+    "rating": 7.9,
+    "numberOfVotes": 729,
+    "popularity": 157.894,
+    "releaseDate": "2000-10-05"
+  },
+  {
+    "name": "Bosch",
+    "genres": [
+      "mystery",
+      "drama",
+      "crime"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/lQPwNJ6DRpmRfTrKy8A94c7IvU3.jpg",
+    "rating": 8,
+    "numberOfVotes": 415,
+    "popularity": 116.123,
+    "releaseDate": "2015-01-14"
+  },
+  {
+    "name": "Stargate SG-1",
+    "genres": [
+      "sci-fi",
+      "fantasy",
+      "action",
+      "adventure",
+      "mystery"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/rst5xc4f7v1KiDiQjzDiZqLtBpl.jpg",
+    "rating": 8.3,
+    "numberOfVotes": 1257,
+    "popularity": 137.112,
+    "releaseDate": "1997-07-27"
+  },
+  {
+    "name": "Star Wars: The Bad Batch",
+    "genres": [
+      "animation",
+      "action",
+      "adventure",
+      "sci-fi",
+      "fantasy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/5Q6z9bjy8dHKA5T8kNmCd8hj6Gl.jpg",
+    "rating": 8.4,
+    "numberOfVotes": 697,
+    "popularity": 128.005,
+    "releaseDate": "2021-05-04"
+  },
+  {
+    "name": "The Witcher",
+    "genres": [
+      "drama",
+      "action",
+      "adventure",
+      "sci-fi",
+      "fantasy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/7vjaCdMw15FEbXyLQTVa04URsPm.jpg",
+    "rating": 8.2,
+    "numberOfVotes": 4483,
+    "popularity": 113.555,
+    "releaseDate": "2019-12-20"
+  },
+  {
+    "name": "Scorpion",
+    "genres": [
+      "action",
+      "adventure",
+      "drama",
+      "crime"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/hzeirSF6bRjssDh5JFrm5WRwFLd.jpg",
+    "rating": 8.3,
+    "numberOfVotes": 3611,
+    "popularity": 123.82,
+    "releaseDate": "2014-09-22"
+  },
+  {
+    "name": "Happy Valley",
+    "genres": [
+      "crime",
+      "drama",
+      "mystery"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/xZK5iQSrn2mouZEk2PwyLPCwa4u.jpg",
+    "rating": 8,
+    "numberOfVotes": 215,
+    "popularity": 171.333,
+    "releaseDate": "2014-04-29"
+  },
+  {
+    "name": "Supergirl",
+    "genres": [
+      "drama",
+      "sci-fi",
+      "fantasy",
+      "action",
+      "adventure"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/zsaiq8ZclPuneuN7loLEbsh1ANJ.jpg",
+    "rating": 7.3,
+    "numberOfVotes": 3834,
+    "popularity": 155.327,
+    "releaseDate": "2015-10-26"
+  },
+  {
+    "name": "All American",
+    "genres": [
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/bpmZDwQfUPVKCLfIivbWnJQT6wU.jpg",
+    "rating": 8.3,
+    "numberOfVotes": 375,
+    "popularity": 72.672,
+    "releaseDate": "2018-10-10"
+  },
+  {
+    "name": "Station 19",
+    "genres": [
+      "drama",
+      "action",
+      "adventure"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/lcuCED5Ky2uM5VE6wILOwt5FEb0.jpg",
+    "rating": 8.3,
+    "numberOfVotes": 1243,
+    "popularity": 128.029,
+    "releaseDate": "2018-03-22"
+  },
+  {
+    "name": "Futurama",
+    "genres": [
+      "animation",
+      "action",
+      "adventure",
+      "comedy",
+      "sci-fi",
+      "fantasy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/k5e8kAq9jpaSmgvFM10su5LXGFR.jpg",
+    "rating": 8.4,
+    "numberOfVotes": 2576,
+    "popularity": 125.319,
+    "releaseDate": "1999-03-28"
+  },
+  {
+    "name": "Love, Victor",
+    "genres": [
+      "comedy",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/xnZYv0myYIhKW0iPDTh697n5qu0.jpg",
+    "rating": 8.6,
+    "numberOfVotes": 1422,
+    "popularity": 109.351,
+    "releaseDate": "2020-06-17"
+  },
+  {
+    "name": "The Nanny",
+    "genres": [
+      "comedy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ArcJvQ27Bhn5FiyfAphS2eNEMhb.jpg",
+    "rating": 8.1,
+    "numberOfVotes": 932,
+    "popularity": 139.283,
+    "releaseDate": "1993-11-03"
+  },
+  {
+    "name": "Loki",
+    "genres": [
+      "drama",
+      "sci-fi",
+      "fantasy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/kEl2t3OhXc3Zb9FBh1AuYzRTgZp.jpg",
+    "rating": 8.2,
+    "numberOfVotes": 9628,
+    "popularity": 121.886,
+    "releaseDate": "2021-06-09"
+  },
+  {
+    "name": "Silent Library",
+    "genres": [],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/nsKWKCpxw4Bv4KZ0gCAioNdmj87.jpg",
+    "rating": 10,
+    "numberOfVotes": 3,
+    "popularity": 149.034,
+    "releaseDate": "2009-06-15"
+  },
+  {
+    "name": "The X-Files",
+    "genres": [
+      "sci-fi",
+      "fantasy",
+      "mystery",
+      "crime"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/5BD0kiTGnDxONqdrsswTewnk6WH.jpg",
+    "rating": 8.4,
+    "numberOfVotes": 2488,
+    "popularity": 133.579,
+    "releaseDate": "1993-09-10"
+  },
+  {
+    "name": "Guillermo del Toro's Cabinet of Curiosities",
+    "genres": [
+      "drama",
+      "mystery"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/a91e9hpWwfCqxJI4xM9Q2RhuxgI.jpg",
+    "rating": 7.9,
+    "numberOfVotes": 451,
+    "popularity": 127.502,
+    "releaseDate": "2022-10-25"
+  },
+  {
+    "name": "National Treasure: Edge of History",
+    "genres": [
+      "action",
+      "adventure"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/noRVimjdx6PwPBCVikhExYqogsX.jpg",
+    "rating": 7.4,
+    "numberOfVotes": 74,
+    "popularity": 121.854,
+    "releaseDate": "2022-12-14"
+  },
+  {
+    "name": "One Piece",
+    "genres": [
+      "action",
+      "adventure"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/moXOK5tok3CAmcQ1rjbK6DoqVFY.jpg",
+    "rating": 0,
+    "numberOfVotes": 0,
+    "popularity": 95.223,
+    "releaseDate": ""
+  },
+  {
+    "name": "The Handmaid's Tale",
+    "genres": [
+      "sci-fi",
+      "fantasy",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/1ryCwZaZFAlG0c1w8XiMHeAxxYy.jpg",
+    "rating": 8.2,
+    "numberOfVotes": 2308,
+    "popularity": 111.788,
+    "releaseDate": "2017-04-26"
+  },
+  {
+    "name": "Dexter",
+    "genres": [
+      "crime",
+      "drama",
+      "mystery"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/58H6Ctze1nnpS0s9vPmAAzPcipR.jpg",
+    "rating": 8.2,
+    "numberOfVotes": 3401,
+    "popularity": 123.521,
+    "releaseDate": "2006-10-01"
+  },
+  {
+    "name": "Sex/Life",
+    "genres": [
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/kfcJl5e8CRWDU7e4vX6uNABPRbS.jpg",
+    "rating": 7.1,
+    "numberOfVotes": 1073,
+    "popularity": 108.58,
+    "releaseDate": "2021-06-25"
+  },
+  {
+    "name": "Vera",
+    "genres": [
+      "crime",
+      "drama",
+      "mystery"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/7qpXXG6Izo0NvmxHib2SKRDXmXQ.jpg",
+    "rating": 7.2,
+    "numberOfVotes": 93,
+    "popularity": 134.542,
+    "releaseDate": "2011-05-01"
+  },
+  {
+    "name": "Professor T",
+    "genres": [
+      "crime",
+      "mystery"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/jJ9SjrX7tEAwHigRq20TeANhH1Q.jpg",
+    "rating": 7.7,
+    "numberOfVotes": 19,
+    "popularity": 125.856,
+    "releaseDate": "2021-06-03"
+  },
+  {
+    "name": "Doctors",
+    "genres": [
+      "soap",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/bhEHvxUd5zuySUGhNFngkC4NacQ.jpg",
+    "rating": 4.8,
+    "numberOfVotes": 34,
+    "popularity": 158.701,
+    "releaseDate": "2000-03-27"
+  },
+  {
+    "name": "24",
+    "genres": [
+      "action",
+      "adventure",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/iq6yrZ5LEDXf1ArCOYLq8PIUBpV.jpg",
+    "rating": 7.8,
+    "numberOfVotes": 1230,
+    "popularity": 107.827,
+    "releaseDate": "2001-11-06"
+  },
+  {
+    "name": "Mayday",
+    "genres": [
+      "documentary",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/2uuVIAb4MtPmMNTpOyID5V8DzrU.jpg",
+    "rating": 8.3,
+    "numberOfVotes": 210,
+    "popularity": 115.803,
+    "releaseDate": "2003-09-03"
+  },
+  {
+    "name": "Gotham",
+    "genres": [
+      "drama",
+      "crime",
+      "sci-fi",
+      "fantasy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/4XddcRDtnNjYmLRMYpbrhFxsbuq.jpg",
+    "rating": 7.6,
+    "numberOfVotes": 3003,
+    "popularity": 113.625,
+    "releaseDate": "2014-09-22"
+  },
+  {
+    "name": "Star Trek",
+    "genres": [
+      "sci-fi",
+      "fantasy",
+      "drama"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/bPsxOpHVpVCX3hFz2fxnF1Vz3Dj.jpg",
+    "rating": 8.1,
+    "numberOfVotes": 1021,
+    "popularity": 124.214,
+    "releaseDate": "1966-09-08"
+  },
+  {
+    "name": "Once Upon a Time",
+    "genres": [
+      "drama",
+      "sci-fi",
+      "fantasy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/49qD372jeHUTmdNMGJkjCFZdv9y.jpg",
+    "rating": 7.3,
+    "numberOfVotes": 1845,
+    "popularity": 111.216,
+    "releaseDate": "2011-10-23"
+  },
+  {
+    "name": "The Walking Dead: Origins",
+    "genres": [
+      "documentary"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6stEKYqgLBhSieTRnnZ5ShE5ZPS.jpg",
+    "rating": 7.8,
+    "numberOfVotes": 452,
+    "popularity": 96.193,
+    "releaseDate": "2021-07-15"
+  },
+  {
+    "name": "Monk",
+    "genres": [
+      "comedy",
+      "crime",
+      "drama",
+      "mystery"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/3axGMbUecXXOPSeG47v2i9wK5y5.jpg",
+    "rating": 7.9,
+    "numberOfVotes": 816,
+    "popularity": 124.392,
+    "releaseDate": "2002-07-12"
+  },
+  {
+    "name": "The Love Boat",
+    "genres": [
+      "drama",
+      "comedy"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fnsnazlj2bt3Fuj0pJ7wBPmuMLO.jpg",
+    "rating": 6.3,
+    "numberOfVotes": 127,
+    "popularity": 111.632,
+    "releaseDate": "1977-09-24"
+  },
+  {
+    "name": "Star Trek: The Next Generation",
+    "genres": [
+      "sci-fi",
+      "fantasy",
+      "action",
+      "adventure",
+      "drama",
+      "mystery"
+    ],
+    "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/m8Jp435AhUBmltmPyP5LOYjc80V.jpg",
+    "rating": 8.3,
+    "numberOfVotes": 1150,
+    "popularity": 121.926,
+    "releaseDate": "1987-09-28"
+  }
+]

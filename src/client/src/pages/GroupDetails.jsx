@@ -15,8 +15,12 @@ const GroupDetails = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    const headers = {
+      'x-api-key': process.env.REACT_APP_BACKEND_KEY,
+    };
+
     axios
-      .get(`${API}/api/group/get?groupId=${state.groupId}`)
+      .get(`${API}/api/group/get?groupId=${state.groupId}`, { headers })
       .then((res) => {
         setGroup(res.data);
         state.group = res.data;
@@ -25,16 +29,27 @@ const GroupDetails = () => {
   }, [API, state]);
 
   const handleCreateSessionClick = (e) => {
+    const headers = {
+      'x-api-key': process.env.REACT_APP_BACKEND_KEY,
+    };
+
     e.preventDefault();
     axios
-      .post(`${API}/api/voting/new/group`, {
-        groupId: state.groupId,
-      })
+      .post(
+        `${API}/api/voting/new/group`,
+        {
+          groupId: state.groupId,
+        },
+        { headers }
+      )
       .then((res) => {
+
         state.session = res.data;
-        console.log(state.session);
-        setSession(res.data)
-        return axios.get(`${API}/api/group/get?groupId=${state.groupId}`)
+        setSession(res.data);
+
+        return axios.get(`${API}/api/group/get?groupId=${state.groupId}`, {
+          headers,
+        });
       })
       .then((res) => {
         setGroup(res.data);
@@ -45,14 +60,19 @@ const GroupDetails = () => {
   };
 
   const handleCurrentSessionClick = (e) => {
+    const headers = {
+      'x-api-key': process.env.REACT_APP_BACKEND_KEY,
+    };
+
     e.preventDefault();
-    axios.get(`${API}/api/voting/get?uuid=${state.group.currentVotingSession}`)
-    .then((res) => {
-      setSession(res.data);
-      state.session = res.data;
-    })
-    .then(() => navigate('/group/vote', { state: state }))
-    .catch((e) => console.log(e));
+    axios
+      .get(`${API}/api/voting/get?uuid=${state.group.currentVotingSession}`, { headers })
+      .then((res) => {
+        setSession(res.data);
+        state.session = res.data;
+      })
+      .then(() => navigate('/group/vote', { state: state }))
+      .catch((e) => console.log(e));
   };
 
   const handleEndSessionClick = (e) => {
@@ -74,7 +94,8 @@ const GroupDetails = () => {
         alignItems="center"
         flexDirection="column"
         gap="5vh"
-        minHeight="75vh">
+        minHeight="75vh"
+      >
         <Typography variant="h3" component="h3">
           {group && group.groupName ? group.groupName : ''}
         </Typography>
@@ -85,26 +106,34 @@ const GroupDetails = () => {
           display="flex"
           justifyContent="center"
           alignItems="center"
-          gap="5%">
+          gap="5%"
+        >
           <Button
             variant="outlined"
             size="large"
-            onClick={handleCreateSessionClick}>
+            onClick={handleCreateSessionClick}
+          >
             Start Session
           </Button>
           <Button
             variant="outlined"
             size="large"
-            onClick={handleCurrentSessionClick}>
+            onClick={handleCurrentSessionClick}
+          >
             Current Session
           </Button>
           <Button
             variant="outlined"
             size="large"
-            onClick={handleEndSessionClick}>
+            onClick={handleEndSessionClick}
+          >
             End Session
           </Button>
-          <Button variant="outlined" size="large" onClick={handleBestMatchClick}>
+          <Button
+            variant="outlined"
+            size="large"
+            onClick={handleBestMatchClick}
+          >
             View Best Match
           </Button>
         </Box>

@@ -20,15 +20,21 @@ const BestMatch = () => {
   const uid = useSelector(selectUid);
   const [flick, setFlick] = React.useState({});
 
-
   useEffect(() => {
-    axios.get(`${API}/api/voting/match?uuid=${state.group.currentVotingSession}`)
-    .then((res) => {
-      console.log(state.group.currentVotingSession);
-      console.log(res.data);
-      setFlick(res.data);
-    })
-    .catch((e) => console.log(e));
+    const headers = {
+      'x-api-key': process.env.REACT_APP_BACKEND_KEY,
+    };
+
+    axios
+      .get(`${API}/api/voting/match?uuid=${state.group.currentVotingSession}`, {
+        headers,
+      })
+      .then((res) => {
+        console.log(state.group.currentVotingSession);
+        console.log(res.data);
+        setFlick(res.data);
+      })
+      .catch((e) => console.log(e));
   }, [API, state]);
 
   const navigate = useNavigate();
@@ -67,7 +73,6 @@ const BestMatch = () => {
           <Typography variant="h6" component="h6">
             {flick.name}
           </Typography>
-
         </Box>
         <Button variant="outlined" onClick={handleLeaveClick}>
           Leave Session

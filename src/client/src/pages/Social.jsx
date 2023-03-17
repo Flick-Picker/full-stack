@@ -35,8 +35,12 @@ const Social = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    const headers = {
+      'x-api-key': process.env.REACT_APP_BACKEND_KEY,
+    };
+
     axios
-      .get(`${API}/api/invites/friends/getforuser?uid=${uid}`)
+      .get(`${API}/api/invites/friends/getforuser?uid=${uid}`, { headers })
       .then((res) => setFriendInvites(res.data))
       .catch((e) => console.log(e));
   }, [API, uid]);
@@ -52,8 +56,12 @@ const Social = () => {
       senderUid: inv.senderUser,
       requestUid: inv.requestedUser,
     };
+    const headers = {
+      'x-api-key': process.env.REACT_APP_BACKEND_KEY,
+    };
+
     axios
-      .post(`${API}/api/invites/friends/accept`, body)
+      .post(`${API}/api/invites/friends/accept`, body, { headers })
       .then(() => {
         const newArray = friendInvites.splice(i, 1);
         setFriendInvites(newArray);
@@ -64,8 +72,12 @@ const Social = () => {
   const handleDeclineFriend = (inv) => {};
 
   const sendFriendRequest = () => {
+    const headers = {
+      'x-api-key': process.env.REACT_APP_BACKEND_KEY,
+    };
+
     axios
-      .get(`${API}/api/user/query?identifier=${friendField}`)
+      .get(`${API}/api/user/query?identifier=${friendField}`, { headers })
       .then((res) => {
         const requestUser = res.data;
         return axios.post(`${API}/api/invites/friends/send`, {
@@ -89,6 +101,10 @@ const Social = () => {
       return;
     }
 
+    const headers = {
+      'x-api-key': process.env.REACT_APP_BACKEND_KEY,
+    };
+
     friendIdsForGroup.forEach((friendToInvite) => {
       axios
         .post(`${API}/api/invites/groups/send`, {
@@ -96,7 +112,7 @@ const Social = () => {
           requestUid: friendToInvite.uid,
           groupId: selectedGroup.groupId,
           groupName: selectedGroup.groupName,
-        })
+        }, { headers })
         .catch((e) => console.log(e));
     });
     navigate('/home');
