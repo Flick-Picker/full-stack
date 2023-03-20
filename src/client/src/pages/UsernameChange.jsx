@@ -49,6 +49,10 @@ const UsernameChange = () => {
     navigate('/profile');
   };
 
+  const headers = {
+    'x-api-key': process.env.REACT_APP_BACKEND_KEY,
+  };
+
   const changeUsername = () => {
     updateProfile(user, {
         displayName: username,
@@ -57,7 +61,7 @@ const UsernameChange = () => {
           axios.post(`${API}/api/user/username`, {
             uid,
             username,
-          })
+          }, { headers })
         })
         .catch((error) => {
           // Handle errors
