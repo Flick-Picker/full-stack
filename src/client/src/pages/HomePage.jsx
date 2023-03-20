@@ -18,7 +18,6 @@ const HomePage = () => {
     const headers = {
       'x-api-key': process.env.REACT_APP_BACKEND_KEY,
     };
-    console.log(headers);
     axios
       .get(`${API}/api/user/collectgroups?uid=${uid}`, { headers: headers })
       .then((res) => {

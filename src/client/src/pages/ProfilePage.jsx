@@ -26,14 +26,12 @@ const ProfilePage = () => {
   if (user !== null) {
     email = user.email;
     username = user.displayName;
-    console.log(email); // Log the current user's email
   } else {
     email = "no email";
     
     console.log("No user is currently signed in");
   }
 
-  //console.log(email);
   const navigate = useNavigate();
 
   const handleChangeUsernameClick = (e) => {
