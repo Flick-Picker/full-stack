@@ -13,6 +13,7 @@ import { createUserWithEmailAndPassword } from 'firebase/auth';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import auth from '..';
+import OAuth from '../components/OAuth';
 
 const SignUpPage = () => {
   const signUpURI = `${
@@ -48,7 +49,7 @@ const SignUpPage = () => {
 
   const handleClickShowPassword = () => setShowPassword(!showPassword);
 
-  const handleMouseDownPassword = (e) => {
+  const handleMouseDown = (e) => {
     e.preventDefault();
   };
 
@@ -135,7 +136,7 @@ const SignUpPage = () => {
               <IconButton
                 aria-label="toggle password visibility"
                 onClick={handleClickShowPassword}
-                onMouseDown={handleMouseDownPassword}
+                onMouseDown={handleMouseDown}
                 edge="end">
                 {showPassword ? <Visibility /> : <VisibilityOff />}
               </IconButton>
@@ -159,7 +160,7 @@ const SignUpPage = () => {
               <IconButton
                 aria-label="toggle retype password visibility"
                 onClick={handleClickShowPassword}
-                onMouseDown={handleMouseDownPassword}
+                onMouseDown={handleMouseDown}
                 edge="end">
                 {showPassword ? <Visibility /> : <VisibilityOff />}
               </IconButton>
@@ -176,6 +177,7 @@ const SignUpPage = () => {
         onClick={(e) => handleSubmit(e)}>
         Sign Up
       </Button>
+      <OAuth />
     </Box>
   );
 };
