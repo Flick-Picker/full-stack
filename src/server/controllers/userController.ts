@@ -137,6 +137,20 @@ export async function updateUsername(req: Request, res: Response) {
   }
 }
 
+export async function updateEmail(req: Request, res: Response) {
+  try {
+    if (!verifyKey(req)) {
+      res.status(500).json({ error: 'Invalid Flick Picker API Key' });
+      return;
+    }
+    const { uid, email } = req.body;
+    const user = await service.updateEmail(uid, email);
+    res.send(user);
+  } catch (err) {
+    res.status(500).send(err);
+  }
+}
+
 export async function addFriend(req: Request, res: Response) {
   try {
     if (!verifyKey(req)) {

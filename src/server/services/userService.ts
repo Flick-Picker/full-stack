@@ -109,6 +109,19 @@ export const updateUsername = async (userUid: string, username: string) => {
   return docSnap.data();
 };
 
+export const updateEmail = async (userUid: string, email: string) => {
+  const docRef = doc(db, col, userUid);
+  let docSnap = await getDoc(docRef);
+
+  if (docSnap.exists()) {
+    await updateDoc(docRef, {
+      email,
+    });
+  }
+  docSnap = await getDoc(docRef);
+  return docSnap.data();
+};
+
 // adding friend (two-way)
 export const addFriend = async (userUid: string, friendUid: string) => {
   const docRef = doc(db, col, userUid);
