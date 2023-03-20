@@ -1,6 +1,7 @@
 import { FacebookOutlined, Google } from '@mui/icons-material';
 import { Box, IconButton } from '@mui/material';
 import {
+  FacebookAuthProvider,
   GoogleAuthProvider,
   signInWithPopup,
 } from 'firebase/auth';
@@ -64,7 +65,34 @@ const OAuth = () => {
   };
 
   const handleClickLogInMeta = (e) => {
-    alert('Call Meta Login');
+    const provider = new FacebookAuthProvider();
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        const user = result.user;
+
+        const obj = {
+          uid: user.uid,
+          email: user.email,
+          accessToken: user.accessToken,
+        };
+        dispatch(init(obj));
+
+        const expires = new Date();
+        expires.setTime(obj.expirationTime);
+        setCookie('access_token', obj.accessToken, {
+          path: '/',
+          expires,
+        });
+        setCookie('uid', obj.uid, {
+          path: '/',
+          expires,
+        });
+
+        navigate('/home');
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (
