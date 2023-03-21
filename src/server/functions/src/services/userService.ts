@@ -79,6 +79,7 @@ export const addUser = async (uid: string, email: string) => {
       friends: [],
       groupsOwned: [],
       groupsJoined: [],
+      currentVotingSession: '',
     });
   }
   docSnap = await getDoc(docRef);
@@ -86,7 +87,7 @@ export const addUser = async (uid: string, email: string) => {
 };
 
 export const updateUser = async (userData: User) => {
-  const docRef = doc(db, col, userData.email);
+  const docRef = doc(db, col, userData.uid);
   let docSnap = await getDoc(docRef);
 
   if (docSnap.exists()) {
@@ -103,6 +104,19 @@ export const updateUsername = async (userUid: string, username: string) => {
   if (docSnap.exists()) {
     await updateDoc(docRef, {
       username,
+    });
+  }
+  docSnap = await getDoc(docRef);
+  return docSnap.data();
+};
+
+export const updateEmail = async (userUid: string, email: string) => {
+  const docRef = doc(db, col, userUid);
+  let docSnap = await getDoc(docRef);
+
+  if (docSnap.exists()) {
+    await updateDoc(docRef, {
+      email,
     });
   }
   docSnap = await getDoc(docRef);
@@ -153,6 +167,19 @@ export const addToGroup = async (
         groupsJoined: arrayUnion(groupId),
       });
     }
+  }
+  docSnap = await getDoc(docRef);
+  return docSnap.data();
+};
+
+export const addNewVotingSession = async (userUid: string, votingId: string) => {
+  const docRef = doc(db, col, userUid);
+  let docSnap = await getDoc(docRef);
+
+  if (docSnap.exists()) {
+    await updateDoc(docRef, {
+      currentVotingSession: votingId,
+    });
   }
   docSnap = await getDoc(docRef);
   return docSnap.data();
