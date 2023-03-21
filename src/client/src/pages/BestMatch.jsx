@@ -75,7 +75,7 @@ const BestMatch = () => {
           </Typography>
         </Box>
         <Button variant="outlined" onClick={handleLeaveClick}>
-          Leave Session
+          Exit
         </Button>
       </Box>
     </Box>

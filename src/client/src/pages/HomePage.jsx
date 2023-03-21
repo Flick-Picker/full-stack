@@ -36,6 +36,10 @@ const HomePage = () => {
     navigate('/group/create');
   };
 
+  const handleJustMeClick = () => {
+    navigate('/user/session', { state: { } });
+  };
+
   const handleGoToGroupClick = (groupId) => {
     navigate('/group', { state: { groupId } });
   };
@@ -55,7 +59,7 @@ const HomePage = () => {
         <Typography variant="h3" component="h3">
           Who's joining you?
         </Typography>
-        <Button variant="outlined" size="large">
+        <Button variant="outlined" size="large" onClick={() => handleJustMeClick()}>
           Just me
         </Button>
         <Box>

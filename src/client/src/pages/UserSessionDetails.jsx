@@ -3,13 +3,16 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
+import { selectUid } from '../features/token/tokenSlice';
+import { useSelector } from 'react-redux';
 
-const GroupDetails = () => {
+const UserSessionDetails = () => {
   const API = `${process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'}`;
 
-  const [group, setGroup] = useState();
+  const [user, setUser] = useState();
   const [session, setSession] = useState();
 
+  const uid = useSelector(selectUid);
   const { state } = useLocation();
 
   const navigate = useNavigate();
@@ -20,13 +23,14 @@ const GroupDetails = () => {
     };
 
     axios
-      .get(`${API}/api/group/get?groupId=${state.groupId}`, { headers })
+      .get(`${API}/api/user/get?uid=${uid}`, { headers })
       .then((res) => {
-        setGroup(res.data);
-        state.group = res.data;
+        setUser(res.data);
+        state.user = res.data;
+        return res.data;
       })
       .catch((e) => console.log(e));
-  }, [API, state]);
+  }, [API, uid, state]);
 
   const handleCreateSessionClick = (e) => {
     const headers = {
@@ -36,26 +40,24 @@ const GroupDetails = () => {
     e.preventDefault();
     axios
       .post(
-        `${API}/api/voting/new/group`,
+        `${API}/api/voting/new/user`,
         {
-          groupId: state.groupId,
+          uid,
         },
         { headers }
       )
       .then((res) => {
-
-        state.session = res.data;
         setSession(res.data);
-
-        return axios.get(`${API}/api/group/get?groupId=${state.groupId}`, {
+        state.session = res.data;
+        return axios.get(`${API}/api/user/get?uid=${uid}`, {
           headers,
         });
       })
       .then((res) => {
-        setGroup(res.data);
-        state.group = res.data;
+        setUser(res.data);
+        state.user = res.data;
       })
-      .then(() => navigate('/group/vote', { state: state }))
+      .then(() => navigate('/user/vote', { state: state }))
       .catch((e) => console.log(e));
   };
 
@@ -66,23 +68,36 @@ const GroupDetails = () => {
 
     e.preventDefault();
     axios
-      .get(`${API}/api/voting/get?uuid=${state.group.currentVotingSession}`, { headers })
+      .get(`${API}/api/voting/get?uuid=${user.currentVotingSession}`, { headers })
       .then((res) => {
         setSession(res.data);
         state.session = res.data;
+        return res.data;
       })
-      .then(() => navigate('/group/vote', { state: state }))
+      .then(() => navigate('/user/vote', { state: state }))
       .catch((e) => console.log(e));
   };
 
   const handleEndSessionClick = (e) => {
     e.preventDefault();
-    //navigate('/group/vote', { state: state });
   };
 
   const handleBestMatchClick = (e) => {
+    const headers = {
+      'x-api-key': process.env.REACT_APP_BACKEND_KEY,
+    };
+
     e.preventDefault();
-    navigate('/group/match', { state: state });
+    axios
+      .get(`${API}/api/voting/get?uuid=${user.currentVotingSession}`, { headers })
+      .then((res) => {
+        setSession(res.data);
+        state.session = res.data;
+        return res.data;
+      })
+      .then((res) => navigate('/user/history', { state: state }))
+      .catch((e) => console.log(e));
+
   };
 
   return (
@@ -97,10 +112,7 @@ const GroupDetails = () => {
         minHeight="75vh"
       >
         <Typography variant="h3" component="h3">
-          {group && group.groupName ? group.groupName : ''}
-        </Typography>
-        <Typography variant="h4" component="h4">
-          Voting Session
+          Voting Session for {user ? user.username : ''}
         </Typography>
         <Box
           display="flex"
@@ -113,7 +125,7 @@ const GroupDetails = () => {
             size="large"
             onClick={handleCreateSessionClick}
           >
-            Start Session
+            Start New Session
           </Button>
           <Button
             variant="outlined"
@@ -134,7 +146,7 @@ const GroupDetails = () => {
             size="large"
             onClick={handleBestMatchClick}
           >
-            View Best Match
+            View History
           </Button>
         </Box>
       </Box>
@@ -142,4 +154,4 @@ const GroupDetails = () => {
   );
 };
 
-export default GroupDetails;
+export default UserSessionDetails;
