@@ -104,6 +104,7 @@ const OAuth = () => {
         <Google />
       </IconButton>
       <IconButton
+        disabled
         aria-label="meta login"
         onClick={handleClickLogInMeta}
         onMouseDown={handleMouseDown}>
