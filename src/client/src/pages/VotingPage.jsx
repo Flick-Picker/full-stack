@@ -30,7 +30,6 @@ const VotingPage = () => {
 
 
   useEffect(() => {
-    console.log(state);
     const recs = state.session.recommendations;
     for (let i = 0; i < recs.length; i += 1) {
       const rec = recs[i];

@@ -30,8 +30,6 @@ const BestMatch = () => {
         headers,
       })
       .then((res) => {
-        console.log(state.group.currentVotingSession);
-        console.log(res.data);
         setFlick(res.data);
       })
       .catch((e) => console.log(e));
