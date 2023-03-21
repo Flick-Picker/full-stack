@@ -81,6 +81,10 @@ const router = createBrowserRouter([
     element: <BestMatch />,
   },
   {
+    path: '/group/history',
+    element: <History />,
+  },
+  {
     path: '/user/session',
     element: <UserSessionDetails />,
   },

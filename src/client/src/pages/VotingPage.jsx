@@ -13,8 +13,12 @@ import axios from 'axios';
 import { useSelector } from 'react-redux';
 import { selectUid } from '../features/token/tokenSlice';
 
+const headers = {
+  'x-api-key': process.env.REACT_APP_BACKEND_KEY,
+};
+const API = `${process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'}`;
+
 const VotingPage = () => {
-  const API = `${process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'}`;
   const { state, pathname } = useLocation();
 
   const uid = useSelector(selectUid);
@@ -24,9 +28,6 @@ const VotingPage = () => {
 
   const isForGroup = pathname === '/group/vote';
 
-  const headers = {
-    'x-api-key': process.env.REACT_APP_BACKEND_KEY,
-  };
 
   useEffect(() => {
     console.log(state);
@@ -44,13 +45,6 @@ const VotingPage = () => {
   const navigate = useNavigate();
 
   const handleRatingClick = (value) => {
-
-    // let sessionId = '';
-    // if (isForGroup) {
-    //   sessionId = state.group.currentVotingSession;
-    // } else {
-    //   sessionId = state.user.currentVotingSession;
-    // }
 
     axios
       .post(

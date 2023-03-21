@@ -6,8 +6,12 @@ import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import { selectUid } from '../features/token/tokenSlice';
 
+const headers = {
+  'x-api-key': process.env.REACT_APP_BACKEND_KEY,
+};
+const API = `${process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'}`;
+
 const HomePage = () => {
-  const API = `${process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'}`;
 
   const [userGroups, setUserGroups] = React.useState();
 
@@ -15,16 +19,14 @@ const HomePage = () => {
   const uid = useSelector(selectUid);
 
   useEffect(() => {
-    const headers = {
-      'x-api-key': process.env.REACT_APP_BACKEND_KEY,
-    };
+
     axios
-      .get(`${API}/api/user/collectgroups?uid=${uid}`, { headers: headers })
+      .get(`${API}/api/user/collectgroups?uid=${uid}`, { headers })
       .then((res) => {
         setUserGroups(res.data);
       })
       .catch((e) => console.log(e));
-  }, [API, uid]);
+  }, [uid]);
 
   const handleJoinGroupClick = (e) => {
     e.preventDefault();

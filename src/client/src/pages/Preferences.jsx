@@ -15,8 +15,12 @@ import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import { selectUid } from '../features/token/tokenSlice';
 
+const headers = {
+  'x-api-key': process.env.REACT_APP_BACKEND_KEY,
+};
+const API = `${process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'}`;
+
 const Preferences = () => {
-  const API = `${process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'}`;
 
   // This is going to be an API call
   const genres = [
@@ -68,9 +72,6 @@ const Preferences = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const headers = {
-      'x-api-key': process.env.REACT_APP_BACKEND_KEY,
-    };
 
     axios
       .get(`${API}/api/user/pref/get?uid=${uid}`, { headers })
@@ -85,7 +86,7 @@ const Preferences = () => {
       .catch((e) => {
         console.log(e);
       });
-  }, [API, uid]);
+  }, [uid]);
 
   const handleLikedGenresChange = (e) => {
     const {
@@ -102,10 +103,6 @@ const Preferences = () => {
   };
 
   const handleSave = (e) => {
-    const headers = {
-      'x-api-key': process.env.REACT_APP_BACKEND_KEY,
-    };
-
     const body = {
       uid: uid,
       likedGenres: likedGenres,
@@ -115,6 +112,7 @@ const Preferences = () => {
       tvShowPreference: tvPref,
       preferredRatings: 2 * rating,
     };
+    
     axios
       .post(`${API}/api/user/pref/update`, body, { headers })
       .then(navigate('/home'))
