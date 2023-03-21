@@ -1,67 +1,68 @@
-import {
-  Box,
-  Button,
-  Checkbox,
-  FormControlLabel,
-  FormGroup,
-  Typography,
-} from '@mui/material';
+import { Box, Button, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { DataGrid } from '@mui/x-data-grid';
 import Header from '../components/Header';
-import axios from 'axios';
-import { useSelector } from 'react-redux';
-import { selectUid } from '../features/token/tokenSlice';
+
+function findBestMatch(recommendations) {
+  const recs = recommendations;
+  let bestMatch = recs[0];
+  recs.forEach((rec) => {
+    if (rec.voteRating > bestMatch.voteRating) {
+      bestMatch = rec;
+    }
+  });
+  return bestMatch;
+}
 
 const History = () => {
-  const API = `${process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'}`;
-  const { state } = useLocation();
+  const { state, pathname } = useLocation();
+  const [session, setSession] = useState({});
+  const [flick, setFlick] = useState(state.session.recommendations[0]);
 
-
-  const [ session, setSession ] = useState({});
-  const [ flick, setFlick ] = useState(state.session.recommendations[0]);
-
-  const uid = useSelector(selectUid);
+  const isForGroup = pathname === '/group/history';
+  const navigate = useNavigate();
 
   useEffect(() => {
     setSession(state.session);
-  });
-
-  const navigate = useNavigate();
+    const bestMatch = findBestMatch(state.session.recommendations);
+    setFlick(bestMatch);
+  }, [state.session]);
 
   const handleLeaveClick = (e) => {
     e.preventDefault();
-    navigate('/user/session', { state: state });
+    if (isForGroup) {
+      navigate('/group', { state: state });
+    } else {
+      navigate('/user/session', { state: state });
+    }
   };
 
   const handleRowClick = (e, row) => {
     e.stopPropagation();
     setFlick(row);
-    console.log(flick);
   };
 
   const columns = [
     { field: 'name', headerName: 'Flick Name', width: 350 },
     {
       field: 'algorithmRating',
-      headerName: 'Personalized Rating',
+      headerName: isForGroup ? 'Group Rating' : 'Personalized Rating',
       width: 150,
       valueFormatter: ({ value }) => value.toFixed(2),
     },
     {
       field: 'voteRating',
-      headerName: 'Your Vote',
+      headerName: isForGroup ? 'Group Consensus' : 'Your Vote',
       width: 150,
       valueGetter: (params) => {
-        if (params.value === 1) {
-          return 'Liked'
-        } else if (params.value === 0) {
-          return 'Neutral'
+        if (params.value >= 1) {
+          return 'Liked';
+        } else if (params.value < 1 && params.value >= 0) {
+          return 'Neutral';
+        } else {
+          return 'Disliked';
         }
-        else {
-          return 'Disliked'
-        };
       },
     },
   ];
@@ -77,11 +78,9 @@ const History = () => {
         gap="5vh"
         minHeight="75vh"
       >
-
         <Typography variant="h6" component="h6">
-          Your Flick History:
+          Flick History
         </Typography>
-
         <Box
           component="img"
           sx={{
@@ -90,7 +89,7 @@ const History = () => {
             maxHeight: { xs: 300, md: 400 },
             //maxWidth: { xs: 350, md: 250 },
           }}
-          alt='Image Flick'
+          alt="Image Flick"
           src={flick.imageURL}
         />
 
@@ -98,8 +97,9 @@ const History = () => {
           <DataGrid
             rows={state.session.recommendations}
             columns={columns}
-            getRowId={(row) => row.name }
+            getRowId={(row) => row.name}
             pageSize={5}
+            rowSelectionModel={flick.name}
             onRowClick={(params, e) => handleRowClick(e, params.row)}
           />
         </Box>

@@ -6,8 +6,12 @@ import Header from '../components/Header';
 import { selectUid } from '../features/token/tokenSlice';
 import { useSelector } from 'react-redux';
 
+const headers = {
+  'x-api-key': process.env.REACT_APP_BACKEND_KEY,
+};
+const API = `${process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'}`;
+
 const UserSessionDetails = () => {
-  const API = `${process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'}`;
 
   const [user, setUser] = useState();
   const [session, setSession] = useState();
@@ -18,10 +22,6 @@ const UserSessionDetails = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const headers = {
-      'x-api-key': process.env.REACT_APP_BACKEND_KEY,
-    };
-
     axios
       .get(`${API}/api/user/get?uid=${uid}`, { headers })
       .then((res) => {
@@ -30,13 +30,9 @@ const UserSessionDetails = () => {
         return res.data;
       })
       .catch((e) => console.log(e));
-  }, [API, uid, state]);
+  }, [uid, state]);
 
   const handleCreateSessionClick = (e) => {
-    const headers = {
-      'x-api-key': process.env.REACT_APP_BACKEND_KEY,
-    };
-
     e.preventDefault();
     axios
       .post(
@@ -62,10 +58,6 @@ const UserSessionDetails = () => {
   };
 
   const handleCurrentSessionClick = (e) => {
-    const headers = {
-      'x-api-key': process.env.REACT_APP_BACKEND_KEY,
-    };
-
     e.preventDefault();
     axios
       .get(`${API}/api/voting/get?uuid=${user.currentVotingSession}`, { headers })
@@ -82,11 +74,7 @@ const UserSessionDetails = () => {
     e.preventDefault();
   };
 
-  const handleBestMatchClick = (e) => {
-    const headers = {
-      'x-api-key': process.env.REACT_APP_BACKEND_KEY,
-    };
-
+  const handleHistoryClick = (e) => {
     e.preventDefault();
     axios
       .get(`${API}/api/voting/get?uuid=${user.currentVotingSession}`, { headers })
@@ -97,7 +85,6 @@ const UserSessionDetails = () => {
       })
       .then((res) => navigate('/user/history', { state: state }))
       .catch((e) => console.log(e));
-
   };
 
   return (
@@ -134,17 +121,17 @@ const UserSessionDetails = () => {
           >
             Current Session
           </Button>
-          <Button
+          {/* <Button
             variant="outlined"
             size="large"
             onClick={handleEndSessionClick}
           >
             End Session
-          </Button>
+          </Button> */}
           <Button
             variant="outlined"
             size="large"
-            onClick={handleBestMatchClick}
+            onClick={handleHistoryClick}
           >
             View History
           </Button>

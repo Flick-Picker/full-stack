@@ -4,8 +4,12 @@ import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 
+const headers = {
+  'x-api-key': process.env.REACT_APP_BACKEND_KEY,
+};
+const API = `${process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'}`;
+
 const GroupDetails = () => {
-  const API = `${process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'}`;
 
   const [group, setGroup] = useState();
   const [session, setSession] = useState();
@@ -15,9 +19,6 @@ const GroupDetails = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const headers = {
-      'x-api-key': process.env.REACT_APP_BACKEND_KEY,
-    };
 
     axios
       .get(`${API}/api/group/get?groupId=${state.groupId}`, { headers })
@@ -26,7 +27,7 @@ const GroupDetails = () => {
         state.group = res.data;
       })
       .catch((e) => console.log(e));
-  }, [API, state]);
+  }, [state]);
 
   const handleCreateSessionClick = (e) => {
     const headers = {
@@ -85,6 +86,19 @@ const GroupDetails = () => {
     navigate('/group/match', { state: state });
   };
 
+  const handleHistoryClick = (e) => {
+    e.preventDefault();
+    axios
+      .get(`${API}/api/voting/get?uuid=${group.currentVotingSession}`, { headers })
+      .then((res) => {
+        setSession(res.data);
+        state.session = res.data;
+        return res.data;
+      })
+      .then((res) => navigate('/group/history', { state: state }))
+      .catch((e) => console.log(e));
+  };
+
   return (
     <Box>
       <Header />
@@ -122,12 +136,19 @@ const GroupDetails = () => {
           >
             Current Session
           </Button>
-          <Button
+          {/* <Button
             variant="outlined"
             size="large"
             onClick={handleEndSessionClick}
           >
             End Session
+          </Button> */}
+          <Button
+            variant="outlined"
+            size="large"
+            onClick={handleBestMatchClick}
+          >
+            View Best Match
           </Button>
           <Button
             variant="outlined"
@@ -135,6 +156,13 @@ const GroupDetails = () => {
             onClick={handleBestMatchClick}
           >
             View Best Match
+          </Button>
+          <Button
+            variant="outlined"
+            size="large"
+            onClick={handleHistoryClick}
+          >
+            View History
           </Button>
         </Box>
       </Box>
