@@ -1,9 +1,7 @@
+import { AccountCircle, Visibility, VisibilityOff } from '@mui/icons-material';
 import {
-  AccountCircle,
-  Visibility,
-  VisibilityOff,
-} from '@mui/icons-material';
-import {
+  Alert,
+  AlertTitle,
   Box,
   Button,
   FormControl,
@@ -26,6 +24,7 @@ const LoginPage = () => {
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
   const [showPassword, setShowPassword] = React.useState(false);
+  const [errorAlert, setErrorAlert] = React.useState(undefined);
 
   // Redux Global State
   const dispatch = useDispatch();
@@ -95,9 +94,25 @@ const LoginPage = () => {
         navigate('/home');
       })
       .catch((error) => {
-        console.log(error);
-        // const errorCode = error.code;
-        // const errorMessage = error.message;
+        switch (error.code) {
+          case 'auth/invalid-email':
+          case 'auth/wrong-password':
+            setErrorAlert(
+              <Alert severity="error" onClose={() => setErrorAlert(undefined)}>
+                <AlertTitle>Error</AlertTitle>
+                Invalid Email or Incorrect Password
+              </Alert>
+            );
+            break;
+          default:
+            setErrorAlert(
+              <Alert severity="error" onClose={() => setErrorAlert(undefined)}>
+                <AlertTitle>Error</AlertTitle>
+                Something unexpected happened. Try again later.
+              </Alert>
+            );
+        }
+        // console.log(error);
       });
   };
 
@@ -153,6 +168,7 @@ const LoginPage = () => {
         Log In
       </Button>
       <OAuth />
+      {errorAlert !== undefined ? errorAlert : <></>}
     </Box>
   );
 };

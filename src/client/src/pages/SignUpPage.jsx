@@ -1,5 +1,7 @@
 import { AccountCircle, Visibility, VisibilityOff } from '@mui/icons-material';
 import {
+  Alert,
+  AlertTitle,
   Box,
   Button,
   FormControl,
@@ -28,7 +30,7 @@ const SignUpPage = () => {
   const [password, setPassword] = React.useState('');
   const [passAgain, setPassAgain] = React.useState('');
   const [showPassword, setShowPassword] = React.useState(false);
-  const [uid, setUid] = React.useState('');
+  const [errorAlert, setErrorAlert] = React.useState(undefined);
   // React-Router Navigation
   const navigate = useNavigate();
 
@@ -80,8 +82,6 @@ const SignUpPage = () => {
         })
         .then((res) => {
           const user = res.data;
-          setUid(user.uid);
-
           const body = {
             uid: user.uid,
           };
@@ -91,11 +91,56 @@ const SignUpPage = () => {
           navigate('/login');
         })
         .catch((error) => {
-          const errorCode = error.code;
-          const errorMessage = error.message;
+          switch (error.code) {
+            case 'auth/invalid-email':
+              setErrorAlert(
+                <Alert
+                  severity="error"
+                  onClose={() => setErrorAlert(undefined)}>
+                  <AlertTitle>Error</AlertTitle>
+                  Invalid Email
+                </Alert>
+              );
+              break;
+            case 'auth/weak-password':
+              setErrorAlert(
+                <Alert
+                  severity="error"
+                  onClose={() => setErrorAlert(undefined)}>
+                  <AlertTitle>Error</AlertTitle>
+                  Weak password, should be atleast 6 characters
+                </Alert>
+              );
+              break;
+            case 'auth/email-already-in-use':
+              setErrorAlert(
+                <Alert
+                  severity="error"
+                  onClose={() => setErrorAlert(undefined)}>
+                  <AlertTitle>Error</AlertTitle>
+                  Email has already been used
+                </Alert>
+              );
+              break;
+            default:
+              setErrorAlert(
+                <Alert
+                  severity="error"
+                  onClose={() => setErrorAlert(undefined)}>
+                  <AlertTitle>Error</AlertTitle>
+                  Something unexpected happened. Try again later.
+                </Alert>
+              );
+          }
+          // console.log(error);
         });
     } else {
-      alert('The passwords provided are different');
+      setErrorAlert(
+        <Alert severity="error" onClose={() => setErrorAlert(undefined)}>
+          <AlertTitle>Error</AlertTitle>
+          Passwords are different
+        </Alert>
+      );
       setPassword('');
       setPassAgain('');
     }
@@ -178,6 +223,7 @@ const SignUpPage = () => {
         Sign Up
       </Button>
       <OAuth />
+      {errorAlert !== undefined ? errorAlert : <></>}
     </Box>
   );
 };
