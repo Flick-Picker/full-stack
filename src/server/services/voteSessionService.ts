@@ -7,6 +7,7 @@ import {
 } from 'firebase/firestore/lite';
 import { v4 as uuidv4 } from 'uuid';
 import * as groupService from './groupService';
+import * as userService from './userService';
 import { VotingSession } from '../models/votingSessionModel';
 import { HistoryMedia, UserVote, VoteMediaRec } from '../models/voteMediaModel';
 import { getRecommendation } from './recommendationService';
@@ -118,6 +119,7 @@ export const addSessionForUser = async (userUid: string) => {
   }
   docSnap = await getDoc(docRef);
   const recsnap: VotingSession = await loadRecommendations(id, userUid, false);
+  await userService.addNewVotingSession(userUid, id);
   return recsnap;
 };
 

@@ -13,18 +13,21 @@ import axios from 'axios';
 import { useSelector } from 'react-redux';
 import { selectUid } from '../features/token/tokenSlice';
 
+const headers = {
+  'x-api-key': process.env.REACT_APP_BACKEND_KEY,
+};
+const API = `${process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'}`;
+
 const VotingPage = () => {
-  const API = `${process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'}`;
-  const { state } = useLocation();
+  const { state, pathname } = useLocation();
 
   const uid = useSelector(selectUid);
   const [currIndex, setCurrIndex] = React.useState(0);
   const [currFlick, setCurrFlick] = React.useState({});
   const [updateFlick, setUpdateFlick] = React.useState(0);
 
-  const headers = {
-    'x-api-key': process.env.REACT_APP_BACKEND_KEY,
-  };
+  const isForGroup = pathname === '/group/vote';
+
 
   useEffect(() => {
     const recs = state.session.recommendations;
@@ -41,11 +44,12 @@ const VotingPage = () => {
   const navigate = useNavigate();
 
   const handleRatingClick = (value) => {
+
     axios
       .post(
         `${API}/api/voting/submitvote`,
         {
-          sessionId: state.group.currentVotingSession,
+          sessionId: state.session.sessionId,
           uid,
           mediaName: currFlick.name,
           vote: value.toString(),
@@ -53,8 +57,6 @@ const VotingPage = () => {
         { headers }
       )
       .then((res) => {
-        console.log('submitted');
-        console.log(res.data);
         state.session = res.data;
       })
       .then(() => {
@@ -68,7 +70,11 @@ const VotingPage = () => {
 
   const handleLeaveClick = (e) => {
     e.preventDefault();
-    navigate('/group', { state: state });
+    if (isForGroup) {
+      navigate('/group', { state: state });
+    } else {
+      navigate('/user/session', { state: state });
+    }
   };
 
   return (
@@ -83,7 +89,7 @@ const VotingPage = () => {
         minHeight="75vh"
       >
         <Typography variant="h6" component="h6">
-          Recommended Flicks For: {state.group.groupName}
+          Recommended Flick
         </Typography>
         <Box>
           <Box
@@ -94,8 +100,8 @@ const VotingPage = () => {
               maxHeight: { xs: 300, md: 400 },
               //maxWidth: { xs: 350, md: 250 },
             }}
-            alt={state.group.groupName}
-            src={currFlick.imageURL}
+            alt='movie'
+            src={ currFlick.imageURL }
           />
           <Typography variant="h6" component="h6">
             {currFlick.name}

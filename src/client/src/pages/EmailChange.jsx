@@ -21,17 +21,18 @@ import { useLocation, useRouteError } from 'react-router';
 import { useSelector } from 'react-redux';
 import Header from '../components/Header';
 import { Check, Clear } from '@mui/icons-material';
-import { selectEmail, selectPassword } from '../features/token/tokenSlice';
+import { selectEmail, selectPassword, selectUid } from '../features/token/tokenSlice';
 
 const EmailChange = () => {
   //const oldemail = useSelector(selectEmail);
   //const userpassword = useSelector(selectPassword);
+  const API = `${process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'}`;
 
   const auth = getAuth();
   const user = auth.currentUser;
 
   const navigate = useNavigate();
-
+  const uid = useSelector(selectUid);
   // Page Specific State
   const [email, setEmail] = React.useState('');
   const [emailAgain, setEmailAgain] = React.useState('');
@@ -57,11 +58,18 @@ const EmailChange = () => {
     navigate('/profile');
   };
 
+  const headers = {
+    'x-api-key': process.env.REACT_APP_BACKEND_KEY,
+  };
+
   const changeEmail = () => {
-    if(email === emailAgain) {
+    if (email === emailAgain) {
       updateEmail(user, email)
       .then(() => {
-        // Need to add change email endpoint...
+        axios.post(`${API}/api/user/email`, {
+          uid,
+          email,
+        }, { headers })
       })
       .catch((error) => {
       });

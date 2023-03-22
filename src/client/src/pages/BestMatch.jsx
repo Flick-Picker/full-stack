@@ -13,29 +13,27 @@ import axios from 'axios';
 import { useSelector } from 'react-redux';
 import { selectUid } from '../features/token/tokenSlice';
 
-const BestMatch = () => {
-  const API = `${process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'}`;
-  const { state } = useLocation();
+const headers = {
+  'x-api-key': process.env.REACT_APP_BACKEND_KEY,
+};
+const API = `${process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'}`;
 
+const BestMatch = () => {
+  
+  const { state } = useLocation();
   const uid = useSelector(selectUid);
   const [flick, setFlick] = React.useState({});
 
   useEffect(() => {
-    const headers = {
-      'x-api-key': process.env.REACT_APP_BACKEND_KEY,
-    };
-
     axios
       .get(`${API}/api/voting/match?uuid=${state.group.currentVotingSession}`, {
         headers,
       })
       .then((res) => {
-        console.log(state.group.currentVotingSession);
-        console.log(res.data);
         setFlick(res.data);
       })
       .catch((e) => console.log(e));
-  }, [API, state]);
+  }, [state]);
 
   const navigate = useNavigate();
 
@@ -75,7 +73,7 @@ const BestMatch = () => {
           </Typography>
         </Box>
         <Button variant="outlined" onClick={handleLeaveClick}>
-          Leave Session
+          Exit
         </Button>
       </Box>
     </Box>

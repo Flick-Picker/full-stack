@@ -14,28 +14,25 @@ import axios from 'axios';
 import { useSelector } from 'react-redux';
 import { selectUid } from '../features/token/tokenSlice';
 
-const JoinGroup = () => {
-  const API = `${process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'}`;
+const headers = {
+  'x-api-key': process.env.REACT_APP_BACKEND_KEY,
+};
+const API = `${process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'}`;
 
+const JoinGroup = () => {
   const [groupInvites, setGroupInvites] = React.useState();
 
   const uid = useSelector(selectUid);
 
   useEffect(() => {
-    const headers = {
-      'x-api-key': process.env.REACT_APP_BACKEND_KEY,
-    };
 
     axios
       .get(`${API}/api/invites/group/getforuser?uid=${uid}`, { headers })
       .then((res) => setGroupInvites(res.data))
       .catch((e) => console.log(e));
-  }, [API, uid]);
+  }, [uid]);
 
   const handleAcceptGroup = (inv, i) => {
-    const headers = {
-      'x-api-key': process.env.REACT_APP_BACKEND_KEY,
-    };
     const body = {
       inviteId: inv.inviteId,
       groupId: inv.groupId,

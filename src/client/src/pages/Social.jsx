@@ -23,8 +23,12 @@ import GroupsList from '../components/GroupsList';
 import Header from '../components/Header';
 import { selectEmail, selectUid } from '../features/token/tokenSlice';
 
+const headers = {
+  'x-api-key': process.env.REACT_APP_BACKEND_KEY,
+};
+const API = `${process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'}`;
+
 const Social = () => {
-  const API = `${process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'}`;
 
   const [selectedGroup, setSelectedGroup] = React.useState('');
   const [friendField, setFriendField] = React.useState('');
@@ -39,15 +43,11 @@ const Social = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const headers = {
-      'x-api-key': process.env.REACT_APP_BACKEND_KEY,
-    };
-
     axios
       .get(`${API}/api/invites/friends/getforuser?uid=${uid}`, { headers })
       .then((res) => setFriendInvites(res.data))
       .catch((e) => console.log(e));
-  }, [API, uid]);
+  }, [uid]);
 
   const handleFriendInputChange = (e) => {
     e.preventDefault();
@@ -60,10 +60,6 @@ const Social = () => {
       senderUid: inv.senderUser,
       requestUid: inv.requestedUser,
     };
-    const headers = {
-      'x-api-key': process.env.REACT_APP_BACKEND_KEY,
-    };
-
     axios
       .post(`${API}/api/invites/friends/accept`, body, { headers })
       .then(() => {
@@ -76,10 +72,6 @@ const Social = () => {
   const handleDeclineFriend = (inv) => {};
 
   const sendFriendRequest = () => {
-    const headers = {
-      'x-api-key': process.env.REACT_APP_BACKEND_KEY,
-    };
-
     axios
       .get(`${API}/api/user/query?identifier=${friendField}`, { headers })
       .then((res) => {
@@ -113,11 +105,7 @@ const Social = () => {
       setAlertText('Need to select atleast one friend');
       return;
     }
-
-    const headers = {
-      'x-api-key': process.env.REACT_APP_BACKEND_KEY,
-    };
-
+    
     friendIdsForGroup.forEach((friendToInvite) => {
       axios
         .post(

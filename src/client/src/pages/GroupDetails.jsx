@@ -1,16 +1,20 @@
 import { Box, Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Typography } from '@mui/material';
 import axios from 'axios';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import { selectUid } from '../features/token/tokenSlice';
 
-const GroupDetails = () => {
-  const API = `${process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'}`;
+const headers = {
+  'x-api-key': process.env.REACT_APP_BACKEND_KEY,
+};
+const API = `${process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'}`;
 
-  const [group, setGroup] = React.useState();
-  const [open, setOpen] = React.useState();
+const GroupDetails = () => {
+
+  const [group, setGroup] = useState();
+  const [open, setOpen] = useState();
   
   const uid = useSelector(selectUid);
 
@@ -19,9 +23,6 @@ const GroupDetails = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const headers = {
-      'x-api-key': process.env.REACT_APP_BACKEND_KEY,
-    };
 
     axios
       .get(`${API}/api/group/get?groupId=${state.groupId}`, { headers })
@@ -30,7 +31,7 @@ const GroupDetails = () => {
         state.group = res.data;
       })
       .catch((e) => console.log(e));
-  }, [API, state]);
+  }, [state]);
 
   const handleClose = () => {
     setOpen(false);
@@ -86,6 +87,18 @@ const GroupDetails = () => {
     navigate('/group/match', { state: state });
   };
 
+  const handleHistoryClick = (e) => {
+    e.preventDefault();
+    axios
+      .get(`${API}/api/voting/get?uuid=${group.currentVotingSession}`, { headers })
+      .then((res) => {
+        state.session = res.data;
+        return res.data;
+      })
+      .then((res) => navigate('/group/history', { state: state }))
+      .catch((e) => console.log(e));
+  };
+
   return (
     <Box>
       <Header />
@@ -124,20 +137,19 @@ const GroupDetails = () => {
           >
             Current Session
           </Button>
-          {/* <Button
-            disabled={state.group !== undefined ? uid !== state.group.ownerUid : false}
-            variant="outlined"
-            size="large"
-            onClick={handleEndSessionClick}
-          >
-            End Session
-          </Button> */}
           <Button
             variant="outlined"
             size="large"
             onClick={handleBestMatchClick}
           >
             View Best Match
+          </Button>
+          <Button
+            variant="outlined"
+            size="large"
+            onClick={handleHistoryClick}
+          >
+            View History
           </Button>
         </Box>
       </Box>
