@@ -1,4 +1,5 @@
 import {
+  Alert,
   Box,
   Button,
   FormControl,
@@ -10,7 +11,6 @@ import axios from 'axios';
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import FriendsList from '../components/FriendsList';
 import Header from '../components/Header';
 import { selectUid } from '../features/token/tokenSlice';
 
@@ -74,26 +74,10 @@ const CreateGroup = () => {
             label="Email"
           />
         </FormControl>
-        <Box
-          display="flex"
-          gap="1vh"
-          justifyContent="center"
-          alignItems="center"
-          flexDirection="column"
-          padding="20px"
-          border="solid"
-          borderRadius="10px">
-          <Typography
-            variant="h6"
-            component="h6"
-            sx={{ textDecoration: 'underline' }}>
-            Invite Friends
-          </Typography>
-          <FriendsList />
-        </Box>
         <Button variant="outlined" onClick={handleCreateGroup}>
           Create Group
         </Button>
+        <Alert severity='info'>Go to Social to invite friends into your group!</Alert>
       </Box>
     </Box>
   );
