@@ -1,14 +1,18 @@
-import { Box, Button, Typography } from '@mui/material';
+import { Box, Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Typography } from '@mui/material';
 import axios from 'axios';
 import React, { useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
+import { selectUid } from '../features/token/tokenSlice';
 
 const GroupDetails = () => {
   const API = `${process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'}`;
 
   const [group, setGroup] = React.useState();
-  const [session, setSession] = React.useState();
+  const [open, setOpen] = React.useState();
+  
+  const uid = useSelector(selectUid);
 
   const { state } = useLocation();
 
@@ -28,7 +32,12 @@ const GroupDetails = () => {
       .catch((e) => console.log(e));
   }, [API, state]);
 
-  const handleCreateSessionClick = (e) => {
+  const handleClose = () => {
+    setOpen(false);
+  }
+
+  const createSessionAccept = (e) => {
+    handleClose();
     const headers = {
       'x-api-key': process.env.REACT_APP_BACKEND_KEY,
     };
@@ -43,9 +52,7 @@ const GroupDetails = () => {
         { headers }
       )
       .then((res) => {
-
         state.session = res.data;
-        setSession(res.data);
 
         return axios.get(`${API}/api/group/get?groupId=${state.groupId}`, {
           headers,
@@ -68,16 +75,10 @@ const GroupDetails = () => {
     axios
       .get(`${API}/api/voting/get?uuid=${state.group.currentVotingSession}`, { headers })
       .then((res) => {
-        setSession(res.data);
         state.session = res.data;
       })
       .then(() => navigate('/group/vote', { state: state }))
       .catch((e) => console.log(e));
-  };
-
-  const handleEndSessionClick = (e) => {
-    e.preventDefault();
-    //navigate('/group/vote', { state: state });
   };
 
   const handleBestMatchClick = (e) => {
@@ -109,9 +110,10 @@ const GroupDetails = () => {
           gap="5%"
         >
           <Button
+            disabled={state.group !== undefined ? uid !== state.group.ownerUid : false}
             variant="outlined"
             size="large"
-            onClick={handleCreateSessionClick}
+            onClick={() => setOpen(true)}
           >
             Start Session
           </Button>
@@ -122,13 +124,14 @@ const GroupDetails = () => {
           >
             Current Session
           </Button>
-          <Button
+          {/* <Button
+            disabled={state.group !== undefined ? uid !== state.group.ownerUid : false}
             variant="outlined"
             size="large"
             onClick={handleEndSessionClick}
           >
             End Session
-          </Button>
+          </Button> */}
           <Button
             variant="outlined"
             size="large"
@@ -138,6 +141,19 @@ const GroupDetails = () => {
           </Button>
         </Box>
       </Box>
+      <Dialog
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="alert-create-session">
+          <DialogTitle>{"Overwrite session if it exists?"}</DialogTitle>
+          <DialogContent>
+            <DialogContentText>Creating a session will delete the existing one, if one already exists. This will restart the votes and allow for new user preferences to be checked.</DialogContentText>
+          </DialogContent>
+          <DialogActions>
+            <Button onClick={handleClose}>No</Button>
+            <Button onClick={createSessionAccept} autoFocus>Yes</Button>
+          </DialogActions>
+      </Dialog>
     </Box>
   );
 };
