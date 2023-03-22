@@ -136,20 +136,6 @@ const GroupDetails = () => {
           >
             Current Session
           </Button>
-          {/* <Button
-            variant="outlined"
-            size="large"
-            onClick={handleEndSessionClick}
-          >
-            End Session
-          </Button> */}
-          <Button
-            variant="outlined"
-            size="large"
-            onClick={handleBestMatchClick}
-          >
-            View Best Match
-          </Button>
           <Button
             variant="outlined"
             size="large"
