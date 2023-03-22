@@ -1,5 +1,6 @@
 import { Check, Clear } from '@mui/icons-material';
 import {
+  Alert,
   Box,
   Button,
   FormControl,
@@ -10,6 +11,7 @@ import {
   ListItemSecondaryAction,
   ListItemText,
   OutlinedInput,
+  Snackbar,
   Typography,
 } from '@mui/material';
 import axios from 'axios';
@@ -32,6 +34,8 @@ const Social = () => {
   const [friendField, setFriendField] = React.useState('');
   const [friendInvites, setFriendInvites] = React.useState();
   const [friendIdsForGroup, setFriendIdsForGroup] = React.useState([]);
+  const [alert, setAlert] = React.useState(undefined); // error, warning, info, success
+  const [alertText, setAlertText] = React.useState('');
 
   const uid = useSelector(selectUid);
   const email = useSelector(selectEmail);
@@ -72,36 +76,53 @@ const Social = () => {
       .get(`${API}/api/user/query?identifier=${friendField}`, { headers })
       .then((res) => {
         const requestUser = res.data;
-        return axios.post(`${API}/api/invites/friends/send`, {
-          senderUid: uid,
-          senderEmail: email,
-          requestUid: requestUser.uid,
-        });
+        return axios
+          .post(`${API}/api/invites/friends/send`, {
+            senderUid: uid,
+            senderEmail: email,
+            requestUid: requestUser.uid,
+          })
+          .then(() => {
+            setAlert('success');
+            setAlertText('Friend request sent');
+          });
       })
       .then(() => setFriendField(''))
-      .catch((e) => console.log(e));
+      .catch((e) => {
+        setAlert('error');
+        setAlertText('Friend request could not be sent');
+      });
   };
 
   const sendGroupRequest = () => {
-    // Create better error handling
     if (!selectedGroup) {
-      alert('need to select a group');
+      setAlert('error');
+      setAlertText('Need to select a group');
       return;
     }
     if (!friendIdsForGroup && friendIdsForGroup.length === 0) {
-      alert('need to select atleast 1 friend');
+      setAlert('error');
+      setAlertText('Need to select atleast one friend');
       return;
     }
     
     friendIdsForGroup.forEach((friendToInvite) => {
       axios
-        .post(`${API}/api/invites/groups/send`, {
-          senderUid: uid,
-          requestUid: friendToInvite.uid,
-          groupId: selectedGroup.groupId,
-          groupName: selectedGroup.groupName,
-        }, { headers })
-        .catch((e) => console.log(e));
+        .post(
+          `${API}/api/invites/groups/send`,
+          {
+            senderUid: uid,
+            requestUid: friendToInvite.uid,
+            groupId: selectedGroup.groupId,
+            groupName: selectedGroup.groupName,
+          },
+          { headers }
+        )
+        .catch((e) => {
+          console.log(e);
+          setAlert('error');
+          setAlertText('Friends could not be invited');
+        });
     });
     navigate('/home');
   };
@@ -115,8 +136,7 @@ const Social = () => {
         alignItems="center"
         flexDirection="column"
         gap="5vh"
-        minHeight="75vh"
-      >
+        minHeight="75vh">
         <Typography variant="h4" component="h4">
           Social
         </Typography>
@@ -129,8 +149,7 @@ const Social = () => {
             display="flex"
             justifyContent="center"
             alignItems="center"
-            flexDirection="column"
-          >
+            flexDirection="column">
             <Typography variant="h5" component="h5">
               Friends
             </Typography>
@@ -142,8 +161,7 @@ const Social = () => {
               flexDirection="column"
               padding="20px"
               border="solid"
-              borderRadius="10px"
-            >
+              borderRadius="10px">
               <FriendsList setFriendIdsForGroup={setFriendIdsForGroup} />
             </Box>
           </Box>
@@ -153,8 +171,7 @@ const Social = () => {
               display="flex"
               justifyContent="center"
               alignItems="center"
-              flexDirection="column"
-            >
+              flexDirection="column">
               <Typography variant="h5" component="h5">
                 Friend Requests
               </Typography>
@@ -163,8 +180,7 @@ const Social = () => {
                   width: '225px',
                   border: 'solid',
                   borderRadius: '10px',
-                }}
-              >
+                }}>
                 {friendInvites.map((friendInvite, i) => {
                   return (
                     <ListItem key={i} dense>
@@ -174,8 +190,7 @@ const Social = () => {
                           aria-label="accept"
                           onClick={() => {
                             handleAcceptFriend(friendInvite, i);
-                          }}
-                        >
+                          }}>
                           <Check />
                         </IconButton>
                         <IconButton
@@ -183,8 +198,7 @@ const Social = () => {
                           aria-label="decline"
                           onClick={() => {
                             handleDeclineFriend(friendInvite, i);
-                          }}
-                        >
+                          }}>
                           <Clear />
                         </IconButton>
                       </ListItemSecondaryAction>
@@ -228,6 +242,12 @@ const Social = () => {
           </Button>
         </Box>
       </Box>
+      <Snackbar
+        open={alert !== undefined}
+        autoHideDuration={6000}
+        onClose={() => setAlert(undefined)}>
+        <Alert severity={alert}>{alertText}</Alert>
+      </Snackbar>
     </Box>
   );
 };

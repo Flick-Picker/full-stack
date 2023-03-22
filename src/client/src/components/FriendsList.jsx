@@ -60,7 +60,7 @@ const FriendsList = ({ setFriendIdsForGroup }) => {
           const labelId = `friend-checkbox-label-${i}`;
 
           return (
-            <ListItem key={friend}>
+            <ListItem key={i}>
               <ListItemButton onClick={handleToggle(friend)}>
                 <ListItemIcon>
                   <Checkbox

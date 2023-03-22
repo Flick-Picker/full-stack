@@ -1,5 +1,7 @@
 import { AccountCircle, Visibility, VisibilityOff } from '@mui/icons-material';
 import {
+  Alert,
+  AlertTitle,
   Box,
   Button,
   FormControl,
@@ -15,17 +17,14 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import auth from '..';
 import { init } from '../features/token/tokenSlice';
+import OAuth from '../components/OAuth';
 
 const LoginPage = () => {
-
-  const prefURI = `${
-    process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'
-  }/api/user/pref`;
-
   // Page Specific State
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
   const [showPassword, setShowPassword] = React.useState(false);
+  const [errorAlert, setErrorAlert] = React.useState(undefined);
 
   // Redux Global State
   const dispatch = useDispatch();
@@ -53,7 +52,7 @@ const LoginPage = () => {
 
   const handleClickShowPassword = () => setShowPassword(!showPassword);
 
-  const handleMouseDownPassword = (e) => {
+  const handleMouseDown = (e) => {
     e.preventDefault();
   };
 
@@ -95,9 +94,25 @@ const LoginPage = () => {
         navigate('/home');
       })
       .catch((error) => {
-        console.log(error);
-        // const errorCode = error.code;
-        // const errorMessage = error.message;
+        switch (error.code) {
+          case 'auth/invalid-email':
+          case 'auth/wrong-password':
+            setErrorAlert(
+              <Alert severity="error" onClose={() => setErrorAlert(undefined)}>
+                <AlertTitle>Error</AlertTitle>
+                Invalid Email or Incorrect Password
+              </Alert>
+            );
+            break;
+          default:
+            setErrorAlert(
+              <Alert severity="error" onClose={() => setErrorAlert(undefined)}>
+                <AlertTitle>Error</AlertTitle>
+                Something unexpected happened. Try again later.
+              </Alert>
+            );
+        }
+        // console.log(error);
       });
   };
 
@@ -136,7 +151,7 @@ const LoginPage = () => {
               <IconButton
                 aria-label="toggle password visibility"
                 onClick={handleClickShowPassword}
-                onMouseDown={handleMouseDownPassword}
+                onMouseDown={handleMouseDown}
                 edge="end">
                 {showPassword ? <Visibility /> : <VisibilityOff />}
               </IconButton>
@@ -152,6 +167,8 @@ const LoginPage = () => {
         onClick={(e) => handleSubmit(e)}>
         Log In
       </Button>
+      <OAuth />
+      {errorAlert !== undefined ? errorAlert : <></>}
     </Box>
   );
 };
