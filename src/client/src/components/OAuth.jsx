@@ -11,8 +11,19 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import auth from '..';
 import { init } from '../features/token/tokenSlice';
+import axios from 'axios';
 
-const OAuth = () => {
+const OAuth = ({ signup }) => {
+  const signUpURI = `${
+    process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'
+  }/api/user`;
+  const prefURI = `${
+    process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'
+  }/api/user/pref`;
+  const headers = {
+    'x-api-key': process.env.REACT_APP_BACKEND_KEY,
+  };
+
   // Redux Global State
   const dispatch = useDispatch();
 
@@ -57,6 +68,19 @@ const OAuth = () => {
           expires,
         });
 
+        if (signup) {
+          const body = {
+            uid: user.uid,
+            email: user.email,
+          };
+          axios.post(`${signUpURI}/new`, body, { headers }).then((res) => {
+            const user = res.data;
+            const body = {
+              uid: user.uid,
+            };
+            return axios.post(`${prefURI}/new`, body, { headers });
+          });
+        }
         navigate('/home');
       })
       .catch((error) => {

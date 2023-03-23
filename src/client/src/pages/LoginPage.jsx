@@ -167,7 +167,7 @@ const LoginPage = () => {
         onClick={(e) => handleSubmit(e)}>
         Log In
       </Button>
-      <OAuth />
+      <OAuth signup={false} />
       {errorAlert !== undefined ? errorAlert : <></>}
     </Box>
   );
