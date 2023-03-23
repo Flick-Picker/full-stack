@@ -87,7 +87,7 @@ const SignUpPage = () => {
           };
           return axios.post(`${prefURI}/new`, body, { headers });
         })
-        .then((res) => {
+        .then(() => {
           navigate('/login');
         })
         .catch((error) => {
@@ -222,7 +222,7 @@ const SignUpPage = () => {
         onClick={(e) => handleSubmit(e)}>
         Sign Up
       </Button>
-      <OAuth />
+      <OAuth signup={true} />
       {errorAlert !== undefined ? errorAlert : <></>}
     </Box>
   );
