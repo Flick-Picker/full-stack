@@ -273,11 +273,6 @@ const animeTVAlgorithm = async (preferences: PreferenceObject) => {
     }
     sumRating += popularityRating * Math.sqrt(preferences.popularityPreference);
 
-    if (animeTVShow.name === 'Attack on Titan Season 3 Part 2') {
-      console.log(animeTVShow.runtime);
-      console.log(preferences.runtimePreference);
-      console.log(`Runtime rating: ${runtimeRating}`);
-    }
     const rating = (sumRating) * Math.sqrt(preferences.animePreference);
     if (rating > 0) {
       batch.push(new RecommendationObject(animeTVShow.name, animeTVShow.imageURL, rating));
@@ -328,11 +323,6 @@ const animeMovieAlgorithm = async (preferences: PreferenceObject) => {
       runtimeRating = 0;
     }
     sumRating += runtimeRating;
-    if (animeMovie.name === 'Gintama: The Very Final') {
-      console.log(animeMovie.runtime);
-      console.log(preferences.runtimePreference);
-      console.log(`Runtime rating: ${runtimeRating}`);
-    }
 
     // Score the anime movie based on the recent release preference
     let recentReleaseRating = 0;
