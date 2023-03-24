@@ -6,6 +6,10 @@ class PreferenceObject {
     public moviePreference: number,
     public tvShowPreference: number,
     public animePreference: number,
+    public runtimePreference: number,
+    public recentReleasePreference: number,
+    public yearRangePreference: number[],
+    public popularityPreference: number,
   ) {
     this.likedGenres = likedGenres;
     this.dislikedGenres = dislikedGenres;
@@ -13,6 +17,10 @@ class PreferenceObject {
     this.moviePreference = moviePreference;
     this.tvShowPreference = tvShowPreference;
     this.animePreference = animePreference;
+    this.runtimePreference = runtimePreference;
+    this.recentReleasePreference = recentReleasePreference;
+    this.yearRangePreference = yearRangePreference;
+    this.popularityPreference = popularityPreference;
   }
 }
 
