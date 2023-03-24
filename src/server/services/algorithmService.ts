@@ -47,9 +47,9 @@ const movieAlgorithm = async (preferences: PreferenceObject) => {
 
     // Score the anime movie based on the runtime preferences
     let runtimeRating = -1;
-    if (Math.abs(movie.runtime - preferences.runtimePreference) > 15) {
+    if (Math.abs(movie.runtime - preferences.runtimePreference) < 15) {
       runtimeRating = 1;
-    } else if (Math.abs(movie.runtime - preferences.runtimePreference) > 30) {
+    } else if (Math.abs(movie.runtime - preferences.runtimePreference) < 30) {
       runtimeRating = 0;
     }
     sumRating += runtimeRating;
@@ -140,9 +140,9 @@ const tvShowAlgorithm = async (preferences: PreferenceObject) => {
 
     // Score the anime movie based on the runtime preferences
     let runtimeRating = -1;
-    if (Math.abs(tvShow.runtime - preferences.runtimePreference) > 15) {
+    if (Math.abs(tvShow.runtime - preferences.runtimePreference) < 15) {
       runtimeRating = 1;
-    } else if (Math.abs(tvShow.runtime - preferences.runtimePreference) > 30) {
+    } else if (Math.abs(tvShow.runtime - preferences.runtimePreference) < 30) {
       runtimeRating = 0;
     }
     sumRating += runtimeRating;
@@ -198,8 +198,8 @@ const tvShowAlgorithm = async (preferences: PreferenceObject) => {
 
 const animeTVAlgorithm = async (preferences: PreferenceObject) => {
   const batch: RecommendationObject[] = [];
-  let sumRating = 0;
   animeTV.forEach((animeTVShow) => {
+    let sumRating = 0;
     let genreRating = 0;
     animeTVShow.genres.forEach((curAnimeTVGenre) => {
       let isGenreLiked = 0;
@@ -225,9 +225,9 @@ const animeTVAlgorithm = async (preferences: PreferenceObject) => {
 
     // Score the anime tv show based on the runtime preferences
     let runtimeRating = -1;
-    if (Math.abs(animeTVShow.runtime - preferences.runtimePreference) > 15) {
+    if (Math.abs(animeTVShow.runtime - preferences.runtimePreference) < 15) {
       runtimeRating = 1;
-    } else if (Math.abs(animeTVShow.runtime - preferences.runtimePreference) > 30) {
+    } else if (Math.abs(animeTVShow.runtime - preferences.runtimePreference) < 30) {
       runtimeRating = 0;
     }
     sumRating += runtimeRating;
@@ -317,9 +317,9 @@ const animeMovieAlgorithm = async (preferences: PreferenceObject) => {
 
     // Score the anime movie based on the runtime preferences
     let runtimeRating = -1;
-    if (Math.abs(animeMovie.runtime - preferences.runtimePreference) > 15) {
+    if (Math.abs(animeMovie.runtime - preferences.runtimePreference) < 15) {
       runtimeRating = 1;
-    } else if (Math.abs(animeMovie.runtime - preferences.runtimePreference) > 30) {
+    } else if (Math.abs(animeMovie.runtime - preferences.runtimePreference) < 30) {
       runtimeRating = 0;
     }
     sumRating += runtimeRating;
