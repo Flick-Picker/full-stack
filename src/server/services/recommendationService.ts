@@ -13,15 +13,51 @@ const compileGroupPreferences = async (id: string) => {
   let sumMoviePref = 0;
   let sumTVPref = 0;
   let sumAnimePref = 0;
+  let sumRuntimePref = 0;
+  let sumRecentReleasePref = 0;
+  let sumPopularityPref = 0;
+  let sumLowerYearPref = 0;
+  let sumUpperYearPref = 0;
 
   groupPreferences.forEach((preference) => {
     // Entertainment type preferences
-    sumMoviePref += preference.moviePreference;
-    sumTVPref += preference.tvShowPreference;
-    sumAnimePref += preference.animePreference;
+    if (preference.moviePreference) {
+      sumMoviePref += preference.moviePreference;
+    }
+    if (preference.tvShowPreference) {
+      sumTVPref += preference.tvShowPreference;
+    }
+    if (preference.animePreference) {
+      sumAnimePref += preference.animePreference;
+    }
 
     // Rating preference
-    sumPrefRating += preference.preferredRatings;
+    if (preference.preferredRatings) {
+      sumPrefRating += preference.preferredRatings;
+    }
+
+    // Runtime preference
+    if (preference.runtimePreference) {
+      sumRuntimePref += preference.runtimePreference;
+    }
+
+    // Recent release preference
+    if (preference.recentReleasePreference) {
+      sumRecentReleasePref += preference.recentReleasePreference;
+    }
+
+    // Year range preferences
+    if (preference.yearRangePreference && preference.yearRangePreference[0]) {
+      sumLowerYearPref += preference.yearRangePreference[0];
+    }
+    if (preference.yearRangePreference && preference.yearRangePreference[1]) {
+      sumUpperYearPref += preference.yearRangePreference[1];
+    }
+
+    // Popularity preference
+    if (preference.popularityPreference) {
+      sumPopularityPref += preference.popularityPreference;
+    }
 
     // Genre preferences
     preference.likedGenres.forEach((genre) => {
@@ -66,6 +102,10 @@ const compileGroupPreferences = async (id: string) => {
     sumMoviePref / groupPreferences.length,
     sumTVPref / groupPreferences.length,
     sumAnimePref / groupPreferences.length,
+    sumRuntimePref / groupPreferences.length,
+    sumRecentReleasePref / groupPreferences.length,
+    [sumLowerYearPref / groupPreferences.length, sumUpperYearPref / groupPreferences.length],
+    sumPopularityPref / groupPreferences.length,
   );
 };
 

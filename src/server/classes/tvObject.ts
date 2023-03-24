@@ -6,7 +6,8 @@ class TVObject {
     public rating: number,
     public numberOfVotes: number,
     public popularity: number,
-    public releaseDate: string,
+    public year: number,
+    public runtime: number,
   ) {
     this.name = name;
     this.genres = genres;
@@ -14,7 +15,8 @@ class TVObject {
     this.rating = rating;
     this.numberOfVotes = numberOfVotes;
     this.popularity = popularity;
-    this.releaseDate = releaseDate;
+    this.year = year;
+    this.runtime = runtime;
   }
 }
 

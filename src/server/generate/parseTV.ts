@@ -3,6 +3,8 @@ import tvList from '../api-json/tv_batch.json';
 import TVObject from '../classes/tvObject';
 import tvGenres from '../api-json/tv_genres.json';
 
+const tvshow = { runtime: 25 };
+
 function parseTVGenres(genreIDs: number[]) {
   const genres = new Set<string>();
   genreIDs.forEach((genreID) => {
@@ -34,7 +36,8 @@ export const getTVShows = async () => {
       tvShow.vote_average,
       tvShow.vote_count,
       tvShow.popularity,
-      tvShow.first_air_date ? tvShow.first_air_date : '',
+      Number.parseInt(tvShow.first_air_date ? tvShow.first_air_date.substring(0, tvShow.first_air_date.indexOf('-')) : '2009', 10),
+      tvshow.runtime,
     ));
   });
 
