@@ -6,6 +6,8 @@ class AnimeMovieObject {
     public imageURL: string,
     public rating: number,
     public numberOfVotes: number,
+    public runtime: number,
+    public year: number,
   ) {
     this.name = name;
     this.genres = genres;
@@ -13,6 +15,8 @@ class AnimeMovieObject {
     this.imageURL = imageURL;
     this.rating = rating;
     this.numberOfVotes = numberOfVotes;
+    this.runtime = runtime;
+    this.year = year;
   }
 }
 

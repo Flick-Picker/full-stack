@@ -6,4 +6,8 @@ export interface Preference {
   moviePreference: number;
   tvShowPreference: number;
   animePreference: number;
+  runtimePreference: number;
+  recentReleasePreference: number;
+  yearRangePreference: number[];
+  popularityPreference: number;
 }
