@@ -1,4 +1,13 @@
-import { Box, Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Typography } from '@mui/material';
+import {
+  Box,
+  Button,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogContentText,
+  DialogTitle,
+  Typography,
+} from '@mui/material';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
@@ -12,10 +21,10 @@ const headers = {
 const API = `${process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'}`;
 
 const GroupDetails = () => {
-
   const [group, setGroup] = useState();
   const [open, setOpen] = useState();
-  
+  const [sessionExists, setSessionExists] = useState(undefined);
+
   const uid = useSelector(selectUid);
 
   const { state } = useLocation();
@@ -23,7 +32,6 @@ const GroupDetails = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-
     axios
       .get(`${API}/api/group/get?groupId=${state.groupId}`, { headers })
       .then((res) => {
@@ -35,7 +43,7 @@ const GroupDetails = () => {
 
   const handleClose = () => {
     setOpen(false);
-  }
+  };
 
   const createSessionAccept = (e) => {
     handleClose();
@@ -74,7 +82,9 @@ const GroupDetails = () => {
 
     e.preventDefault();
     axios
-      .get(`${API}/api/voting/get?uuid=${state.group.currentVotingSession}`, { headers })
+      .get(`${API}/api/voting/get?uuid=${state.group.currentVotingSession}`, {
+        headers,
+      })
       .then((res) => {
         state.session = res.data;
       })
@@ -90,7 +100,9 @@ const GroupDetails = () => {
   const handleHistoryClick = (e) => {
     e.preventDefault();
     axios
-      .get(`${API}/api/voting/get?uuid=${group.currentVotingSession}`, { headers })
+      .get(`${API}/api/voting/get?uuid=${group.currentVotingSession}`, {
+        headers,
+      })
       .then((res) => {
         state.session = res.data;
         return res.data;
@@ -108,8 +120,7 @@ const GroupDetails = () => {
         alignItems="center"
         flexDirection="column"
         gap="5vh"
-        minHeight="75vh"
-      >
+        minHeight="75vh">
         <Typography variant="h3" component="h3">
           {group && group.groupName ? group.groupName : ''}
         </Typography>
@@ -120,35 +131,29 @@ const GroupDetails = () => {
           display="flex"
           justifyContent="center"
           alignItems="center"
-          gap="5%"
-        >
+          gap="5%">
           <Button
-            disabled={state.group !== undefined ? uid !== state.group.ownerUid : false}
+            disabled={
+              state.group !== undefined ? uid !== state.group.ownerUid : false
+            }
             variant="outlined"
             size="large"
-            onClick={() => setOpen(true)}
-          >
+            onClick={() => setOpen(true)}>
             Start Session
           </Button>
           <Button
             variant="outlined"
             size="large"
-            onClick={handleCurrentSessionClick}
-          >
+            onClick={handleCurrentSessionClick}>
             Current Session
           </Button>
           <Button
             variant="outlined"
             size="large"
-            onClick={handleBestMatchClick}
-          >
+            onClick={handleBestMatchClick}>
             View Best Match
           </Button>
-          <Button
-            variant="outlined"
-            size="large"
-            onClick={handleHistoryClick}
-          >
+          <Button variant="outlined" size="large" onClick={handleHistoryClick}>
             View History
           </Button>
         </Box>
@@ -157,14 +162,20 @@ const GroupDetails = () => {
         open={open}
         onClose={handleClose}
         aria-labelledby="alert-create-session">
-          <DialogTitle>{"Overwrite session if it exists?"}</DialogTitle>
-          <DialogContent>
-            <DialogContentText>Creating a session will delete the existing one, if one already exists. This will restart the votes and allow for new user preferences to be checked.</DialogContentText>
-          </DialogContent>
-          <DialogActions>
-            <Button onClick={handleClose}>No</Button>
-            <Button onClick={createSessionAccept} autoFocus>Yes</Button>
-          </DialogActions>
+        <DialogTitle>{'Overwrite session if it exists?'}</DialogTitle>
+        <DialogContent>
+          <DialogContentText>
+            Creating a session will delete the existing one, if one already
+            exists. This will restart the votes and allow for new user
+            preferences to be checked.
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose}>No</Button>
+          <Button onClick={createSessionAccept} autoFocus>
+            Yes
+          </Button>
+        </DialogActions>
       </Dialog>
     </Box>
   );

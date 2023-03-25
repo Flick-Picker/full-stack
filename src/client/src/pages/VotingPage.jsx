@@ -28,7 +28,6 @@ const VotingPage = () => {
 
   const isForGroup = pathname === '/group/vote';
 
-
   useEffect(() => {
     const recs = state.session.recommendations;
     for (let i = 0; i < recs.length; i += 1) {
@@ -44,7 +43,6 @@ const VotingPage = () => {
   const navigate = useNavigate();
 
   const handleRatingClick = (value) => {
-
     axios
       .post(
         `${API}/api/voting/submitvote`,
@@ -86,9 +84,8 @@ const VotingPage = () => {
         alignItems="center"
         flexDirection="column"
         gap="5vh"
-        minHeight="75vh"
-      >
-        <Typography variant="h6" component="h6">
+        minHeight="75vh">
+        <Typography variant="h4" component="h4" marginTop={'3%'}>
           Recommended Flick
         </Typography>
         <Box>
@@ -100,8 +97,8 @@ const VotingPage = () => {
               maxHeight: { xs: 300, md: 400 },
               //maxWidth: { xs: 350, md: 250 },
             }}
-            alt='movie'
-            src={ currFlick.imageURL }
+            alt="movie"
+            src={currFlick.imageURL}
           />
           <Typography variant="h6" component="h6">
             {currFlick.name}

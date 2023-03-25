@@ -19,7 +19,6 @@ const headers = {
 const API = `${process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'}`;
 
 const BestMatch = () => {
-  
   const { state } = useLocation();
   const uid = useSelector(selectUid);
   const [flick, setFlick] = React.useState({});
@@ -51,9 +50,8 @@ const BestMatch = () => {
         alignItems="center"
         flexDirection="column"
         gap="5vh"
-        minHeight="75vh"
-      >
-        <Typography variant="h6" component="h6">
+        minHeight="75vh">
+        <Typography variant="h4" component="h4" marginTop={'3%'}>
           Top Flick for {state.group.groupName}:
         </Typography>
         <Box>
