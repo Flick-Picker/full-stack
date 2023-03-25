@@ -1,8 +1,9 @@
-import { AccountCircle, Build, Group, Home } from '@mui/icons-material';
-import { AppBar, Box, IconButton, Toolbar, Typography } from '@mui/material';
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import LogOut from './LogOut';
+import { AccountCircle, Build, Group, Home } from "@mui/icons-material";
+import { AppBar, Box, IconButton, Toolbar, Typography } from "@mui/material";
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import LogOut from "./LogOut";
+import logo from "./../assets/fplogo.png";
 
 const Header = () => {
   // React-Router Navigation
@@ -10,34 +11,42 @@ const Header = () => {
 
   const handleHomeClick = (e) => {
     e.preventDefault();
-    navigate('/home');
+    navigate("/home");
   };
 
   const handleSocialClick = (e) => {
     e.preventDefault();
-    navigate('/social');
+    navigate("/social");
   };
 
   const handlePreferencesClick = (e) => {
     e.preventDefault();
-    navigate('/preferences');
+    navigate("/preferences");
   };
 
   const handleAccountClick = (e) => {
     e.preventDefault();
-    navigate('/profile');
+    navigate("/profile");
   };
 
   return (
     <AppBar position="static">
       <Toolbar>
+        <img
+          src={logo}
+          style={{
+            width: 90,
+            paddingRight: 20
+          }}
+        />
         <IconButton
           size="large"
           edge="start"
           color="inherit"
           aria-label="menu"
           onClick={handleHomeClick}
-          sx={{ mr: 2 }}>
+          sx={{ mr: 2 }}
+        >
           <Box display="flex" alignItems="center" flexWrap="wrap">
             <Home />
             <Typography variant="body1" sx={{ ml: 0.5 }}>
@@ -45,7 +54,7 @@ const Header = () => {
             </Typography>
           </Box>
         </IconButton>
-        <Box sx={{ flexGrow: 1 }} />{' '}
+        <Box sx={{ flexGrow: 1 }} />{" "}
         {/* Replace here with typography if text needed*/}
         <IconButton
           size="large"
@@ -53,7 +62,8 @@ const Header = () => {
           color="inherit"
           aria-label="menu"
           onClick={handlePreferencesClick}
-          sx={{ mr: 2 }}>
+          sx={{ mr: 2 }}
+        >
           <Box display="flex" alignItems="center" flexWrap="wrap">
             <Typography variant="body1" sx={{ mr: 0.5 }}>
               Preferences
@@ -67,7 +77,8 @@ const Header = () => {
           color="inherit"
           aria-label="menu"
           onClick={handleSocialClick}
-          sx={{ mr: 2 }}>
+          sx={{ mr: 2 }}
+        >
           <Box display="flex" alignItems="center" flexWrap="wrap">
             <Typography variant="body1" sx={{ mr: 0.5 }}>
               Social
@@ -81,7 +92,8 @@ const Header = () => {
           color="inherit"
           aria-label="menu"
           sx={{ mr: 2 }}
-          onClick={handleAccountClick}>
+          onClick={handleAccountClick}
+        >
           <Box display="flex" alignItems="center" flexWrap="wrap">
             <Typography variant="body1" sx={{ mr: 0.5 }}>
               Account
