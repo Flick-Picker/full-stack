@@ -6,8 +6,12 @@ import {
   MenuItem,
   Rating,
   Select,
+  TextField,
   Typography,
 } from '@mui/material';
+import dayjs from 'dayjs';
+import { DatePicker, LocalizationProvider } from '@mui/x-date-pickers';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import axios from 'axios';
 import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
@@ -21,7 +25,6 @@ const headers = {
 const API = `${process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'}`;
 
 const Preferences = () => {
-
   // This is going to be an API call
   const genres = [
     'drama',
@@ -67,21 +70,49 @@ const Preferences = () => {
   const [moviePref, setMoviePref] = React.useState(1);
   const [tvPref, setTVPref] = React.useState(1);
   const [rating, setRating] = React.useState(0);
+  const [runtime, setRuntime] = React.useState(0);
+  const [recentRelease, setRecentRelease] = React.useState(1);
+  const [yearRange, setYearRange] = React.useState([1900, 2023]);
+  const [popularity, setPopularity] = React.useState(1);
 
   const uid = useSelector(selectUid);
   const navigate = useNavigate();
 
   useEffect(() => {
-
     axios
       .get(`${API}/api/user/pref/get?uid=${uid}`, { headers })
       .then((res) => {
-        setLikedGenres(res.data.likedGenres);
-        setDislikedGenres(res.data.dislikedGenres);
-        setAnimePref(res.data.animePreference);
-        setMoviePref(res.data.moviePreference);
-        setTVPref(res.data.tvShowPreference);
-        setRating(res.data.preferredRatings / 2);
+        console.log(res);
+        if (res.data.likedGenres !== undefined) {
+          setLikedGenres(res.data.likedGenres);
+        }
+        if (res.data.dislikedGenres !== undefined) {
+          setDislikedGenres(res.data.dislikedGenres);
+        }
+        if (res.data.animePreference !== undefined) {
+          setAnimePref(res.data.animePreference);
+        }
+        if (res.data.moviePreference !== undefined) {
+          setMoviePref(res.data.moviePreference);
+        }
+        if (res.data.tvShowPreference !== undefined) {
+          setTVPref(res.data.tvShowPreference);
+        }
+        if (res.data.preferredRatings !== undefined) {
+          setRating(res.data.preferredRatings / 2);
+        }
+        if (res.data.runtimePreference !== undefined) {
+          setRuntime(res.data.runtimePreference);
+        }
+        if (res.data.recentReleasePreference !== undefined) {
+          setRecentRelease(res.data.recentReleasePreference);
+        }
+        if (res.data.yearRangePreference !== undefined) {
+          setYearRange(res.data.yearRangePreference);
+        }
+        if (res.data.popularityPreference !== undefined) {
+          setPopularity(res.data.popularityPreference);
+        }
       })
       .catch((e) => {
         console.log(e);
@@ -102,6 +133,11 @@ const Preferences = () => {
     setDislikedGenres(typeof value === 'string' ? value.split(',') : value);
   };
 
+  const handleRunTimeChange = (e) => {
+    e.preventDefault();
+    setRuntime(e.target.value);
+  };
+
   const handleSave = (e) => {
     const body = {
       uid: uid,
@@ -111,8 +147,12 @@ const Preferences = () => {
       moviePreference: moviePref,
       tvShowPreference: tvPref,
       preferredRatings: 2 * rating,
+      runtimePreference: runtime,
+      recentReleasePreference: recentRelease,
+      yearRangePreference: yearRange,
+      popularityPreference: popularity,
     };
-    
+
     axios
       .post(`${API}/api/user/pref/update`, body, { headers })
       .then(navigate('/home'))
@@ -129,10 +169,10 @@ const Preferences = () => {
         justifyContent="center"
         alignItems="center"
         flexDirection="column"
-        gap="5vh"
+        gap="3vh"
         minHeight="75vh">
         {/* TODO: Every button needs a handler */}
-        <Typography variant="h4" component="h4">
+        <Typography variant="h4" component="h4" marginTop={'3%'}>
           Preferences
         </Typography>
 
@@ -216,9 +256,7 @@ const Preferences = () => {
                   labelId="anime-pref-select-label"
                   id="anime-pref-select"
                   value={animePref}
-                  onChange={(e) => {
-                    setAnimePref(e.target.value);
-                  }}>
+                  onChange={(e) => setAnimePref(e.target.value)}>
                   <MenuItem value={2}>Liked</MenuItem>
                   <MenuItem defaultChecked value={1}>
                     Neutral
@@ -232,9 +270,7 @@ const Preferences = () => {
                   labelId="movie-pref-select-label"
                   id="movie-pref-select"
                   value={moviePref}
-                  onChange={(e) => {
-                    setMoviePref(e.target.value);
-                  }}>
+                  onChange={(e) => setMoviePref(e.target.value)}>
                   <MenuItem value={2}>Liked</MenuItem>
                   <MenuItem defaultChecked value={1}>
                     Neutral
@@ -248,9 +284,7 @@ const Preferences = () => {
                   labelId="tv-pref-select-label"
                   id="tv-pref-select"
                   value={tvPref}
-                  onChange={(e) => {
-                    setTVPref(e.target.value);
-                  }}>
+                  onChange={(e) => setTVPref(e.target.value)}>
                   <MenuItem value={2}>Liked</MenuItem>
                   <MenuItem defaultChecked value={1}>
                     Neutral
@@ -269,7 +303,6 @@ const Preferences = () => {
             <Typography variant="h6" component="h6">
               Minimum Rating
             </Typography>
-
             <Rating
               name="half-rating"
               defaultValue={0}
@@ -280,6 +313,87 @@ const Preferences = () => {
                 setRating(newRating);
               }}
             />
+
+            <Typography variant="h6" component="h6" marginTop={'2%'}>
+              Run Time
+            </Typography>
+            <FormControl variant="standard" required={true}>
+              <TextField
+                type="number"
+                sx={{ width: '100px' }}
+                onChange={handleRunTimeChange}
+              />
+            </FormControl>
+          </Box>
+        </Box>
+
+        <Box
+          display="flex"
+          flexDirection="row"
+          alignItems="flex-start"
+          gap="0%">
+          <FormControl sx={{ m: 1, width: 150 }}>
+            <Typography variant="h6" component="h6" marginTop={'2%'}>
+              Recent Release
+            </Typography>
+            <Select
+              labelId="recent-release-pref-select-label"
+              id="recent-release-pref-select"
+              value={recentRelease}
+              onChange={(e) => setRecentRelease(e.target.value)}>
+              <MenuItem value={2}>Important</MenuItem>
+              <MenuItem defaultChecked value={1}>
+                Neutral
+              </MenuItem>
+              <MenuItem value={0}>Not Important</MenuItem>
+            </Select>
+          </FormControl>
+
+          <FormControl sx={{ m: 1, width: 150 }}>
+            <Typography variant="h6" component="h6" marginTop={'2%'}>
+              Popularity
+            </Typography>
+            <Select
+              labelId="recent-release-pref-select-label"
+              id="recent-release-pref-select"
+              value={recentRelease}
+              onChange={(e) => setPopularity(e.target.value)}>
+              <MenuItem value={2}>Important</MenuItem>
+              <MenuItem defaultChecked value={1}>
+                Neutral
+              </MenuItem>
+              <MenuItem value={0}>Not Important</MenuItem>
+            </Select>
+          </FormControl>
+        </Box>
+
+        <Box display="flex" flexDirection="column" alignItems="center">
+          <Typography variant="h6" component="h6" marginTop={'2%'}>
+            Release Year Range
+          </Typography>
+          <Box
+            display="flex"
+            flexDirection="row"
+            alignItems="flex-start"
+            gap="5%">
+            <LocalizationProvider dateAdapter={AdapterDayjs}>
+              <DatePicker
+                disableFuture
+                views={['year']}
+                sx={{ width: '200px' }}
+                label={'Minimum'}
+                value={dayjs(yearRange[0])}
+                onChange={(val) => setYearRange([val, yearRange[1]])}
+              />
+              <DatePicker
+                disableFuture
+                views={['year']}
+                sx={{ width: '200px' }}
+                label={'Maximum'}
+                value={dayjs(yearRange[1])}
+                onChange={(val) => setYearRange([yearRange[0], val])}
+              />
+            </LocalizationProvider>
           </Box>
         </Box>
 

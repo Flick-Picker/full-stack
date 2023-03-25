@@ -76,9 +76,8 @@ const History = () => {
         alignItems="center"
         flexDirection="column"
         gap="5vh"
-        minHeight="75vh"
-      >
-        <Typography variant="h6" component="h6">
+        minHeight="75vh">
+        <Typography variant="h4" component="h4" marginTop={'3%'}>
           Flick History
         </Typography>
         <Box
@@ -98,7 +97,7 @@ const History = () => {
             rows={state.session.recommendations}
             columns={columns}
             getRowId={(row) => row.name}
-            pageSize={5}
+            pageSizeOptions={[25]}
             rowSelectionModel={flick.name}
             onRowClick={(params, e) => handleRowClick(e, params.row)}
           />
