@@ -81,7 +81,7 @@ const Social = () => {
             senderUid: uid,
             senderEmail: email,
             requestUid: requestUser.uid,
-          })
+          }, { headers })
           .then(() => {
             setAlert('success');
             setAlertText('Friend request sent');
@@ -138,7 +138,7 @@ const Social = () => {
         gap="5vh"
         minHeight="75vh">
         <Typography variant="h4" component="h4">
-          Social
+          Add Friends to Group
         </Typography>
         <GroupsList
           selectedGroup={selectedGroup}
@@ -223,7 +223,9 @@ const Social = () => {
         >
           Invite to Group
         </Button>
-
+        <Typography variant="h4" component="h4">
+          Add a New Friend
+        </Typography>
         <Box display="flex">
           <FormControl variant="standard">
             <InputLabel id="send-friend-request-input-label">
