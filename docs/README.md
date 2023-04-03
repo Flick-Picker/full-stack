@@ -18,6 +18,4 @@ information.  They are just intended to be a starting point.>
 
 # Documentation folders
 
-The folders and files for this folder are as follows:
-
-Describe ...
+Each seperate folder contains .tex files, .pdf files, and a Makefile pertaining to the document. For example, SRS contains all .tex, images, and the Makefile used to update the SRS document.
