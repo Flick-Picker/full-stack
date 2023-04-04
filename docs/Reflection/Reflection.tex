@@ -29,6 +29,7 @@
 \textbf{Date} & \textbf{Developer(s)} & \textbf{Change}\\
 \midrule
 April 3 & Talha & Adding Section 2, 3, and 4\\
+April 4 & Talha & Adding Section 5\\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -102,23 +103,37 @@ users currently exist?}
 
 \plt{This question focuses on processes and tools used for project management.}
 
+\noindent \progname ~used various different technologies together for project management, GitHub for code and code reviews, Jira for issue tracking, and Discord for the majority of the communication taken place, alongside a Google Calendar to keep track of dates and deadlines for the project.
+
 \subsection{How Does Your Project Management Compare to Your Development Plan}
 
 \plt{Did you follow your Development plan, with respect to the team meeting plan, 
 team communication plan, team member roles and workflow plan.  Did you use the 
 technology you planned on using?}
 
+\noindent The team meeting plan, team communication plan, team member roles, and workflow plan were all followed from the beginning of the year. Nearly all the major technology 7eam initially discussed was used, with a few libraries added for the client and server, but those are relatively minor while looking at the big picture. There was a plan to implement dependency checking through Snyk or an equivalent, but it has yet to be implemented due to time constraints and other deadlines being more critical. Synk would have automatically flagged libraries used in \progname ~if they have security vulnerabilities. Since there were not too many dependencies being used, the urgency of Synk was reduced as we could check if the current library versions have security vulnerabilities manually.
+
 \subsection{What Went Well?}
 
 \plt{What went well for your project management in terms of processes and 
 technology?}
 
+\noindent 7eam's plans for team meetings, communication, and dividing roles since the start went well. Following the capstone deadlines made planning around them easier without explicitly stating they would be followed, as it was only natural. Everyone on the team hopped on and completed their fair share of all the documentation and the code. Splitting team member roles into specific areas allowed us to learn the ins and outs of the section we assigned ourselves efficiently. The minor drawback is that the client developers do not know how the server works, and vice versa. It is only a minor drawback, as this is how the industry is expected to function. It takes work to be an expert at everything, which we would have needed more time for throughout the year.
+\\~\\ Most of the workflow plan also went well. Explicitly creating a protected branch and forcing two code reviews on a pull request from the developers ensured high-quality code was merged into ``develop" and no redundant code was pushed up. Forcing a pull request description was also great for quickly getting a sense of the changes being requested. Finally, pinging on Discord automatically when a pull request is opened in the repository also allowed every developer to be up to date with the application's state.
+\\~\\ Finally, all the technology mentioned was used efficiently as well as linting, however there might be room for improvement in the external APIs, further discussed below.
+
 \subsection{What Went Wrong?}
 
 \plt{What went wrong in terms of processes and technology?}
 
+Compared to what went right, only a few things went wrong regarding process and technology. In the workflow, we said we would use Jira for issue tracking, an incredibly effective website for large-scale plans. It could have been clearer for \progname ~'s use case. Since the development is linear initially, the need for Jira drops and everything follows a clear pattern. If there had been more horizontal development in various parts of the application, Jira would have been the correct route. Using GitHub issue tracking to be fully organized would have been better.
+\\~\\ Going back to the vertical development, the workflow plan for the pipeline was also rather lacking, there was just no tests or anything initially to ensure a green pipeline. This is both due to the structure of the capstone course and how development was required on the application, tests were written at the end, so the pipeline was always going to be green. However, this plan was important to have as further development can get verified through the pipeline.
+\\~\\ Finally, from the assumption 7eam made regarding the information required for the shows, if that assumption is incorrect based off the user feedback then there may have been better external APIs to use in place of the ones currently being used.
+
 \subsection{What Would you Do Differently Next Time?}
 
 \plt{What will you do differently for your next project?}
+
+\noindent Overall, the project went smoothly, and there is little we could have used differently regarding the process and technology tools. Using GitHub for issue tracking, creating tests earlier, and preliminary research on what users would like would have resolved all the abovementioned issues. This is the most significant takeaway; 7eam should have involved users since the beginning. With the answers provided by those initial alpha users, there could have been a smoother transition between the development and release of the application. So, including users from the start would have been the most important for any application of this kind.
 
 \end{document}
