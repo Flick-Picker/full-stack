@@ -46,8 +46,9 @@
 \begin{tabularx}{\textwidth}{p{3cm}p{2cm}X}
 \toprule {\bf Date} & {\bf Version} & {\bf Notes}\\
 \midrule
-Jan 14 & 1.0 & Adding modules and objects to store in databases - Talha\\
-Jan 15 & 1.0 & Adding descriptions to modules - Talha\\
+Jan 14 & 0.1 & Adding modules and objects to store in databases - Talha\\
+Jan 15 & 0.1 & Adding descriptions to modules - Talha\\
+April 5 & 1.0 & Updated Custom Data Types, minor changes - Madhi \\
 \bottomrule
 \end{tabularx}
 
@@ -116,7 +117,7 @@ designers and maintainers to easily identify the parts of the software.  The
 potential readers of this document are as follows:
 
 \begin{itemize}
-\item New project members: This document can be a guide for a new project member
+\item New Project Members: This document can be a guide for a new project member
   to easily understand the overall structure and quickly find the
   relevant modules they are searching for.
 \item Maintainers: The hierarchical structure of the module guide improves the
@@ -184,19 +185,27 @@ Flick Picker uses standard data types, but a handful custom ones have to be crea
 \hline
 {\bf Key Name} & {\bf Value Type} & {\bf Description}\\
 \hline
-\verb_anime_ & bool & Allow animes as show recommendations\\
+\verb_anime_ & bool & Allow animes as recommendations\\
 \hline
-\verb_movie_ & bool & Allow movies as show recommendations\\
+\verb_movie_ & bool & Allow movies as recommendations\\
 \hline
-\verb_tv_ & bool & Allow tv shows as show recommendations\\
+\verb_tv_ & bool & Allow TV shows as recommendations\\
 \hline
 \verb_series_ & bool & Allow a show with multiple seasons\\
 \hline
-\verb_genre_ & List\textlangle{}enum\textrangle & Which type of show is allowed\\
+\verb_genres_ & List\textlangle{}enum\textrangle & Which type of media is allowed\\
+\hline
+\verb_disliked genres_ & List\textlangle{}enum\textrangle & Which type of media is not allowed\\
 \hline
 \verb_runtime_ & enum & Length of show allowed\\
 \hline
-\verb_rating_ & enum & Minimum rating of show allowed\\
+\verb_rating_ & enum & Minimum medias' rating allowed\\
+\hline
+\verb_popularity_ & enum & User weighting for medias' popularity \\
+\hline
+\verb_recent release_ & enum & User weighting for medias' recent release date \\
+\hline
+\verb_release range_ & String & Release date range of media allowed \\
 \hline
 \end{tabularx}
 
@@ -213,7 +222,13 @@ Flick Picker uses standard data types, but a handful custom ones have to be crea
 \hline
 \verb_friends_ & List\textlangle{}int\textrangle & Friends the user has\\
 \hline
-\verb_preferences_ & Preferences & Show constraints user has selected\\
+\verb_preference_ & Preferences & Show constraints user has selected\\
+\hline
+\verb_groupsJoined_ & List\textlangle{}String\textrangle & Groups that user has joined\\
+\hline
+\verb_groupsOwned_ & List\textlangle{}String\textrangle & Groups that user owns\\
+\hline
+\verb_currentSession_ & Session & Current Voting Session for user\\
 \hline
 \end{tabularx}
 
@@ -230,8 +245,87 @@ Flick Picker uses standard data types, but a handful custom ones have to be crea
 \hline
 \verb_preferences_ & List\textlangle{}Preferences\textrangle & All preferences of users in the group\\
 \hline
-\verb_recommendations_ & List\textlangle{}String\textrangle & Shows recommended to the group\\
+\verb_currentSession_ & Session & Current Voting Session for group\\
 \hline
+\verb_doneSessions_ & List\textlangle{}Session\textrangle & All completed Voting Sessions for group\\
+\hline
+\end{tabularx}
+
+\subsection{Session}
+\begin{tabularx}{\textwidth}{|p{3.3cm}|p{4cm}|X|}
+	\hline
+	{\bf Key Name} & {\bf Value Type} & {\bf Description}\\
+	\hline
+	\verb_id_ & int & Unique voting session identifier\\
+	\hline
+	\verb_isGroup_ & bool & Identifies whether session is for Individual or Group\\
+	\hline
+	\verb_user_ & User & User reference, if it is an Individual session \\
+	\hline
+	\verb_group_ & Group \textlangle{}int\textrangle & Group reference, if it is an Individual session\\
+	\hline
+	\verb_recommendations_ & List\textlangle{}Recommendation\textrangle & Media recommendations for session \\
+	\hline
+\end{tabularx}
+
+\subsection{FriendInvite}
+\begin{tabularx}{\textwidth}{|p{3.3cm}|p{3cm}|X|}
+	\hline
+	{\bf Key Name} & {\bf Value Type} & {\bf Description}\\
+	\hline
+	\verb_id_ & int & Unique invite identifier\\
+	\hline
+	\verb_senderUser_ & User & User reference for sender of invite \\
+	\hline
+	\verb_requestedUser_ & User & User reference for invite receiver \\
+	\hline
+	\verb_isAccepted_ & bool \textlangle{}int\textrangle & Identifies if invite has been accepted \\
+	\hline
+\end{tabularx}
+
+\subsection{GroupInvite}
+\begin{tabularx}{\textwidth}{|p{3.3cm}|p{3cm}|X|}
+	\hline
+	{\bf Key Name} & {\bf Value Type} & {\bf Description}\\
+	\hline
+	\verb_id_ & int & Unique invite identifier\\
+	\hline
+	\verb_senderUser_ & User & User reference for sender of invite \\
+	\hline
+	\verb_requestedUser_ & User & User reference for invite receiver \\
+	\hline
+	\verb_group_ & Group & Group reference \\
+	\hline
+	\verb_isAccepted_ & bool  & Identifies if invite has been accepted \\
+	\hline
+\end{tabularx}
+
+\subsection{Recommendation}
+\begin{tabularx}{\textwidth}{|p{3.3cm}|p{3cm}|X|}
+	\hline
+	{\bf Key Name} & {\bf Value Type} & {\bf Description}\\
+	\hline
+	\verb_name_ & String & Name of media\\
+	\hline
+	\verb_algorithmRating_ & int & Rating determined by Recommendation Algorithm \\
+	\hline
+	\verb_userVotes_ & List\textlangle{}Vote\textrangle & User Votes submitted\\
+	\hline
+	\verb_voteRating_ & int & Total Rating from votes submitted\\
+	\hline
+\end{tabularx}
+
+\subsection{Vote}
+\begin{tabularx}{\textwidth}{|p{3.3cm}|p{3cm}|X|}
+	\hline
+	{\bf Key Name} & {\bf Value Type} & {\bf Description}\\
+	\hline
+	\verb_user_ & User & User that submitted the vote \\
+	\hline
+	\verb_vote_ & enum & Vote given by user \\
+	\hline
+	\verb_time_ & DateTime & Time the vote was submitted \\
+	\hline
 \end{tabularx}
 
 \subsection{Authentication}
@@ -240,6 +334,8 @@ Flick Picker uses standard data types, but a handful custom ones have to be crea
 {\bf Key Name} & {\bf Value Type} & {\bf Description}\\
 \hline
 \verb_id_ & int & Unique user identifier, linked to \verb_User_ \\
+\hline
+\verb_email_ & int & Email identifier, linked to \verb_User_ \\
 \hline
 \verb_password_ & Hash & Hashed password stored\\
 \hline
@@ -413,9 +509,9 @@ to be implemented.
 \subsubsection{OAuth Login Module (\mref{mOL})}
 
 \begin{description}
-\item[Secrets:] OAuthentication login details, through Google, Meta, or Apple
+\item[Secrets:] OAuthentication login details, through Google
 \item[Services:] Allows the user to sign up and login through an OAuth provider
-\item[Implemented By:] Google, Meta, Apple OAuth services paired with \progname
+\item[Implemented By:] Google OAuth services paired with \progname
 \item[Type of Module:] Library
 \end{description}
 
@@ -424,7 +520,7 @@ to be implemented.
 \begin{description}
 \item[Secrets:] Data behind fetching all the shows and organizing them
 \item[Services:] Allows \progname ~ to return a set of shows that match user preferences
-\item[Implemented By:] OMDb API and MyAnimeList API
+\item[Implemented By:] OMDb API and Jikan Anime API
 \item[Type of Module:] Library
 \end{description}
 
