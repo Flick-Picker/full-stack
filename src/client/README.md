@@ -68,3 +68,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### Folder Structure
+public - "Create React App" entry point
+src/assets - Static images
+src/components - Reusable React components
+src/features - Redux Token definitions
+src/pages - Individual pages in the application
