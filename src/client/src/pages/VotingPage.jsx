@@ -28,6 +28,7 @@ const VotingPage = () => {
 
   const isForGroup = pathname === '/group/vote';
 
+  // on render, set the current flick to be the flick that has not been voted by the user
   useEffect(() => {
     const recs = state.session.recommendations;
     for (let i = 0; i < recs.length; i += 1) {
@@ -43,6 +44,7 @@ const VotingPage = () => {
   const navigate = useNavigate();
 
   const handleRatingClick = (value) => {
+    // call API to submit the current vote
     axios
       .post(
         `${API}/api/voting/submitvote`,
