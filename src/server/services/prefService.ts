@@ -30,6 +30,7 @@ export const getPrefRef = async (groupId: string) => {
   return {};
 };
 
+// collect all user preferences for a specified group
 export const getGroupPrefs = async (groupId: string) => {
   const groupPrefs = [];
   const group = await groupService.getGroup(groupId);

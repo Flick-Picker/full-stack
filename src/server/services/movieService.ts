@@ -6,6 +6,7 @@ dotenv.config({ path: path.resolve(__dirname, '../.env') });
 const TMDB_KEY = process.env.TMDB_KEY || '';
 const TMDB_API_URL = 'https://api.themoviedb.org/3';
 
+// call external movie API and receive a list of genres
 export const getGenres = async (mediatype: string) => {
   try {
     const requrl = `${TMDB_API_URL}/genre/${mediatype}/list`;
@@ -24,6 +25,7 @@ export const getGenres = async (mediatype: string) => {
   }
 };
 
+// call external movie API and receive a list of movie/tv show data
 export const discoverMedia = async (mediatype: string, page: number) => {
   try {
     const requrl = `${TMDB_API_URL}/discover/${mediatype}`;
