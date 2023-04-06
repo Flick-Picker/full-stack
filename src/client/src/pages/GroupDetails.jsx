@@ -31,6 +31,7 @@ const GroupDetails = () => {
 
   const navigate = useNavigate();
 
+  // collect the group data on render
   useEffect(() => {
     axios
       .get(`${API}/api/group/get?groupId=${state.groupId}`, { headers })
@@ -47,22 +48,17 @@ const GroupDetails = () => {
 
   const createSessionAccept = (e) => {
     handleClose();
-    const headers = {
-      'x-api-key': process.env.REACT_APP_BACKEND_KEY,
-    };
-
     e.preventDefault();
+    // call API to create new session
     axios
       .post(
         `${API}/api/voting/new/group`,
-        {
-          groupId: state.groupId,
-        },
+        { groupId: state.groupId },
         { headers }
       )
       .then((res) => {
         state.session = res.data;
-
+        // collect updated group's data
         return axios.get(`${API}/api/group/get?groupId=${state.groupId}`, {
           headers,
         });
@@ -76,11 +72,8 @@ const GroupDetails = () => {
   };
 
   const handleCurrentSessionClick = (e) => {
-    const headers = {
-      'x-api-key': process.env.REACT_APP_BACKEND_KEY,
-    };
-
     e.preventDefault();
+    // collect current session's data
     axios
       .get(`${API}/api/voting/get?uuid=${state.group.currentVotingSession}`, {
         headers,
@@ -99,6 +92,7 @@ const GroupDetails = () => {
 
   const handleHistoryClick = (e) => {
     e.preventDefault();
+    // collect current session's data
     axios
       .get(`${API}/api/voting/get?uuid=${group.currentVotingSession}`, {
         headers,

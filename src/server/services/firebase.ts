@@ -4,6 +4,7 @@ import path from 'path';
 
 dotenv.config({ path: path.resolve(__dirname, '../.env') });
 
+// firebase database configuration
 const firebaseConfig = {
   apiKey: process.env.FIREBASE_apiKey || '',
   authDomain: process.env.FIREBASE_authDomain || '',

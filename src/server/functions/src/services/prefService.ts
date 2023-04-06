@@ -57,6 +57,10 @@ export const addPref = async (uid: string) => {
       animePreference: 1,
       tvShowPreference: 1,
       moviePreference: 1,
+      runtimePreference: 0,
+      recentReleasePreference: 1,
+      yearRangePreference: [],
+      popularityPreference: 1,
     });
   }
   docSnap = await getDoc(docRef);

@@ -31,10 +31,11 @@ export const getSession = async (uid: string) => {
 const formatRecommendations = async (id: string, isGroup: boolean) => {
   let recs = [] as RecommendationObject[];
   try {
-    recs = await getRecommendation(id, isGroup);
+    recs = await getRecommendation(id, isGroup); // collect recommendations
   } catch (err) {
     console.log(err);
   }
+
   const formatrecs: VoteMediaRec[] = [];
   recs.forEach((rec: RecommendationObject) => {
     const r : VoteMediaRec = {
@@ -54,6 +55,7 @@ const formatRecommendations = async (id: string, isGroup: boolean) => {
   return formatrecs;
 };
 
+// load recommendations into the specific Voting Session DB record
 export const loadRecommendations = async (
   sessionId: string,
   id: string,
@@ -90,6 +92,7 @@ export const addSessionForGroup = async (groupId: string) => {
     recommendations: [] as VoteMediaRec[],
   };
 
+  // add new DB record and a session reference to the specified group DB record
   if (!docSnap.exists()) {
     await setDoc(docRef, initialSession);
     await groupService.addNewSessionToGroup(groupId, id);
@@ -114,6 +117,7 @@ export const addSessionForUser = async (userUid: string) => {
     recommendations: [],
   };
 
+  // add new DB record and a session reference to the specified group DB record
   if (!docSnap.exists()) {
     await setDoc(docRef, initialSession);
   }
@@ -136,6 +140,7 @@ export const finishSession = async (sessionId: string) => {
   return docSnap.data();
 };
 
+// track user's votes by pushing them into the session DB record
 export const submitUserVote = async (
   sessionId: string,
   userUid: string,
@@ -162,7 +167,6 @@ export const submitUserVote = async (
       recs[i].userVoteSet.push(userUid);
       recs[i].userVotes.push(userVote);
       recs[i].voteRating += votenum;
-      // if (media.userVoteSet.length === group)
     }
   }
 
@@ -205,6 +209,7 @@ export const addMediaToHistory = async (
   return docSnap.data();
 };
 
+// logic for producing the Best Match
 export const computeMatch = async (sessionId: string) => {
   const docRef = doc(db, col, sessionId);
   const docSnap = await getDoc(docRef);
@@ -213,6 +218,7 @@ export const computeMatch = async (sessionId: string) => {
 
   let max = -1;
   let maxRec: VoteMediaRec = {} as VoteMediaRec;
+  // find max
   recs.forEach((rec: VoteMediaRec) => {
     if (rec.hasVoteStarted && rec.voteRating > max) {
       max = rec.voteRating;

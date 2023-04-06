@@ -45,6 +45,7 @@ export const addGroup = async (groupName: string, ownerUid: string) => {
       completedVotingSessions: [],
       currentVotingSession: '',
     });
+    // add a group reference to the user record
     await userService.addToGroup(ownerUid, id, true);
   }
   docSnap = await getDoc(docRef);
@@ -83,7 +84,7 @@ export const addNewSessionToGroup = async (groupId: string, sessionId: string) =
   // allows for clearing of old vote session with new one
   const currSession = docSnap.get('currentVotingSession');
   if (docSnap.exists()) {
-    // move old voting session to completed
+    // move old voting session to completed list of sessions
     if (currSession) {
       await updateDoc(docRef, {
         currentVotingSession: sessionId,
@@ -103,6 +104,7 @@ export const addFinishedSessionToGroup = async (groupId: string, sessionId: stri
   const docRef = doc(db, col, groupId);
   let docSnap = await getDoc(docRef);
 
+  // move old voting session to completed list of sessions
   if (docSnap.exists()) {
     await updateDoc(docRef, {
       currentVotingSession: '',

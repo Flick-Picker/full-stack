@@ -46,10 +46,11 @@
 \begin{tabularx}{\textwidth}{p{3cm}p{2cm}X}
 \toprule {\bf Date} & {\bf Version} & {\bf Notes}\\
 \midrule
-January 18 & 1.0 & Added content to section 6.4, some potential content to 6.1 - Jarrod \\
-January 18 & 1.1 & Completed Sections 3, 4, 6.1, 6.2, 6.4 - Jarrod \\
-January 18 & 1.2 & Completed Sections 5, 6.3, 8, 12 - Madhi \\
-January 18 & 1.3 & Editing and adding to reflection - All \\
+January 18 & 0.1 & Added content to section 6.4, some potential content to 6.1 - Jarrod \\
+January 18 & 0.2 & Completed Sections 3, 4, 6.1, 6.2, 6.4 - Jarrod \\
+January 18 & 0.3 & Completed Sections 5, 6.3, 8, 12 - Madhi \\
+January 18 & 0.4 & Editing and adding to reflection - All \\
+April 5 & 1.0 & Minor edits to diagrams, content - Madhi \\
 
 \bottomrule
 \end{tabularx}
@@ -101,7 +102,7 @@ The system will allow the user to interact with the application, in order to fin
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{SystemContext.png}
+	\includegraphics[width=0.8\textwidth]{SystemContext-rev1.png}
 	\caption{System Context of the entire system and its environment}
 	\label{FigUH}
 \end{figure}
@@ -129,7 +130,7 @@ The system will allow the user to interact with the application, in order to fin
 \subsection{Component Diagram}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\textwidth]{ComponentDiagram.png}
+	\includegraphics[width=0.7\textwidth]{ComponentDiagram-rev1.png}
 	\caption{Component Diagram showing all modules}
 	\label{FigUH}
 \end{figure}
@@ -139,15 +140,15 @@ The system will allow the user to interact with the application, in order to fin
 \subsubsection{Connection Between Authentication Requirements and Design}
 \hspace*{14pt} For email and password authentication, the user's email and a hashed form of their password are stored in the database. Upon login request, the inputted email and password will be compared to the pairs in the database and the login will either succeed or fail depending on whether a match is found. 
 
-Google and Facebook OAuth will provide authorization and an email to Flick Picker which will have / create an account with this email. If an account with this email already exists using OAuth, the user is logged in successfully. If an account using the previous method (email and password) exists, the user will be prompted to login using their email and password as above. If an account with this email does not exist, the user will be logged in and a new OAuth account will be created. They will then be brought to the new user page (creation of username, preferences, etc.). 
+Google OAuth will provide authorization and an email to Flick Picker which will have / create an account with this email. If an account with this email already exists using OAuth, the user is logged in successfully. If an account using the previous method (email and password) exists, the user will be prompted to login using their email and password as above. If an account with this email does not exist, the user will be logged in and a new OAuth account will be created. They will then be brought to the new user page (creation of username, preferences, etc.). 
 
 Upon clicking the logout button, the user will be brought to the login screen and their token is removed.
 
 \subsubsection{Connection Between Profile/Group Requirements and Design}
 \hspace*{14pt} There will be a page for users to modify their information, including username and password if the account is not an OAuth account. Additionally, there will be a page for users to access and modify their preferences (e.g. genre, show type, etc.). A separate page will enable users to create and join groups. Group invites will be provided through the invited user's email or friends page. The owner of a group can view the group members, join requests, and other information regarding group management on the group management page. 
 
-\subsubsection{connection Between Recommendation Requirements and Design}
-\hspace*{14pt} Daily, Flick Picker will retrieve information about the top 3000 most popular Movies, TV Shows, and Anime and store that information for quick access. This information will be used in the vast majority of all recommendations. If a recommendation cannot be found within these Movies, TV Shows, or Anime, additional queries will be sent to the relevant APIs to find a recommendation.
+\subsubsection{Connection Between Recommendation Requirements and Design}
+\hspace*{14pt} Flick Picker will retrieve information about the top 3000 most popular Movies, TV Shows, and Anime and store that information for quick access. This information will be used in the vast majority of all recommendations. If a recommendation cannot be found within these Movies, TV Shows, or Anime, additional queries will be sent to the relevant APIs to find a recommendation.
 
 During the recommendation process for a group, individual users reflect their desire to watch a recommendation using the 'like', 'neutral', or 'dislike' buttons. This information will be stored alongside their preferences to aid in future recommendations for both the group and the individuals. 
 

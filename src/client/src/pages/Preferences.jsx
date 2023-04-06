@@ -315,7 +315,7 @@ const Preferences = () => {
             />
 
             <Typography variant="h6" component="h6" marginTop={'2%'}>
-              Run Time
+              Runtime (in mins)
             </Typography>
             <FormControl variant="standard" required={true}>
               <TextField
@@ -356,7 +356,7 @@ const Preferences = () => {
             <Select
               labelId="recent-release-pref-select-label"
               id="recent-release-pref-select"
-              value={recentRelease}
+              value={popularity}
               onChange={(e) => setPopularity(e.target.value)}>
               <MenuItem value={2}>Important</MenuItem>
               <MenuItem defaultChecked value={1}>

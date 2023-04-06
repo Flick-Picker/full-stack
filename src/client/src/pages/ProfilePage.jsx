@@ -12,12 +12,6 @@ import Header from '../components/Header';
 import { selectEmail } from '../features/token/tokenSlice';
 
 const ProfilePage = () => {
-  //const email = useSelector(selectEmail);
-
-  // const auth = getAuth();
-  // const user = auth.currentUser;
-  // let username = user.displayName ? user.displayName: "No username. Please add one!";
-  // let email = "";
   const auth = getAuth();
   const user = auth.currentUser;
   let username = '';
