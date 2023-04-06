@@ -308,9 +308,9 @@ The selected friend's account won't be deleted during the process of adding them
 \item exception: N/A
 \end{itemize}
 
-\noindent requestFriend(friend: User):
+\noindent requestFriend(friend):
 \begin{itemize}
-	\item transition: User.friendRequests(friend), friend
+	\item transition: User.friendRequests(friend), friend.friendRequests(User)
 	\item output: N/A
 	\item exception: N/A
 \end{itemize}
@@ -622,8 +622,9 @@ N/A
 \hline
 \textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
 \hline
-groupData() & M8.recommendGroup & List\textlangle String\textrangle media & no matching results \\
-userData() & M8.recommendUser & List\textlangle String\textrangle media & no matching results \\
+groupData() & M8.recommendGroup & List\textlangle Recommendation\textrangle & no matching results \\
+userData() & M8.recommendUser & List\textlangle Recommendation\textrangle  & no matching results \\
+bestMatch() & Preferences & Recommendation & no matching results \\
 \hline
 \end{tabular}
 \end{center}
@@ -644,15 +645,22 @@ N/A
 \noindent groupData():
 \begin{itemize}
 \item transition: N/A
-\item output: List\textlangle String\textrangle media
+\item output: List\textlangle Recommendation\textrangle 
 \item exception: N/A
 \end{itemize}
 
 \noindent userData():
 \begin{itemize}
 \item transition: N/A
-\item output: List\textlangle String\textrangle media
+\item output: List\textlangle Recommendation\textrangle  
 \item exception: N/A
+\end{itemize}
+
+\noindent bestMatch():
+\begin{itemize}
+	\item transition: max Recommendations[i].voteRating for i in Recommendations.length 
+	\item output: Recommendation
+	\item exception: N/A
 \end{itemize}
 
 \subsubsection{Local Functions}
