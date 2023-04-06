@@ -1,7 +1,7 @@
 # Flick Picker
 
 ## Description 
-This project is a mobile application to make picking something to watch easier with a large group of friends, considering the group's preferences and recommending what to watch from Movies, TV Shows, and Anime.
+This project is a web application to make picking something to watch easier with a large group of friends, considering the group's preferences and recommending what to watch from Movies, TV Shows, and Anime.
 
 ## Contribute to Repo
 `develop` is a protected branch and cannot be merged directly too, rather follow the below steps:
@@ -32,7 +32,9 @@ September 19, 2022
 ## Structure
 The folders and files for this project are as follows:
 
+.github/workflows - GitHub Actions CI/CD Pipelines
 docs - Documentation for the project
 refs - Reference material used for the project, including papers
-src - Source code
-test - Test cases
+src/client - Front End Source Code
+src/server - Back End Source Code
+src/server/tests - Automated Tests

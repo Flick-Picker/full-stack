@@ -3,8 +3,4 @@
 <The SRS is for a single product.  The CA is for a family of related 
 products>
 
-The folders and files for this folder are as follows:
-
-Describe ...
-
-Only one of the CA or SRS document should be completed
+The folders and files for the software requirements specification and commonality analysis, the CA is intentionally incomplete.
