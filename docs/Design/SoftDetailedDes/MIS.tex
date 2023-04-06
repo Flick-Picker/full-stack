@@ -13,7 +13,6 @@
 \usepackage{xfrac}
 \usepackage{tabularx}
 \usepackage{float}
-\usepackage{siunitx}
 \usepackage{booktabs}
 \usepackage{multirow}
 \usepackage[section]{placeins}
@@ -53,8 +52,9 @@ urlcolor=cyan          % color of external links
 \begin{tabularx}{\textwidth}{p{3cm}p{2cm}X}
 \toprule {\bf Date} & {\bf Version} & {\bf Notes}\\
 \midrule
-January 18 & 1.0 & Added title, Module Decomposition table from Module Guide\\
-January 18 & 2.0 & Updated section 2, 3, 4\\
+January 18 & 0.1 & Added title, Module Decomposition table from Module Guide\\
+January 18 & 0.2 & Updated section 2, 3, 4\\
+April 5 & 1.0 &  Edits to MIS of modules - Madhi \\
 \bottomrule
 \end{tabularx}
 
@@ -207,7 +207,8 @@ N/A
 \hline
 \textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
 \hline
-getProfile() & String email, String password & - & Unregistered email, Incorrect password \\
+signup() & String email, String password & - & Password does not meet requirements \\
+login() & String email, String password & - & Unregistered email, Incorrect password \\
 signOut() & - & - & - \\
 \hline
 \end{tabular}
@@ -216,19 +217,19 @@ signOut() & - & - & - \\
 \subsection{Semantics}
 
 \subsubsection{State Variables}
-int profileId, String profileName, String profileEmail, String profilePassword
+int userId, String username, String email, String password
 
 \subsubsection{Environment Variables}
 N/A
 
 \subsubsection{Assumptions}
-User has a profile with the OAuth service they use to sign-in, with the provider of that service being able to handle invalid sign-in attempts.
+User has a profile through an OAuth service or through our service, and our service is able to handle invalid sign-in attempts.
 
 \subsubsection{Access Routine Semantics}
 
-\noindent getProfile():
+\noindent getUser():
 \begin{itemize}
-\item transition: User.id, User.name, User.email, Authentication.id, Authentication.password := profileId, profileName, profileEmail, profileId, profilePassword
+\item transition: User.id, User.name, User.email, Authentication.id, Authentication.password := userId, username, email, userUid, password
 \item output: N/A
 \item exception: N/A
 \end{itemize}
@@ -268,6 +269,7 @@ N/A
 findFriend() & String searchName & List\textlangle User\textrangle users & No user with that name \\
 addFriend() & - & - & - \\
 deleteFriend() & - & - & - \\
+requestFriend() & - & - & - \\
 \hline
 \end{tabular}
 \end{center}
@@ -285,25 +287,32 @@ The selected friend's account won't be deleted during the process of adding them
 
 \subsubsection{Access Routine Semantics}
 
-\noindent findFriend():
+\noindent findFriend(searchName):
 \begin{itemize}
 \item transition: N/A
 \item output: List\textlangle User\textrangle $\rightarrow$ User.name == searchName
 \item exception: No user with the entered name
 \end{itemize}
 
-\noindent addFriend():
+\noindent addFriend(friend):
 \begin{itemize}
-\item transition: User.friends.append(friendId)
+\item transition: User.friends.append(friendId), 
 \item output: N/A
 \item exception: N/A
 \end{itemize}
 
-\noindent deleteFriend():
+\noindent deleteFriend(friend):
 \begin{itemize}
 \item transition: User.friends.remove(friend)
 \item output: N/A
 \item exception: N/A
+\end{itemize}
+
+\noindent requestFriend(friend: User):
+\begin{itemize}
+	\item transition: User.friendRequests(friend), friend
+	\item output: N/A
+	\item exception: N/A
 \end{itemize}
 
 \subsubsection{Local Functions}
