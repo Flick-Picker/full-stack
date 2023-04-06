@@ -51,6 +51,7 @@ January 18 & 0.2 & Completed Sections 3, 4, 6.1, 6.2, 6.4 - Jarrod \\
 January 18 & 0.3 & Completed Sections 5, 6.3, 8, 12 - Madhi \\
 January 18 & 0.4 & Editing and adding to reflection - All \\
 April 5 & 1.0 & Minor edits to diagrams, content - Madhi \\
+April 5 & 1.1 & Minor edits to content - Ali \\
 
 \bottomrule
 \end{tabularx}
@@ -67,12 +68,12 @@ This section records information for easy reference.
 \begin{tabular}{l l} 
   \toprule		
   \textbf{symbol} & \textbf{description}\\
-  \midrule 
+  \midrule
+  API & Application Programming Interface\\
   \progname & A program to find Movies, TV Shows, or Anime for individuals or groups\\
-  UI & User Interface\\
   MG & Module Guide\\
   MIS & Module Interface Specification\\
-  API & Application Programming Interface\\
+  UI & User Interface\\
   \bottomrule
 \end{tabular}\\
 
@@ -91,7 +92,7 @@ This section records information for easy reference.
 \pagenumbering{arabic}
 
 \section{Introduction}
-\hspace*{14pt} In order to continue with the implementation of Flick Picker, it is important to create a System Design document. This will help in outlining the design decisions that were made so as to not cause confusion and increased work in the implementation process. It is also important to outline the tasks, both in regard to the work that needs to be done and with whom the work has been assigned. This document, including these design decisions and timeline, will be complimented by the MG and the MIS to further outline the specifications of Flick Picker. 
+\hspace*{14pt} Flick Picker is a web application that lets people select their preferences for watchable media and find recommendations of things to watch, being able to take multiple sets of preferences into account to find new media. Users can find new things to watch by themselves using only their preferences, or join user groups that find media based on what everyone likes in the group. In order to continue with the implementation of Flick Picker, it is important to create a System Design document. This will help in outlining the design decisions that were made so as to not cause confusion and increased work in the implementation process. It is also important to outline the tasks, both in regard to the work that needs to be done and with whom the work has been assigned. This document, including these design decisions and timeline, will be complimented by the MG and the MIS to further outline the specifications of Flick Picker. 
 
 \section{Purpose}
 \hspace*{14pt} The purpose of this design documentation is to cover the behaviour of our system under a variety of conditions, detail the components of the system, discuss any connections between design choices and the requirements, user interface designs, and a timeline of when tasks should be complete and who should be completing them. Information in this design document should support or further explain the information found in the MG and MIS.
@@ -138,21 +139,25 @@ The system will allow the user to interact with the application, in order to fin
 \subsection{Connection Between Requirements and Design} \label{SecConnection}
 
 \subsubsection{Connection Between Authentication Requirements and Design}
-\hspace*{14pt} For email and password authentication, the user's email and a hashed form of their password are stored in the database. Upon login request, the inputted email and password will be compared to the pairs in the database and the login will either succeed or fail depending on whether a match is found. 
+\hspace*{14pt} (FR 1) For email and password authentication, the user's email and a hashed form of their password are stored in the database. Upon login request, the inputted email and password will be compared to the pairs in the database and the login will either succeed or fail depending on whether a match is found.
 
-Google OAuth will provide authorization and an email to Flick Picker which will have / create an account with this email. If an account with this email already exists using OAuth, the user is logged in successfully. If an account using the previous method (email and password) exists, the user will be prompted to login using their email and password as above. If an account with this email does not exist, the user will be logged in and a new OAuth account will be created. They will then be brought to the new user page (creation of username, preferences, etc.). 
+(FR 2) Google OAuth will provide authorization and an email to Flick Picker which will have / create an account with this email. If an account with this email already exists using OAuth, the user is logged in successfully. If an account using the previous method (email and password) exists, the user will be prompted to login using their email and password as above. If an account with this email does not exist, the user will be logged in and a new OAuth account will be created. They will then be brought to the new user page (creation of username, preferences, etc.).
 
-Upon clicking the logout button, the user will be brought to the login screen and their token is removed.
+(FR 3) Upon clicking the logout button, the user will be brought to the login screen and their token is removed.
 
 \subsubsection{Connection Between Profile/Group Requirements and Design}
-\hspace*{14pt} There will be a page for users to modify their information, including username and password if the account is not an OAuth account. Additionally, there will be a page for users to access and modify their preferences (e.g. genre, show type, etc.). A separate page will enable users to create and join groups. Group invites will be provided through the invited user's email or friends page. The owner of a group can view the group members, join requests, and other information regarding group management on the group management page. 
+\hspace*{14pt} (FR 4) There will be a page for users to modify their information, including username and password if the account is not an OAuth account.
+
+(FR 5) Additionally, there will be a page for users to access and modify their preferences (e.g. genre, show type, etc.).
+
+(FR 6, 7, 8) A separate page will enable users to create and join groups. Group invites will be provided through the invited user's email or friends page. The owner of a group can view the group members, join requests, and other information regarding group management on the group management page. 
 
 \subsubsection{Connection Between Recommendation Requirements and Design}
-\hspace*{14pt} Flick Picker will retrieve information about the top 3000 most popular Movies, TV Shows, and Anime and store that information for quick access. This information will be used in the vast majority of all recommendations. If a recommendation cannot be found within these Movies, TV Shows, or Anime, additional queries will be sent to the relevant APIs to find a recommendation.
+\hspace*{14pt} (FR 9) Flick Picker will retrieve information about the top 3000 most popular Movies, TV Shows, and Anime and store that information for quick access. This information will be used in the vast majority of all recommendations. If a recommendation cannot be found within these Movies, TV Shows, or Anime, additional queries will be sent to the relevant APIs to find a recommendation.
 
-During the recommendation process for a group, individual users reflect their desire to watch a recommendation using the 'like', 'neutral', or 'dislike' buttons. This information will be stored alongside their preferences to aid in future recommendations for both the group and the individuals. 
+(FR 10) During the recommendation process for a group, individual users reflect their desire to watch a recommendation using the 'like', 'neutral', or 'dislike' buttons. This information will be stored alongside their preferences to aid in future recommendations for both the group and the individuals. 
 
-Given user permission, Flick Picker will send emails to all members in a group once a recommendation has been chosen. 
+(FR 11) Given user permission, Flick Picker will send emails to all members in a group once a recommendation has been chosen. 
 
 \section{System Variables}
 
