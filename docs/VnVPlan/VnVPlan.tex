@@ -169,7 +169,7 @@ Further means of implementation verification will also include code walkthroughs
 
 
 \subsection{Automated Testing and Verification Tools}
-Unit tests will be written with a JavaScript unit testing framework called Jest. Jest also produces reports for code coverage metrics. Our code coverage goals include an overall 80\% coverage. A code coverage check will be done for every Pull Request made. Code coverage reports will be monitored to ensure that all functionality is being tested. Integration/system tests will be done with Selenium and Cucumber.js. Cucumber.js also has functionality to produce testing metrics and results. For static analysis and linting, ESLint and AirBnB styling will be utilized. This will ensure uniform coding standards and uncover any potential errors prior to compilation. Auomated code builds, through GitHub/Jenkins, will be present to ensure that every deployment made will not break the application. Refer to Development Plan for indepth details behind the tools:
+Unit tests will be written with a JavaScript unit testing framework called Jest. Jest also produces reports for code coverage metrics. Our code coverage goals include an overall 80\% coverage. A code coverage check will be done for every Pull Request made. Code coverage reports will be monitored to ensure that all functionality is being tested. Integration/system tests will be done manually. For static analysis and linting, ESLint and AirBnB styling will be utilized. This will ensure uniform coding standards and uncover any potential errors prior to compilation. Auomated code builds, through GitHub/Jenkins, will be present to ensure that every deployment made will not break the application. Refer to Development Plan for indepth details behind the tools:
 
 \citet{DevPlan}
 
@@ -188,7 +188,7 @@ The tests outlined here will follow the following format:
 	\item[Derivation:] Test Case Derivation
 	\item[Execution:] Manual Test | API Test
 \end{itemize}
-The execution of the test will be through automated selenium tests for the front-end and an API test library for the back-end.
+The execution of the test will be manually for the front-end and an API test library for the back-end.
 
 \subsection{Tests for Functional Requirements}
 The tests below are based directly on the FR sections from the SRS. Since these are mandatory requirements, they will all be automated, and the tests must pass on any new code change to prevent these requirements from being violated.
@@ -542,7 +542,7 @@ Contains all the tests for the Performance NFR.
 	\item[Control:] Dynamic
 	\item[Initial State:] Empty email and password box on the login screen
 	\item[Input:] Any and all appropriate user inputs and navigation (typing login info, clicking buttons)
-	\item[Output:] Visiting all menus and triggering all possible UI changes, verifying with Selenium that no user information is outputted on the page
+	\item[Output:] Visiting all menus and triggering all possible UI changes, verifying with manually that no user information is outputted on the page
 	\item[Derivation:] Ensuring that the application handles the user's private data properly and does not output it due to any unforeseen condition
 	\item[Execution:] Manual Test
 \end{itemize}
@@ -1001,6 +1001,9 @@ There were no nonfunctional unit tests, as all nonfunctional requirements were t
 \newpage
 
 \subsubsection*{User Survey}
+The survey was designed to gauge how easy it was to navigate the system for users of different levels of technological proficiency. The responses to 
+the system's usability were very positive. Moreover, the overall look and feel of the UI was deemed to be well done too.\\
+Though there were a small number of respondants, the highly positive feedback gives condifences in the usability and look of the app.\\
 \includegraphics[scale=0.6]{images/Survey1.png}\\
 \includegraphics[scale=0.6]{images/Survey2.png}\\
 \includegraphics[scale=0.6]{images/Survey3.png}\\
