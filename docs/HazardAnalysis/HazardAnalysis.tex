@@ -104,47 +104,52 @@ A hazard, as defined by Nancy Leveson, is a property or condition in the system,
 \newpage
 \section{Failure Modes and Effects Analysis}
 Below are tables containing the full Failure Modes and Effects Analysis.
+\label{table1}
 \begin{table}[hp]
 	\caption{Failure Modes and Effects 1} \label{TblFMEA1}
-	\begin{tabularx}{\linewidth}{| p{0.2\textwidth} | X X p{0.25\textwidth} X l |}
+	\begin{tabularx}{\linewidth}{| p{0.185\textwidth} | X | X | p{0.25\textwidth} | X | l |}
 		\hline
 		Component & Failure Modes & Effects of Failure & Causes of Failure & Recommended Actions & SR \\
 		\hline
-		Database & Data is deleted on accident & All user data is lost & Database Failure & Regular backups exist where data can be rolled back on demand & IR2, IR3 \\
+		Database & Data is deleted on accident & All user data is lost & Database Failure & Regular backups exist where data can be rolled back on demand & IR1, IR2, IR3 \\
 		\hdashline
 		~ & Data is unavailable & User cannot access data & Database Failure & Refer Above & IR7 \\
 		\hdashline
-		~ & Data is modified incorrectly & User data is not updated & Database Failure & System alerts if data is not modified when requested & IR2 \\
+		Profile Management & Data is modified incorrectly & User data is not updated & Database Failure & System alerts if data is not modified when requested & IR2 \\
 		\hline
-		Authentication & User cannot login & User cannot view recommendations or friends & Invalid Credentials & Use the correct credentials & AR1, PR1 \\
+		Authentication & User cannot login & User cannot view recommendations or friends & Authentication Failure & Use the correct credentials & AR1, PR1 \\
 		\hline
 		\end{tabularx}
 \end{table}
 \newpage
+\label{table2}
 \begin{table}[hp]
 	\caption{Failure Modes and Effects 2} \label{TblFMEA2}
-	\begin{tabularx}{\linewidth}{| p{0.2\textwidth} | X X p{0.25\textwidth} X l |}
+	\begin{tabularx}{\linewidth}{| p{0.22\textwidth} | X | X | p{0.25\textwidth} | X | l |}
 		\hline
 		Component & Failure Modes & Effects of Failure & Causes of Failure & Recommended Actions & SR \\
 		\hline
 		Authentication & Impersonated Superadmin manipulates user's database & User data is changed on back-end, or deleted & Database Security Failure & Reset superadmin password and rollback database & AR2 \\
 		\hline
-		Show Selection & Show selection misses preferences & Group will be given a recommendation which does not match all preferences & Algorithmic Error & Group has to try a new recommendation or modify their preferences as none would match & PR2 \\
+		Recommendation System & Recommendation misses preferences & Group will be given a recommendation which does not match all preferences & Preference Error & Group has to try a new recommendation or modify their preferences as none would match & ALGR1 \\
 		\hdashline
-		~ & Show selection takes too long & Group is given recommendations too slowly & Algorithmic Error & Server must be able to handle influx of requests at busy times & PR2 \\
+		~ & Recommendation generation takes too long & Group is given recommendations too slowly & Algorithmic Efficiency Error & Server must be able to handle influx of requests at busy times & ER1 \\
+		\hline
+		~ & Recommendation generation is incorrect & Group or individual is given recommendations that do not meet their preferences at all & Algorithmic Error & Review and recreate error to determine where the algorithm is making mistakes and fix & ALGR2 \\
 		\hline
 		\end{tabularx}
 \end{table}
+\label{table3}
 \newpage
 \begin{table}[hp]
 	\caption{Failure Modes and Effects 3} \label{TblFMEA3}
-	\begin{tabularx}{\linewidth}{| p{0.17\textwidth} | X X p{0.25\textwidth} X l |}
+	\begin{tabularx}{\linewidth}{| p{0.15\textwidth} | X | X | p{0.25\textwidth} | X | l |}
 		\hline
 		Component & Failure Modes & Effects of Failure & Causes of Failure & Recommended Actions & SR \\
 		\hline
-		Browser & Application Crashes & Unsaved user data can be lost & General browser crash & Reopen browser application and fill in any data that was not saved & IR6 \\
+		Physical Device & Application Crashes & Unsaved user data can be lost & General browser crash & Reopen browser application and fill in any data that was not saved & IR6 \\
 		\hline
-		Github Automation & Pipeline Not Automatically Run & The current build of will look like it has no issues but the tests were not run & GitHub Error & Manually start pipeline & IR4, IR5 \\
+		Deployments & Pipeline Not Automatically Run & The current build of will look like it has no issues but the tests were not run & GitHub Error & Manually start pipeline & IR4, IR5 \\
 		\hline
 		\end{tabularx}
 \end{table}
@@ -154,32 +159,43 @@ Below are tables containing the full Failure Modes and Effects Analysis.
 Below are the Requirements that have been formed by the above analysis.
 
 \subsection{Access Requirements}
+These requirements ensure that user data is only accessible to the correct users (superadmin and the user them self).
 \begin{itemize}
-	\item AR1: Users can only access and modify their own data
-	\item AR2: Only a superadmin can modify the database directly, which there is only one of
+	\item AR1: Users can only access and modify their own data.
+	\item AR2: Only a superadmin can modify the database directly, which there is only one of.
 \end{itemize}
 
 \subsection{Integrity Requirements}
+These requirements revolve around the user's data, our database, our deployment, and the user's device. These requirements ensure that the application maintains its own health, the health of the user's device, and the health of the data.
 \begin{itemize}
-	\item IR1: User data is not modified without their permission
-	\item IR2: Database backups occur daily
-	\item IR3: Database backups are kept for at minimum one month
-	\item IR4: CI/CD Pipeline is run before every deployment to ensure a healthy application state
-	\item IR5: CI/CD Pipeline is run on every new code change before it can be merged
-	\item IR6: Application crashes will not cause the device to stop working
-	\item IR7: Database will be available as long as the service is available
+	\item IR1: User data is not modified without their permission. \hyperref[table1]{(In table)}
+	\item IR2: Database backups occur daily. \hyperref[table1]{(In table)}
+	\item IR3: Database backups are kept for at minimum one month. \hyperref[table1]{(In table)}
+	\item IR4: CI/CD Pipeline is run before every deployment to ensure a healthy application state. \hyperref[table3]{(In table)}
+	\item IR5: CI/CD Pipeline is run on every new code change before it can be merged. \hyperref[table3]{(In table)}
+	\item IR6: Application crashes will not cause the device to stop working. \hyperref[table3]{(In table)}
+	\item IR7: Database will be available as long as the service is available. \hyperref[table1]{(In table)}
 \end{itemize}
 
 \subsection{Privacy Requirements}
+This requirement ensures that access to the application data and user data requires proper authentication.
 \begin{itemize}
-	\item PR1: Users have to login with their credentials to access application data
-	\item PR2: Algorithm to choose shows shall be protected
+	\item PR1: Users have to login with their credentials to access application data. \hyperref[table1]{(In table)}
 \end{itemize}
 
-\subsection{Audit Requirements}
+\subsection{Efficiency Requirements}
+This requirement ensures that users do not have to wait a long period of time before receiving their recommendation, preventing the user from thinking that the page has frozen.
 \begin{itemize}
-	\item AT1: Requirements shall be easy to read and verify across the system
+	\item ER1: Algorithm must complete the generation of recommendations in a reasonable time (Less than 5 seconds) and be able to report that information to the UI. \hyperref[table2]{(In table)}
 \end{itemize}
+
+\subsection{Algorithm Requirements}
+These requirements ensure that the algorithm functions in edge cases and will ensure proper functionality of the algorithm.
+\begin{itemize}
+	\item ALGR1: Algorithm must be able to generate recommendations even if there is no perfect match to the user or group's preferences. \hyperref[table2]{(In table)}
+	\item ALGR2: Algorithm must generate recommendations that align in some way with the user or group's preferences. \hyperref[table2]{(In table)}
+\end{itemize}
+
 
 \section{Roadmap}
 The safety requirements determined within this document will be considered throughout the development of the project. After completion of key components (Frontend, Backend, Database etc.), hazard analysis will be conducted to ensure that potential risks are mitigated. If any issues or risks are discovered, action will be taken immediately to resolve them.
