@@ -4,6 +4,7 @@
 \usepackage{booktabs}
 \usepackage{fullpage}
 \usepackage{graphicx}
+\usepackage{hyperref}
 
 \input{../Comments}
 \input{../Common}
@@ -16,7 +17,7 @@
 	
 \maketitle
 \vspace*{\fill}
-Created From: Volere, Requirements Specification Template, Edition 18
+
 
 
 ~\newpage \pagenumbering{roman}
@@ -37,6 +38,7 @@ Oct 5/22 & 0.3 & Adding Section 2\\
 Oct 5/22 & 0.4 & Adding Section 7\\
 Oct 5/22 & 0.5 & Adding Section 4\\
 Oct 5/22 & 0.6 & Adding Section 8, 10.1, 10.6\\
+April 4/23 & 1.1 & Updating document based on feedback excluding NFRs\\
 \bottomrule
 \end{tabularx}
 
@@ -50,8 +52,8 @@ The business aims to make finding shows across groups of friends with differing 
 \subsection{Goals of the Project}
 Goals can shift as development continues, entirely losing scope on the developers' passion for why the application started. Thus there will only be a few immediate goals to capture the passion that developers currently have and will continue to uphold in the future:
 \begin{itemize}
-	\item Provide a means of choosing a Movie, TV show, or Anime to watch immediately in a large friend group, which they all enjoy
-	\item Users can be recommended a Movie, TV show, or Anime individually as well.
+	\item Provide a means of choosing a movie, TVshow, or anime to watch immediately in a large friend group, which they all enjoy
+	\item Users can be recommended a movie, TVshow, or anime individually as well.
 	\item Minimize the number of advertisements while using the application
 \end{itemize}
 
@@ -62,29 +64,29 @@ The client will be responsible for project approval, including, but not limited 
 Additionally, the client will also provide feedback throughout the development on various deliverables.
 
 \subsection{The Customer}
-The customers for Flick Picker are individuals who watch movies, tv shows, or anime as an individual or a group who wish to find catered recommendations.
+The customers for Flick Picker are individuals who watch movies, TVshows, or anime as an individual or a group who wish to find catered recommendations.
 
 \subsection{Other Stakeholders}
 
 The members of 7eam are other stakeholders falling under the categories of:
 \begin{itemize}
-    \item Designers and Developers
+    \item Designers and developers
     \item Testers
-    \item Systems Engineers
-    \item Technology Experts
-    \item System Designers
-    \item Usability Experts
+    \item Systems engineers
+    \item Technology experts
+    \item System designers
+    \item Usability experts
 \end{itemize}
 
 \subsection{The Hands-On Users of the Product}
 The hands-on users of the product are the same as listed under the customer section.
 
 \subsubsection*{Individual Watchers}
-The individual watcher is a user who will simply input their preference settings and then browse the movies, tv shows, or anime that fit the preferences.
+The individual watcher is a user who will simply input their preference settings and then browse the movies, TVshows, or anime that fit the preferences.
 \subsubsection*{Group Watchers}
 Group watchers also input their personal preferences.
 Additionally, they must also create a group and add the other members.
-With the group created, members can browse the movies, tv shows, or anime that best fit the combined preferences of the group.
+With the group created, members can browse the movies, TVshows, or anime that best fit the combined preferences of the group.
 
 \subsection{Personas}
 N/A
@@ -114,14 +116,14 @@ The application will be deployed on a website, so the restrictions of a browser 
 N/A
 
 \subsection{Off-the-Shelf Software}
-The list of Movies, TV Shows, and Anime will be polled from two separate APIs, which is the following:
+The list of movies, TV shows, and anime will be polled from two separate APIs, which is the following:
 \begin{itemize}
-	\item MyAnimeList for data on Anime
-	\item OMDB for data on TV Shows and Movies
+	\item MyAnimeList for data on anime
+	\item OMDB for data on TV shows and movies
 \end{itemize}
 
 \subsection{Anticipated Workplace Environment}
-As Flick Picker is a browser application, 7eam expects users to use the application on their desktops or phones. Thus the application must be optimized for both possible settings, relying on a responsive layout. However, the users' physical workplace has no bearing on the design, as they can use it whenever necessary. 
+As Flick Picker is a browser application, 7eam expects users to use the application on their desktops or phones. Thus the application must be optimized for both possible settings, relying on a responsive layout. However, the users' physical workplace has no bearing on the design, as they can use it whenever a computer or phone with internet is available. 
 
 \subsection{Schedule Constraints}
 The schedule is the same as the one Dr. Smith has provided us with
@@ -164,7 +166,7 @@ The schedule is the same as the one Dr. Smith has provided us with
 \end{tabular}
 
 \subsection{Budget Constraints}
-The expenses for this application must not exceed \$500, and there are only five developers working on 7eam.
+Based on the outline of SFWRENG 4G06, the expenses for this application must not exceed \$500. There are five developers working on 7eam.
 
 \subsection{Enterprise Constraints}
 N/A
@@ -175,12 +177,14 @@ N/A
 \begin{itemize}
 	\item BE: Back-End
 	\item FE: Front-End
+	\item API: Application Programming Interface
+	\item BUC: Business Use Case
 \end{itemize}
 
 \section{Relevant Facts and Assumptions}
 
 \subsection{Relevant Facts}
-There is no existing solution 7eam has found that fills a similar role as selecting a Movie, TV Show or Anime based on the preferences of a group of users.
+There is no existing solution 7eam has found that fills a similar role as selecting a Movie, TV show or anime based on the preferences of a group of users.
 
 
 \subsection{Business Rules}
@@ -189,8 +193,8 @@ N/A
 \subsection{Assumptions}
 There are a few assumptions 7eam deems necessary to see regarding Flick Picker's capabilities and what it will not do:
 \begin{itemize}
-	\item Flick Picker will not provide a means to watch the selected show directly through the application
-	\item Flick Picker will suggest the best movie, tv show, or anime for the group. This may violate the preferences of a member or multiple members of the group.
+	\item Flick Picker will not provide a means to watch the selected show directly through the application.
+	\item Flick Picker will suggest the best movie, TVshow, or anime for the group. This may violate the preferences of a member or multiple members of the group.
 	\item The browser on which the application is used, through any device, is not deprecated
 \end{itemize}
 
@@ -199,17 +203,24 @@ There are a few assumptions 7eam deems necessary to see regarding Flick Picker's
 \subsection{The Current Situation}
 As Flick Picker is being built from the ground up, no existing business processes exist. However, 7eam has agreed to follow a rigorous development process, which is not changing. The developers must make a pull request against the `develop' branch to make any changes, which two people must review before merging. If it is a code change, then tests must run on the deployed code, all passing and getting two reviews before merging.
 
+\pagebreak
+
 \subsection{The Context of the Work}
-\begin{center}
-	\includegraphics[scale=1]{contextDiagram.png}
-\end{center}
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[scale=1]{contextDiagram.png}
+	\end{center}
+	\caption{Context of the Work}
+\end{figure}
+
 
 \subsection{Work Partitioning}
 \subsubsection*{Business Event List}
 \begin{tabularx}{\textwidth}{|p{4cm}p{6cm}X|}
 \toprule {\bf Event Name} & {\bf Input and Output} & {\bf Summary of BUC}\\
 \hline
-MyAnimeList/OMBD are polled & TV Show, Movie, and Anime Data (in) & Collect information about the shows to display to users \\
+MyAnimeList/OMBD are polled & TV show, movie, and anime Data (in) & Collect information about the shows to display to users \\
 \hline
 MongoDB data is updated & User data updated (out) & Any updates to user data are stored \\
 \hline
@@ -228,11 +239,15 @@ External login is queried & External authentication validates user (in) & Allows
 \subsection{Specifying a Business Use Case (BUC)}
 N/A as summary of BUCs are above.
 
+\pagebreak
 \section{Business Data Model and Data Dictionary}
 \subsection{Business Data Model}
+\begin{figure}[h]
 \begin{center}
 	\includegraphics[scale=0.12]{BusinessDataModel.png}
 \end{center}
+\caption{Business Data Model}
+\end{figure}
 
 \subsection{Data Dictionary}
 For content of each element of the data dictionary, see the Business Data Model above.
@@ -244,22 +259,25 @@ Additionally, attributes that are self explanatory are omitted from the Data Dic
 	User & A single user of the product & Class \\
 	Group & A collection of users with one being the owner & Class \\
 	Movie & North American or European movie & Class\\
-	TV Show & North American or European television shows & Class\\
+	TV show & North American or European television shows & Class\\
 	Anime & Japanese, Chinese, or Korean animated shows & Class\\
 	Group ID & Unique identifier for a group & \\
-	Movie ID & Unique identifier for a Movie & Attribute \\
-	TV Show ID & Unique identifier for a TV Show & Attribute \\
-	Anime ID & Unique identifier for an Anime & Attribute \\
+	Movie ID & Unique identifier for a movie & Attribute \\
+	TV show ID & Unique identifier for a TV show & Attribute \\
+	Anime ID & Unique identifier for an anime & Attribute \\
 	\hline
 \end{tabularx}
 
+\pagebreak
 \section{The Scope of the Product}
-
-
 \subsection{Product Boundary}
+\begin{figure}[h]
 \includegraphics[scale=0.6]{SystemBoundariesDiagram.png}
+\caption{Product Boundaries}
+\end{figure}
 
 \subsection{Product Use Case Table}
+\label{8.2}
 \begin{tabularx}{\textwidth}{|p{4cm}p{6cm}X|}
 	\toprule {\bf Use Case} & {\bf Actors} & {\bf Description}\\
 	\hline
@@ -282,7 +300,8 @@ Additionally, attributes that are self explanatory are omitted from the Data Dic
 	\end{tabularx}
 
 \subsection{Individual Product Use Cases}
-Please refer to Section 8.2 for individual Use Case descriptions.
+
+Please refer to Section \ref{8.2} for individual Use Case descriptions.
 
 \section{Functional Requirements}
 \noindent
@@ -324,7 +343,7 @@ Please refer to Section 8.2 for individual Use Case descriptions.
 \medskip
 \\\textbf{Description:} The application shall allow the user to set their profile preferences 
 \\\textbf{Rationale:} Required since the application needs these preferences to efficiently recommend movies/TV shows to the user. The preferences pertain to their favourite genre, movies, TV shows, anime, actors etc.
-\\\textbf{Fit Criterion:} The user's input (eg. Movie name) should be valid
+\\\textbf{Fit Criterion:} The user's input (eg. movie name) should be valid
 
 \bigskip
 \textbf{Requirement \#:} 6 \quad \textbf{Requirement Type:} 2 \quad \textbf{Event/Use Case: 4.0}
@@ -512,50 +531,22 @@ N/A
 There are publicly-known algorithms and methods we can research and implement in our project. We can also consult any open-source applications that make use of recommendation algorithms. It is likely that we will use one or more algorithms that are proven to be successful, and tailor them to our needs, using a combination of pieces as necessary. Creating an algorithm from scratch is a very complex task that is far beyond the scope of this project.
 
 \subsection{New Problems}
-
-
-\subsubsection{Effects on the Current Environment}
-N/A
-
-\subsubsection{Effects on the Installed Systems }
-N/A
-
-\subsubsection{Potential User Problems}
-N/A
-
-\subsubsection{Limitations in the Anticipated Implementation Environment That May Inhibit the New Product}
-N/A
-
-\subsubsection{Follow-Up Problems}
 N/A
 
 \subsection{Tasks}
-
-\subsubsection{Project Planning}
-N/A
-
-\subsubsection{Planning of the Development Phases}
-N/A
-
-\subsection{Migration to the New Product}
-N/A
-
-\subsubsection{Requirements for Migration to the New Product}
-N/A
-
-\subsubsection{Data That Has to Be Modified or Translated for the New Product}
 N/A
 
 \subsection{Risks}
 
-\begin{itemize}
-	\item \textbf{Ineffective algorithm:} The main and biggest risk of the project is the algorithm recommending undesirable choices to user groups, which would make our application ineffective at its sole purpose. The probability of this risk actually becoming a problem is very low, as we plan on doing thorough research and analysis of different algorithms to create our customized algorithm using principles that are proven to be successful. Additionally, we will conduct testing using mock data, and make use of the appropriate metrics to determine the effectiveness. Then, we can consider these results to determine if changes should be made - so if our algorithm isn't effective at first, we will eventually reach a final product that is successful.
-	\item \textbf{Insecure user login:} With any service that requires users to create an account that has a password for their login, there is the risk of their stored data being compromised. The probability of this risk becoming a problem is low, as we plan on using proper encryption methods for passwords, and implementing Google and Facebook account connection with user authentication.
-\end{itemize}
+\subsubsection{Ineffective algorithm}
+ The main and biggest risk of the project is the algorithm recommending undesirable choices to user groups, which would make our application ineffective at its sole purpose. The probability of this risk actually becoming a problem is very low, as we plan on doing thorough research and analysis of different algorithms to create our customized algorithm using principles that are proven to be successful. Additionally, we will conduct testing using mock data, and make use of the appropriate metrics to determine the effectiveness. Then, we can consider these results to determine if changes should be made - so if our algorithm isn't effective at first, we will eventually reach a final product that is successful.
+\subsubsection{Insecure user login}
+With any service that requires users to create an account that has a password for their login, there is the risk of their stored data being compromised. The probability of this risk becoming a problem is low, as we plan on using proper encryption methods for passwords, and implementing Google and Facebook account connection with user authentication.
+
 
 
 \subsection{Costs}
-N/A
+Minimal costs are associated with Flick Picker. Current costs are associated with the server and total between \$0.01 and \$1.00 per active month.
 
 \subsection{User Documentation and Training}
 
@@ -570,5 +561,12 @@ N/A
 
 \subsection{Ideas for Solutions}
 N/A
+
+\section{References}
+Created From: Volere, Requirements Specification Template, Edition 18
+
+\noindent
+\hyperref{https://github.com/airbnb/javascript}{}{}{AirBnB Style Guide}
+\section{Traceability Matrix}
 
 \end{document}
