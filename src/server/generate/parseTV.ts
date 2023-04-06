@@ -5,6 +5,10 @@ import tvGenres from '../api-json/tv_genres.json';
 
 const tvshow = { runtime: 25 };
 
+/**
+ * Parses the genre(s) of a tv show into an array based on the provided IDs
+ * @param genreIDs the genre ID(s) of the tv show from the external API
+ */
 function parseTVGenres(genreIDs: number[]) {
   const genres = new Set<string>();
   genreIDs.forEach((genreID) => {
@@ -24,6 +28,11 @@ function parseTVGenres(genreIDs: number[]) {
   return Array.from(genres);
 }
 
+/**
+ * Parses the tv show api-json and creates anime tv objects. The goal is to
+ * reduce the amount of data present by only including needed data. Some data requires
+ * some separate mapping (see parseMovieGenres).
+ */
 export const getTVShows = async () => {
   const tvShows: TVObject[] = [];
   tvList.forEach((tvShow) => {
