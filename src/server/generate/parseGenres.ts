@@ -6,6 +6,10 @@ import animeMovie from '../api-json/anime_movie_batch.json';
 import movieGenres from '../api-json/movie_genres.json';
 import tvGenres from '../api-json/tv_genres.json';
 
+/**
+ * Parses each parsed media (tv show, movie, anime tv show, anime movie) and creates a
+ * final list of genres that are available.
+ */
 export const getGenres = async () => {
   const finalGenres = new Set<string>();
   tvList.forEach((tvShow: any) => {

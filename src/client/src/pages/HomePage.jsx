@@ -18,8 +18,8 @@ const HomePage = () => {
   const navigate = useNavigate();
   const uid = useSelector(selectUid);
 
+  // Collect user's groups on render
   useEffect(() => {
-
     axios
       .get(`${API}/api/user/collectgroups?uid=${uid}`, { headers })
       .then((res) => {

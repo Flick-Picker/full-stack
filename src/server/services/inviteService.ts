@@ -112,6 +112,7 @@ export const acceptFriendInvite = async (
     await updateDoc(docRef, {
       isAccepted: true,
     });
+    // call user service to add friend ID within user records
     await userService.addFriend(senderEmail, requestEmail);
   }
   docSnap = await getDoc(docRef);
@@ -157,6 +158,7 @@ export const acceptGroupInvite = async (
     await updateDoc(docRef, {
       isAccepted: true,
     });
+    // call user service to add group ID within user records
     await groupService.addUserToGroup(groupId, requestUid);
   }
   docSnap = await getDoc(docRef);

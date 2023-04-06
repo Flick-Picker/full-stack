@@ -147,7 +147,7 @@ export const addFriend = async (userUid: string, friendUid: string) => {
   return docSnap.data();
 };
 
-// adding to group
+// adding a user to a specified group
 export const addToGroup = async (
   userUid: string,
   groupId: string,
@@ -172,6 +172,7 @@ export const addToGroup = async (
   return docSnap.data();
 };
 
+// when an new voting session is created, keep track of the ID of the session
 export const addNewVotingSession = async (userUid: string, votingId: string) => {
   const docRef = doc(db, col, userUid);
   let docSnap = await getDoc(docRef);
@@ -185,6 +186,7 @@ export const addNewVotingSession = async (userUid: string, votingId: string) => 
   return docSnap.data();
 };
 
+// collect all groups a user is in
 export const collectGroups = async (uid: string) => {
   const docRef = doc(db, col, uid);
   const docSnap = await getDoc(docRef);
@@ -204,6 +206,7 @@ export const collectGroups = async (uid: string) => {
   return {};
 };
 
+// collect all friends for a user
 export const collectFriends = async (uid: string) => {
   const docRef = doc(db, col, uid);
   const docSnap = await getDoc(docRef);

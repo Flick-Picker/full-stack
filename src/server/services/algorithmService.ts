@@ -10,6 +10,10 @@ export const tvShowType = 2;
 export const animeTVType = 3;
 export const animeMovieType = 4;
 
+/**
+ * Algorithm for movies that will rank each anime movie and return the results.
+ * @param preferences a set of user preferences to rank the movies against
+ */
 const movieAlgorithm = async (preferences: PreferenceObject) => {
   const batch: RecommendationObject[] = [];
   movies.forEach((movie) => {
@@ -103,6 +107,10 @@ const movieAlgorithm = async (preferences: PreferenceObject) => {
   return batch;
 };
 
+/**
+ * Algorithm for tv shows that will rank each anime movie and return the results.
+ * @param preferences a set of user preferences to rank the tv shows against
+ */
 const tvShowAlgorithm = async (preferences: PreferenceObject) => {
   const batch: RecommendationObject[] = [];
   tvShows.forEach((tvShow) => {
@@ -196,6 +204,10 @@ const tvShowAlgorithm = async (preferences: PreferenceObject) => {
   return batch;
 };
 
+/**
+ * Algorithm for anime tv shows that will rank each anime movie and return the results.
+ * @param preferences a set of user preferences to rank the anime tv shows against
+ */
 const animeTVAlgorithm = async (preferences: PreferenceObject) => {
   const batch: RecommendationObject[] = [];
   animeTV.forEach((animeTVShow) => {
@@ -281,6 +293,10 @@ const animeTVAlgorithm = async (preferences: PreferenceObject) => {
   return batch;
 };
 
+/**
+ * Algorithm for anime movies that will rank each anime movie and return the results.
+ * @param preferences a set of user preferences to rank the anime movies against
+ */
 const animeMovieAlgorithm = async (preferences: PreferenceObject) => {
   const batch: RecommendationObject[] = [];
   animeMovies.forEach((animeMovie) => {
@@ -373,6 +389,11 @@ const animeMovieAlgorithm = async (preferences: PreferenceObject) => {
   return batch;
 };
 
+/**
+ * General algorithm that will call the corresponding algorithm depending on the type.
+ * @param type the media type (movie = 1, tv show = 2, anime tv show = 3, anime movie = 4)
+ * @param preferences the set of user preferences that the algorithm will use to rank media
+ */
 export const algorithm = async (type: number, preferences: PreferenceObject) => {
   if (type === movieType) {
     // call movie algo

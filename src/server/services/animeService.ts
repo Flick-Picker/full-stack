@@ -2,6 +2,7 @@ import axios from 'axios';
 
 const JIKAN_API_URL = 'https://api.jikan.moe/v4';
 
+// call external anime API and receive a list of anime media data
 export const topAnimes = async (mediatype: string, page: number) => {
   try {
     const requrl = `${JIKAN_API_URL}/top/anime`;

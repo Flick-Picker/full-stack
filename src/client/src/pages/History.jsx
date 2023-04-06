@@ -25,8 +25,8 @@ const History = () => {
 
   useEffect(() => {
     setSession(state.session);
-    const bestMatch = findBestMatch(state.session.recommendations);
-    setFlick(bestMatch);
+    const bestMatch = findBestMatch(state.session.recommendations); 
+    setFlick(bestMatch); // set selected flick to be the Best Match by default
   }, [state.session]);
 
   const handleLeaveClick = (e) => {
@@ -43,6 +43,7 @@ const History = () => {
     setFlick(row);
   };
 
+  // data grid column details
   const columns = [
     { field: 'name', headerName: 'Flick Name', width: 350 },
     {

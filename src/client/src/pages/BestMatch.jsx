@@ -23,6 +23,7 @@ const BestMatch = () => {
   const uid = useSelector(selectUid);
   const [flick, setFlick] = React.useState({});
 
+  // get the Best Match from our API on render
   useEffect(() => {
     axios
       .get(`${API}/api/voting/match?uuid=${state.group.currentVotingSession}`, {

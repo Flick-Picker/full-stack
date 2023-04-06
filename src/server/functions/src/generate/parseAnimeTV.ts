@@ -25,6 +25,8 @@ export const getAnimeTv = async () => {
         show.images.jpg.large_image_url,
         show.score,
         show.scored_by,
+        Number.parseInt(show.duration.replace(/\D*/, ''), 10),
+        show.aired.prop.from.year,
       ),
     );
   });
