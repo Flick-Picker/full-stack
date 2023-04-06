@@ -2,6 +2,10 @@ import * as fs from 'fs';
 import animeMovie from '../api-json/anime_movie_batch.json';
 import AnimeMovieObject from '../classes/animeMovieObject';
 
+/**
+ * Parses the genre(s) of an anime movie into an array
+ * @param genres the genre(s) of the anime from the external API
+ */
 function parseAnimeMovieGenre(genres: { name: string; }[]) {
   const returnGenres = new Set<string>();
   genres.forEach((genre: { name: string; }) => {
@@ -10,6 +14,11 @@ function parseAnimeMovieGenre(genres: { name: string; }[]) {
   return Array.from(returnGenres);
 }
 
+/**
+ * Parses the anime movie api-json and creates anime movie objects. The goal is to
+ * reduce the amount of data present by only including needed data. Some data requires
+ * some separate mapping (see parseAnimeMovieGenre).
+ */
 export const getAnimeMovie = async () => {
   const anime: AnimeMovieObject[] = [];
   animeMovie.forEach((movie: any) => {

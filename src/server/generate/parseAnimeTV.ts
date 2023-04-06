@@ -2,6 +2,10 @@ import * as fs from 'fs';
 import animeTV from '../api-json/anime_tv_batch.json';
 import AnimeTvObject from '../classes/animeTvObject';
 
+/**
+ * Parses the genre(s) of an anime tv show into an array
+ * @param genres the genre(s) of the anime from the external API
+ */
 function parseAnimeTvGenre(genres: { name: string; }[]) {
   const returnGenres = new Set<String>();
   genres.forEach((genre: { name: string; }) => {
@@ -10,6 +14,11 @@ function parseAnimeTvGenre(genres: { name: string; }[]) {
   return Array.from(returnGenres);
 }
 
+/**
+ * Parses the anime tv api-json and creates anime tv objects. The goal is to
+ * reduce the amount of data present by only including needed data. Some data requires
+ * some separate mapping (see parseAnimeTvGenre).
+ */
 export const getAnimeTv = async () => {
   const anime: AnimeTvObject[] = [];
   animeTV.forEach((show) => {

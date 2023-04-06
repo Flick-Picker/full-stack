@@ -5,6 +5,10 @@ import movieGenres from '../api-json/movie_genres.json';
 
 const Movie = { runtime: 130 };
 
+/**
+ * Parses the genre(s) of a movie into an array based on the provided IDs
+ * @param genreIDs the genre ID(s) of the movie from the external API
+ */
 function parseMovieGenres(genreIDs: number[]) {
   const genres = new Set<string>();
   genreIDs.forEach((genreID) => {
@@ -22,6 +26,11 @@ function parseMovieGenres(genreIDs: number[]) {
   return Array.from(genres);
 }
 
+/**
+ * Parses the movie api-json and creates anime tv objects. The goal is to
+ * reduce the amount of data present by only including needed data. Some data requires
+ * some separate mapping (see parseMovieGenres).
+ */
 export const getMovies = async () => {
   const movies: MovieObject[] = [];
   movieList.forEach((movie) => {

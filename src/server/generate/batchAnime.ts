@@ -5,6 +5,10 @@ import * as animeapi from '../services/animeService';
 const sleep = (ms: number) => (
   new Promise((resolve) => setTimeout(resolve, ms)));
 
+/**
+ * Calls the anime API for either anime tv shows or anime movies.
+ * @param mediatype either 'movie' or 'tv' depending on what anime type is desired.
+ */
 export const retrieveBatch = async (mediatype: string) => {
   let batch: any[] = [];
   for (let i = 1; i <= 10; i += 1) {
