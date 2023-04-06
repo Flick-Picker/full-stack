@@ -4,6 +4,7 @@
 \usepackage{tabularx}
 \usepackage{hyperref}
 \usepackage{float}
+\usepackage{graphicx}
 \hypersetup{
     colorlinks,
     citecolor=blue,
@@ -48,6 +49,8 @@
 		November 2 & Madhi Nagarajan & Section 3\\
 		\midrule
 		November 2 & Jarrod Colwell & Final Edits\\
+		\midrule
+		April 5 & Andrew Carvalino & Added Survey to Appendix and made final edits\\
 		\bottomrule
 	\end{tabularx}
 \end{table}
@@ -112,7 +115,7 @@ This document describes the plan to verify and validate that Flick Picker meets 
 The first objective involves verifying that Flick Picker meets requirements outlined in our SRS document and validating that the behaviour present is desirable. This includes the functional requirements (e.g. Authentication Requirements) and the non-functional requirements (e.g. Appearance Requirements). This objective will build confidence in the correctness of Flick Picker along with validating that security and usability standards are met.
 
 \subsubsection{UI Elements}
-The second objective of the V\&V document involves the validation of navigability and functionality of UI elements. Each menu described in the 'Front End Testing' section above must be functional for users. Additionally, users must be able to navigate to each page individually. This objective ensures that usability and response time standards are met. 
+The second objective of the V\&V document involves the validation of navigability and functionality of UI elements. Each menu described in the `Front End Testing' section above must be functional for users. Additionally, users must be able to navigate to each page individually. This objective ensures that usability and response time standards are met. 
 
 \subsubsection{External Connections}
 The final objective of the V\&V document is to ensure that all external connections of Flick Picker (e.g. APIs, Database) work as intended. This objective ensures that the interoperability of Flick Picker is adequate. 
@@ -122,14 +125,11 @@ The final objective of the V\&V document is to ensure that all external connecti
 \subsection{Relevant Documentation}
 
 % \wss{Reference relevant documentation.  This will definitely include your SRS and your other project documents (MG, MIS, etc). You can include these even before they are written, since by the time the project is done, they will be written.}
-\subsubsection{SRS}
-\citet{SRS}
-
-\subsubsection{MG}
-\citet{MG}
-
-\subsubsection{MIS}
-\citet{MIS}
+\begin{enumerate}
+	\item[] SRS: \citet{SRS}
+	\item[] MG: \citet{MG}
+	\item[] MIS: \citet{MIS}
+\end{enumerate}
 
 \section{Plan}
 
@@ -169,7 +169,7 @@ Further means of implementation verification will also include code walkthroughs
 
 
 \subsection{Automated Testing and Verification Tools}
-Unit tests will be written with a JavaScript unit testing framework called Jest. Jest also produces reports for code coverage metrics. Our code coverage goals include an overall 80\% coverage. A code coverage check will be done for every Pull Request made. Code coverage reports will be monitored to ensure that all functionality is being tested. Integration/system tests will be done with Selenium and Cucumber.js. Cucumber.js also has functionality to produce testing metrics and results. For static analysis and linting, ESLint and AirBnB styling will be utilized. This will ensure uniform coding standards and uncover any potential errors prior to compilation. Auomated code builds, through GitHub/Jenkins, will be present to ensure that every deployment made will not break the application. Refer to Development Plan for indepth details behind the tools:
+Unit tests will be written with a JavaScript unit testing framework called Jest. Jest also produces reports for code coverage metrics. Our code coverage goals include an overall 80\% coverage. A code coverage check will be done for every Pull Request made. Code coverage reports will be monitored to ensure that all functionality is being tested. Integration/system tests will be done manually. For static analysis and linting, ESLint and AirBnB styling will be utilized. This will ensure uniform coding standards and uncover any potential errors prior to compilation. Auomated code builds, through GitHub/Jenkins, will be present to ensure that every deployment made will not break the application. Refer to Development Plan for indepth details behind the tools:
 
 \citet{DevPlan}
 
@@ -186,9 +186,9 @@ The tests outlined here will follow the following format:
 	\item[Input:] Input
 	\item[Output:] Output
 	\item[Derivation:] Test Case Derivation
-	\item[Execution:] Automated Selenium Test | API Test
+	\item[Execution:] Manual Test | API Test
 \end{itemize}
-The execution of the test will be through automated selenium tests for the front-end and an API test library for the back-end.
+The execution of the test will be manually for the front-end and an API test library for the back-end.
 
 \subsection{Tests for Functional Requirements}
 The tests below are based directly on the FR sections from the SRS. Since these are mandatory requirements, they will all be automated, and the tests must pass on any new code change to prevent these requirements from being violated.
@@ -203,7 +203,7 @@ Contains all the tests for the Authentication FR.
 	\item[Input:] Email and password is filled correctly
 	\item[Output:] Customer is logged in
 	\item[Derivation:] Need a successful UI test on what a customer will see once they are logged in correctly
-	\item[Execution:] Selenium Automated Test
+	\item[Execution:] Manual Test
 \end{itemize}
 
 \paragraph*{API Auth T 1: User Login - Success}
@@ -223,7 +223,7 @@ Contains all the tests for the Authentication FR.
 	\item[Input:] Email and password is filled incorrectly
 	\item[Output:] Customer failed to login
 	\item[Derivation:] Need a successful failure UI test on what a customer will see once they input their credentials incorrectly
-	\item[Execution:] Selenium Automated Test
+	\item[Execution:] Manual Test
 \end{itemize}
 
 \paragraph*{API Auth T 2: User Login - Failure}
@@ -243,7 +243,7 @@ Contains all the tests for the Authentication FR.
 	\item[Input:] Sign-up button is pressed, all boxes for sign-up are filled in correctly, confirm button is pressed
 	\item[Output:] Customer account is created
 	\item[Derivation:] Need a successful UI test on what a customer will see once they Sign-Up correctly
-	\item[Execution:] Selenium Automated Test
+	\item[Execution:] Manual Test
 \end{itemize}
 
 \paragraph*{API Auth T 3: User Sign-Up - Success}
@@ -263,7 +263,7 @@ Contains all the tests for the Authentication FR.
 	\item[Input:] Sign-up button is pressed, all boxes for sign-up are filled in incorrectly, confirm button is pressed
 	\item[Output:] Areas where there is incorrect information is highlighted
 	\item[Derivation:] Need a successful UI test on what a customer will see if they do not Sign-Up correctly
-	\item[Execution:] Selenium Automated Test
+	\item[Execution:] Manual Test
 \end{itemize}
 
 \paragraph*{API Auth T 4: User Sign-Up - Failure}
@@ -283,7 +283,7 @@ Contains all the tests for the Authentication FR.
 	\item[Input:] Logout is pressed
 	\item[Output:] Login screen displays
 	\item[Derivation:] Need a UI test on what a customer will see if they log out
-	\item[Execution:] Selenium Automated Test
+	\item[Execution:] Manual Test
 \end{itemize}
 
 \paragraph*{API Auth T 5: User Logout}
@@ -303,7 +303,7 @@ Contains all the tests for the Authentication FR.
 	\item[Input:] OAuth button is pressed
 	\item[Output:] Correctly redirect to OAuth login
 	\item[Derivation:] Need a successful UI test on what a customer will see if they choose to sign-up/login though an OAuth provider
-	\item[Execution:] Selenium Automated Test
+	\item[Execution:] Manual Test
 \end{itemize}
 
 \subsubsection{Area of Testing: Profile/Group}
@@ -316,7 +316,7 @@ Contains all the tests for the Profile/Group FRs.
 	\item[Input:] Profile button is clicked, display name and password are updated, confirm is clicked
 	\item[Output:] Confirmation that information is updated
 	\item[Derivation:] Need a successful UI test on how a customer can update their profile
-	\item[Execution:] Selenium Automated Test
+	\item[Execution:] Manual Test
 \end{itemize}
 
 \paragraph*{API PG T 1: Modify User Profile}
@@ -336,7 +336,7 @@ Contains all the tests for the Profile/Group FRs.
 	\item[Input:] Profile button is clicked, show preferences are updated, confirm is clicked
 	\item[Output:] Confirmation that preferences are updated
 	\item[Derivation:] Need a successful UI test on how a customer can update their preferences
-	\item[Execution:] Selenium Automated Test
+	\item[Execution:] Manual Test
 \end{itemize}
 
 \paragraph*{API PG T 2: Modify User Preferences}
@@ -356,7 +356,7 @@ Contains all the tests for the Profile/Group FRs.
 	\item[Input:] Create Group button is clicked, name is input, confirm is clicked
 	\item[Output:] Group is created with the specified name
 	\item[Derivation:] Need a successful UI test on how a customer can create a group
-	\item[Execution:] Selenium Automated Test
+	\item[Execution:] Manual Test
 \end{itemize}
 
 \paragraph*{API PG T 3: Create Group}
@@ -376,7 +376,7 @@ Contains all the tests for the Profile/Group FRs.
 	\item[Input:] Invite is accepted through notifications
 	\item[Output:] User is added to the group
 	\item[Derivation:] Need a successful UI test on how a customer can join a group
-	\item[Execution:] Selenium Automated Test
+	\item[Execution:] Manual Test
 \end{itemize}
 
 \paragraph*{API PG T 4: Join Group}
@@ -396,7 +396,7 @@ Contains all the tests for the Profile/Group FRs.
 	\item[Input:] Group is selected, invite user through their username or email, confirm is clicked
 	\item[Output:] User invite is sent
 	\item[Derivation:] Need a successful UI test on how a customer can send an invite
-	\item[Execution:] Selenium Automated Test
+	\item[Execution:] Manual Test
 \end{itemize}
 
 \paragraph*{API PG T 5: Invite to Group}
@@ -419,7 +419,7 @@ Contains all the tests for the Recommendation FRs.
 	\item[Input:] Not Applicable
 	\item[Output:] Observe if the home page is updated with recommendations
 	\item[Derivation:] Need a successful UI test where a customer gets rotating recommendations
-	\item[Execution:] Selenium Automated Test
+	\item[Execution:] Manual Test
 \end{itemize}
 
 \paragraph*{API R T 1: Receive Recommendations}
@@ -439,7 +439,7 @@ Contains all the tests for the Recommendation FRs.
 	\item[Input:] Hover a movie and input recommendation
 	\item[Output:] Movie should be updated with the recommendation
 	\item[Derivation:] Need a successful UI test where a customer can update recommendations
-	\item[Execution:] Selenium Automated Test
+	\item[Execution:] Manual Test
 \end{itemize}
 
 \paragraph*{API R T 2: Rate Recommendations}
@@ -534,7 +534,7 @@ Contains all the tests for the Performance NFR.
 	\item[Input:] Any user input (entering text, clicking a button)
 	\item[Output:] Appropriate program response to user input
 	\item[Derivation:] Must time the responsiveness of the program to an arbitrary user action in order to gauge if it is below 1 second.
-	\item[Execution:] Automated Selenium Test
+	\item[Execution:] Manual Test
 \end{itemize}
 
 \paragraph*{Performance T 2: Safety-Critical}
@@ -542,9 +542,9 @@ Contains all the tests for the Performance NFR.
 	\item[Control:] Dynamic
 	\item[Initial State:] Empty email and password box on the login screen
 	\item[Input:] Any and all appropriate user inputs and navigation (typing login info, clicking buttons)
-	\item[Output:] Visiting all menus and triggering all possible UI changes, verifying with Selenium that no user information is outputted on the page
+	\item[Output:] Visiting all menus and triggering all possible UI changes, verifying with manually that no user information is outputted on the page
 	\item[Derivation:] Ensuring that the application handles the user's private data properly and does not output it due to any unforeseen condition
-	\item[Execution:] Automated Selenium Test
+	\item[Execution:] Manual Test
 \end{itemize}
 
 \paragraph*{Performance T 3: Precision or Accuracy}
@@ -564,7 +564,7 @@ Contains all the tests for the Performance NFR.
 	\item[Input:] Visiting the web page
 	\item[Output:] Connection success or failure
 	\item[Derivation:] Checking to see if the web application is available for at least 90\% of the day, assuming Firebase stability
-	\item[Execution:] Automated Selenium Test
+	\item[Execution:] Manual Test
 \end{itemize}
 
 \paragraph*{Performance T 5: Robustness or Fault-Tolerance}
@@ -574,7 +574,7 @@ Contains all the tests for the Performance NFR.
 	\item[Input:] Input
 	\item[Output:] Output
 	\item[Derivation:] Verifying that a match will always be found by stress testing using some heterogeneous groups
-	\item[Execution:] Automated Selenium Test
+	\item[Execution:] Manual Test
 \end{itemize}
 
 \paragraph*{Performance T 6: Capacity}
@@ -585,7 +585,7 @@ Contains all the tests for the Performance NFR.
 	\item[Output:] Application's stability
 	\item[Derivation:] Ensuring and proving that each user session is independent of another and that no
 	limit to the number of users logged on concurrently exists.
-	\item[Execution:] Automated Selenium Test
+	\item[Execution:] Manual Test
 \end{itemize}
 
 \subsubsection{Area of Testing: Operational and Environmental Test}
@@ -640,14 +640,18 @@ Contains all the tests for the Performance NFR.
 The two traceability matrices can be found in the Appendix.
 
 \section{Unit Test Description}
-This section will be filled in after the MIS is completed.
 
 %\wss{Reference your MIS and explain your overall philosophy for test case
 %  selection.}
 %\wss{This section should not be filled in until after the MIS has
 %  been completed.}
 %
-%\subsection{Unit Testing Scope}
+In creating unit tests, we wanted to prioritize those functions of the system that were most important in order that it may work. 
+This meant creating tests that covered the essentials and, in some cases, could be mapped onto similar functions (such as the group voting session testing 
+results being applicable to individual voting, thereby eliminating the need to test the latter). Tests whose results followed from those of others were not 
+included for the sake of brevity.
+
+\subsection{Unit Testing Scope}
 %
 %\wss{What modules are outside of the scope.  If there are modules that are
 %  developed by someone else, then you would say here if you aren't planning on
@@ -655,60 +659,235 @@ This section will be filled in after the MIS is completed.
 %  have a lower priority for verification than others.  If this is the case,
 %  explain your rationale for the ranking of module importance.}
 %
-%\subsection{Tests for Functional Requirements}
+M3, M5, M6, and M8 is the scope of the modules tested with unit testing. Each of these modules had functions that were vital to the 
+system as a whole, and so they were prioritized for unit testing to speed up the testing process whenever large updates to the source code were made. 
+We chose to leave out M4 (the Friends Module) since the creation of new test users and adding them as friends was a feature that could easily be verified 
+manually and, if something was wrong with it, would be covered by the tests for the Groups Module. Similarly, M9 (OAuth Module) was left out of the scope 
+since its functionality relied on what is provided by Google and Meta. Finally, M10 (API Module) was also left out of the scope since it, too, was dependent 
+on what is provided by the API developers.
+
+
+\subsection{Tests for Functional Requirements}
 %
 %\wss{Most of the verification will be through automated unit testing.  If
 %  appropriate specific modules can be verified by a non-testing based
 %  technique.  That can also be documented in this section.}
 %
-%\subsubsection{Module 1}
+\subsubsection{Module 3 - Native Login}
 %
 %\wss{Include a blurb here to explain why the subsections below cover the module.
 %  References to the MIS would be good.  You will want tests from a black box
 %  perspective and from a white box perspective.  Explain to the reader how the
 %  tests were selected.}
 %
-%\begin{enumerate}
+The most important function of this module is the creation of new accounts, with their data being uploaded to the database, thereby making 
+the functionality of logging in inferrable from the success of this unit test.
+
+\begin{enumerate}
+
+\item[]{T1: User Creation\\}
+
+Type: Automatic
+
+Initial State: Login Page
+
+Input: Test email and password
+
+Output: New user profile created and added to database
+
+Test Case Derivation: Ensure that the user creation funcationality works
+
+How test will be performed: automatic testing file (user.test.ts)
+
+\end{enumerate}
+
+\subsubsection{Module 5 - Groups}
+
+The funcationality of the Groups Module was fully covered by testing the creation of a group and all funcationality surrounding the adding of new members.
+
+\begin{enumerate}
+
+\item[]{T2: Create a group\\}
+
+Type: Automatic
+
+Initial State: Create Group Page
+
+Input: Test group name
+
+Output: New group is created
+
+Test Case Derivation: Ensure that users can successfully create new groups
+
+How test will be performed: automatic testing file (group.test.ts)
+
+\item[]{T3: Add user to group\\}
+
+Type: Automatic
+
+Initial State: Social Page
+
+Input: Group name and user id/email
+
+Output: varification that selected user has been added to group
+
+Test Case Derivation: Ensure that users can successfully be added to groups
+
+How test will be performed: automatic testing file (group.test.ts)
+
+\item[]{T4: Invite a user to group\\}
+
+Type: Automatic
+
+Initial State: Social Page
+
+Input: Group name and friend id/email
+
+Output: New user recieves invite to test group
+
+Test Case Derivation: Ensure that users can successfully invite new members to groups
+
+How test will be performed: automatic testing file (group.test.ts)
+
+\item[]{T5: Accept Invite to group\\}
+
+Type: Automatic
+
+Initial State: Join Group Page
+
+Input: Group invite id
+
+Output: User accepts the group invite
+
+Test Case Derivation: Ensure that users can successfully accept invitations to new groups
+
+How test will be performed: automatic testing file (group.test.ts)
+
+\end{enumerate}
+
+\subsubsection{Module 6 - Profile}
 %
-%\item{test-id1\\}
+%\wss{Include a blurb here to explain why the subsections below cover the module.
+%  References to the MIS would be good.  You will want tests from a black box
+%  perspective and from a white box perspective.  Explain to the reader how the
+%  tests were selected.}
 %
-%Type: \wss{Functional, Dynamic, Manual, Automatic, Static etc. Most will
-%  be automatic}
+The changes to the profile section all used similar functionality with Firebase, so we thought it only necessary to test the creation of a 
+new username. Moreover, the preferenes were fully tested, with initial and later preference changes being accounted for.
+\begin{enumerate}
+
+\item[]{T6: Edit user profile\\}
+
+Type: Automatic
+
+Initial State: Change User Name Page
+
+Input: New user profile name
+
+Output: Newly entered profile name is saved and displays instead of email or previous profile name
+
+Test Case Derivation: Ensure that the user can successfully change their profile name
+
+How test will be performed: automatic testing file (user.test.ts)
+
+\item[]{T7: New preferences for a user\\}
+
+Type: Automatic
+
+Initial State: Preferences Page
+
+Input: Set of media preferences
+
+Output: Creation of the user's first set of preferences
+
+Test Case Derivation: Ensure that the user can successfully create their initial preferences
+
+How test will be performed: automatic testing file (user.test.ts)
+
+\item[]{T8: Edit user preferences\\}
+
+Type: Automatic
+
+Initial State: Preferences Page
+
+Input: Set of media preferences
+
+Output: Change the user's first set of preferences to the newly specified preferences
+
+Test Case Derivation: Ensure that the user can successfully change their preferences
+
+How test will be performed: automatic testing file (user.test.ts)
+
+\end{enumerate}
+
+\subsubsection{Module 8 - Matching Algorithm}
+
+The matching algorithm was fully tested, with the voting session, recommendations, votes, and final suggestion all being accounted for.
+
+\begin{enumerate}
+
+\item[]{T9: Start a Voting Session\\}
+
+Type: Automatic
+
+Initial State: Group Page
+
+Input: Group id
+
+Output: New voting session for test group
+
+Test Case Derivation: Ensure that the group can start a new voting session
+
+How test will be performed: automatic testing file (recommendation.test.ts)
+
+\item[]{T10: Load Recommendations\\}
+
+Type: Automatic
+
+Initial State: Group Voting Page
+
+Input: Group and session id
+
+Output: Recommendations for the group
+
+Test Case Derivation: Ensure that the algorithm can generate recommendations based on the preferences of all members
+
+How test will be performed: automatic testing file (recommendation.test.ts)
+
+\item[]{T11: Submit Votes\\}
+
+Type: Automatic
+
+Initial State: Group Voting Page
+
+Input: Session id and votes for suggested media
+
+Output: Verification that the users' votes are saved
+
+Test Case Derivation: Ensure that the system can save users' votes for different media
+
+How test will be performed: automatic testing file (recommendation.test.ts)
+
+\item[]{T12: Find Best Match\\}
+
+Type: Automatic
+
+Initial State: Group Voting Page
+
+Input: Session id
+
+Output: The media that the algorithm chooses based on preferences and votes
+
+Test Case Derivation: Ensure that the algorithm can provide a decision based on the suggestions and votes
+
+How test will be performed: automatic testing file (recommendation.test.ts)
+
+\end{enumerate}
+
 %
-%Initial State:
-%
-%Input:
-%
-%Output: \wss{The expected result for the given inputs}
-%
-%Test Case Derivation: \wss{Justify the expected value given in the Output field}
-%
-%How test will be performed:
-%
-%\item{test-id2\\}
-%
-%Type: \wss{Functional, Dynamic, Manual, Automatic, Static etc. Most will
-%  be automatic}
-%
-%Initial State:
-%
-%Input:
-%
-%Output: \wss{The expected result for the given inputs}
-%
-%Test Case Derivation: \wss{Justify the expected value given in the Output field}
-%
-%How test will be performed:
-%
-%\item{...\\}
-%
-%\end{enumerate}
-%
-%\subsubsection{Module 2}
-%
-%...
-%
-%\subsection{Tests for Nonfunctional Requirements}
+\subsection{Tests for Nonfunctional Requirements}
+There were no nonfunctional unit tests, as all nonfunctional requirements were tested through different means (such as the survey, as seen in the Appendix).
+
 %
 %\wss{If there is a module that needs to be independently assessed for
 %  performance, those test cases can go here.  In some projects, planning for
@@ -716,45 +895,31 @@ This section will be filled in after the MIS is completed.
 %
 %\wss{These tests may involve collecting performance data from previously
 %  mentioned functional tests.}
+
 %
-%\subsubsection{Module ?}
-%
-%\begin{enumerate}
-%
-%\item{test-id1\\}
-%
-%Type: \wss{Functional, Dynamic, Manual, Automatic, Static etc. Most will
-%  be automatic}
-%
-%Initial State:
-%
-%Input/Condition:
-%
-%Output/Result:
-%
-%How test will be performed:
-%
-%\item{test-id2\\}
-%
-%Type: Functional, Dynamic, Manual, Static etc.
-%
-%Initial State:
-%
-%Input:
-%
-%Output:
-%
-%How test will be performed:
-%
-%\end{enumerate}
-%
-%\subsubsection{Module ?}
-%
-%...
-%
-%\subsection{Traceability Between Test Cases and Modules}
+\subsection{Traceability Between Test Cases and Modules}
 %
 %\wss{Provide evidence that all of the modules have been considered.}
+\begin{table}[H]
+	\caption{Module Traceability Matrix}
+	\begin{tabular}{ll}
+		\toprule
+		\textbf{Test Number} & \textbf{Module} \\
+		\midrule
+		T1: User Creation & M3\\
+		T2: Create a group & M5\\
+		T3: Add user to group & M5\\
+		T4: Invite a user to group & M5\\
+		T6: Edit user profile & M6\\
+		T7: New preferences for a user & M6\\
+		T8: Edit user preferences & M6\\
+		T9: Start a Voting Session & M8\\
+		T10: Load Recommendations & M8\\
+		T11: Submit Votes & M8\\
+		T12: Find Best Match & M8\\
+		\bottomrule
+	\end{tabular}
+\end{table}
 
 \newpage
 
@@ -832,5 +997,19 @@ This section will be filled in after the MIS is completed.
 		\bottomrule
 	\end{tabular}
 \end{table}
+
+\newpage
+
+\subsubsection*{User Survey}
+The survey was designed to gauge how easy it was to navigate the system for users of different levels of technological proficiency. The responses to 
+the system's usability were very positive. Moreover, the overall look and feel of the UI was deemed to be well done too.\\
+Though there were a small number of respondants, the highly positive feedback gives condifences in the usability and look of the app.\\
+\includegraphics[scale=0.6]{images/Survey1.png}\\
+\includegraphics[scale=0.6]{images/Survey2.png}\\
+\includegraphics[scale=0.6]{images/Survey3.png}\\
+\includegraphics[scale=0.6]{images/Survey4.png}\\
+\includegraphics[scale=0.6]{images/Survey5.png}\\
+\includegraphics[scale=0.6]{images/Survey6.png}\\
+
 
 \end{document}
