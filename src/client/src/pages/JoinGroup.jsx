@@ -6,8 +6,10 @@ import {
   ListItemSecondaryAction,
   ListItemText,
   Typography,
+  Snackbar,
+  Alert
 } from '@mui/material';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from '../components/Header';
 import { Check, Clear } from '@mui/icons-material';
 import axios from 'axios';
@@ -20,12 +22,12 @@ const headers = {
 const API = `${process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'}`;
 
 const JoinGroup = () => {
-  const [groupInvites, setGroupInvites] = React.useState();
+  const [groupInvites, setGroupInvites] = useState();
+  const [alert, setAlert] = useState(false); // error, warning, info, success
 
   const uid = useSelector(selectUid);
 
   useEffect(() => {
-
     axios
       .get(`${API}/api/invites/group/getforuser?uid=${uid}`, { headers })
       .then((res) => setGroupInvites(res.data))
@@ -47,9 +49,15 @@ const JoinGroup = () => {
         setGroupInvites(newArray);
       })
       .catch((e) => console.log(e));
+      setAlert(true);
+      groupInvites.splice(i, 1);
+      setGroupInvites(groupInvites);
   };
 
-  const handleDeclineGroup = (inv, i) => {};
+  const handleDeclineGroup = (inv, i) => {
+    groupInvites.splice(i, 1);
+    setGroupInvites(groupInvites);
+  };
 
   return (
     <Box>
@@ -108,6 +116,12 @@ const JoinGroup = () => {
           <Typography>You have no invites!</Typography>
         )}
       </Box>
+      <Snackbar
+        open={alert}
+        autoHideDuration={6000}
+        onClose={() => setAlert(false)}>
+        <Alert>Accepted Group Invite</Alert>
+      </Snackbar>
     </Box>
   );
 };
