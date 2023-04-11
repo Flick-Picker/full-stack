@@ -1,5 +1,5 @@
 # Flick Picker
-##URL: https://flickpicker-app.web.app/
+## URL: https://flickpicker-app.web.app/
 
 ## Description 
 This project is a web application to make picking something to watch easier with a large group of friends, considering the group's preferences and recommending what to watch from Movies, TV Shows, and Anime.
