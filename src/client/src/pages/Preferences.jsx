@@ -82,7 +82,6 @@ const Preferences = () => {
     axios
       .get(`${API}/api/user/pref/get?uid=${uid}`, { headers })
       .then((res) => {
-        console.log(res);
         if (res.data.likedGenres !== undefined) {
           setLikedGenres(res.data.likedGenres);
         }

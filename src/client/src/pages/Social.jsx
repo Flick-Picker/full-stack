@@ -15,7 +15,7 @@ import {
   Typography,
 } from '@mui/material';
 import axios from 'axios';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import FriendsList from '../components/FriendsList';
@@ -36,6 +36,7 @@ const Social = () => {
   const [friendIdsForGroup, setFriendIdsForGroup] = React.useState([]);
   const [alert, setAlert] = React.useState(undefined); // error, warning, info, success
   const [alertText, setAlertText] = React.useState('');
+  const [friendsRefresh, setFriendsRefresh] = useState(0);
 
   const uid = useSelector(selectUid);
   const email = useSelector(selectEmail);
@@ -63,13 +64,25 @@ const Social = () => {
     axios
       .post(`${API}/api/invites/friends/accept`, body, { headers })
       .then(() => {
-        const newArray = friendInvites.splice(i, 1);
-        setFriendInvites(newArray);
+        friendInvites.splice(i, 1);
+        setFriendInvites(friendInvites);
+      })
+      .then(() => {
+        friendIdsForGroup.push(inv.senderUid);
+        setFriendIdsForGroup(friendIdsForGroup);
+        setAlert('success');
+        setAlertText('Friend request accepted');
+        setFriendsRefresh(friendsRefresh + 1);
       })
       .catch((e) => console.log(e));
   };
 
-  const handleDeclineFriend = (inv) => {};
+  const handleDeclineFriend = (inv, i) => {
+    friendInvites.splice(i, 1);
+    setFriendInvites(friendInvites);
+    friendIdsForGroup.push(inv.senderUid);
+    setFriendIdsForGroup(friendIdsForGroup);
+  };
 
   const sendFriendRequest = () => {
     axios
@@ -162,7 +175,7 @@ const Social = () => {
               padding="20px"
               border="solid"
               borderRadius="10px">
-              <FriendsList setFriendIdsForGroup={setFriendIdsForGroup} />
+              <FriendsList friendsRefresh={friendsRefresh} setFriendIdsForGroup={setFriendIdsForGroup} />
             </Box>
           </Box>
 

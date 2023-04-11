@@ -12,20 +12,20 @@ import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { selectUid } from '../features/token/tokenSlice';
 
-const FriendsList = ({ setFriendIdsForGroup }) => {
-  const API = `${process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'}`;
+const API = `${process.env.REACT_APP_BACKEND_URI || 'http://localhost:8080'}`;
 
+const headers = {
+  'x-api-key': process.env.REACT_APP_BACKEND_KEY,
+};   
+
+const FriendsList = ({ setFriendIdsForGroup }) => {
   const [checked, setChecked] = React.useState([]);
   const [friendsList, setFriendsList] = React.useState([]);
 
   const uid = useSelector(selectUid);
 
   useEffect(() => {
-    if (uid) {
-      const headers = {
-        'x-api-key': process.env.REACT_APP_BACKEND_KEY,
-      };    
-
+    if (uid) { 
       axios
         .get(`${API}/api/user/collectfriends?uid=${uid}`, { headers })
         .then((res) => {
@@ -35,7 +35,7 @@ const FriendsList = ({ setFriendIdsForGroup }) => {
     } else {
       console.log("uid isn't available in FriendsList");
     }
-  }, [API, uid]);
+  }, [uid]);
 
   const handleToggle = (value) => () => {
     const currentIndex = checked.indexOf(value);
